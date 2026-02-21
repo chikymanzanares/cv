@@ -1,37 +1,67 @@
 {
   "meta": {
     "cv_id": "cv_007",
-    "created_at": "2026-02-21T10:24:49.847659+00:00",
+    "created_at": "2026-02-21T13:44:31.533139+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "es",
+      "language": "en",
       "seniority": "junior",
-      "persona_type": "startup engineer",
-      "writing_style": "verbose",
+      "persona_type": "career switcher",
+      "writing_style": "results-driven",
       "role": "DevOps Engineer",
       "education_country": "India"
     },
     "photo_source": "local_asset",
-    "photo_asset": "esteban.jpeg"
+    "photo_asset": "peter.jpeg",
+    "generation_config": {
+      "writing_style": "results-driven",
+      "summary_length": "short",
+      "experience_style": "paragraphs",
+      "omit_sections": [
+        "projects"
+      ],
+      "include_interests_section": false,
+      "section_label_preset": {
+        "summary": "Profil professionnel",
+        "experience": "Expérience",
+        "education": "Formation",
+        "skills": "Compétences",
+        "languages": "Langues",
+        "projects": "Projets",
+        "certifications": "Certifications",
+        "interests": "Centres d'intérêt",
+        "profile": "Profil"
+      }
+    }
   },
   "data": {
-    "full_name": "Alejandro Gutiérrez",
-    "headline": "Junior DevOps Engineer with a passion for automation and cloud infrastructure",
-    "email": "alejandro.gutierrez@email.com",
-    "phone": "+91 987654321",
+    "full_name": "Raj Kumar",
+    "headline": "DevOps Engineer",
+    "email": "raj.kumar@email.com",
+    "phone": "+91 98765 43210",
     "location": "Bangalore, India",
-    "summary": "As a junior DevOps Engineer, I am dedicated to bridging the gap between development and operations, ensuring seamless software delivery and infrastructure management. With a strong background in scripting, cloud platforms, and agile methodologies, I strive to optimize workflows, improve system reliability, and empower teams to achieve their goals. I am eager to contribute my skills and enthusiasm to a dynamic startup environment, where I can continue to grow and make a meaningful impact.",
+    "summary": "Passionate DevOps engineer with a strong background in infrastructure management and automation. Skilled in implementing CI/CD pipelines, cloud deployment, and monitoring solutions to drive operational efficiency.",
+    "section_labels": {
+      "summary": "Profil professionnel",
+      "experience": "Expérience",
+      "education": "Formation",
+      "skills": "Compétences",
+      "languages": "Langues",
+      "certifications": "Certifications",
+      "interests": "Centres d'intérêt"
+    },
     "skills": [
       "Docker",
       "Kubernetes",
-      "Ansible",
       "AWS",
       "Azure",
-      "GitLab CI/CD",
+      "Terraform",
+      "Jenkins",
+      "Ansible",
       "Prometheus",
       "Grafana"
     ],
@@ -41,46 +71,27 @@
         "level": "Fluent"
       },
       {
-        "name": "Spanish",
+        "name": "Hindi",
         "level": "Native"
       }
     ],
     "experience": [
       {
-        "company": "TechSavvy Startups",
-        "title": "Junior DevOps Engineer",
+        "company": "ABC Tech Solutions",
+        "title": "DevOps Engineer",
         "start_date": "2021-06-01",
         "end_date": "2023-03-31",
         "location": "Bangalore, India",
-        "bullets": [
-          "Automated infrastructure provisioning and deployment using Terraform and Ansible",
-          "Implemented Kubernetes clusters on AWS and Azure for containerized applications",
-          "Monitored and optimized system performance using Prometheus and Grafana",
-          "Collaborated with development teams to integrate CI/CD pipelines and ensure seamless releases",
-          "Provided technical support and troubleshooting for production environments"
-        ]
+        "paragraph": "Implemented a fully automated CI/CD pipeline using Jenkins, Ansible, and Kubernetes, reducing deployment time by 80% and improving overall system reliability. Designed and deployed a comprehensive monitoring and alerting system using Prometheus and Grafana, enabling proactive issue detection and resolution. Collaborated with cross-functional teams to optimize cloud infrastructure, resulting in a 25% reduction in monthly AWS costs."
       }
     ],
     "education": [
       {
-        "institution": "Indian Institute of Technology (IIT) Madras",
-        "degree": "Bachelor of Technology (B.Tech)",
+        "institution": "National Institute of Technology, Rourkela",
+        "degree": "Bachelor of Technology",
         "field": "Computer Science and Engineering",
         "start_year": "2017",
         "end_year": "2021"
-      }
-    ],
-    "projects": [
-      {
-        "name": "DevOps Automation Toolkit",
-        "description": "Developed a comprehensive toolkit for automating infrastructure provisioning, application deployment, and monitoring using a combination of open-source tools and cloud services.",
-        "tech": [
-          "Terraform",
-          "Ansible",
-          "Kubernetes",
-          "Prometheus",
-          "Grafana"
-        ]
       }
     ],
     "certifications": [
@@ -91,20 +102,25 @@
       },
       {
         "name": "Certified Kubernetes Administrator (CKA)",
-        "issuer": "Cloud Native Computing Foundation",
+        "issuer": "The Linux Foundation",
         "year": "2021"
       }
+    ],
+    "interests": [
+      "Hiking",
+      "Cooking",
+      "Photography"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alejandro-gutierrez"
+        "url": "https://www.linkedin.com/in/raj-kumar-devops"
       },
       {
         "label": "Portfolio",
-        "url": "https://alejandro-gutierrez.com"
+        "url": "https://rajkumar.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a young, friendly-looking man with short dark hair and a warm smile, wearing a collared shirt and looking directly at the camera."
+    "photo_prompt": "Professional LinkedIn-style headshot. Raj Kumar, a young male DevOps engineer with short dark hair and a friendly expression, wearing a collared shirt and standing in front of a blurred office background."
   }
 }

@@ -1,136 +1,127 @@
 {
   "meta": {
     "cv_id": "cv_019",
-    "created_at": "2026-02-21T10:26:28.329997+00:00",
+    "created_at": "2026-02-21T13:46:20.454865+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "en",
+      "language": "de",
       "seniority": "senior",
-      "persona_type": "corporate enterprise architect",
-      "writing_style": "concise",
+      "persona_type": "career switcher",
+      "writing_style": "formal",
       "role": "UX Designer",
       "education_country": "Germany"
     },
     "photo_source": "local_asset",
-    "photo_asset": "gina.jpeg"
+    "photo_asset": "girl.jpeg",
+    "generation_config": {
+      "writing_style": "formal",
+      "summary_length": "paragraph",
+      "experience_style": "paragraphs",
+      "omit_sections": [
+        "projects"
+      ],
+      "include_interests_section": true,
+      "section_label_preset": {
+        "summary": "Resumen profesional",
+        "experience": "Experiencia laboral",
+        "education": "Formación",
+        "skills": "Competencias",
+        "languages": "Idiomas",
+        "projects": "Proyectos",
+        "certifications": "Certificaciones",
+        "interests": "Intereses",
+        "profile": "Perfil"
+      }
+    }
   },
   "data": {
-    "full_name": "Markus Schneider",
-    "headline": "Senior UX Designer and Enterprise Architect",
-    "email": "markus.schneider@example.com",
+    "full_name": "Maximilian Müller",
+    "headline": "Erfahrener UX-Designer mit Fokus auf Benutzerzentrierung",
+    "email": "maximilian.mueller@example.com",
     "phone": "+49 123 456 7890",
-    "location": "Munich, Germany",
-    "summary": "Experienced UX Designer and Enterprise Architect with a strong background in designing and implementing complex software systems for large corporate clients. Skilled in user research, information architecture, interaction design, and prototyping. Adept at bridging the gap between business requirements and technical implementation.",
+    "location": "München, Deutschland",
+    "summary": "Ich bin ein erfahrener UX-Designer mit über 10 Jahren Berufserfahrung. Meine Leidenschaft liegt darin, innovative und benutzerfreundliche digitale Produkte zu entwickeln, die das Nutzererlebnis in den Mittelpunkt stellen. Ich verfüge über ein breites Spektrum an Fähigkeiten, darunter Prototyping, Usability-Tests, Interaktionsdesign und visuelle Gestaltung. Ich arbeite eng mit interdisziplinären Teams zusammen, um Projekte erfolgreich umzusetzen und die Bedürfnisse der Nutzer optimal zu erfüllen.",
+    "section_labels": {
+      "summary": "Resumen profesional",
+      "experience": "Experiencia laboral",
+      "education": "Formación",
+      "skills": "Competencias",
+      "languages": "Idiomas",
+      "interests": "Intereses"
+    },
     "skills": [
-      "User Experience Design",
-      "Information Architecture",
-      "Interaction Design",
+      "Interaktionsdesign",
       "Prototyping",
-      "Enterprise Architecture",
-      "Systems Integration",
-      "Agile Methodologies"
+      "Usability-Testing",
+      "User Research",
+      "Visual Design",
+      "Wireframing",
+      "Adobe Creative Suite"
     ],
     "languages": [
       {
-        "name": "German",
-        "level": "Native"
+        "name": "Deutsch",
+        "level": "Muttersprache"
       },
       {
-        "name": "English",
-        "level": "Fluent"
+        "name": "Englisch",
+        "level": "Fließend"
       }
     ],
     "experience": [
       {
-        "company": "Siemens AG",
-        "title": "Senior UX Designer and Enterprise Architect",
+        "company": "Acme GmbH",
+        "title": "Senior UX-Designer",
         "start_date": "2018-01-01",
-        "end_date": "2023-12-31",
-        "location": "Munich, Germany",
-        "bullets": [
-          "Designed and implemented user-centric enterprise software solutions for Siemens' industrial automation and energy management divisions.",
-          "Collaborated with cross-functional teams to define and execute the UX strategy, ensuring seamless integration with the overall enterprise architecture.",
-          "Conducted user research, created information architectures, and developed high-fidelity prototypes to validate design concepts.",
-          "Provided technical leadership and mentorship to junior designers and architects, fostering a culture of continuous improvement."
-        ]
+        "end_date": "2022-12-31",
+        "location": "München, Deutschland",
+        "paragraph": "Als Senior UX-Designer bei Acme GmbH war ich für die Konzeption und Umsetzung benutzerfreundlicher digitaler Lösungen verantwortlich. Ich arbeitete eng mit interdisziplinären Teams zusammen, um die Bedürfnisse der Kunden zu verstehen und innovative Produkte zu entwickeln. Meine Aufgaben umfassten die Durchführung von Nutzerforschung, die Erstellung von Wireframes und Prototypen, das Testen der Usability sowie die Gestaltung der visuellen Oberfläche. Ich konnte maßgeblich dazu beitragen, dass die Produkte von Acme eine hohe Akzeptanz bei den Nutzern fanden."
       },
       {
-        "company": "BMW Group",
-        "title": "UX Designer and Enterprise Architect",
-        "start_date": "2014-06-01",
+        "company": "Omega AG",
+        "title": "UX-Designer",
+        "start_date": "2014-05-01",
         "end_date": "2017-12-31",
-        "location": "Munich, Germany",
-        "bullets": [
-          "Designed and implemented user interfaces for BMW's connected car and mobility services platforms.",
-          "Defined the enterprise architecture and integration strategy for BMW's digital ecosystem, ensuring seamless data exchange and user experiences.",
-          "Facilitated cross-functional workshops to align business requirements with technical capabilities, driving innovation and operational efficiency."
-        ]
+        "location": "Hamburg, Deutschland",
+        "paragraph": "Bei Omega AG war ich als UX-Designer für die Entwicklung benutzerfreundlicher Webseiten und mobiler Anwendungen verantwortlich. Ich führte Usability-Tests durch, erstellte Wireframes und Prototypen und arbeitete eng mit dem Entwicklungsteam zusammen, um die Umsetzung der Designs sicherzustellen. Darüber hinaus beteiligte ich mich an Marktforschung und der Analyse von Nutzerdaten, um die Produkte kontinuierlich zu verbessern."
       }
     ],
     "education": [
       {
-        "institution": "Technical University of Munich",
+        "institution": "Technische Universität München",
         "degree": "Master of Science",
-        "field": "Computer Science",
-        "start_year": "2010",
-        "end_year": "2012"
+        "field": "Medieninformatik",
+        "start_year": "2011",
+        "end_year": "2013"
       },
       {
-        "institution": "University of Augsburg",
+        "institution": "Universität Augsburg",
         "degree": "Bachelor of Science",
-        "field": "Information Systems",
-        "start_year": "2006",
-        "end_year": "2010"
+        "field": "Informatik",
+        "start_year": "2008",
+        "end_year": "2011"
       }
     ],
-    "projects": [
-      {
-        "name": "Siemens Industrial Automation Platform",
-        "description": "Designed and implemented the user experience and enterprise architecture for Siemens' next-generation industrial automation platform, enabling seamless integration of production systems and data-driven decision-making.",
-        "tech": [
-          "User Experience Design",
-          "Information Architecture",
-          "Enterprise Architecture",
-          "Systems Integration"
-        ]
-      },
-      {
-        "name": "BMW Connected Mobility App",
-        "description": "Designed the user interface and interaction patterns for BMW's connected mobility app, integrating data from various sources to provide personalized mobility services and recommendations.",
-        "tech": [
-          "User Experience Design",
-          "Interaction Design",
-          "Mobile Development",
-          "Data Integration"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "Certified Enterprise Architect",
-        "issuer": "The Open Group",
-        "year": "2016"
-      },
-      {
-        "name": "Certified User Experience Designer",
-        "issuer": "Nielsen Norman Group",
-        "year": "2014"
-      }
+    "interests": [
+      "Reisen",
+      "Fotografie",
+      "Lesen",
+      "Kochen"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/markusschneider"
+        "url": "https://www.linkedin.com/in/maximilian-mueller"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.markusschneider.com"
+        "url": "https://www.maximilian-mueller.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a middle-aged man with short, neatly styled brown hair and a friendly, confident expression. He is wearing a dark blue suit and a white shirt."
+    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a middle-aged man with short brown hair and a friendly expression, wearing a collared shirt and suit jacket."
   }
 }

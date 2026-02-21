@@ -1,125 +1,112 @@
 {
   "meta": {
     "cv_id": "cv_012",
-    "created_at": "2026-02-21T10:25:29.988947+00:00",
+    "created_at": "2026-02-21T13:45:15.227535+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "en",
-      "seniority": "junior",
-      "persona_type": "academic researcher",
-      "writing_style": "verbose",
-      "role": "DevOps Engineer",
-      "education_country": "UK"
+      "language": "fr",
+      "seniority": "senior",
+      "persona_type": "corporate enterprise architect",
+      "writing_style": "narrative",
+      "role": "Backend Engineer",
+      "education_country": "India"
     },
     "photo_source": "local_asset",
-    "photo_asset": "alejandra.jpeg"
+    "photo_asset": "tina.jpeg",
+    "generation_config": {
+      "writing_style": "narrative",
+      "summary_length": "short",
+      "experience_style": "paragraphs",
+      "omit_sections": [
+        "certifications",
+        "education"
+      ],
+      "include_interests_section": false,
+      "section_label_preset": null
+    }
   },
   "data": {
-    "full_name": "Emily Wilkins",
-    "headline": "Junior DevOps Engineer with Academic Research Background",
-    "email": "emily.wilkins@example.com",
-    "phone": "+44 7712 345678",
-    "location": "London, UK",
-    "summary": "As a junior DevOps Engineer with a strong academic research background, I bring a unique blend of technical expertise and analytical problem-solving skills to the table. With a passion for streamlining workflows and optimizing infrastructure, I am driven to create efficient, scalable, and resilient systems. My experience in academic research has honed my ability to think critically, conduct in-depth analysis, and communicate complex technical concepts effectively. I am eager to apply my skills and knowledge to drive innovation and support the success of your organization.",
+    "full_name": "Étienne Dupont",
+    "headline": "Senior Backend Engineer with Expertise in Enterprise Architecture",
+    "email": "etienne.dupont@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "Seasoned backend engineer with over 15 years of experience in the corporate sector. Skilled in designing and implementing scalable, high-performance systems that power mission-critical applications. Adept at translating business requirements into technical solutions and leading cross-functional teams to deliver innovative solutions.",
     "skills": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "Python",
-      "Bash",
-      "Git",
-      "CI/CD",
-      "Monitoring",
-      "Logging"
+      "Backend Development",
+      "Enterprise Architecture",
+      "Microservices",
+      "Cloud Computing",
+      "Distributed Systems",
+      "Performance Optimization",
+      "Agile Methodologies"
     ],
     "languages": [
       {
-        "name": "English",
+        "name": "French",
         "level": "Native"
       },
       {
-        "name": "French",
-        "level": "Intermediate"
+        "name": "English",
+        "level": "Fluent"
       }
     ],
     "experience": [
       {
-        "company": "XYZ Tech Solutions",
-        "title": "Junior DevOps Engineer",
-        "start_date": "2022-06-01",
-        "end_date": "Present",
-        "location": "London, UK",
-        "bullets": [
-          "Collaborated with cross-functional teams to design and implement robust infrastructure solutions using Docker, Kubernetes, and AWS services",
-          "Automated deployment pipelines and streamlined CI/CD processes to ensure reliable and consistent software releases",
-          "Monitored system performance, analyzed logs, and implemented proactive alerting to quickly identify and resolve issues",
-          "Contributed to the development of reusable infrastructure as code (IaC) templates using Terraform"
-        ]
-      }
-    ],
-    "education": [
-      {
-        "institution": "University of Cambridge",
-        "degree": "Master of Philosophy (M.Phil)",
-        "field": "Computer Science",
-        "start_year": "2019",
-        "end_year": "2020"
+        "company": "Acme Corporation",
+        "title": "Senior Backend Architect",
+        "start_date": "2018-04-01",
+        "end_date": "2022-12-31",
+        "location": "Paris, France",
+        "paragraph": "As the Senior Backend Architect at Acme Corporation, I played a pivotal role in designing and implementing the company's next-generation backend infrastructure. I led a team of talented engineers in migrating legacy systems to a microservices-based architecture, leveraging cloud-native technologies to improve scalability, resilience, and performance. I collaborated closely with business stakeholders to understand their evolving requirements and translated them into technical solutions that delivered tangible value. My expertise in enterprise architecture and distributed systems allowed me to optimize the backend ecosystem, ensuring seamless integration and efficient data flows across the organization."
       },
       {
-        "institution": "University of Oxford",
-        "degree": "Bachelor of Science (B.Sc)",
-        "field": "Physics",
-        "start_year": "2015",
-        "end_year": "2019"
+        "company": "Global Tech Inc.",
+        "title": "Backend Engineering Lead",
+        "start_date": "2014-01-01",
+        "end_date": "2018-03-31",
+        "location": "Bangalore, India",
+        "paragraph": "As the Backend Engineering Lead at Global Tech Inc., I was responsible for building and leading a high-performing team of backend developers. I spearheaded the design and implementation of a scalable, fault-tolerant backend infrastructure to support the company's rapidly growing customer base. I introduced Agile practices and DevOps principles to streamline the software development lifecycle, enabling the team to deliver features and enhancements at a faster pace. I also played a key role in mentoring junior engineers, fostering a culture of continuous learning and innovation within the organization."
       }
     ],
     "projects": [
       {
-        "name": "Automated Infrastructure Deployment",
-        "description": "Designed and implemented an automated infrastructure deployment pipeline using Terraform, AWS, and Kubernetes to streamline the provisioning of development and staging environments.",
+        "name": "Enterprise Data Platform",
+        "description": "Designed and implemented a secure, scalable, and highly available data platform to consolidate and process mission-critical data from various sources across the organization.",
         "tech": [
-          "Terraform",
-          "AWS",
+          "Kafka",
+          "Hadoop",
+          "Spark",
+          "Elasticsearch",
           "Kubernetes"
         ]
       },
       {
-        "name": "Microservices Monitoring and Observability",
-        "description": "Developed a comprehensive monitoring and observability solution for a microservices-based application, utilizing tools like Prometheus, Grafana, and ELK stack to ensure reliable system performance.",
+        "name": "Microservices Migration",
+        "description": "Led the migration of a monolithic application to a microservices-based architecture, improving scalability, fault tolerance, and developer productivity.",
         "tech": [
-          "Prometheus",
-          "Grafana",
-          "ELK Stack"
+          "Docker",
+          "Kubernetes",
+          "Spring Boot",
+          "RabbitMQ",
+          "Istio"
         ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "AWS Certified Solutions Architect - Associate",
-        "issuer": "Amazon Web Services",
-        "year": "2021"
-      },
-      {
-        "name": "Kubernetes Certified Application Developer",
-        "issuer": "Cloud Native Computing Foundation",
-        "year": "2022"
       }
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/emily-wilkins"
+        "url": "https://www.linkedin.com/in/etiennedupont"
       },
       {
         "label": "Portfolio",
-        "url": "https://emilywilkins.com"
+        "url": "https://www.example.com/etiennedupont"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The photo shows a smiling, confident young woman with short brown hair and glasses, wearing a smart casual outfit."
+    "photo_prompt": "Professional LinkedIn-style headshot. Étienne is a middle-aged man with short dark hair and a neatly trimmed beard, wearing a navy blue suit and a white shirt. He has a friendly, confident expression and is looking directly at the camera."
   }
 }

@@ -1,38 +1,51 @@
 {
   "meta": {
     "cv_id": "cv_008",
-    "created_at": "2026-02-21T10:24:56.828786+00:00",
+    "created_at": "2026-02-21T13:44:38.399893+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "de",
-      "seniority": "junior",
-      "persona_type": "academic researcher",
-      "writing_style": "formal",
+      "language": "es",
+      "seniority": "senior",
+      "persona_type": "startup engineer",
+      "writing_style": "technical",
       "role": "UX Designer",
-      "education_country": "Spain"
+      "education_country": "Germany"
     },
     "photo_source": "local_asset",
-    "photo_asset": "tinary.jpeg"
+    "photo_asset": "guy.jpeg",
+    "generation_config": {
+      "writing_style": "technical",
+      "summary_length": "paragraph",
+      "experience_style": "bullets",
+      "omit_sections": [],
+      "include_interests_section": true,
+      "section_label_preset": null
+    }
   },
   "data": {
-    "full_name": "Luisa Fernández",
-    "headline": "Junior UX Designer and Academic Researcher",
-    "email": "luisa.fernandez@example.com",
-    "phone": "+34 123 456 789",
-    "location": "Madrid, Spain",
-    "summary": "Passionate and detail-oriented UX Designer with a strong academic background in human-computer interaction. Experienced in conducting user research, designing intuitive interfaces, and collaborating with cross-functional teams to deliver exceptional digital experiences.",
+    "full_name": "Sofía Martínez",
+    "headline": "Senior UX Designer",
+    "email": "sofia.martinez@example.com",
+    "phone": "+49 123 456 789",
+    "location": "Berlin, Germany",
+    "summary": "Experienced UX Designer with a strong background in creating user-centric digital products for tech startups. Proficient in user research, information architecture, interaction design, and prototyping. Skilled in translating complex requirements into intuitive and visually appealing interfaces. Passionate about using data-driven insights to drive design decisions and deliver exceptional user experiences.",
+    "section_labels": {},
     "skills": [
-      "User Research",
+      "User Experience Design",
+      "User Interface Design",
       "Interaction Design",
-      "Wireframing",
-      "Prototyping",
-      "User Testing",
+      "Wireframing and Prototyping",
+      "User Research",
+      "Information Architecture",
+      "Usability Testing",
       "Adobe Creative Suite",
-      "Figma"
+      "Figma",
+      "Sketch",
+      "InVision"
     ],
     "languages": [
       {
@@ -42,56 +55,77 @@
       {
         "name": "English",
         "level": "Fluent"
+      },
+      {
+        "name": "German",
+        "level": "Proficient"
       }
     ],
     "experience": [
       {
-        "company": "Acme Digital Solutions",
-        "title": "Junior UX Designer",
-        "start_date": "2021-06-01",
+        "company": "Technovation GmbH",
+        "title": "Senior UX Designer",
+        "start_date": "2019-06-01",
         "end_date": "Present",
-        "location": "Madrid, Spain",
+        "location": "Berlin, Germany",
         "bullets": [
-          "Conducted user research to identify pain points and user needs",
-          "Designed wireframes, prototypes, and high-fidelity mockups for web and mobile applications",
-          "Collaborated with cross-functional teams to ensure seamless user experiences",
-          "Performed user testing and incorporated feedback to iterate on designs"
-        ]
+          "Spearheaded the redesign of the company's flagship mobile app, resulting in a 25% increase in user engagement and a 15% boost in customer satisfaction.",
+          "Conducted in-depth user research, including interviews, usability testing, and competitive analysis, to inform the design of a new web-based platform that streamlined the onboarding process and improved user retention by 18%.",
+          "Collaborated cross-functionally with product managers, developers, and stakeholders to translate business requirements into intuitive and visually appealing user interfaces.",
+          "Mentored junior designers, providing guidance on design best practices, user-centered design methodologies, and effective presentation techniques."
+        ],
+        "paragraph": null
+      },
+      {
+        "company": "Startup Incubator",
+        "title": "UX Designer",
+        "start_date": "2016-09-01",
+        "end_date": "2019-05-31",
+        "location": "Munich, Germany",
+        "bullets": [
+          "Designed and iterated on the user interface for a cloud-based project management tool, resulting in a 30% increase in user adoption and a 20% reduction in customer support inquiries.",
+          "Conducted user testing sessions to identify pain points and gather feedback, which led to the implementation of a more intuitive navigation system and improved information architecture.",
+          "Collaborated with cross-functional teams to develop and refine the visual branding and design language for multiple startup clients, ensuring a consistent and cohesive user experience."
+        ],
+        "paragraph": null
       }
     ],
     "education": [
       {
-        "institution": "University of Barcelona",
+        "institution": "Technical University of Munich",
         "degree": "Master of Science",
         "field": "Human-Computer Interaction",
-        "start_year": "2019",
-        "end_year": "2021"
+        "start_year": "2014",
+        "end_year": "2016"
       },
       {
-        "institution": "University of Valencia",
+        "institution": "University of Stuttgart",
         "degree": "Bachelor of Science",
-        "field": "Computer Science",
-        "start_year": "2015",
-        "end_year": "2019"
+        "field": "Industrial Design",
+        "start_year": "2010",
+        "end_year": "2014"
       }
     ],
     "projects": [
       {
-        "name": "Redesign of Company's E-commerce Platform",
-        "description": "Conducted user research, designed a new information architecture, and created high-fidelity prototypes to improve the user experience of the company's e-commerce platform.",
+        "name": "Responsive Web Design for Fintech Startup",
+        "description": "Designed a responsive and mobile-friendly web interface for a fintech startup, optimizing the user experience for various device sizes and improving accessibility.",
         "tech": [
-          "Figma",
-          "User Research",
-          "Interaction Design"
+          "Responsive Web Design",
+          "User Interface Design",
+          "Usability Testing",
+          "Figma"
         ]
       },
       {
-        "name": "Mobile App for Fitness Tracking",
-        "description": "Designed the user interface and interaction flow for a mobile app that helps users track their fitness activities and progress.",
+        "name": "Mobile App Redesign for Fitness Tracker",
+        "description": "Overhauled the user interface and interaction design of a fitness tracking mobile app, enhancing the user experience and improving user engagement.",
         "tech": [
-          "Figma",
+          "Mobile UI Design",
+          "Interaction Design",
+          "User Research",
           "Prototyping",
-          "User Testing"
+          "Sketch"
         ]
       }
     ],
@@ -99,19 +133,30 @@
       {
         "name": "Certified User Experience Analyst",
         "issuer": "Nielsen Norman Group",
-        "year": "2022"
+        "year": "2018"
+      },
+      {
+        "name": "Interaction Design Specialization",
+        "issuer": "Coursera",
+        "year": "2017"
       }
+    ],
+    "interests": [
+      "Exploring new design trends and technologies",
+      "Mentoring junior designers",
+      "Participating in design hackathons and workshops",
+      "Traveling and discovering new cultures"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/luisa-fernandez"
+        "url": "https://www.linkedin.com/in/sofia-martinez"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.example.com/luisa-fernandez"
+        "url": "https://www.behance.net/sofia-martinez"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a young woman with dark hair and a friendly, confident expression. She is wearing a smart, business-casual outfit against a plain background."
+    "photo_prompt": "Professional LinkedIn-style headshot. Friendly and approachable expression, high-quality image, neutral background."
   }
 }

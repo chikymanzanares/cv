@@ -24,10 +24,23 @@ class RenderSettings:
 
 
 def _env(templates_dir: Path) -> Environment:
-    return Environment(
+    env = Environment(
         loader=FileSystemLoader(str(templates_dir)),
         autoescape=select_autoescape(["html", "xml"]),
     )
+    # Default section titles when section_labels not in CV
+    env.globals["section_title"] = lambda cv, key: (cv.get("section_labels") or {}).get(key, {
+        "summary": "Summary",
+        "experience": "Experience",
+        "education": "Education",
+        "skills": "Skills",
+        "languages": "Languages",
+        "projects": "Projects",
+        "certifications": "Certifications",
+        "interests": "Interests",
+        "profile": "Profile",
+    }.get(key, key.title()))
+    return env
 
 
 def _load_json(path: Path) -> dict[str, Any]:
@@ -41,9 +54,25 @@ def _list_cv_dirs(input_dir: Path) -> list[Path]:
 def _pick_template(cv_obj: dict[str, Any], templates: list[str]) -> str:
     """
     Pick template per CV to increase PDF diversity.
+    Bias toward minimal when CV has few sections (avoids empty blocks).
     Deterministic if seed is set (handled by random.seed()).
     """
-    # Optional: you can bias templates based on language/seniority etc.
+    data = cv_obj.get("data", {})
+    has_education = bool(data.get("education"))
+    has_projects = bool(data.get("projects"))
+    has_certs = bool(data.get("certifications"))
+    has_languages = bool(data.get("languages"))
+    full_sections = sum([has_education, has_projects, has_certs, has_languages])
+
+    minimal_tpl = "cv_minimal.html.j2"
+    if full_sections == 0 and minimal_tpl in templates:
+        # Prefer minimal when there are no optional sections
+        weights = [1, 1, 3] if len(templates) == 3 else None
+    else:
+        weights = None
+
+    if weights and len(weights) == len(templates):
+        return random.choices(templates, weights=weights, k=1)[0]
     return random.choice(templates)
 
 

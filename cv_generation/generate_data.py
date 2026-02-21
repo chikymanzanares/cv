@@ -21,9 +21,74 @@ PERSONA_TYPES = [
 
 SENIORITY_LEVELS = ["junior", "mid", "senior"]
 EDU_COUNTRIES = ["Spain", "Germany", "UK", "India"]
-WRITING_STYLES = ["formal", "concise", "verbose"]
+
+WRITING_STYLES = [
+    "formal",
+    "concise",
+    "verbose",
+    "narrative",
+    "technical",
+    "action-oriented",
+    "results-driven",
+    "minimal",
+    "detailed",
+    "punchy",
+    "descriptive",
+    "academic",
+    "business-casual",
+    "storytelling",
+    "dry and factual",
+    "creative",
+    "bullet-heavy",
+]
+
 ROLES = ["Backend Engineer", "Data Scientist", "Product Manager", "DevOps Engineer", "UX Designer"]
 LANGUAGES = ["en", "es", "fr", "de"]
+
+# Optional sections: randomly omit some to increase variability
+OPTIONAL_SECTIONS = ["projects", "certifications", "education", "languages"]
+SUMMARY_LENGTHS = ["one_line", "short", "paragraph"]
+# Weight for using alternative section titles (more = more variety in section names)
+USE_ALTERNATIVE_SECTION_LABELS_WEIGHT = 0.7
+
+# Presets of section titles for variety (key -> display title). One preset chosen per CV when using alternatives.
+SECTION_LABEL_PRESETS = [
+    {"summary": "Summary", "experience": "Experience", "education": "Education", "skills": "Skills", "languages": "Languages", "projects": "Projects", "certifications": "Certifications", "interests": "Interests", "profile": "Profile"},
+    {"summary": "Professional Summary", "experience": "Work History", "education": "Education", "skills": "Core Competencies", "languages": "Languages", "projects": "Key Projects", "certifications": "Certifications", "interests": "Interests", "profile": "Profile"},
+    {"summary": "About Me", "experience": "Employment", "education": "Academic Background", "skills": "Skills", "languages": "Languages", "projects": "Projects", "certifications": "Licenses & Certifications", "interests": "Personal", "profile": "About Me"},
+    {"summary": "Executive Summary", "experience": "Career History", "education": "Qualifications", "skills": "Technical Skills", "languages": "Language Skills", "projects": "Notable Projects", "certifications": "Certifications", "interests": "Outside Work", "profile": "Executive Summary"},
+    {"summary": "Profile", "experience": "Professional Experience", "education": "Education", "skills": "Expertise", "languages": "Languages", "projects": "Selected Projects", "certifications": "Credentials", "interests": "Hobbies", "profile": "Profile"},
+    {"summary": "Overview", "experience": "Work Experience", "education": "Studies", "skills": "Competencies", "languages": "Languages", "projects": "Projects", "certifications": "Certifications", "interests": "Leisure", "profile": "Overview"},
+    {"summary": "Introduction", "experience": "Employment History", "education": "Academic", "skills": "Skills & Tools", "languages": "Languages", "projects": "Projects", "certifications": "Certifications", "interests": "Personal Interests", "profile": "Introduction"},
+    {"summary": "Resumen profesional", "experience": "Experiencia laboral", "education": "Formación", "skills": "Competencias", "languages": "Idiomas", "projects": "Proyectos", "certifications": "Certificaciones", "interests": "Intereses", "profile": "Perfil"},
+    {"summary": "Profil", "experience": "Berufserfahrung", "education": "Ausbildung", "skills": "Kompetenzen", "languages": "Sprachen", "projects": "Projekte", "certifications": "Zertifizierungen", "interests": "Interessen", "profile": "Profil"},
+    {"summary": "Profil professionnel", "experience": "Expérience", "education": "Formation", "skills": "Compétences", "languages": "Langues", "projects": "Projets", "certifications": "Certifications", "interests": "Centres d'intérêt", "profile": "Profil"},
+]
+# "bullets" = classic bullet list; "paragraphs" = one narrative paragraph per role
+EXPERIENCE_STYLES = ["bullets", "paragraphs"]
+# Optional extra section (hobbies/interests) with variable name
+INCLUDE_INTERESTS_SECTION_WEIGHT = 0.4  # 40% of CVs get this section
+
+# Short guidance per writing style so the LLM varies tone and structure
+WRITING_STYLE_GUIDANCE = {
+    "formal": "Use formal language, complete sentences, avoid slang.",
+    "concise": "Short sentences. One line per idea. No filler.",
+    "verbose": "Full sentences and detailed descriptions. Explain context.",
+    "narrative": "Tell a story. Use flowing prose and cause-effect.",
+    "technical": "Precise terminology, metrics, tech stack names. Straight to the point.",
+    "action-oriented": "Start bullets with strong verbs (Led, Built, Designed). Focus on impact.",
+    "results-driven": "Emphasize outcomes and numbers (%, €, time saved). Quantify where possible.",
+    "minimal": "Few words. Keywords and dates. No long sentences.",
+    "detailed": "Expand on responsibilities and context. 2–3 sentences per role where useful.",
+    "punchy": "Short, bold phrases. No filler. High impact per line.",
+    "descriptive": "Rich adjectives and context. Describe the environment and scope.",
+    "academic": "Precise, measured tone. Mention publications or research if it fits the persona.",
+    "business-casual": "Professional but approachable. Slightly conversational where appropriate.",
+    "storytelling": "Frame experience as a journey. Connect roles and growth.",
+    "dry and factual": "Neutral tone. Dates, titles, facts only. No sales language.",
+    "creative": "Vivid language. Stand-out phrasing. Avoid clichés.",
+    "bullet-heavy": "Many short bullets per role. Scannable. Few full paragraphs.",
+}
 
 
 # ---------------------------
@@ -56,11 +121,55 @@ def resolve_provider(settings) -> str:
 # PROMPT
 # ---------------------------
 
-def read_prompt_template() -> str:
-    path = Path("cv_generation/prompts/cv_json_v1.txt")
+def read_prompt_template(version: str = "v2") -> str:
+    path = Path(f"cv_generation/prompts/cv_json_{version}.txt")
     if not path.exists():
         raise FileNotFoundError(f"Missing prompt template: {path}")
     return path.read_text(encoding="utf-8")
+
+
+def build_structure_instructions(cfg: dict) -> str:
+    """Build variability instructions for the LLM from profile config."""
+    parts = []
+
+    omit = cfg.get("omit_sections", [])
+    if omit:
+        parts.append(
+            f"Do NOT include these sections (leave as empty arrays [] or omit the key): {', '.join(omit)}."
+        )
+    else:
+        parts.append("Include all sections that fit the profile (experience, education, skills, etc.).")
+
+    sl = cfg.get("summary_length", "paragraph")
+    if sl == "one_line":
+        parts.append("Summary must be exactly one short sentence (max 1–2 lines).")
+    elif sl == "short":
+        parts.append("Summary: 2–3 sentences only.")
+    else:
+        parts.append("Summary: one full paragraph (3–5 sentences).")
+
+    preset = cfg.get("section_label_preset")
+    if preset:
+        labels_str = ", ".join(f"{k} -> \"{v}\"" for k, v in preset.items())
+        parts.append(
+            f"Use these exact section titles and return them in data.section_labels (use the same key): {labels_str}. Include in section_labels only the keys for sections you actually have in data."
+        )
+    else:
+        parts.append("Use standard section titles (Summary, Experience, Education, Skills, Languages). You may omit section_labels or set it to {}.")
+
+    exp_style = cfg.get("experience_style", "bullets")
+    if exp_style == "paragraphs":
+        parts.append(
+            "For each experience entry provide a single 'paragraph' (narrative text describing the role and achievements). Leave 'bullets' empty [] or omit."
+        )
+    else:
+        parts.append("For each experience use 'bullets' (list of 2–5 achievement bullets). No paragraph field needed.")
+
+    if cfg.get("include_interests_section"):
+        parts.append(
+            "Include an optional section for hobbies/personal interests. Choose a title (e.g. Hobbies, Interests, Personal, Outside Work, Leisure, Personal Interests) and put it in section_labels.interests. Put the content in data.interests as an array of 2–5 short items (e.g. ['Reading', 'Cycling']) or as one short paragraph string."
+        )
+    return " ".join(parts)
 
 
 # ---------------------------
@@ -68,6 +177,12 @@ def read_prompt_template() -> str:
 # ---------------------------
 
 def sample_profile_config() -> dict:
+    # Omit a random subset of optional sections (often 0–2, sometimes more)
+    n_omit = random.choices([0, 1, 2, 3], weights=[40, 35, 20, 5], k=1)[0]
+    omit_sections = random.sample(OPTIONAL_SECTIONS, min(n_omit, len(OPTIONAL_SECTIONS)))
+    use_alternative = random.random() < USE_ALTERNATIVE_SECTION_LABELS_WEIGHT
+    section_label_preset = random.choice(SECTION_LABEL_PRESETS) if use_alternative else None
+
     return {
         "language": random.choice(LANGUAGES),
         "seniority": random.choice(SENIORITY_LEVELS),
@@ -75,6 +190,11 @@ def sample_profile_config() -> dict:
         "writing_style": random.choice(WRITING_STYLES),
         "role": random.choice(ROLES),
         "education_country": random.choice(EDU_COUNTRIES),
+        "omit_sections": omit_sections,
+        "summary_length": random.choice(SUMMARY_LENGTHS),
+        "section_label_preset": section_label_preset,
+        "experience_style": random.choice(EXPERIENCE_STYLES),
+        "include_interests_section": random.random() < INCLUDE_INTERESTS_SECTION_WEIGHT,
     }
 
 
@@ -142,7 +262,8 @@ def main(n: int = 30) -> None:
     out_root = Path(settings.output_dir)
     out_root.mkdir(parents=True, exist_ok=True)
 
-    prompt_tpl = read_prompt_template()
+    prompt_version = "cv_json_v2"
+    prompt_tpl = read_prompt_template("v2")
     headshot_pool = load_headshot_pool()
 
     anthropic = None
@@ -168,6 +289,10 @@ def main(n: int = 30) -> None:
             else settings.openrouter_text_model
         )
 
+        structure_instructions = build_structure_instructions(cfg)
+        writing_style_guidance = WRITING_STYLE_GUIDANCE.get(
+            cfg["writing_style"], "Use clear, professional language."
+        )
         prompt = prompt_tpl.format(
             cv_id=cv_id,
             created_at=created_at,
@@ -175,6 +300,8 @@ def main(n: int = 30) -> None:
             provider=provider,
             text_model=text_model,
             image_model=settings.openrouter_image_model,
+            structure_instructions=structure_instructions,
+            writing_style_guidance=writing_style_guidance,
             **cfg,
         )
 
@@ -191,8 +318,18 @@ def main(n: int = 30) -> None:
 
         img_bytes, asset_name = load_random_headshot(headshot_pool)
 
+        cv_obj.setdefault("meta", {})["prompt_version"] = prompt_version
         cv_obj["meta"]["photo_source"] = "local_asset"
         cv_obj["meta"]["photo_asset"] = asset_name
+        # Persist the actual config we used so we know how this CV was generated
+        cv_obj["meta"]["generation_config"] = {
+            "writing_style": cfg["writing_style"],
+            "summary_length": cfg["summary_length"],
+            "experience_style": cfg["experience_style"],
+            "omit_sections": cfg["omit_sections"],
+            "include_interests_section": cfg["include_interests_section"],
+            "section_label_preset": cfg.get("section_label_preset"),
+        }
 
         (cv_dir / "cv.json").write_text(
             json.dumps(cv_obj, ensure_ascii=False, indent=2),

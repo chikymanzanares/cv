@@ -1,124 +1,104 @@
 {
   "meta": {
     "cv_id": "cv_029",
-    "created_at": "2026-02-21T10:27:57.108833+00:00",
+    "created_at": "2026-02-21T13:47:50.865665+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
       "language": "fr",
-      "seniority": "junior",
-      "persona_type": "academic researcher",
-      "writing_style": "concise",
-      "role": "Data Scientist",
+      "seniority": "senior",
+      "persona_type": "career switcher",
+      "writing_style": "descriptive",
+      "role": "Backend Engineer",
       "education_country": "India"
     },
     "photo_source": "local_asset",
-    "photo_asset": "charles.jpeg"
+    "photo_asset": "tommy.jpeg",
+    "generation_config": {
+      "writing_style": "descriptive",
+      "summary_length": "paragraph",
+      "experience_style": "paragraphs",
+      "omit_sections": [
+        "certifications",
+        "projects"
+      ],
+      "include_interests_section": true,
+      "section_label_preset": null
+    }
   },
   "data": {
-    "full_name": "Aditi Sharma",
-    "headline": "Junior Data Scientist with Academic Research Experience",
-    "email": "aditi.sharma@example.com",
-    "phone": "+91 987 654 3210",
-    "location": "New Delhi, India",
-    "summary": "Passionate data scientist with a strong academic background and experience in conducting research projects. Skilled in data analysis, machine learning, and problem-solving. Eager to apply my knowledge and contribute to innovative data-driven solutions.",
+    "full_name": "Émile Dupont",
+    "headline": "Experienced Backend Engineer with a Passion for Innovative Solutions",
+    "email": "emile.dupont@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "With over a decade of experience in the IT industry, I have honed my skills as a versatile and adaptable Backend Engineer. After a successful career in the retail sector, I made the strategic decision to transition into the dynamic world of software development. My diverse background, coupled with a keen eye for problem-solving and a deep fascination with emerging technologies, has allowed me to excel in delivering robust and scalable backend solutions that drive business success. I am passionate about collaborating with cross-functional teams, continuously learning, and leveraging cutting-edge tools and frameworks to tackle complex challenges.",
+    "section_labels": {},
     "skills": [
-      "Python",
-      "SQL",
-      "Machine Learning",
-      "Data Visualization",
-      "Pandas",
-      "Numpy",
-      "Scikit-learn"
+      "Java",
+      "Spring Boot",
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "Docker",
+      "Kubernetes",
+      "AWS"
     ],
     "languages": [
       {
-        "name": "English",
-        "level": "Fluent"
+        "name": "French",
+        "level": "Native"
       },
       {
-        "name": "Hindi",
-        "level": "Native"
+        "name": "English",
+        "level": "Fluent"
       }
     ],
     "experience": [
       {
-        "company": "XYZ Research Institute",
-        "title": "Research Assistant",
-        "start_date": "2021-06-01",
-        "end_date": "2022-08-31",
-        "location": "New Delhi, India",
-        "bullets": [
-          "Collaborated with a team of researchers to design and execute data-driven experiments.",
-          "Performed data collection, cleaning, and analysis using Python and SQL.",
-          "Contributed to the development of machine learning models to extract insights from complex datasets.",
-          "Presented research findings at internal workshops and conferences."
-        ]
+        "company": "Acme Retail Solutions",
+        "title": "Senior Backend Engineer",
+        "start_date": "2018-04-01",
+        "end_date": "2023-03-31",
+        "location": "Paris, France",
+        "paragraph": "As a Senior Backend Engineer at Acme Retail Solutions, I played a pivotal role in the development and maintenance of a robust e-commerce platform that serviced a diverse client base. I spearheaded the migration from a monolithic architecture to a microservices-based system, leveraging technologies like Spring Boot, MySQL, and Redis to ensure high availability, scalability, and performance. Collaborating closely with the product and DevOps teams, I implemented efficient data processing pipelines and automated deployment workflows, significantly reducing time-to-market for new features. My expertise in designing and implementing secure and scalable APIs was instrumental in enhancing the customer experience and driving business growth."
+      },
+      {
+        "company": "Retail Tech Innovators",
+        "title": "Backend Developer",
+        "start_date": "2015-06-01",
+        "end_date": "2018-03-31",
+        "location": "Bangalore, India",
+        "paragraph": "As a Backend Developer at Retail Tech Innovators, I was responsible for building and maintaining a suite of microservices that powered a cutting-edge retail management platform. I worked closely with the product team to understand business requirements and translate them into robust, scalable, and maintainable backend solutions. This involved designing and implementing efficient data storage and retrieval mechanisms using MongoDB and Redis, as well as developing secure and performant APIs using Spring Boot. I also contributed to the development of a real-time inventory management system, leveraging event-driven architecture and message queuing technologies to ensure seamless data synchronization across multiple retail outlets."
       }
     ],
     "education": [
       {
-        "institution": "Indian Institute of Technology, Delhi",
-        "degree": "Master of Science",
-        "field": "Computer Science",
-        "start_year": "2019",
-        "end_year": "2021"
-      },
-      {
-        "institution": "University of Delhi",
+        "institution": "Indian Institute of Technology, Madras",
         "degree": "Bachelor of Technology",
         "field": "Computer Science and Engineering",
-        "start_year": "2015",
-        "end_year": "2019"
+        "start_year": "2010",
+        "end_year": "2014"
       }
     ],
-    "projects": [
-      {
-        "name": "Predictive Maintenance for Manufacturing",
-        "description": "Developed a machine learning model to predict equipment failures in a manufacturing plant, resulting in a 20% reduction in unplanned downtime.",
-        "tech": [
-          "Python",
-          "Scikit-learn",
-          "Pandas",
-          "Matplotlib"
-        ]
-      },
-      {
-        "name": "Sentiment Analysis of Social Media Data",
-        "description": "Designed and implemented a natural language processing pipeline to analyze customer sentiment from social media posts, providing valuable insights for the marketing team.",
-        "tech": [
-          "Python",
-          "NLTK",
-          "Pandas",
-          "Seaborn"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "IBM Data Science Professional Certificate",
-        "issuer": "IBM",
-        "year": "2022"
-      },
-      {
-        "name": "Python for Data Science and Machine Learning Bootcamp",
-        "issuer": "Udemy",
-        "year": "2021"
-      }
+    "interests": [
+      "Reading",
+      "Hiking",
+      "Cooking"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/aditi-sharma-123456/"
+        "url": "https://www.linkedin.com/in/emile-dupont"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.aditisharma.com"
+        "url": "https://www.example.com/emile-dupont"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Aditi is a young woman with dark hair, wearing a blue blazer and smiling at the camera."
+    "photo_prompt": "Professional LinkedIn-style headshot. Émile Dupont, a senior backend engineer with a friendly and approachable demeanor."
   }
 }

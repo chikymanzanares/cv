@@ -75,19 +75,15 @@ Without a valid `.env` and the corresponding API key, the project will not work.
 
 ## Start the project
 
-1. **Generate CV data** (required before first run):
+1. **Generate CV data and PDFs** (required before first run). One command does both:
 
    ```
-   make -C cv_generation gen-data
+   make -C cv_generation gen-all
    ```
 
-2. **Generate PDFs** from the CV data:
+   Or step by step: `make -C cv_generation gen-data` then `make -C cv_generation gen-pdf`.
 
-   ```
-   make -C cv_generation gen-pdf
-   ```
-
-3. **Run everything** (API + Postgres + migrations):
+2. **Run everything** (API + Postgres + migrations):
 
    ```
    make up

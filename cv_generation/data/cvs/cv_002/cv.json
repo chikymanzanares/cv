@@ -1,111 +1,164 @@
 {
   "meta": {
     "cv_id": "cv_002",
-    "created_at": "2026-02-21T10:40:12.902090+00:00",
+    "created_at": "2026-02-21T13:43:45.707476+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
       "language": "de",
       "seniority": "senior",
       "persona_type": "startup engineer",
-      "writing_style": "concise",
+      "writing_style": "punchy",
       "role": "Product Manager",
-      "education_country": "India"
+      "education_country": "Germany"
     },
     "photo_source": "local_asset",
-    "photo_asset": "ginger.jpeg"
+    "photo_asset": "ben.jpeg",
+    "generation_config": {
+      "writing_style": "punchy",
+      "summary_length": "short",
+      "experience_style": "bullets",
+      "omit_sections": [],
+      "include_interests_section": false,
+      "section_label_preset": {
+        "summary": "Profil professionnel",
+        "experience": "Expérience",
+        "education": "Formation",
+        "skills": "Compétences",
+        "languages": "Langues",
+        "projects": "Projets",
+        "certifications": "Certifications",
+        "interests": "Centres d'intérêt",
+        "profile": "Profil"
+      }
+    }
   },
   "data": {
-    "full_name": "Arjun Sharma",
-    "headline": "Senior Product Manager | Startup Veteran",
-    "email": "arjun.sharma@example.com",
+    "full_name": "Lukas Bauer",
+    "headline": "Erfahrener Produkt-Manager für Start-ups",
+    "email": "lukas.bauer@example.com",
     "phone": "+49 123 456 7890",
-    "location": "Berlin, Germany",
-    "summary": "Seasoned Product Manager with a proven track record of driving innovation and delivering successful products in the startup ecosystem. Adept at navigating complex challenges, building high-performing teams, and aligning stakeholders to achieve business objectives.",
+    "location": "Berlin, Deutschland",
+    "summary": "Erfahrener Produkt-Manager mit Erfolgsbilanz bei der Entwicklung und Einführung innovativer digitaler Produkte. Spezialisiert auf Lean-Methoden und agiles Projektmanagement.",
+    "section_labels": {
+      "summary": "Profil professionnel",
+      "experience": "Expérience",
+      "education": "Formation",
+      "skills": "Compétences",
+      "languages": "Langues",
+      "projects": "Projets",
+      "certifications": "Certifications",
+      "interests": "Centres d'intérêt"
+    },
     "skills": [
-      "Product Management",
-      "Agile Methodologies",
-      "User Research",
-      "Data Analysis",
-      "Team Leadership",
-      "Stakeholder Management"
+      "Produkt-Management",
+      "Agiles Projektmanagement",
+      "Lean-Methoden",
+      "Produktanalyse",
+      "User Experience Design"
     ],
     "languages": [
       {
-        "name": "German",
-        "level": "Fluent"
+        "name": "Deutsch",
+        "level": "Muttersprache"
       },
       {
-        "name": "English",
-        "level": "Fluent"
+        "name": "Englisch",
+        "level": "Fließend"
       }
     ],
     "experience": [
       {
-        "company": "Acme Innovations",
-        "title": "Senior Product Manager",
-        "start_date": "2019-01-01",
-        "end_date": "2022-12-31",
-        "location": "Berlin, Germany",
+        "company": "Acme Start-up GmbH",
+        "title": "Produkt-Manager",
+        "start_date": "2019-06-01",
+        "end_date": "2022-09-30",
+        "location": "Berlin, Deutschland",
         "bullets": [
-          "Led the development and launch of a groundbreaking SaaS platform, driving 200% user growth and a 35% increase in revenue within the first year.",
-          "Collaborated cross-functionally with engineering, design, and marketing teams to define product roadmaps and deliver innovative features.",
-          "Utilized data-driven insights to make informed decisions, optimize the user experience, and enhance product-market fit."
+          "Entwickelte und implementierte eine Produktstrategie, die den Umsatz um 35% steigerte",
+          "Leitete das agile Produktentwicklungsteam und optimierte den Entwicklungsprozess",
+          "Analysierte Kundenfeedback und -daten, um Produktverbesserungen umzusetzen"
         ]
       },
       {
-        "company": "Startup Accelerator GmbH",
-        "title": "Product Manager",
-        "start_date": "2016-06-01",
-        "end_date": "2018-12-31",
-        "location": "Munich, Germany",
+        "company": "Digitale Innovationen AG",
+        "title": "Produkt-Manager (Praktikum)",
+        "start_date": "2018-03-01",
+        "end_date": "2019-05-31",
+        "location": "München, Deutschland",
         "bullets": [
-          "Guided early-stage startups through the product development lifecycle, from ideation to launch, resulting in a 50% increase in successful product launches.",
-          "Mentored founders on best practices in product management, user research, and data-driven decision-making.",
-          "Managed the product portfolio and prioritized initiatives to align with the accelerator's strategic objectives."
+          "Unterstützte bei der Konzeption und Entwicklung neuer digitaler Produkte",
+          "Führte Marktanalysen und Wettbewerbsbeobachtungen durch",
+          "Erstellte Produktspezifikationen und User Stories"
         ]
       }
     ],
     "education": [
       {
-        "institution": "Indian Institute of Technology (IIT) Bombay",
-        "degree": "Bachelor of Technology (B.Tech.)",
-        "field": "Computer Science",
-        "start_year": "2009",
-        "end_year": "2013"
+        "institution": "Technische Universität München",
+        "degree": "Master of Science",
+        "field": "Wirtschaftsinformatik",
+        "start_year": "2016",
+        "end_year": "2018"
+      },
+      {
+        "institution": "Universität Mannheim",
+        "degree": "Bachelor of Science",
+        "field": "Betriebswirtschaftslehre",
+        "start_year": "2013",
+        "end_year": "2016"
       }
     ],
     "projects": [
       {
-        "name": "Startup Accelerator Product Management Bootcamp",
-        "description": "Developed and delivered a comprehensive product management training program for early-stage startup founders.",
+        "name": "Produktlaunch Acme App",
+        "description": "Entwicklung und Einführung einer neuen mobilen Anwendung für Kleinunternehmen",
         "tech": [
-          "Product Strategy",
-          "User Research",
-          "Agile Methodologies"
+          "Produkt-Management",
+          "Agiles Projektmanagement",
+          "User Experience Design"
+        ]
+      },
+      {
+        "name": "Produktoptimierung Digitale Innovationen",
+        "description": "Analyse und Verbesserung eines bestehenden Produktportfolios",
+        "tech": [
+          "Marktanalyse",
+          "Produktanalyse",
+          "Lean-Methoden"
         ]
       }
     ],
     "certifications": [
       {
-        "name": "Certified Product Manager",
-        "issuer": "Product Management Institute",
-        "year": "2018"
+        "name": "Product Management Professional",
+        "issuer": "Produktmanagement-Institut",
+        "year": "2020"
+      },
+      {
+        "name": "Agile Scrum Master",
+        "issuer": "Scrum Alliance",
+        "year": "2019"
       }
+    ],
+    "interests": [
+      "Startup-Ökosystem",
+      "Produktinnovation",
+      "Digitale Transformation"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/arjunsharma"
+        "url": "https://www.linkedin.com/in/lukas-bauer"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.arjunsharma.com"
+        "url": "https://www.example.com/lukas-bauer"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a middle-aged man with short, dark hair and a friendly, confident expression. He is wearing a blue collared shirt and a neutral background."
+    "photo_prompt": "Professional LinkedIn-style headshot. Confident, smiling portrait of Lukas Bauer in a business casual outfit against a neutral background."
   }
 }

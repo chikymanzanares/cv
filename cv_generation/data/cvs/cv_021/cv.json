@@ -1,123 +1,140 @@
 {
   "meta": {
     "cv_id": "cv_021",
-    "created_at": "2026-02-21T10:26:47.401799+00:00",
+    "created_at": "2026-02-21T13:46:40.845890+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "es",
-      "seniority": "mid",
+      "language": "fr",
+      "seniority": "senior",
       "persona_type": "career switcher",
-      "writing_style": "concise",
-      "role": "UX Designer",
-      "education_country": "UK"
+      "writing_style": "descriptive",
+      "role": "Data Scientist",
+      "education_country": "Germany"
     },
     "photo_source": "local_asset",
-    "photo_asset": "wu.jpeg"
+    "photo_asset": "claudia.jpeg",
+    "generation_config": {
+      "writing_style": "descriptive",
+      "summary_length": "short",
+      "experience_style": "paragraphs",
+      "omit_sections": [
+        "certifications",
+        "languages"
+      ],
+      "include_interests_section": false,
+      "section_label_preset": {
+        "summary": "About Me",
+        "experience": "Employment",
+        "education": "Academic Background",
+        "skills": "Skills",
+        "languages": "Languages",
+        "projects": "Projects",
+        "certifications": "Licenses & Certifications",
+        "interests": "Personal",
+        "profile": "About Me"
+      }
+    }
   },
   "data": {
-    "full_name": "Alejandro Gutiérrez",
-    "headline": "UX Designer with a Passion for Crafting Intuitive Experiences",
-    "email": "alejandro.gutierrez@example.com",
-    "phone": "+34 612 345 678",
-    "location": "Madrid, Spain",
-    "summary": "Experienced UX Designer with a background in customer service and a keen eye for detail. Passionate about creating user-centric designs that enhance the overall experience. Adept at conducting user research, prototyping, and iterating on designs to deliver exceptional results.",
+    "full_name": "Dominique Dupont",
+    "headline": "Senior Data Scientist with Expertise in Transforming Data into Actionable Insights",
+    "email": "dominique.dupont@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "Seasoned data scientist with a diverse background spanning various industries. Adept at leveraging advanced analytical techniques and machine learning models to uncover valuable insights that drive business decision-making. Passionate about translating complex data into clear, actionable recommendations that have a tangible impact on organizational goals.",
+    "section_labels": {
+      "summary": "About Me",
+      "experience": "Employment",
+      "education": "Academic Background",
+      "skills": "Skills",
+      "projects": "Projects"
+    },
     "skills": [
-      "User Research",
-      "Wireframing",
-      "Prototyping",
-      "Interaction Design",
-      "User Interface Design",
-      "Usability Testing"
-    ],
-    "languages": [
-      {
-        "name": "Spanish",
-        "level": "Native"
-      },
-      {
-        "name": "English",
-        "level": "Fluent"
-      }
+      "Data Mining and Exploration",
+      "Statistical Modeling and Inference",
+      "Machine Learning Algorithms",
+      "Natural Language Processing",
+      "Data Visualization and Reporting",
+      "SQL and NoSQL Databases",
+      "Python and R Programming"
     ],
     "experience": [
       {
-        "company": "Acme Software",
-        "title": "UX Designer",
-        "start_date": "2020-06-01",
-        "end_date": "2023-03-15",
-        "location": "Madrid, Spain",
-        "bullets": [
-          "Conducted user research and interviews to understand customer pain points and needs",
-          "Designed wireframes, mockups, and prototypes to iterate on design solutions",
-          "Collaborated with cross-functional teams to ensure alignment and successful implementation of designs",
-          "Performed usability testing and incorporated user feedback to refine the final product"
-        ]
+        "company": "Acme Analytics",
+        "title": "Senior Data Scientist",
+        "start_date": "2019-06-01",
+        "end_date": "2023-03-31",
+        "location": "Paris, France",
+        "paragraph": "Played a pivotal role in transforming Acme Analytics' data-driven decision-making capabilities. Spearheaded the implementation of advanced machine learning models to automate and optimize critical business processes, resulting in significant cost savings and improved operational efficiency. Collaborated cross-functionally with stakeholders from various departments to understand their unique challenges and develop tailored solutions that addressed their needs. Mentored and trained junior data scientists, sharing best practices and fostering a culture of continuous learning and innovation."
       },
       {
-        "company": "Retail Innovations",
-        "title": "Customer Service Representative",
-        "start_date": "2018-09-01",
-        "end_date": "2020-05-31",
-        "location": "Madrid, Spain",
-        "bullets": [
-          "Provided excellent customer service, addressing inquiries and resolving issues in a timely manner",
-          "Gathered customer feedback and insights to help inform product and service improvements",
-          "Demonstrated strong problem-solving and communication skills"
-        ]
+        "company": "Datavision Consulting",
+        "title": "Data Scientist",
+        "start_date": "2016-09-01",
+        "end_date": "2019-05-31",
+        "location": "Paris, France",
+        "paragraph": "Joined Datavision Consulting as a data scientist, working on a diverse range of client engagements across industries. Leveraged my expertise in data mining, statistical analysis, and machine learning to uncover hidden patterns and insights that informed strategic decision-making. Collaborated closely with cross-functional teams to design and implement data-driven solutions, ensuring seamless integration with existing systems and processes. Delivered impactful presentations to C-suite executives, effectively communicating complex findings in a clear and concise manner."
       }
     ],
     "education": [
       {
-        "institution": "University of Manchester",
-        "degree": "Bachelor of Arts",
-        "field": "Interaction Design",
-        "start_year": "2014",
-        "end_year": "2017"
+        "institution": "Technical University of Munich",
+        "degree": "Master of Science",
+        "field": "Computer Science",
+        "start_year": "2011",
+        "end_year": "2013"
+      },
+      {
+        "institution": "University of Heidelberg",
+        "degree": "Bachelor of Science",
+        "field": "Mathematics",
+        "start_year": "2007",
+        "end_year": "2011"
       }
     ],
     "projects": [
       {
-        "name": "E-commerce Website Redesign",
-        "description": "Redesigned the user interface and information architecture of a leading e-commerce platform to improve the overall shopping experience.",
+        "name": "Predictive Maintenance Model",
+        "description": "Developed a machine learning-based predictive maintenance model for a manufacturing client, leveraging sensor data and historical maintenance records to forecast equipment failures and optimize maintenance schedules. Resulted in a 25% reduction in unplanned downtime and a 15% decrease in maintenance costs.",
         "tech": [
-          "Figma",
-          "Framer",
-          "HTML/CSS",
-          "JavaScript"
+          "Python",
+          "TensorFlow",
+          "Scikit-learn",
+          "Time Series Analysis",
+          "Predictive Modeling"
         ]
       },
       {
-        "name": "Mobile App for Fitness Tracking",
-        "description": "Designed the user experience and interface for a mobile app that helps users track their fitness goals and progress.",
+        "name": "Personalized Product Recommendations",
+        "description": "Designed and implemented a recommendation engine for an e-commerce client, using collaborative filtering and natural language processing techniques to provide personalized product suggestions based on customer browsing and purchase history. Increased average order value by 18% and reduced customer churn by 12%.",
         "tech": [
-          "Sketch",
-          "Principle",
-          "Swift",
-          "React Native"
+          "Python",
+          "pandas",
+          "NumPy",
+          "Recommender Systems",
+          "Natural Language Processing"
         ]
       }
     ],
-    "certifications": [
-      {
-        "name": "Certified Usability Analyst",
-        "issuer": "Human Factors International",
-        "year": "2021"
-      }
+    "interests": [
+      "Hiking and Outdoor Adventures",
+      "Gourmet Cooking and Wine Tasting",
+      "Exploring Art Museums and Galleries"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alejandro-gutierrez"
+        "url": "https://www.linkedin.com/in/dominique-dupont"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.alejandro-gutierrez.com"
+        "url": "https://www.dominiquedupont.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate has short dark hair, dark eyes, and a warm smile. They are wearing a collared shirt and looking directly at the camera."
+    "photo_prompt": "Professional LinkedIn-style headshot. Dominique Dupont, a senior data scientist, is shown in a well-lit, neutral office setting, wearing a smart, business-casual outfit and maintaining a friendly, confident expression."
   }
 }

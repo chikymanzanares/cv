@@ -1,41 +1,69 @@
 {
   "meta": {
     "cv_id": "cv_025",
-    "created_at": "2026-02-21T10:27:24.401012+00:00",
+    "created_at": "2026-02-21T13:47:17.266146+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "de",
+      "language": "fr",
       "seniority": "junior",
-      "persona_type": "self-taught developer",
-      "writing_style": "concise",
-      "role": "Product Manager",
+      "persona_type": "career switcher",
+      "writing_style": "business-casual",
+      "role": "Data Scientist",
       "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "ben.jpeg"
+    "photo_asset": "wu.jpeg",
+    "generation_config": {
+      "writing_style": "business-casual",
+      "summary_length": "paragraph",
+      "experience_style": "bullets",
+      "omit_sections": [
+        "certifications"
+      ],
+      "include_interests_section": false,
+      "section_label_preset": {
+        "summary": "Overview",
+        "experience": "Work Experience",
+        "education": "Studies",
+        "skills": "Competencies",
+        "languages": "Languages",
+        "projects": "Projects",
+        "certifications": "Certifications",
+        "interests": "Leisure",
+        "profile": "Overview"
+      }
+    }
   },
   "data": {
-    "full_name": "Lena Müller",
-    "headline": "Product Manager | Self-Taught Developer",
-    "email": "lena.mueller@example.com",
-    "phone": "+49 123 456 789",
-    "location": "Berlin, Germany",
-    "summary": "Passionate self-taught developer with a keen interest in product management. Experienced in creating and launching successful digital products. Skilled in agile methodologies, user research, and cross-functional collaboration.",
+    "full_name": "Amélie Dupont",
+    "headline": "Junior Data Scientist",
+    "email": "amelie.dupont@email.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "Passionate about using data to drive meaningful insights, I am a recent graduate with a strong background in mathematics and a keen interest in the field of data science. Although new to the industry, I am eager to apply my analytical skills and problem-solving abilities to help organizations make informed decisions. With a solid foundation in statistical analysis, machine learning, and data visualization, I am confident in my ability to contribute to dynamic and innovative teams.",
+    "section_labels": {
+      "summary": "Overview",
+      "experience": "Work Experience",
+      "education": "Studies",
+      "skills": "Competencies",
+      "languages": "Languages",
+      "projects": "Projects",
+      "interests": "Leisure"
+    },
     "skills": [
-      "Product Management",
-      "Agile Methodologies",
-      "User Research",
       "Python",
       "SQL",
-      "Figma"
+      "Data Analysis",
+      "Machine Learning",
+      "Tableau"
     ],
     "languages": [
       {
-        "name": "German",
+        "name": "French",
         "level": "Native"
       },
       {
@@ -45,81 +73,54 @@
     ],
     "experience": [
       {
-        "company": "Acme Software Solutions",
-        "title": "Product Manager",
-        "start_date": "2022-06-01",
-        "end_date": "2023-12-31",
-        "location": "Berlin, Germany",
+        "company": "Acme Data Solutions",
+        "title": "Data Analyst Intern",
+        "start_date": "2021-06-01",
+        "end_date": "2021-08-31",
+        "location": "Paris, France",
         "bullets": [
-          "Collaborated with cross-functional teams to develop and launch a new SaaS product, resulting in a 25% increase in customer acquisition",
-          "Conducted user research and market analysis to identify pain points and inform product roadmap",
-          "Implemented agile methodologies to streamline product development and delivery"
-        ]
-      },
-      {
-        "company": "Startup Accelerator GmbH",
-        "title": "Product Management Intern",
-        "start_date": "2021-09-01",
-        "end_date": "2022-05-31",
-        "location": "Munich, Germany",
-        "bullets": [
-          "Assisted in the development and launch of a new mobile app, contributing to a 20% increase in user engagement",
-          "Participated in user testing sessions and analyzed feedback to improve the product's user experience",
-          "Supported the team in managing the product backlog and prioritizing feature development"
+          "Assisted in the development and implementation of data-driven solutions to improve business operations",
+          "Performed data extraction, cleaning, and analysis to identify key trends and insights",
+          "Collaborated with cross-functional teams to present findings and recommendations"
         ]
       }
     ],
     "education": [
       {
-        "institution": "University of Cambridge",
-        "degree": "Bachelor of Science",
-        "field": "Computer Science",
-        "start_year": "2017",
-        "end_year": "2020"
+        "institution": "University of Oxford",
+        "degree": "BSc in Mathematics",
+        "field": "Mathematics",
+        "start_year": "2018",
+        "end_year": "2021"
       }
     ],
     "projects": [
       {
-        "name": "Personal Website",
-        "description": "Designed and developed a personal website using React and Gatsby to showcase my projects and skills.",
+        "name": "Customer Churn Prediction Model",
+        "description": "Developed a machine learning model to predict customer churn for a telecommunications company, using Python and scikit-learn.",
         "tech": [
-          "React",
-          "Gatsby",
-          "CSS"
-        ]
-      },
-      {
-        "name": "Expense Tracker App",
-        "description": "Built a mobile-friendly expense tracking application using React Native and Firebase, allowing users to manage their personal finances.",
-        "tech": [
-          "React Native",
-          "Firebase",
-          "JavaScript"
+          "Python",
+          "Scikit-learn",
+          "Pandas",
+          "Matplotlib"
         ]
       }
     ],
-    "certifications": [
-      {
-        "name": "Product Management Certification",
-        "issuer": "Udemy",
-        "year": "2021"
-      },
-      {
-        "name": "Agile Fundamentals",
-        "issuer": "Scrum.org",
-        "year": "2022"
-      }
+    "interests": [
+      "Hiking",
+      "Cooking",
+      "Volunteering"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/lena-mueller"
+        "url": "https://www.linkedin.com/in/amelie-dupont"
       },
       {
         "label": "Portfolio",
-        "url": "https://lena-mueller.com"
+        "url": "https://ameliedupont.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate has a friendly, confident expression and is dressed in business casual attire."
+    "photo_prompt": "Professional LinkedIn-style headshot. Smiling, well-lit portrait against a plain background."
   }
 }

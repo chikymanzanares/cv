@@ -1,39 +1,64 @@
 {
   "meta": {
     "cv_id": "cv_003",
-    "created_at": "2026-02-21T10:24:17.252411+00:00",
+    "created_at": "2026-02-21T13:43:55.764140+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
       "language": "de",
-      "seniority": "mid",
-      "persona_type": "self-taught developer",
-      "writing_style": "verbose",
+      "seniority": "junior",
+      "persona_type": "startup engineer",
+      "writing_style": "action-oriented",
       "role": "UX Designer",
       "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "tom.jpeg"
+    "photo_asset": "sarah.jpeg",
+    "generation_config": {
+      "writing_style": "action-oriented",
+      "summary_length": "one_line",
+      "experience_style": "bullets",
+      "omit_sections": [],
+      "include_interests_section": false,
+      "section_label_preset": {
+        "summary": "Overview",
+        "experience": "Work Experience",
+        "education": "Studies",
+        "skills": "Competencies",
+        "languages": "Languages",
+        "projects": "Projects",
+        "certifications": "Certifications",
+        "interests": "Leisure",
+        "profile": "Overview"
+      }
+    }
   },
   "data": {
     "full_name": "Lena Müller",
-    "headline": "Passionate UX Designer with a Flair for Intuitive Interfaces",
+    "headline": "Junior UX Designer",
     "email": "lena.mueller@example.com",
-    "phone": "+49 123 456 7890",
+    "phone": "+49 123 456 789",
     "location": "Berlin, Germany",
-    "summary": "As a self-taught UX Designer, I have a deep fascination with creating user-centric digital experiences that not only delight but also empower users. With a strong background in visual design and a keen eye for detail, I excel at translating complex requirements into elegant and intuitive interfaces. My passion for continuous learning and my ability to collaborate effectively with cross-functional teams have been instrumental in my professional journey. I am excited to leverage my skills and experience to contribute to your organization's mission and help drive innovation in the digital landscape.",
+    "summary": "Passionate UX designer with a track record of delivering impactful digital experiences.",
+    "section_labels": {
+      "summary": "Overview",
+      "experience": "Work Experience",
+      "education": "Studies",
+      "skills": "Competencies",
+      "languages": "Languages",
+      "projects": "Projects",
+      "certifications": "Certifications",
+      "interests": "Leisure"
+    },
     "skills": [
-      "User Interface Design",
-      "Interaction Design",
-      "Prototyping",
-      "User Research",
-      "Information Architecture",
-      "Design Thinking",
-      "Wireframing",
-      "Usability Testing"
+      "User-centered design",
+      "Wireframing and prototyping",
+      "Interaction design",
+      "Usability testing",
+      "Agile methodologies"
     ],
     "languages": [
       {
@@ -47,74 +72,61 @@
     ],
     "experience": [
       {
-        "company": "Acme Digital",
-        "title": "Senior UX Designer",
-        "start_date": "2019-04-01",
-        "end_date": "2022-09-30",
+        "company": "Startup X",
+        "title": "UX Designer",
+        "start_date": "2021-06-01",
+        "end_date": "2023-03-31",
         "location": "Berlin, Germany",
         "bullets": [
-          "Collaborated with cross-functional teams to design intuitive and user-friendly interfaces for a range of web and mobile applications",
-          "Conducted comprehensive user research, including interviews, usability testing, and data analysis, to inform design decisions",
-          "Developed high-fidelity prototypes and design systems to ensure consistent branding and user experience",
-          "Presented design concepts and solutions to stakeholders, securing buy-in and driving product development"
+          "Led the design of a mobile app from concept to launch, resulting in a 25% increase in user engagement.",
+          "Conducted user research and usability testing to identify and address pain points, improving the overall user experience.",
+          "Collaborated with cross-functional teams to deliver design solutions that aligned with business objectives."
         ]
       },
       {
-        "company": "Digital Innovations GmbH",
-        "title": "UX Designer",
-        "start_date": "2016-09-01",
-        "end_date": "2019-03-31",
-        "location": "Munich, Germany",
+        "company": "Agency Y",
+        "title": "UX Design Intern",
+        "start_date": "2020-06-01",
+        "end_date": "2021-03-31",
+        "location": "London, UK",
         "bullets": [
-          "Designed and iterated on user interfaces for a variety of web-based applications, ensuring seamless user experiences",
-          "Collaborated with product managers and developers to translate business requirements into user-centric design solutions",
-          "Conducted user testing sessions to gather feedback and continuously improve the product's usability",
-          "Contributed to the development of the company's design system, ensuring brand consistency across all digital touchpoints"
+          "Assisted in the design and development of responsive web interfaces for various client projects.",
+          "Participated in user research activities, including interviews and contextual inquiries.",
+          "Gained experience in using design tools such as Figma and prototyping software."
         ]
       }
     ],
     "education": [
       {
-        "institution": "University of London",
-        "degree": "Bachelor of Arts",
-        "field": "Graphic Design",
-        "start_year": "2012",
-        "end_year": "2015"
+        "institution": "University of Sussex",
+        "degree": "Bachelor of Science",
+        "field": "User Experience Design",
+        "start_year": "2016",
+        "end_year": "2020"
       }
     ],
     "projects": [
       {
-        "name": "Responsive E-commerce Website",
-        "description": "Designed and prototyped a responsive e-commerce website with a focus on intuitive navigation and a seamless checkout experience.",
+        "name": "Personal Portfolio Website",
+        "description": "Designed and developed a personal portfolio website to showcase my UX work and projects.",
         "tech": [
-          "Figma",
-          "Adobe XD",
-          "HTML/CSS",
+          "HTML",
+          "CSS",
           "JavaScript"
-        ]
-      },
-      {
-        "name": "Mobile Banking App",
-        "description": "Conceptualized and designed a user-friendly mobile banking app that streamlined common banking tasks and provided personalized financial insights.",
-        "tech": [
-          "Sketch",
-          "InVision",
-          "Swift",
-          "Android Studio"
         ]
       }
     ],
     "certifications": [
       {
-        "name": "Certified User Experience Analyst",
-        "issuer": "International User Experience Certification Institute",
-        "year": "2020"
-      },
-      {
-        "name": "Google UX Design Professional Certificate",
-        "issuer": "Coursera",
-        "year": "2018"
+        "name": "Certified User Experience Designer",
+        "issuer": "Interaction Design Foundation",
+        "year": "2021"
       }
+    ],
+    "interests": [
+      "Exploring new design trends",
+      "Volunteering at local hackathons",
+      "Hiking and outdoor activities"
     ],
     "links": [
       {
@@ -126,6 +138,6 @@
         "url": "https://www.lenamueller.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Lena Müller, a mid-career UX Designer with a self-taught background, looking confident and approachable in a well-lit, neutral setting."
+    "photo_prompt": "Professional LinkedIn-style headshot. Lena Müller, a young woman with short brown hair, wearing a blue blouse, smiling at the camera."
   }
 }

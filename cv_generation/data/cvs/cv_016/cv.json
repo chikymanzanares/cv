@@ -1,94 +1,130 @@
 {
   "meta": {
     "cv_id": "cv_016",
-    "created_at": "2026-02-21T10:26:04.054102+00:00",
+    "created_at": "2026-02-21T13:45:52.216491+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
       "language": "es",
-      "seniority": "junior",
-      "persona_type": "academic researcher",
-      "writing_style": "concise",
+      "seniority": "senior",
+      "persona_type": "startup engineer",
+      "writing_style": "detailed",
       "role": "Product Manager",
       "education_country": "India"
     },
     "photo_source": "local_asset",
-    "photo_asset": "peter.jpeg"
+    "photo_asset": "sony.jpeg",
+    "generation_config": {
+      "writing_style": "detailed",
+      "summary_length": "short",
+      "experience_style": "bullets",
+      "omit_sections": [],
+      "include_interests_section": false,
+      "section_label_preset": {
+        "summary": "Profil",
+        "experience": "Berufserfahrung",
+        "education": "Ausbildung",
+        "skills": "Kompetenzen",
+        "languages": "Sprachen",
+        "projects": "Projekte",
+        "certifications": "Zertifizierungen",
+        "interests": "Interessen",
+        "profile": "Profil"
+      }
+    }
   },
   "data": {
-    "full_name": "Ananya Sharma",
-    "headline": "Aspiring Product Manager with Academic Research Experience",
-    "email": "ananya.sharma@example.com",
-    "phone": "+91 987-654-3210",
-    "location": "New Delhi, India",
-    "summary": "Passionate academic researcher with a strong background in data analysis and problem-solving. Seeking to transition into a Product Manager role to leverage my analytical skills and drive innovation. Committed to delivering user-centric solutions that create lasting impact.",
+    "full_name": "Javier Hernández",
+    "headline": "Erfahrener Produkt-Manager für Startups",
+    "email": "javier.hernandez@example.com",
+    "phone": "+34 123 456 789",
+    "location": "Madrid, Spanien",
+    "summary": "Erfahrener Produkt-Manager mit einer nachgewiesenen Erfolgsbilanz bei der Entwicklung und Einführung innovativer digitaler Produkte für schnell wachsende Startups. Verfüge über fundierte Kenntnisse in den Bereichen Produktstrategie, Produktdesign und Produktentwicklung. Bringe außerdem starke Fähigkeiten im Projektmanagement und in der Zusammenarbeit mit Entwicklungsteams mit.",
+    "section_labels": {
+      "summary": "Profil",
+      "experience": "Berufserfahrung",
+      "education": "Ausbildung",
+      "skills": "Kompetenzen",
+      "languages": "Sprachen",
+      "projects": "Projekte",
+      "certifications": "Zertifizierungen",
+      "interests": "Interessen"
+    },
     "skills": [
-      "Product Management",
-      "Data Analysis",
-      "User Research",
-      "Agile Methodologies",
-      "Problem Solving"
+      "Produktstrategie",
+      "Produktdesign",
+      "Agile Methoden",
+      "Projektmanagement",
+      "Datenanalyse"
     ],
     "languages": [
       {
-        "name": "English",
-        "level": "Fluent"
+        "name": "Spanisch",
+        "level": "Muttersprache"
       },
       {
-        "name": "Hindi",
-        "level": "Native"
+        "name": "Englisch",
+        "level": "Fließend"
+      },
+      {
+        "name": "Deutsch",
+        "level": "Verhandlungssicher"
       }
     ],
     "experience": [
       {
-        "company": "University of Delhi",
-        "title": "Research Assistant",
-        "start_date": "2021-06-01",
-        "end_date": "2023-05-31",
-        "location": "New Delhi, India",
+        "company": "Startup X",
+        "title": "Produkt-Manager",
+        "start_date": "2021-01-01",
+        "end_date": "2023-06-30",
+        "location": "Madrid, Spanien",
         "bullets": [
-          "Conducted extensive literature reviews and data analysis to support research projects",
-          "Collaborated with cross-functional teams to design and implement research methodologies",
-          "Presented research findings at academic conferences, contributing to the field's knowledge base"
+          "Entwickelte die Produktstrategie und -roadmap für die Kernprodukte des Unternehmens, die zu einer Umsatzsteigerung von 35% führten.",
+          "Leitete das interdisziplinäre Produktteam bei der Umsetzung neuer Funktionen und Verbesserungen, die die Kundenzufriedenheit um 25% steigerten.",
+          "Analysierte Kundenfeedback und -daten, um Produktverbesserungen zu identifizieren und umzusetzen, die die Kundenbindung um 20% erhöhten."
+        ]
+      },
+      {
+        "company": "Startup Y",
+        "title": "Produkt-Manager",
+        "start_date": "2018-06-01",
+        "end_date": "2020-12-31",
+        "location": "Barcelona, Spanien",
+        "bullets": [
+          "Entwickelte die Produktstrategie und -roadmap für die Mobile-App des Unternehmens, die zu einer Steigerung der monatlichen Nutzerzahlen um 45% führte.",
+          "Leitete das Produktteam bei der Konzeption und Umsetzung neuer Funktionen, die die Bewertungen in den App-Stores um 2,5 Sterne verbesserten.",
+          "Arbeitete eng mit dem Vertriebsteam zusammen, um Produktanforderungen und -verbesserungen zu identifizieren, die den Umsatz um 28% steigerten."
         ]
       }
     ],
     "education": [
       {
-        "institution": "Indian Institute of Technology, Delhi",
-        "degree": "Master of Science",
-        "field": "Computer Science",
-        "start_year": "2019",
-        "end_year": "2021"
+        "institution": "Indian Institute of Technology Madras",
+        "degree": "Master of Technology (M.Tech.)",
+        "field": "Informatik",
+        "start_year": "2012",
+        "end_year": "2014"
       },
       {
-        "institution": "Birla Institute of Technology and Science, Pilani",
-        "degree": "Bachelor of Engineering",
-        "field": "Electronics and Communication",
-        "start_year": "2015",
-        "end_year": "2019"
+        "institution": "Birla Institute of Technology and Science",
+        "degree": "Bachelor of Engineering (B.E.)",
+        "field": "Informatik",
+        "start_year": "2008",
+        "end_year": "2012"
       }
     ],
     "projects": [
       {
-        "name": "Predictive Analytics for Customer Churn",
-        "description": "Developed a machine learning model to predict customer churn for a telecommunications company, resulting in a 15% reduction in customer attrition.",
+        "name": "Startup-Produktplattform",
+        "description": "Entwicklung einer modularen Produktplattform für Startups, die Funktionen wie Benutzerregistrierung, Zahlungsabwicklung und Datenanalyse beinhaltet.",
         "tech": [
-          "Python",
-          "Scikit-learn",
-          "Pandas"
-        ]
-      },
-      {
-        "name": "Automated Recommendation System",
-        "description": "Designed and implemented a content-based recommendation system for an e-commerce platform, improving user engagement and sales.",
-        "tech": [
-          "Java",
-          "Apache Spark",
-          "Neo4j"
+          "React",
+          "Node.js",
+          "MongoDB",
+          "AWS"
         ]
       }
     ],
@@ -96,24 +132,24 @@
       {
         "name": "Certified Product Manager",
         "issuer": "Product School",
-        "year": "2022"
-      },
-      {
-        "name": "Advanced Data Analysis",
-        "issuer": "Coursera",
-        "year": "2021"
+        "year": "2019"
       }
+    ],
+    "interests": [
+      "Startup-Ökosystem",
+      "Produktinnovation",
+      "Technologietrends"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/ananya-sharma"
+        "url": "https://www.linkedin.com/in/javier-hernandez"
       },
       {
         "label": "Portfolio",
-        "url": "https://ananyasharma.com"
+        "url": "https://www.example.com/javier-hernandez"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a young woman with dark hair, wearing a white blouse and a neutral expression, looking directly at the camera."
+    "photo_prompt": "Professional LinkedIn-style headshot. Javier is a middle-aged man with short dark hair and a friendly smile, wearing a collared shirt."
   }
 }

@@ -16,23 +16,27 @@
 
   <hr/>
 
-  <h2>Profile</h2>
+  <h2>{{ section_title(cv, 'profile') }}</h2>
   <p>{{ cv.summary }}</p>
 
-  <h2>Experience</h2>
+  <h2>{{ section_title(cv, 'experience') }}</h2>
   {% for ex in cv.experience or [] %}
     <div class="item">
       <div class="item-title">{{ ex.company }} — {{ ex.title }}</div>
       <div class="item-sub">{{ ex.location }} · {{ ex.start_date }} → {{ ex.end_date }}</div>
+      {% if ex.paragraph %}
+      <p>{{ ex.paragraph }}</p>
+      {% else %}
       <ul>
         {% for b in ex.bullets or [] %}
           <li>{{ b }}</li>
         {% endfor %}
       </ul>
+      {% endif %}
     </div>
   {% endfor %}
 
-  <h2>Education</h2>
+  <h2>{{ section_title(cv, 'education') }}</h2>
   {% for e in cv.education or [] %}
     <div class="item">
       <div class="item-title">{{ e.institution }}</div>
@@ -40,16 +44,29 @@
     </div>
   {% endfor %}
 
-  <h2>Skills</h2>
+  <h2>{{ section_title(cv, 'skills') }}</h2>
+  {% if cv.skills is string %}
+  <p>{{ cv.skills }}</p>
+  {% else %}
   <p>{{ (cv.skills or []) | join(" · ") }}</p>
+  {% endif %}
 
   {% if cv.languages %}
-  <h2>Languages</h2>
+  <h2>{{ section_title(cv, 'languages') }}</h2>
   <p>
     {% for lang in cv.languages %}
       {{ lang.name }} ({{ lang.level }}){% if not loop.last %}, {% endif %}
     {% endfor %}
   </p>
+  {% endif %}
+
+  {% if cv.interests %}
+  <h2>{{ section_title(cv, 'interests') }}</h2>
+  {% if cv.interests is string %}
+  <p>{{ cv.interests }}</p>
+  {% else %}
+  <p>{{ cv.interests | join(" · ") }}</p>
+  {% endif %}
   {% endif %}
 </div>
 {% endblock %}

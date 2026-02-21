@@ -1,127 +1,130 @@
 {
   "meta": {
     "cv_id": "cv_014",
-    "created_at": "2026-02-21T10:25:45.583771+00:00",
+    "created_at": "2026-02-21T13:45:31.028348+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "de",
-      "seniority": "mid",
-      "persona_type": "startup engineer",
-      "writing_style": "formal",
-      "role": "DevOps Engineer",
-      "education_country": "Spain"
+      "language": "en",
+      "seniority": "senior",
+      "persona_type": "academic researcher",
+      "writing_style": "storytelling",
+      "role": "UX Designer",
+      "education_country": "India"
     },
     "photo_source": "local_asset",
-    "photo_asset": "tina.jpeg"
+    "photo_asset": "chen.jpeg",
+    "generation_config": {
+      "writing_style": "storytelling",
+      "summary_length": "short",
+      "experience_style": "bullets",
+      "omit_sections": [
+        "projects"
+      ],
+      "include_interests_section": false,
+      "section_label_preset": null
+    }
   },
   "data": {
-    "full_name": "Lena Schultz",
-    "headline": "Experienced DevOps Engineer Driving Innovation at Startups",
-    "email": "lena.schultz@example.com",
-    "phone": "+49 123 456 7890",
-    "location": "Berlin, Germany",
-    "summary": "Highly skilled DevOps Engineer with a proven track record of driving innovation and optimizing infrastructure at fast-paced startups. Adept at automating workflows, deploying cloud-native applications, and collaborating cross-functionally to deliver reliable and scalable solutions. Passionate about leveraging the latest technologies to improve efficiency and enhance the user experience.",
+    "full_name": "Aadhya Sharma",
+    "headline": "Senior UX Designer with a Passion for Innovative Research",
+    "email": "aadhya.sharma@email.com",
+    "phone": "+91 9876543210",
+    "location": "Bangalore, India",
+    "summary": "As a seasoned UX Designer, I have dedicated my career to bridging the gap between cutting-edge research and intuitive user experiences. With a strong background in academic research and a keen eye for design, I strive to create products that not only solve complex problems but also delight users.",
+    "section_labels": {},
     "skills": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Monitoring",
-      "Scripting",
-      "Troubleshooting"
+      "User Research",
+      "Interaction Design",
+      "Prototyping",
+      "Information Architecture",
+      "Usability Testing"
     ],
     "languages": [
       {
-        "name": "German",
-        "level": "Native"
-      },
-      {
         "name": "English",
         "level": "Fluent"
+      },
+      {
+        "name": "Hindi",
+        "level": "Native"
       }
     ],
     "experience": [
       {
-        "company": "Acme Startup",
-        "title": "DevOps Engineer",
-        "start_date": "2020-06-01",
+        "company": "XYZ Research Lab",
+        "title": "Senior UX Designer",
+        "start_date": "2018-06-01",
         "end_date": "2022-12-31",
-        "location": "Berlin, Germany",
+        "location": "Bangalore, India",
         "bullets": [
-          "Designed and implemented a robust CI/CD pipeline using Jenkins, GitLab, and Kubernetes to streamline application deployments",
-          "Automated infrastructure provisioning and management using Terraform and AWS, reducing deployment time by 50%",
-          "Developed custom monitoring and alerting solutions with Prometheus and Grafana to proactively identify and resolve issues",
-          "Collaborated with cross-functional teams to ensure seamless integration of new features and services"
-        ]
+          "Conducted in-depth user research to identify pain points and opportunities for innovative solutions",
+          "Designed intuitive and visually appealing user interfaces that seamlessly integrated cutting-edge research findings",
+          "Collaborated closely with cross-functional teams to ensure a cohesive user experience across multiple platforms",
+          "Implemented robust usability testing protocols to validate design decisions and iteratively improve the product"
+        ],
+        "paragraph": null
       },
       {
-        "company": "Tech Startup GmbH",
-        "title": "DevOps Consultant",
-        "start_date": "2018-03-01",
-        "end_date": "2020-05-31",
-        "location": "Munich, Germany",
+        "company": "ABC University",
+        "title": "Research Assistant",
+        "start_date": "2015-09-01",
+        "end_date": "2018-05-31",
+        "location": "Bangalore, India",
         "bullets": [
-          "Provided DevOps consulting and implementation services to multiple startups, helping them optimize their infrastructure and improve delivery pipelines",
-          "Designed and deployed Kubernetes clusters on AWS, ensuring high availability and scalability of applications",
-          "Implemented monitoring and alerting solutions using Prometheus, Grafana, and ELK stack to proactively identify and resolve issues",
-          "Trained cross-functional teams on DevOps best practices and tooling to foster a culture of collaboration and continuous improvement"
-        ]
+          "Assisted senior researchers in conducting groundbreaking studies on human-computer interaction",
+          "Contributed to the development of novel research methodologies and data analysis techniques",
+          "Presented research findings at international conferences, fostering collaborative partnerships"
+        ],
+        "paragraph": null
       }
     ],
     "education": [
       {
-        "institution": "Universidad Politécnica de Madrid",
-        "degree": "Bachelor of Science",
-        "field": "Computer Science",
+        "institution": "National Institute of Technology",
+        "degree": "Master of Design",
+        "field": "User Experience Design",
         "start_year": "2013",
-        "end_year": "2017"
-      }
-    ],
-    "projects": [
-      {
-        "name": "Automated Infrastructure Provisioning",
-        "description": "Developed a Terraform-based solution to provision and manage cloud infrastructure on AWS, reducing deployment time and improving reliability.",
-        "tech": [
-          "Terraform",
-          "AWS"
-        ]
+        "end_year": "2015"
       },
       {
-        "name": "Kubernetes Cluster Deployment",
-        "description": "Designed and deployed a highly available Kubernetes cluster on AWS, enabling seamless container orchestration and scalability.",
-        "tech": [
-          "Kubernetes",
-          "AWS"
-        ]
+        "institution": "Indian Institute of Technology",
+        "degree": "Bachelor of Technology",
+        "field": "Computer Science",
+        "start_year": "2009",
+        "end_year": "2013"
       }
     ],
     "certifications": [
       {
-        "name": "AWS Certified Solutions Architect - Associate",
-        "issuer": "Amazon Web Services",
-        "year": "2021"
+        "name": "Certified Usability Analyst",
+        "issuer": "Human Factors International",
+        "year": "2019"
       },
       {
-        "name": "Certified Kubernetes Administrator (CKA)",
-        "issuer": "The Linux Foundation",
-        "year": "2020"
+        "name": "Design Thinking Certification",
+        "issuer": "IDEO U",
+        "year": "2017"
       }
+    ],
+    "interests": [
+      "Exploring emerging technologies",
+      "Traveling to historical sites",
+      "Trekking in the Himalayas"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/lena-schultz"
+        "url": "https://www.linkedin.com/in/aadhya-sharma"
       },
       {
         "label": "Portfolio",
-        "url": "https://lena-schultz.com"
+        "url": "https://www.aadhyasharma.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a woman in her mid-30s with short brown hair, wearing a blue button-up shirt and a neutral expression."
+    "photo_prompt": "Professional LinkedIn-style headshot. Aadhya Sharma, a senior UX designer with a thoughtful expression and a warm, friendly demeanor."
   }
 }

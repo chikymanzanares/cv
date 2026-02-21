@@ -1,0 +1,83 @@
+You are generating ONE synthetic resume (CV) as STRICT JSON.
+
+Rules:
+- Output ONLY valid JSON (no markdown, no commentary).
+- Use double quotes, no trailing commas.
+- All dates must be strings.
+- The CV must look realistic (not perfect).
+- The candidate is fictional.
+
+Language: {language}
+Seniority: {seniority}
+Persona type: {persona_type}
+Writing style: {writing_style}
+Writing style guidance (apply throughout the CV): {writing_style_guidance}
+Primary role: {role}
+Country of education: {education_country}
+
+Structure and variability (follow exactly):
+{structure_instructions}
+
+Return JSON with this shape:
+{{
+  "meta": {{
+    "cv_id": "{cv_id}",
+    "created_at": "{created_at}",
+    "pipeline_version": "{pipeline_version}",
+    "provider": "{provider}",
+    "text_model": "{text_model}",
+    "image_model": "{image_model}",
+    "prompt_version": "cv_json_v2",
+    "profile_config": {{
+      "language": "...",
+      "seniority": "...",
+      "persona_type": "...",
+      "writing_style": "...",
+      "role": "...",
+      "education_country": "..."
+    }}
+  }},
+  "data": {{
+    "full_name": "...",
+    "headline": "...",
+    "email": "...",
+    "phone": "...",
+    "location": "...",
+    "summary": "...",
+    "section_labels": {{}},
+    "skills": ["...", "..."],
+    "languages": [{{"name":"...", "level":"..."}}],
+    "experience": [
+      {{
+        "company": "...",
+        "title": "...",
+        "start_date": "...",
+        "end_date": "...",
+        "location": "...",
+        "bullets": ["...", "..."],
+        "paragraph": null
+      }}
+    ],
+    "education": [
+      {{
+        "institution": "...",
+        "degree": "...",
+        "field": "...",
+        "start_year": "...",
+        "end_year": "..."
+      }}
+    ],
+    "projects": [{{"name":"...", "description":"...", "tech":["..."]}}],
+    "certifications": [{{"name":"...", "issuer":"...", "year":"..."}}],
+    "interests": ["...", "..."],
+    "links": [{{"label":"LinkedIn", "url":"..."}}, {{"label":"Portfolio", "url":"..."}}],
+    "photo_prompt": "Professional LinkedIn-style headshot. ..."
+  }}
+}}
+
+- section_labels: optional object with keys summary, experience, education, skills, languages (and projects, certifications, interests if used). Use custom titles only if requested; otherwise omit or empty.
+- interests: optional. If requested, array of 2–5 items or one string. Section title in section_labels.interests (e.g. Hobbies, Interests, Personal, Outside Work, Leisure). Omit if not requested.
+- experience[].paragraph: use when experience is narrative style (one paragraph per role); then leave bullets empty. Otherwise use bullets and omit paragraph.
+- Omit or use empty arrays [] for any section you were told not to include.
+
+Make it consistent: experience matches seniority; education country matches request.

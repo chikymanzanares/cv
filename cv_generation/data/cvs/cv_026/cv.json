@@ -1,103 +1,122 @@
 {
   "meta": {
     "cv_id": "cv_026",
-    "created_at": "2026-02-21T10:27:32.864953+00:00",
+    "created_at": "2026-02-21T13:47:24.252857+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
       "language": "de",
-      "seniority": "junior",
+      "seniority": "mid",
       "persona_type": "corporate enterprise architect",
-      "writing_style": "formal",
+      "writing_style": "concise",
       "role": "DevOps Engineer",
-      "education_country": "Germany"
+      "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "sony.jpeg"
+    "photo_asset": "gina.jpeg",
+    "generation_config": {
+      "writing_style": "concise",
+      "summary_length": "short",
+      "experience_style": "bullets",
+      "omit_sections": [
+        "languages",
+        "certifications"
+      ],
+      "include_interests_section": true,
+      "section_label_preset": null
+    }
   },
   "data": {
-    "full_name": "Lukas Schneider",
-    "headline": "Junior DevOps Engineer",
-    "email": "lukas.schneider@email.com",
-    "phone": "+49 123 456 7890",
+    "full_name": "Lukas Müller",
+    "headline": "DevOps Engineer with Expertise in Enterprise Architecture",
+    "email": "lukas.mueller@example.com",
+    "phone": "+49 123 456 789",
     "location": "Munich, Germany",
-    "summary": "Passionate and ambitious junior DevOps Engineer with a strong background in software development and cloud infrastructure. Skilled in automating deployment pipelines, monitoring systems, and improving operational efficiency. Eager to apply my technical expertise and problem-solving abilities to drive continuous improvement within a dynamic, forward-thinking organization.",
+    "summary": "Experienced DevOps Engineer with a strong background in enterprise architecture. Adept at designing and implementing scalable, secure, and efficient infrastructure solutions.",
+    "section_labels": {},
     "skills": [
-      "Docker",
-      "Kubernetes",
-      "Ansible",
-      "AWS",
-      "Azure",
-      "Terraform",
-      "Jenkins",
-      "Prometheus",
-      "Grafana"
-    ],
-    "languages": [
-      {
-        "name": "German",
-        "level": "Native"
-      },
-      {
-        "name": "English",
-        "level": "Fluent"
-      }
+      "DevOps Automation",
+      "Cloud Infrastructure",
+      "Containerization",
+      "Continuous Integration/Deployment",
+      "Monitoring and Observability",
+      "Enterprise Architecture"
     ],
     "experience": [
       {
         "company": "Acme Corporation",
-        "title": "Junior DevOps Engineer",
-        "start_date": "2021-06-01",
-        "end_date": "2023-12-31",
+        "title": "DevOps Engineer",
+        "start_date": "2019-06-01",
+        "end_date": "2022-12-31",
         "location": "Munich, Germany",
         "bullets": [
-          "Collaborated with development teams to design and implement automated CI/CD pipelines using Jenkins, Ansible, and Terraform",
-          "Deployed and managed Kubernetes clusters on AWS, ensuring high availability and scalability of microservices",
-          "Implemented monitoring and alerting solutions using Prometheus and Grafana to proactively identify and resolve issues",
-          "Participated in on-call rotations and incident response, minimizing downtime and ensuring swift resolution of production incidents"
+          "Designed and implemented a scalable, cloud-based infrastructure using AWS, Docker, and Kubernetes",
+          "Automated deployment pipelines for multiple applications, reducing deployment time by 80%",
+          "Implemented monitoring and observability solutions to proactively identify and resolve issues"
+        ]
+      },
+      {
+        "company": "Beta Solutions",
+        "title": "Enterprise Architect",
+        "start_date": "2016-09-01",
+        "end_date": "2019-05-31",
+        "location": "London, UK",
+        "bullets": [
+          "Collaborated with cross-functional teams to define and implement enterprise-wide architecture standards",
+          "Designed and documented the organization's technology roadmap, aligning IT initiatives with business goals",
+          "Conducted technology assessments and provided recommendations for modernization and optimization"
         ]
       }
     ],
     "education": [
       {
-        "institution": "Technical University of Munich",
-        "degree": "Bachelor of Science",
+        "institution": "University of Cambridge",
+        "degree": "Master of Engineering",
         "field": "Computer Science",
-        "start_year": "2017",
-        "end_year": "2021"
+        "start_year": "2012",
+        "end_year": "2016"
       }
     ],
     "projects": [
       {
-        "name": "DevOps Automation",
-        "description": "Developed a comprehensive DevOps automation framework using Terraform, Ansible, and Docker to streamline the deployment and management of cloud infrastructure and applications.",
+        "name": "Cloud Migration Project",
+        "description": "Migrated the company's on-premises infrastructure to a hybrid cloud environment using AWS and Azure.",
         "tech": [
+          "AWS",
+          "Azure",
           "Terraform",
-          "Ansible",
-          "Docker"
+          "Ansible"
+        ]
+      },
+      {
+        "name": "Microservices Transformation",
+        "description": "Redesigned the company's monolithic application into a scalable, microservices-based architecture.",
+        "tech": [
+          "Docker",
+          "Kubernetes",
+          "RabbitMQ",
+          "Elasticsearch"
         ]
       }
     ],
-    "certifications": [
-      {
-        "name": "AWS Certified Developer - Associate",
-        "issuer": "Amazon Web Services",
-        "year": "2022"
-      }
+    "interests": [
+      "Hiking",
+      "Traveling",
+      "Reading Tech Blogs"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/lukas-schneider"
+        "url": "https://www.linkedin.com/in/lukas-mueller"
       },
       {
         "label": "Portfolio",
-        "url": "https://lukas-schneider.com"
+        "url": "https://www.example.com/lukas-mueller"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a young, clean-cut man with short brown hair and a friendly, confident expression. He is wearing a smart, button-down shirt and suit jacket against a neutral background."
+    "photo_prompt": "Professional LinkedIn-style headshot. Smiling, well-groomed, and wearing a suit."
   }
 }

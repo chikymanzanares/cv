@@ -1,136 +1,113 @@
 {
   "meta": {
     "cv_id": "cv_030",
-    "created_at": "2026-02-21T10:28:05.030703+00:00",
+    "created_at": "2026-02-21T13:47:59.378517+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "es",
+      "language": "de",
       "seniority": "mid",
       "persona_type": "career switcher",
-      "writing_style": "formal",
-      "role": "DevOps Engineer",
-      "education_country": "Germany"
+      "writing_style": "technical",
+      "role": "Product Manager",
+      "education_country": "Spain"
     },
     "photo_source": "local_asset",
-    "photo_asset": "brandow.jpeg"
+    "photo_asset": "rosy.jpeg",
+    "generation_config": {
+      "writing_style": "technical",
+      "summary_length": "paragraph",
+      "experience_style": "bullets",
+      "omit_sections": [
+        "languages",
+        "certifications"
+      ],
+      "include_interests_section": true,
+      "section_label_preset": null
+    }
   },
   "data": {
-    "full_name": "Emilia Sánchez",
-    "headline": "Experienced DevOps Engineer Transitioning from Software Development",
-    "email": "emilia.sanchez@example.com",
+    "full_name": "Lena Müller",
+    "headline": "Experienced Product Manager with a Background in Software Engineering",
+    "email": "lena.mueller@example.com",
     "phone": "+49 123 456 7890",
-    "location": "Berlin, Germany",
-    "summary": "Seasoned software developer with a strong background in web application development, transitioning into the exciting world of DevOps. Proficient in various programming languages, cloud technologies, and automation tools, I'm driven to streamline and optimize software delivery processes. With a keen eye for detail and a passion for problem-solving, I'm eager to apply my skills and experience to drive innovative DevOps solutions.",
+    "location": "Munich, Germany",
+    "summary": "As a seasoned Product Manager with a strong technical background, I have a proven track record of driving successful product development and delivering innovative solutions that meet customer needs. With expertise in agile methodologies, data-driven decision making, and cross-functional collaboration, I am adept at navigating complex challenges and leading high-performing teams to achieve business objectives.",
+    "section_labels": {},
     "skills": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Azure",
-      "CI/CD",
-      "Terraform",
-      "Ansible",
-      "Python",
-      "Bash"
-    ],
-    "languages": [
-      {
-        "name": "Spanish",
-        "level": "Native"
-      },
-      {
-        "name": "English",
-        "level": "Fluent"
-      },
-      {
-        "name": "German",
-        "level": "Proficient"
-      }
+      "Product Management",
+      "Agile Methodologies",
+      "Data Analysis",
+      "User Experience Design",
+      "Project Management",
+      "Stakeholder Management"
     ],
     "experience": [
       {
         "company": "Acme Software Solutions",
-        "title": "Software Developer",
-        "start_date": "2018-06-01",
-        "end_date": "2022-03-31",
-        "location": "Berlin, Germany",
+        "title": "Product Manager",
+        "start_date": "2020-01-01",
+        "end_date": "2023-06-30",
+        "location": "Munich, Germany",
         "bullets": [
-          "Developed and maintained complex web applications using React, Node.js, and PostgreSQL",
-          "Collaborated with cross-functional teams to design and implement new features",
-          "Participated in code reviews and pair programming sessions to ensure code quality",
-          "Automated deployment and testing processes using Jenkins and Docker"
+          "Spearheaded the development and launch of a new SaaS platform, resulting in a 25% increase in customer acquisition within the first year.",
+          "Collaborated closely with engineering, design, and marketing teams to define product roadmaps and prioritize features based on customer feedback and market trends.",
+          "Implemented agile best practices, including sprint planning, retrospectives, and continuous improvement, to drive efficient and effective product development.",
+          "Leveraged data analytics to monitor product performance, identify areas for optimization, and make data-driven decisions."
         ]
       },
       {
-        "company": "TechSavvy GmbH",
-        "title": "DevOps Engineer",
-        "start_date": "2022-04-01",
-        "end_date": "present",
-        "location": "Berlin, Germany",
+        "company": "XYZ Tech",
+        "title": "Software Engineer",
+        "start_date": "2016-06-01",
+        "end_date": "2019-12-31",
+        "location": "Barcelona, Spain",
         "bullets": [
-          "Implemented and maintained containerized application environments using Docker and Kubernetes",
-          "Automated infrastructure provisioning and deployment using Terraform and Ansible",
-          "Collaborated with developers to optimize CI/CD pipelines and reduce deployment times",
-          "Monitored and troubleshot production systems, ensuring high availability and performance"
+          "Designed and developed scalable web applications using React, Node.js, and MongoDB, contributing to the successful delivery of multiple projects.",
+          "Participated in Scrum ceremonies, including daily standups, sprint planning, and retrospectives, to ensure effective team collaboration and continuous improvement.",
+          "Advocated for user-centric design principles and worked closely with UX designers to enhance the overall product experience."
         ]
       }
     ],
     "education": [
       {
-        "institution": "Technical University of Berlin",
+        "institution": "University of Barcelona",
         "degree": "Bachelor of Science",
         "field": "Computer Science",
-        "start_year": "2014",
-        "end_year": "2018"
+        "start_year": "2012",
+        "end_year": "2016"
       }
     ],
     "projects": [
       {
-        "name": "Microservices Platform",
-        "description": "Designed and implemented a scalable microservices platform using Docker, Kubernetes, and various cloud services",
+        "name": "Personal Portfolio Website",
+        "description": "Designed and developed a personal portfolio website to showcase my projects and skills.",
         "tech": [
-          "Kubernetes",
-          "Docker",
-          "AWS",
-          "Terraform"
-        ]
-      },
-      {
-        "name": "CI/CD Pipeline Optimization",
-        "description": "Improved the CI/CD pipeline for a large-scale web application, reducing deployment time by 50%",
-        "tech": [
-          "Jenkins",
-          "Gitlab",
-          "Docker",
-          "Ansible"
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React"
         ]
       }
     ],
-    "certifications": [
-      {
-        "name": "AWS Certified Solutions Architect - Associate",
-        "issuer": "Amazon Web Services",
-        "year": "2021"
-      },
-      {
-        "name": "Certified Kubernetes Administrator (CKA)",
-        "issuer": "The Linux Foundation",
-        "year": "2022"
-      }
+    "interests": [
+      "Reading",
+      "Hiking",
+      "Cooking"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/emilia-sanchez"
+        "url": "https://www.linkedin.com/in/lena-mueller"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.emiliasanchez.com"
+        "url": "https://lena-mueller.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Emilia Sánchez, a mid-career DevOps engineer with a background in software development, wearing a blue button-up shirt and looking directly at the camera with a friendly expression."
+    "photo_prompt": "Professional LinkedIn-style headshot. Lena Müller, a mid-career product manager with a technical background, looking confident and approachable."
   }
 }

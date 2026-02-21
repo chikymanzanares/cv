@@ -1,42 +1,70 @@
 {
   "meta": {
     "cv_id": "cv_028",
-    "created_at": "2026-02-21T10:27:48.484302+00:00",
+    "created_at": "2026-02-21T13:47:42.132915+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
       "language": "de",
       "seniority": "junior",
       "persona_type": "academic researcher",
-      "writing_style": "verbose",
-      "role": "Data Scientist",
-      "education_country": "Spain"
+      "writing_style": "action-oriented",
+      "role": "UX Designer",
+      "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "guy.jpeg"
+    "photo_asset": "nacho.jpeg",
+    "generation_config": {
+      "writing_style": "action-oriented",
+      "summary_length": "paragraph",
+      "experience_style": "paragraphs",
+      "omit_sections": [],
+      "include_interests_section": true,
+      "section_label_preset": {
+        "summary": "Introduction",
+        "experience": "Employment History",
+        "education": "Academic",
+        "skills": "Skills & Tools",
+        "languages": "Languages",
+        "projects": "Projects",
+        "certifications": "Certifications",
+        "interests": "Personal Interests",
+        "profile": "Introduction"
+      }
+    }
   },
   "data": {
-    "full_name": "Luisa Fernández Gómez",
-    "headline": "Junior Data Scientist with a Passion for Academic Research",
-    "email": "luisa.fernandez@example.com",
-    "phone": "+34 123 456 789",
-    "location": "Madrid, Spain",
-    "summary": "As a junior data scientist, I have a strong academic background and a keen interest in applying data-driven insights to real-world problems. With a background in experimental physics, I bring a unique perspective to the field of data science, combining rigorous analytical skills with a deep understanding of scientific methodologies. My goal is to leverage cutting-edge techniques in machine learning, data visualization, and statistical analysis to drive innovation and make a meaningful impact in the academic and research communities.",
+    "full_name": "Lena Müller",
+    "headline": "Junior UX Designer and Researcher",
+    "email": "lena.mueller@example.com",
+    "phone": "+49 123 456 789",
+    "location": "Berlin, Germany",
+    "summary": "Passionate UX Designer with a strong academic background in human-computer interaction. Skilled in user research, interaction design, and prototyping. Dedicated to creating intuitive and user-centered digital experiences. Eager to apply my knowledge and contribute to innovative projects.",
+    "section_labels": {
+      "summary": "Introduction",
+      "experience": "Employment History",
+      "education": "Academic",
+      "skills": "Skills & Tools",
+      "languages": "Languages",
+      "projects": "Projects",
+      "certifications": "Certifications",
+      "interests": "Personal Interests"
+    },
     "skills": [
-      "Python",
-      "R",
-      "SQL",
-      "Machine Learning",
-      "Data Visualization",
-      "Experimental Design",
-      "Scientific Computing"
+      "User Research",
+      "Interaction Design",
+      "Prototyping",
+      "Usability Testing",
+      "Adobe Creative Suite",
+      "Figma",
+      "Sketch"
     ],
     "languages": [
       {
-        "name": "Spanish",
+        "name": "German",
         "level": "Native"
       },
       {
@@ -46,78 +74,80 @@
     ],
     "experience": [
       {
-        "company": "University of Madrid",
-        "title": "Research Assistant",
+        "company": "Acme Design Agency",
+        "title": "UX Design Intern",
         "start_date": "2021-06-01",
-        "end_date": "2023-08-31",
-        "location": "Madrid, Spain",
-        "bullets": [
-          "Collaborated with a team of researchers on a project investigating the application of machine learning techniques to the analysis of experimental data in high-energy physics",
-          "Developed custom data processing pipelines and statistical models to extract insights from large, complex datasets",
-          "Presented research findings at international conferences and contributed to the publication of peer-reviewed journal articles"
-        ]
+        "end_date": "2021-08-31",
+        "location": "Berlin, Germany",
+        "paragraph": "Collaborated with a team of designers and developers to create user-friendly interfaces for a variety of clients. Conducted user research, including interviews and usability testing, to gain insights and inform design decisions. Designed high-fidelity prototypes and presented them to stakeholders, receiving positive feedback and implementing improvements."
+      },
+      {
+        "company": "University of Berlin",
+        "title": "Research Assistant",
+        "start_date": "2020-09-01",
+        "end_date": "2021-05-31",
+        "location": "Berlin, Germany",
+        "paragraph": "Supported a research project on the impact of emerging technologies on user experience. Conducted literature reviews, assisted with data collection and analysis, and contributed to the development of research methodologies. Presented findings at a departmental seminar, demonstrating strong communication and collaboration skills."
       }
     ],
     "education": [
       {
-        "institution": "University of Barcelona",
+        "institution": "University of Cambridge",
         "degree": "Master of Science",
-        "field": "Experimental Physics",
+        "field": "Human-Computer Interaction",
         "start_year": "2019",
-        "end_year": "2021"
+        "end_year": "2020"
       },
       {
-        "institution": "University of Valencia",
+        "institution": "University of Oxford",
         "degree": "Bachelor of Science",
-        "field": "Physics",
+        "field": "Psychology",
         "start_year": "2015",
-        "end_year": "2019"
+        "end_year": "2018"
       }
     ],
     "projects": [
       {
-        "name": "Particle Accelerator Simulation",
-        "description": "Developed a comprehensive simulation framework for modeling the behavior of particle accelerators, incorporating advanced techniques in computational physics and high-performance computing.",
+        "name": "Redesign of University Website",
+        "description": "Conducted user research, created wireframes and prototypes, and collaborated with developers to redesign the university's website, improving usability and accessibility.",
         "tech": [
-          "Python",
-          "NumPy",
-          "SciPy",
-          "Matplotlib"
+          "Figma",
+          "HTML/CSS",
+          "JavaScript"
         ]
       },
       {
-        "name": "Anomaly Detection in Experimental Data",
-        "description": "Designed and implemented a machine learning-based anomaly detection system to identify outliers and potential errors in large-scale experimental datasets, improving the reliability and accuracy of scientific findings.",
+        "name": "Mobile App for Fitness Tracking",
+        "description": "Designed and tested a mobile app for fitness tracking, incorporating user feedback and iterating on the design to create an intuitive and engaging user experience.",
         "tech": [
-          "R",
-          "TensorFlow",
-          "Keras",
-          "Scikit-learn"
+          "Sketch",
+          "Prototyping",
+          "User Testing"
         ]
       }
     ],
     "certifications": [
       {
-        "name": "Machine Learning Specialization",
-        "issuer": "Coursera",
-        "year": "2022"
-      },
-      {
-        "name": "Data Visualization with Tableau",
-        "issuer": "Udemy",
+        "name": "Certified Usability Analyst",
+        "issuer": "Human Factors International",
         "year": "2021"
       }
+    ],
+    "interests": [
+      "Reading",
+      "Hiking",
+      "Traveling"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/luisa-fernandez-gomez"
+        "url": "https://www.linkedin.com/in/lena-mueller"
       },
       {
         "label": "Portfolio",
-        "url": "https://luisafernandez.com"
+        "url": "https://lena-mueller.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a young woman with dark hair and glasses, wearing a white blouse and smiling at the camera."
+    "photo_prompt": "Professional LinkedIn-style headshot. Friendly, confident, and approachable expression. Wearing a smart, collared shirt against a simple, neutral background."
   }
 }

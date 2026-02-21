@@ -1,139 +1,154 @@
 {
   "meta": {
     "cv_id": "cv_024",
-    "created_at": "2026-02-21T10:27:14.791191+00:00",
+    "created_at": "2026-02-21T13:47:09.622827+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
-    "prompt_version": "cv_json_v1",
+    "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "en",
-      "seniority": "mid",
-      "persona_type": "academic researcher",
-      "writing_style": "verbose",
-      "role": "Backend Engineer",
-      "education_country": "India"
+      "language": "fr",
+      "seniority": "junior",
+      "persona_type": "self-taught developer",
+      "writing_style": "minimal",
+      "role": "UX Designer",
+      "education_country": "Spain"
     },
     "photo_source": "local_asset",
-    "photo_asset": "steve.jpeg"
+    "photo_asset": "yen.jpeg",
+    "generation_config": {
+      "writing_style": "minimal",
+      "summary_length": "short",
+      "experience_style": "bullets",
+      "omit_sections": [],
+      "include_interests_section": false,
+      "section_label_preset": {
+        "summary": "Professional Summary",
+        "experience": "Work History",
+        "education": "Education",
+        "skills": "Core Competencies",
+        "languages": "Languages",
+        "projects": "Key Projects",
+        "certifications": "Certifications",
+        "interests": "Interests",
+        "profile": "Profile"
+      }
+    }
   },
   "data": {
-    "full_name": "Asha Patel",
-    "headline": "Experienced Backend Engineer with a Passion for Research",
-    "email": "asha.patel@example.com",
-    "phone": "+91 987-654-3210",
-    "location": "Bangalore, India",
-    "summary": "As an experienced Backend Engineer, I have honed my skills in designing and developing robust, scalable, and efficient web applications. My background in academic research has instilled in me a deep curiosity and a commitment to continuous learning, which I bring to every project I undertake. I excel at problem-solving, collaboration, and delivering high-quality code that meets the needs of both clients and end-users. With a strong foundation in computer science principles and a keen eye for detail, I am driven to push the boundaries of what is possible in the world of software development.",
+    "full_name": "Emilie Moreau",
+    "headline": "Self-taught UX Designer",
+    "email": "emilie.moreau@email.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "Passionate self-taught UX Designer with a focus on creating intuitive and user-friendly digital experiences.",
+    "section_labels": {
+      "summary": "Professional Summary",
+      "experience": "Work History",
+      "education": "Education",
+      "skills": "Core Competencies",
+      "languages": "Languages",
+      "projects": "Key Projects",
+      "certifications": "Certifications",
+      "interests": "Interests",
+      "profile": "Profile"
+    },
     "skills": [
-      "Python",
-      "Django",
-      "SQL",
-      "Git",
-      "AWS",
-      "Agile Methodologies",
-      "Data Structures",
-      "Algorithms"
+      "Figma",
+      "Sketch",
+      "Adobe Creative Suite",
+      "HTML/CSS",
+      "User Research",
+      "Prototyping"
     ],
     "languages": [
       {
-        "name": "English",
-        "level": "Fluent"
+        "name": "French",
+        "level": "Native"
       },
       {
-        "name": "Hindi",
-        "level": "Native"
+        "name": "English",
+        "level": "Fluent"
       }
     ],
     "experience": [
       {
-        "company": "XYZ Technologies",
-        "title": "Senior Backend Engineer",
-        "start_date": "2019-06-01",
-        "end_date": "2022-12-31",
-        "location": "Bangalore, India",
+        "company": "Startup XYZ",
+        "title": "UX Designer",
+        "start_date": "2021-06-01",
+        "end_date": "2023-03-31",
+        "location": "Paris, France",
         "bullets": [
-          "Designed and implemented scalable backend systems using Django and PostgreSQL",
-          "Collaborated with cross-functional teams to deliver high-quality, feature-rich web applications",
-          "Optimized application performance and improved overall system reliability",
-          "Mentored junior engineers and participated in code reviews to ensure best practices"
+          "Collaborated with cross-functional teams to design intuitive user interfaces",
+          "Conducted user research and usability testing to improve product experiences",
+          "Prototyped and tested design concepts to validate ideas with stakeholders"
         ]
       },
       {
-        "company": "ABC Research Institute",
-        "title": "Research Assistant",
-        "start_date": "2016-09-01",
-        "end_date": "2019-05-31",
-        "location": "Bangalore, India",
+        "company": "Freelance",
+        "title": "UX Designer",
+        "start_date": "2019-09-01",
+        "end_date": "2021-05-31",
+        "location": "Paris, France",
         "bullets": [
-          "Conducted literature reviews and data analysis for various research projects",
-          "Developed prototypes and proof-of-concept applications to support research initiatives",
-          "Collaborated with interdisciplinary teams to identify and address research challenges",
-          "Presented research findings at conferences and contributed to academic publications"
+          "Provided UX design services to various clients in the tech industry",
+          "Conducted user interviews, created wireframes, and designed high-fidelity prototypes",
+          "Collaborated with developers to ensure seamless implementation of designs"
         ]
       }
     ],
     "education": [
       {
-        "institution": "National Institute of Technology, Surathkal",
-        "degree": "Bachelor of Technology",
-        "field": "Computer Science and Engineering",
-        "start_year": "2012",
-        "end_year": "2016"
-      },
-      {
-        "institution": "Indian Institute of Science, Bangalore",
-        "degree": "Master of Technology",
+        "institution": "University of Barcelona",
+        "degree": "Bachelor's Degree",
         "field": "Computer Science",
-        "start_year": "2016",
-        "end_year": "2018"
+        "start_year": "2015",
+        "end_year": "2019"
       }
     ],
     "projects": [
       {
-        "name": "Automated Recommendation System",
-        "description": "Developed a recommendation engine using machine learning algorithms to provide personalized product suggestions to users.",
+        "name": "Personal Portfolio Website",
+        "description": "Designed and developed a responsive personal portfolio website to showcase my work",
         "tech": [
-          "Python",
-          "Django",
-          "scikit-learn",
-          "PostgreSQL"
+          "HTML",
+          "CSS",
+          "JavaScript"
         ]
       },
       {
-        "name": "Distributed File Storage System",
-        "description": "Designed and implemented a scalable, fault-tolerant distributed file storage system using AWS services.",
+        "name": "Mobile App Concept",
+        "description": "Designed a mobile app concept for a fitness tracking application",
         "tech": [
-          "Python",
-          "Django",
-          "AWS S3",
-          "AWS EC2",
-          "AWS Lambda"
+          "Figma",
+          "User Research",
+          "Prototyping"
         ]
       }
     ],
     "certifications": [
       {
-        "name": "AWS Certified Solutions Architect - Associate",
-        "issuer": "Amazon Web Services",
-        "year": "2021"
-      },
-      {
-        "name": "Certified Scrum Master",
-        "issuer": "Scrum Alliance",
-        "year": "2020"
+        "name": "Figma Certification",
+        "issuer": "Figma",
+        "year": "2022"
       }
+    ],
+    "interests": [
+      "Hiking",
+      "Photography",
+      "Cooking"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/asha-patel"
+        "url": "https://www.linkedin.com/in/emilie-moreau"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.ashapatel.com"
+        "url": "https://www.emilie-moreau.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a middle-aged woman with dark hair and glasses, wearing a collared shirt. She has a warm, friendly expression and is looking directly at the camera."
+    "photo_prompt": "Professional LinkedIn-style headshot. Emilie Moreau, a self-taught UX Designer based in Paris, France."
   }
 }

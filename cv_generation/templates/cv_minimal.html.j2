@@ -14,32 +14,55 @@
   </div>
 
   <div class="block">
-    <h2>Summary</h2>
+    <h2>{{ section_title(cv, 'summary') }}</h2>
     <p>{{ cv.summary }}</p>
   </div>
 
   <div class="block">
-    <h2>Experience</h2>
+    <h2>{{ section_title(cv, 'experience') }}</h2>
     {% for ex in cv.experience or [] %}
       <div class="item">
         <div><strong>{{ ex.title }}</strong> — {{ ex.company }}</div>
         <div class="muted">{{ ex.start_date }} → {{ ex.end_date }} · {{ ex.location }}</div>
+        {% if ex.paragraph %}
+        <p>{{ ex.paragraph }}</p>
+        {% else %}
         <ul>
           {% for b in ex.bullets or [] %}
             <li>{{ b }}</li>
           {% endfor %}
         </ul>
+        {% endif %}
       </div>
     {% endfor %}
   </div>
 
   <div class="block">
-    <h2>Skills</h2>
+    <h2>{{ section_title(cv, 'skills') }}</h2>
+    {% if cv.skills is string %}
+    <p>{{ cv.skills }}</p>
+    {% else %}
     <ul class="chips">
       {% for s in cv.skills or [] %}
         <li>{{ s }}</li>
       {% endfor %}
     </ul>
+    {% endif %}
   </div>
+
+  {% if cv.interests %}
+  <div class="block">
+    <h2>{{ section_title(cv, 'interests') }}</h2>
+    {% if cv.interests is string %}
+    <p>{{ cv.interests }}</p>
+    {% else %}
+    <ul class="chips">
+      {% for i in cv.interests %}
+        <li>{{ i }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endif %}
 </div>
 {% endblock %}
