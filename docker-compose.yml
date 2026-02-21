@@ -105,7 +105,7 @@ services:
       - ./:/cv
       - hf_cache:/root/.cache/huggingface
     working_dir: /cv
-    command: ["sh", "-lc", "python -m rag_cli.search --index_dir rag_store --query 'Who has Python experience?'"]
+    command: ["sh", "-lc", "python -m rag.rag_cli.search --index_dir rag_store --query 'Who has Python experience?'"]
     restart: "no"
 
 volumes:
