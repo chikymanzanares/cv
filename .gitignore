@@ -37,3 +37,6 @@ htmlcov/
 # Project data (generated CVs, PDFs, etc.)
 cv_generation/data/
 cv_generation/data/cvs/
+
+# RAG index (generated from PDFs — rebuild with: make dataset)
+rag_store/
