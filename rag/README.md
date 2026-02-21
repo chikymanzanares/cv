@@ -157,9 +157,20 @@ Use `make rebuild` or `--force` to override.
 
 | Mode | Flag | What it does |
 |------|------|-------------|
-| `hybrid` | `--mode hybrid` (default) | Runs both FAISS and BM25, prints both result sets |
+| `hybrid` | `--mode hybrid` (default) | Runs FAISS + BM25, then **reranks** with RRF; prints all three (FAISS, BM25, Reranked) |
+| `reranked` | `--mode reranked` | Same as hybrid but prints only the RRF reranked list |
 | `faiss` | `--mode faiss` | Semantic search only |
 | `bm25` | `--mode bm25` | Keyword search only |
+
+### Reranking (RRF)
+
+When `mode` is `hybrid` or `reranked`, the two ranked lists (FAISS and BM25) are merged using **Reciprocal Rank Fusion (RRF)**:
+
+- Each ranker returns a larger candidate set (default: `max(topk×4, 20)`).
+- For each document, RRF score = `1/(k + rank_faiss) + 1/(k + rank_bm25)` (documents absent from one list contribute only the term from the list where they appear).
+- Results are sorted by this score; the top `topk` form the final reranked list.
+
+This favours chunks that appear **high in both** FAISS and BM25 (e.g. exact keyword match + good semantic fit). The constant `k` is configurable via `--rrf_k` (default 60).
 
 ### How a query is processed
 
@@ -206,26 +217,23 @@ chunks.jsonl[chunk_id]  →  cv_id + text
 Query: "Jenkins"  |  mode=hybrid  |  topk=5
 
 --- FAISS (semantic) ---
-  [0.7821] cv_id=cv_008  chunk=0
-  Marcos Delgado  DevOps Engineer  ...CI/CD pipelines with Jenkins and GitLab...
-
-  [0.7103] cv_id=cv_015  chunk=0
-  Ana Costa  Platform Engineer  ...automated deployments using Jenkins, Ansible...
+  [0.8407] cv_id=cv_029  chunk=4  ...Kubernetes Jenkins Ansible...
+  [0.8376] cv_id=cv_029  chunk=5  ...Jenkins-based CI/CD pipeline...
 
 --- BM25 (keyword) ---
-  [4.2100] cv_id=cv_008  chunk=0
-  Marcos Delgado  DevOps Engineer  ...CI/CD pipelines with Jenkins and GitLab...
+  [3.4059] cv_id=cv_029  chunk=1  ...CI/CD pipelines using Jenkins, Ansible...
+
+--- Reranked (RRF) ---
+  [0.0328] cv_id=cv_029  chunk=1  ...CI/CD pipelines using Jenkins, Ansible...
+  [0.0326] cv_id=cv_029  chunk=4  ...Kubernetes Jenkins Ansible...
+  ...
 ```
 
 ### Configuration
 
-The embedding model is read from the environment:
-
-```
-EMBEDDING_MODEL=intfloat/multilingual-e5-small  # default
-```
-
-See [Hugging Face — intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small).
+- **Embedding model** (env): `EMBEDDING_MODEL=intfloat/multilingual-e5-small`  
+  See [Hugging Face — intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small).
+- **RRF constant** (CLI): `--rrf_k 60` — higher values reduce the impact of rank position when fusing FAISS and BM25.
 
 ---
 
