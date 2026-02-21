@@ -22,3 +22,30 @@ FROM production AS development
 
 COPY requirements-dev.txt .
 RUN pip install --no-cache-dir -r requirements-dev.txt
+
+
+# NEW: generation stage (offline pipeline)
+FROM base AS generation
+
+# System deps for WeasyPrint (HTML -> PDF)
+# Note: This is intentionally NOT in production.
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpango-1.0-0 \
+    libpangoft2-1.0-0 \
+    libpangocairo-1.0-0 \
+    libcairo2 \
+    libffi-dev \
+    libjpeg62-turbo \
+    libopenjp2-7 \
+    libtiff6 \
+    zlib1g \
+    fonts-dejavu-core \
+    fonts-liberation \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements-generation.txt .
+RUN pip install --no-cache-dir -r requirements-generation.txt
+
+# We mount the repo as volume, so no COPY here.
+WORKDIR /cv

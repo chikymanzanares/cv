@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "cv_id": "cv_012",
+    "created_at": "2026-02-21T10:25:29.988947+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "en",
+      "seniority": "junior",
+      "persona_type": "academic researcher",
+      "writing_style": "verbose",
+      "role": "DevOps Engineer",
+      "education_country": "UK"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "alejandra.jpeg"
+  },
+  "data": {
+    "full_name": "Emily Wilkins",
+    "headline": "Junior DevOps Engineer with Academic Research Background",
+    "email": "emily.wilkins@example.com",
+    "phone": "+44 7712 345678",
+    "location": "London, UK",
+    "summary": "As a junior DevOps Engineer with a strong academic research background, I bring a unique blend of technical expertise and analytical problem-solving skills to the table. With a passion for streamlining workflows and optimizing infrastructure, I am driven to create efficient, scalable, and resilient systems. My experience in academic research has honed my ability to think critically, conduct in-depth analysis, and communicate complex technical concepts effectively. I am eager to apply my skills and knowledge to drive innovation and support the success of your organization.",
+    "skills": [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Terraform",
+      "Python",
+      "Bash",
+      "Git",
+      "CI/CD",
+      "Monitoring",
+      "Logging"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "level": "Native"
+      },
+      {
+        "name": "French",
+        "level": "Intermediate"
+      }
+    ],
+    "experience": [
+      {
+        "company": "XYZ Tech Solutions",
+        "title": "Junior DevOps Engineer",
+        "start_date": "2022-06-01",
+        "end_date": "Present",
+        "location": "London, UK",
+        "bullets": [
+          "Collaborated with cross-functional teams to design and implement robust infrastructure solutions using Docker, Kubernetes, and AWS services",
+          "Automated deployment pipelines and streamlined CI/CD processes to ensure reliable and consistent software releases",
+          "Monitored system performance, analyzed logs, and implemented proactive alerting to quickly identify and resolve issues",
+          "Contributed to the development of reusable infrastructure as code (IaC) templates using Terraform"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Cambridge",
+        "degree": "Master of Philosophy (M.Phil)",
+        "field": "Computer Science",
+        "start_year": "2019",
+        "end_year": "2020"
+      },
+      {
+        "institution": "University of Oxford",
+        "degree": "Bachelor of Science (B.Sc)",
+        "field": "Physics",
+        "start_year": "2015",
+        "end_year": "2019"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Automated Infrastructure Deployment",
+        "description": "Designed and implemented an automated infrastructure deployment pipeline using Terraform, AWS, and Kubernetes to streamline the provisioning of development and staging environments.",
+        "tech": [
+          "Terraform",
+          "AWS",
+          "Kubernetes"
+        ]
+      },
+      {
+        "name": "Microservices Monitoring and Observability",
+        "description": "Developed a comprehensive monitoring and observability solution for a microservices-based application, utilizing tools like Prometheus, Grafana, and ELK stack to ensure reliable system performance.",
+        "tech": [
+          "Prometheus",
+          "Grafana",
+          "ELK Stack"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2021"
+      },
+      {
+        "name": "Kubernetes Certified Application Developer",
+        "issuer": "Cloud Native Computing Foundation",
+        "year": "2022"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/emily-wilkins"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://emilywilkins.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. The photo shows a smiling, confident young woman with short brown hair and glasses, wearing a smart casual outfit."
+  }
+}

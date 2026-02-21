@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "cv_id": "cv_003",
+    "created_at": "2026-02-21T10:24:17.252411+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "de",
+      "seniority": "mid",
+      "persona_type": "self-taught developer",
+      "writing_style": "verbose",
+      "role": "UX Designer",
+      "education_country": "UK"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "tom.jpeg"
+  },
+  "data": {
+    "full_name": "Lena Müller",
+    "headline": "Passionate UX Designer with a Flair for Intuitive Interfaces",
+    "email": "lena.mueller@example.com",
+    "phone": "+49 123 456 7890",
+    "location": "Berlin, Germany",
+    "summary": "As a self-taught UX Designer, I have a deep fascination with creating user-centric digital experiences that not only delight but also empower users. With a strong background in visual design and a keen eye for detail, I excel at translating complex requirements into elegant and intuitive interfaces. My passion for continuous learning and my ability to collaborate effectively with cross-functional teams have been instrumental in my professional journey. I am excited to leverage my skills and experience to contribute to your organization's mission and help drive innovation in the digital landscape.",
+    "skills": [
+      "User Interface Design",
+      "Interaction Design",
+      "Prototyping",
+      "User Research",
+      "Information Architecture",
+      "Design Thinking",
+      "Wireframing",
+      "Usability Testing"
+    ],
+    "languages": [
+      {
+        "name": "German",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Digital",
+        "title": "Senior UX Designer",
+        "start_date": "2019-04-01",
+        "end_date": "2022-09-30",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Collaborated with cross-functional teams to design intuitive and user-friendly interfaces for a range of web and mobile applications",
+          "Conducted comprehensive user research, including interviews, usability testing, and data analysis, to inform design decisions",
+          "Developed high-fidelity prototypes and design systems to ensure consistent branding and user experience",
+          "Presented design concepts and solutions to stakeholders, securing buy-in and driving product development"
+        ]
+      },
+      {
+        "company": "Digital Innovations GmbH",
+        "title": "UX Designer",
+        "start_date": "2016-09-01",
+        "end_date": "2019-03-31",
+        "location": "Munich, Germany",
+        "bullets": [
+          "Designed and iterated on user interfaces for a variety of web-based applications, ensuring seamless user experiences",
+          "Collaborated with product managers and developers to translate business requirements into user-centric design solutions",
+          "Conducted user testing sessions to gather feedback and continuously improve the product's usability",
+          "Contributed to the development of the company's design system, ensuring brand consistency across all digital touchpoints"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of London",
+        "degree": "Bachelor of Arts",
+        "field": "Graphic Design",
+        "start_year": "2012",
+        "end_year": "2015"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Responsive E-commerce Website",
+        "description": "Designed and prototyped a responsive e-commerce website with a focus on intuitive navigation and a seamless checkout experience.",
+        "tech": [
+          "Figma",
+          "Adobe XD",
+          "HTML/CSS",
+          "JavaScript"
+        ]
+      },
+      {
+        "name": "Mobile Banking App",
+        "description": "Conceptualized and designed a user-friendly mobile banking app that streamlined common banking tasks and provided personalized financial insights.",
+        "tech": [
+          "Sketch",
+          "InVision",
+          "Swift",
+          "Android Studio"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified User Experience Analyst",
+        "issuer": "International User Experience Certification Institute",
+        "year": "2020"
+      },
+      {
+        "name": "Google UX Design Professional Certificate",
+        "issuer": "Coursera",
+        "year": "2018"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/lena-mueller"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.lenamueller.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. Lena Müller, a mid-career UX Designer with a self-taught background, looking confident and approachable in a well-lit, neutral setting."
+  }
+}

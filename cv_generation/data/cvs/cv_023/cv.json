@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "cv_id": "cv_023",
+    "created_at": "2026-02-21T10:27:04.884081+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "fr",
+      "seniority": "mid",
+      "persona_type": "startup engineer",
+      "writing_style": "formal",
+      "role": "UX Designer",
+      "education_country": "UK"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "groot.jpeg"
+  },
+  "data": {
+    "full_name": "Émilie Dubois",
+    "headline": "Experienced UX Designer with a Passion for Crafting Intuitive Interfaces",
+    "email": "emilie.dubois@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "As an accomplished UX Designer, I have honed my skills in creating user-centric digital experiences that not only delight customers but also drive business success. With a keen eye for detail and a deep understanding of human-centered design principles, I have a proven track record of delivering innovative solutions that solve complex problems. I thrive in fast-paced, collaborative environments and am passionate about pushing the boundaries of what's possible in the digital realm.",
+    "skills": [
+      "User Research",
+      "Interaction Design",
+      "Prototyping",
+      "Wireframing",
+      "Information Architecture",
+      "Usability Testing",
+      "Adobe Creative Suite"
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Startup",
+        "title": "Senior UX Designer",
+        "start_date": "2020-06-01",
+        "end_date": "2023-03-31",
+        "location": "Paris, France",
+        "bullets": [
+          "Conducted extensive user research to identify pain points and inform the design process",
+          "Developed wireframes, prototypes, and high-fidelity mockups to showcase design concepts",
+          "Collaborated closely with cross-functional teams to ensure seamless implementation of UX solutions",
+          "Facilitated usability testing sessions and incorporated user feedback to refine designs",
+          "Mentored junior designers and promoted a culture of continuous learning and improvement"
+        ]
+      },
+      {
+        "company": "Digital Solutions Agency",
+        "title": "UX Designer",
+        "start_date": "2017-09-01",
+        "end_date": "2020-05-31",
+        "location": "London, UK",
+        "bullets": [
+          "Designed user interfaces for a variety of web and mobile applications",
+          "Participated in user research activities to gain insights and inform design decisions",
+          "Collaborated with developers to ensure smooth implementation of designs",
+          "Conducted usability testing and analyzed results to identify areas for improvement",
+          "Presented design concepts and solutions to clients, securing their buy-in and approval"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Manchester",
+        "degree": "Bachelor of Science",
+        "field": "Human-Computer Interaction",
+        "start_year": "2013",
+        "end_year": "2016"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Acme Mobile App Redesign",
+        "description": "Redesigned the Acme mobile app to improve user experience and increase engagement.",
+        "tech": [
+          "Figma",
+          "InVision",
+          "Usability Testing"
+        ]
+      },
+      {
+        "name": "Digital Solutions Agency Website Revamp",
+        "description": "Spearheaded the redesign of the Digital Solutions Agency website to better showcase their services and portfolio.",
+        "tech": [
+          "Adobe XD",
+          "HTML/CSS",
+          "WordPress"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Usability Analyst",
+        "issuer": "Human Factors International",
+        "year": "2019"
+      },
+      {
+        "name": "User Experience Design Specialization",
+        "issuer": "Coursera",
+        "year": "2018"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/emilie-dubois"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.emiliedubois.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. Émilie Dubois, a mid-career UX Designer, is shown in a neutral, thoughtful expression, wearing a smart blazer against a plain background."
+  }
+}

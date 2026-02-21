@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "cv_id": "cv_014",
+    "created_at": "2026-02-21T10:25:45.583771+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "de",
+      "seniority": "mid",
+      "persona_type": "startup engineer",
+      "writing_style": "formal",
+      "role": "DevOps Engineer",
+      "education_country": "Spain"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "tina.jpeg"
+  },
+  "data": {
+    "full_name": "Lena Schultz",
+    "headline": "Experienced DevOps Engineer Driving Innovation at Startups",
+    "email": "lena.schultz@example.com",
+    "phone": "+49 123 456 7890",
+    "location": "Berlin, Germany",
+    "summary": "Highly skilled DevOps Engineer with a proven track record of driving innovation and optimizing infrastructure at fast-paced startups. Adept at automating workflows, deploying cloud-native applications, and collaborating cross-functionally to deliver reliable and scalable solutions. Passionate about leveraging the latest technologies to improve efficiency and enhance the user experience.",
+    "skills": [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Terraform",
+      "CI/CD",
+      "Monitoring",
+      "Scripting",
+      "Troubleshooting"
+    ],
+    "languages": [
+      {
+        "name": "German",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Startup",
+        "title": "DevOps Engineer",
+        "start_date": "2020-06-01",
+        "end_date": "2022-12-31",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Designed and implemented a robust CI/CD pipeline using Jenkins, GitLab, and Kubernetes to streamline application deployments",
+          "Automated infrastructure provisioning and management using Terraform and AWS, reducing deployment time by 50%",
+          "Developed custom monitoring and alerting solutions with Prometheus and Grafana to proactively identify and resolve issues",
+          "Collaborated with cross-functional teams to ensure seamless integration of new features and services"
+        ]
+      },
+      {
+        "company": "Tech Startup GmbH",
+        "title": "DevOps Consultant",
+        "start_date": "2018-03-01",
+        "end_date": "2020-05-31",
+        "location": "Munich, Germany",
+        "bullets": [
+          "Provided DevOps consulting and implementation services to multiple startups, helping them optimize their infrastructure and improve delivery pipelines",
+          "Designed and deployed Kubernetes clusters on AWS, ensuring high availability and scalability of applications",
+          "Implemented monitoring and alerting solutions using Prometheus, Grafana, and ELK stack to proactively identify and resolve issues",
+          "Trained cross-functional teams on DevOps best practices and tooling to foster a culture of collaboration and continuous improvement"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Universidad Politécnica de Madrid",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "start_year": "2013",
+        "end_year": "2017"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Automated Infrastructure Provisioning",
+        "description": "Developed a Terraform-based solution to provision and manage cloud infrastructure on AWS, reducing deployment time and improving reliability.",
+        "tech": [
+          "Terraform",
+          "AWS"
+        ]
+      },
+      {
+        "name": "Kubernetes Cluster Deployment",
+        "description": "Designed and deployed a highly available Kubernetes cluster on AWS, enabling seamless container orchestration and scalability.",
+        "tech": [
+          "Kubernetes",
+          "AWS"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2021"
+      },
+      {
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "issuer": "The Linux Foundation",
+        "year": "2020"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/lena-schultz"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://lena-schultz.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a woman in her mid-30s with short brown hair, wearing a blue button-up shirt and a neutral expression."
+  }
+}

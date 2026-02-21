@@ -67,6 +67,19 @@ services:
       api:
         condition: service_healthy
 
+  generator:
+    build:
+      context: .
+      target: generation
+    image: cv/chatbot-generator:local
+    env_file:
+      - .env
+    volumes:
+      - ./:/cv
+    working_dir: /cv
+    command: ["sh", "-lc", "python -m cv_generation.generate_data --n 30"]
+    restart: "no"
+
 volumes:
   postgres_data:
   front_node_modules:

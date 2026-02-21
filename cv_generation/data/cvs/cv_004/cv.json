@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "cv_id": "cv_004",
+    "created_at": "2026-02-21T10:24:26.689891+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "es",
+      "seniority": "junior",
+      "persona_type": "corporate enterprise architect",
+      "writing_style": "verbose",
+      "role": "Backend Engineer",
+      "education_country": "India"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "tio.jpeg"
+  },
+  "data": {
+    "full_name": "Alejandro Hernández",
+    "headline": "Ambitious Backend Engineer with a Passion for Solving Complex Problems",
+    "email": "alejandro.hernandez@example.com",
+    "phone": "+34 612 345 678",
+    "location": "Madrid, Spain",
+    "summary": "As a driven and innovative Backend Engineer, I possess a strong foundation in computer science principles and a keen eye for optimizing software systems. With experience in developing robust and scalable applications, I excel at translating business requirements into elegant technical solutions. My ability to collaborate cross-functionally and mentor junior team members has been instrumental in driving successful project outcomes. I am constantly seeking opportunities to expand my knowledge and contribute to the advancement of cutting-edge technologies.",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Microservices",
+      "Redis",
+      "MongoDB",
+      "SQL",
+      "Git",
+      "Agile Methodologies"
+    ],
+    "languages": [
+      {
+        "name": "Spanish",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Corporation",
+        "title": "Junior Backend Engineer",
+        "start_date": "2021-06-01",
+        "end_date": "2023-05-31",
+        "location": "Madrid, Spain",
+        "bullets": [
+          "Developed and maintained scalable microservices using Spring Boot, leveraging Redis and MongoDB for caching and data storage",
+          "Collaborated with cross-functional teams to translate business requirements into technical solutions, ensuring efficient and reliable application performance",
+          "Implemented robust error handling and logging mechanisms to enhance the overall system observability",
+          "Participated in Agile ceremonies, including daily standups, sprint planning, and retrospectives, to continuously improve development processes"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Indian Institute of Technology Madras",
+        "degree": "Bachelor of Technology",
+        "field": "Computer Science and Engineering",
+        "start_year": "2017",
+        "end_year": "2021"
+      }
+    ],
+    "projects": [
+      {
+        "name": "E-commerce Platform",
+        "description": "Developed a scalable and secure e-commerce platform using Spring Boot, Redis, and MongoDB. Implemented features such as shopping cart, order management, and payment processing.",
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "Redis",
+          "MongoDB",
+          "Microservices"
+        ]
+      },
+      {
+        "name": "Chatbot Application",
+        "description": "Designed and implemented a conversational AI chatbot using natural language processing techniques. Integrated the chatbot with various communication channels, including web and mobile applications.",
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "Natural Language Processing",
+          "Machine Learning"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2022"
+      },
+      {
+        "name": "Scrum Master Certification",
+        "issuer": "Scrum Alliance",
+        "year": "2021"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/alejandro-hernandez"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.example.com/alejandro-hernandez"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. Alejandro Hernández is a young, clean-cut man with short dark hair, wearing a button-down shirt and a neutral expression."
+  }
+}

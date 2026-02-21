@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "cv_id": "cv_006",
+    "created_at": "2026-02-21T10:24:41.712547+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "en",
+      "seniority": "mid",
+      "persona_type": "academic researcher",
+      "writing_style": "formal",
+      "role": "UX Designer",
+      "education_country": "Germany"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "rock.jpeg"
+  },
+  "data": {
+    "full_name": "Dr. Lukas Schneider",
+    "headline": "UX Designer and Researcher",
+    "email": "lukas.schneider@example.com",
+    "phone": "+49 123 456 789",
+    "location": "Berlin, Germany",
+    "summary": "Experienced UX designer and academic researcher with a passion for creating user-centric digital experiences. Proficient in a range of design methodologies and research techniques, with a strong focus on data-driven decision making and continuous improvement.",
+    "skills": [
+      "User Research",
+      "Interaction Design",
+      "Prototyping",
+      "Usability Testing",
+      "Data Analysis",
+      "Agile Methodologies"
+    ],
+    "languages": [
+      {
+        "name": "German",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Berlin University of Technology",
+        "title": "UX Researcher",
+        "start_date": "2019-09-01",
+        "end_date": "2022-06-30",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Conducted user research and usability testing to inform the design of various university web applications and digital services.",
+          "Collaborated with cross-functional teams to translate research insights into design solutions and iterative improvements.",
+          "Presented research findings and design recommendations to stakeholders, fostering data-driven decision making."
+        ]
+      },
+      {
+        "company": "Fraunhofer Institute for Open Communication Systems",
+        "title": "UX Designer",
+        "start_date": "2017-01-01",
+        "end_date": "2019-08-31",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Designed and prototyped user interfaces for various research projects, focusing on usability and accessibility.",
+          "Conducted user interviews, contextual inquiries, and usability testing to gather insights and validate design decisions.",
+          "Collaborated with researchers and developers to ensure seamless integration of UX principles into the product development process."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Technical University of Berlin",
+        "degree": "Doctor of Philosophy (Ph.D.)",
+        "field": "Human-Computer Interaction",
+        "start_year": "2013",
+        "end_year": "2017"
+      },
+      {
+        "institution": "University of Potsdam",
+        "degree": "Master of Science (M.Sc.)",
+        "field": "Information Systems",
+        "start_year": "2010",
+        "end_year": "2013"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Adaptive User Interfaces for Elderly Users",
+        "description": "Designed and evaluated a personalized user interface for elderly users, incorporating principles of inclusive design and accessibility.",
+        "tech": [
+          "Interaction Design",
+          "Usability Testing",
+          "User Research"
+        ]
+      },
+      {
+        "name": "Virtual Reality for Collaborative Design",
+        "description": "Developed a VR-based platform for remote collaboration in product design, focusing on enhancing spatial awareness and communication.",
+        "tech": [
+          "Virtual Reality",
+          "Prototyping",
+          "User Testing"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Usability Analyst",
+        "issuer": "Human Factors International",
+        "year": "2018"
+      },
+      {
+        "name": "Design Thinking Certification",
+        "issuer": "IDEO U",
+        "year": "2016"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/lukas-schneider"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.lukasschneider.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a middle-aged man with short brown hair and glasses, wearing a blue collared shirt and a neutral expression."
+  }
+}

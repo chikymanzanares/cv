@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "cv_id": "cv_030",
+    "created_at": "2026-02-21T10:28:05.030703+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "es",
+      "seniority": "mid",
+      "persona_type": "career switcher",
+      "writing_style": "formal",
+      "role": "DevOps Engineer",
+      "education_country": "Germany"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "brandow.jpeg"
+  },
+  "data": {
+    "full_name": "Emilia Sánchez",
+    "headline": "Experienced DevOps Engineer Transitioning from Software Development",
+    "email": "emilia.sanchez@example.com",
+    "phone": "+49 123 456 7890",
+    "location": "Berlin, Germany",
+    "summary": "Seasoned software developer with a strong background in web application development, transitioning into the exciting world of DevOps. Proficient in various programming languages, cloud technologies, and automation tools, I'm driven to streamline and optimize software delivery processes. With a keen eye for detail and a passion for problem-solving, I'm eager to apply my skills and experience to drive innovative DevOps solutions.",
+    "skills": [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Azure",
+      "CI/CD",
+      "Terraform",
+      "Ansible",
+      "Python",
+      "Bash"
+    ],
+    "languages": [
+      {
+        "name": "Spanish",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      },
+      {
+        "name": "German",
+        "level": "Proficient"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Software Solutions",
+        "title": "Software Developer",
+        "start_date": "2018-06-01",
+        "end_date": "2022-03-31",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Developed and maintained complex web applications using React, Node.js, and PostgreSQL",
+          "Collaborated with cross-functional teams to design and implement new features",
+          "Participated in code reviews and pair programming sessions to ensure code quality",
+          "Automated deployment and testing processes using Jenkins and Docker"
+        ]
+      },
+      {
+        "company": "TechSavvy GmbH",
+        "title": "DevOps Engineer",
+        "start_date": "2022-04-01",
+        "end_date": "present",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Implemented and maintained containerized application environments using Docker and Kubernetes",
+          "Automated infrastructure provisioning and deployment using Terraform and Ansible",
+          "Collaborated with developers to optimize CI/CD pipelines and reduce deployment times",
+          "Monitored and troubleshot production systems, ensuring high availability and performance"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Technical University of Berlin",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "start_year": "2014",
+        "end_year": "2018"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Microservices Platform",
+        "description": "Designed and implemented a scalable microservices platform using Docker, Kubernetes, and various cloud services",
+        "tech": [
+          "Kubernetes",
+          "Docker",
+          "AWS",
+          "Terraform"
+        ]
+      },
+      {
+        "name": "CI/CD Pipeline Optimization",
+        "description": "Improved the CI/CD pipeline for a large-scale web application, reducing deployment time by 50%",
+        "tech": [
+          "Jenkins",
+          "Gitlab",
+          "Docker",
+          "Ansible"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2021"
+      },
+      {
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "issuer": "The Linux Foundation",
+        "year": "2022"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/emilia-sanchez"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.emiliasanchez.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. Emilia Sánchez, a mid-career DevOps engineer with a background in software development, wearing a blue button-up shirt and looking directly at the camera with a friendly expression."
+  }
+}

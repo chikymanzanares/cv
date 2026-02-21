@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "cv_id": "cv_010",
+    "created_at": "2026-02-21T10:25:11.839157+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "en",
+      "seniority": "senior",
+      "persona_type": "career switcher",
+      "writing_style": "formal",
+      "role": "DevOps Engineer",
+      "education_country": "Spain"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "wonderwoman.jpeg"
+  },
+  "data": {
+    "full_name": "Alejandro Gonzalez",
+    "headline": "Senior DevOps Engineer",
+    "email": "alejandro.gonzalez@example.com",
+    "phone": "+34 123 456 789",
+    "location": "Barcelona, Spain",
+    "summary": "Experienced DevOps Engineer with a strong background in software development and infrastructure management. Skilled in automating and optimizing cloud-based systems, implementing CI/CD pipelines, and collaborating with cross-functional teams to deliver high-quality software solutions.",
+    "skills": [
+      "AWS",
+      "Azure",
+      "Terraform",
+      "Kubernetes",
+      "Docker",
+      "Jenkins",
+      "Python",
+      "Bash"
+    ],
+    "languages": [
+      {
+        "name": "Spanish",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Corp",
+        "title": "Senior DevOps Engineer",
+        "start_date": "2020-01-01",
+        "end_date": "2023-12-31",
+        "location": "Barcelona, Spain",
+        "bullets": [
+          "Designed and implemented scalable, highly available infrastructure using cloud-native technologies",
+          "Automated the entire software delivery pipeline, reducing deployment time from 1 hour to 5 minutes",
+          "Collaborated with development teams to optimize resource utilization and reduce cloud costs by 25%",
+          "Mentored junior engineers and facilitated knowledge-sharing across the organization"
+        ]
+      },
+      {
+        "company": "TechSavvy Inc",
+        "title": "DevOps Engineer",
+        "start_date": "2017-06-01",
+        "end_date": "2020-01-01",
+        "location": "Madrid, Spain",
+        "bullets": [
+          "Designed and implemented CI/CD pipelines using Jenkins, Ansible, and Kubernetes",
+          "Migrated on-premises infrastructure to AWS, improving system reliability and reducing maintenance overhead",
+          "Optimized resource utilization and cost management through monitoring and automation"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Barcelona",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "start_year": "2012",
+        "end_year": "2016"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Microservices Platform",
+        "description": "Designed and implemented a scalable, fault-tolerant microservices platform using Kubernetes, Docker, and Istio.",
+        "tech": [
+          "Kubernetes",
+          "Docker",
+          "Istio",
+          "Prometheus",
+          "Grafana"
+        ]
+      },
+      {
+        "name": "DevSecOps Automation",
+        "description": "Automated the entire software delivery pipeline, including security scanning, compliance checks, and infrastructure provisioning.",
+        "tech": [
+          "Jenkins",
+          "Ansible",
+          "Terraform",
+          "SonarQube",
+          "Snyk"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2021"
+      },
+      {
+        "name": "Certified Kubernetes Administrator",
+        "issuer": "Cloud Native Computing Foundation",
+        "year": "2022"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/alejandrogonzalez"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.example.com/alejandro-gonzalez"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a middle-aged man with dark hair and a friendly, confident expression."
+  }
+}

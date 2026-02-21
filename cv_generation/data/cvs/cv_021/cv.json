@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "cv_id": "cv_021",
+    "created_at": "2026-02-21T10:26:47.401799+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "es",
+      "seniority": "mid",
+      "persona_type": "career switcher",
+      "writing_style": "concise",
+      "role": "UX Designer",
+      "education_country": "UK"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "wu.jpeg"
+  },
+  "data": {
+    "full_name": "Alejandro Gutiérrez",
+    "headline": "UX Designer with a Passion for Crafting Intuitive Experiences",
+    "email": "alejandro.gutierrez@example.com",
+    "phone": "+34 612 345 678",
+    "location": "Madrid, Spain",
+    "summary": "Experienced UX Designer with a background in customer service and a keen eye for detail. Passionate about creating user-centric designs that enhance the overall experience. Adept at conducting user research, prototyping, and iterating on designs to deliver exceptional results.",
+    "skills": [
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Interaction Design",
+      "User Interface Design",
+      "Usability Testing"
+    ],
+    "languages": [
+      {
+        "name": "Spanish",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Software",
+        "title": "UX Designer",
+        "start_date": "2020-06-01",
+        "end_date": "2023-03-15",
+        "location": "Madrid, Spain",
+        "bullets": [
+          "Conducted user research and interviews to understand customer pain points and needs",
+          "Designed wireframes, mockups, and prototypes to iterate on design solutions",
+          "Collaborated with cross-functional teams to ensure alignment and successful implementation of designs",
+          "Performed usability testing and incorporated user feedback to refine the final product"
+        ]
+      },
+      {
+        "company": "Retail Innovations",
+        "title": "Customer Service Representative",
+        "start_date": "2018-09-01",
+        "end_date": "2020-05-31",
+        "location": "Madrid, Spain",
+        "bullets": [
+          "Provided excellent customer service, addressing inquiries and resolving issues in a timely manner",
+          "Gathered customer feedback and insights to help inform product and service improvements",
+          "Demonstrated strong problem-solving and communication skills"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Manchester",
+        "degree": "Bachelor of Arts",
+        "field": "Interaction Design",
+        "start_year": "2014",
+        "end_year": "2017"
+      }
+    ],
+    "projects": [
+      {
+        "name": "E-commerce Website Redesign",
+        "description": "Redesigned the user interface and information architecture of a leading e-commerce platform to improve the overall shopping experience.",
+        "tech": [
+          "Figma",
+          "Framer",
+          "HTML/CSS",
+          "JavaScript"
+        ]
+      },
+      {
+        "name": "Mobile App for Fitness Tracking",
+        "description": "Designed the user experience and interface for a mobile app that helps users track their fitness goals and progress.",
+        "tech": [
+          "Sketch",
+          "Principle",
+          "Swift",
+          "React Native"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Usability Analyst",
+        "issuer": "Human Factors International",
+        "year": "2021"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/alejandro-gutierrez"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.alejandro-gutierrez.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. The candidate has short dark hair, dark eyes, and a warm smile. They are wearing a collared shirt and looking directly at the camera."
+  }
+}

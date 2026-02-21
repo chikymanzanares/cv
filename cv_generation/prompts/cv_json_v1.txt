@@ -1,0 +1,71 @@
+You are generating ONE synthetic resume (CV) as STRICT JSON.
+
+Rules:
+- Output ONLY valid JSON (no markdown, no commentary).
+- Use double quotes, no trailing commas.
+- All dates must be strings.
+- The CV must look realistic (not perfect).
+- The candidate is fictional.
+
+Language: {language}
+Seniority: {seniority}
+Persona type: {persona_type}
+Writing style: {writing_style}
+Primary role: {role}
+Country of education: {education_country}
+
+Return JSON with this shape:
+{{
+  "meta": {{
+    "cv_id": "{cv_id}",
+    "created_at": "{created_at}",
+    "pipeline_version": "{pipeline_version}",
+    "provider": "{provider}",
+    "text_model": "{text_model}",
+    "image_model": "{image_model}",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {{
+      "language": "...",
+      "seniority": "...",
+      "persona_type": "...",
+      "writing_style": "...",
+      "role": "...",
+      "education_country": "..."
+    }}
+  }},
+  "data": {{
+    "full_name": "...",
+    "headline": "...",
+    "email": "...",
+    "phone": "...",
+    "location": "...",
+    "summary": "...",
+    "skills": ["...", "..."],
+    "languages": [{{"name":"...", "level":"..."}}],
+    "experience": [
+      {{
+        "company": "...",
+        "title": "...",
+        "start_date": "...",
+        "end_date": "...",
+        "location": "...",
+        "bullets": ["...", "..."]
+      }}
+    ],
+    "education": [
+      {{
+        "institution": "...",
+        "degree": "...",
+        "field": "...",
+        "start_year": "...",
+        "end_year": "..."
+      }}
+    ],
+    "projects": [{{"name":"...", "description":"...", "tech":["..."]}}],
+    "certifications": [{{"name":"...", "issuer":"...", "year":"..."}}],
+    "links": [{{"label":"LinkedIn", "url":"..."}}, {{"label":"Portfolio", "url":"..."}}],
+    "photo_prompt": "Professional LinkedIn-style headshot. ..."
+  }}
+}}
+
+Make it consistent: experience matches seniority; education country matches request.

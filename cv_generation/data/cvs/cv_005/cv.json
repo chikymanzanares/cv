@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "cv_id": "cv_005",
+    "created_at": "2026-02-21T10:24:34.442791+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "fr",
+      "seniority": "junior",
+      "persona_type": "academic researcher",
+      "writing_style": "formal",
+      "role": "DevOps Engineer",
+      "education_country": "India"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "rosy.jpeg"
+  },
+  "data": {
+    "full_name": "Aditi Sharma",
+    "headline": "Junior DevOps Engineer and Researcher",
+    "email": "aditi.sharma@example.com",
+    "phone": "+91 9876543210",
+    "location": "New Delhi, India",
+    "summary": "Passionate junior DevOps engineer with a strong academic background in computer science. Experienced in automating infrastructure and deploying applications using various DevOps tools and methodologies. Eager to contribute to innovative projects and continuously improve processes.",
+    "skills": [
+      "Docker",
+      "Kubernetes",
+      "Ansible",
+      "Jenkins",
+      "AWS",
+      "Python",
+      "Bash Scripting"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "level": "Fluent"
+      },
+      {
+        "name": "Hindi",
+        "level": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "XYZ Technologies",
+        "title": "Junior DevOps Engineer",
+        "start_date": "2021-06-01",
+        "end_date": "2023-04-30",
+        "location": "New Delhi, India",
+        "bullets": [
+          "Automated infrastructure provisioning and application deployment using Ansible and Terraform",
+          "Implemented Kubernetes clusters and managed containerized applications",
+          "Developed and maintained CI/CD pipelines using Jenkins",
+          "Monitored and troubleshot production environments using logging and monitoring tools"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Indian Institute of Technology (IIT), Delhi",
+        "degree": "Master of Technology (M.Tech)",
+        "field": "Computer Science",
+        "start_year": "2019",
+        "end_year": "2021"
+      },
+      {
+        "institution": "National Institute of Technology (NIT), Rourkela",
+        "degree": "Bachelor of Technology (B.Tech)",
+        "field": "Computer Science and Engineering",
+        "start_year": "2015",
+        "end_year": "2019"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Automated Infrastructure Provisioning",
+        "description": "Designed and implemented an automated infrastructure provisioning system using Terraform and Ansible to deploy and manage cloud resources for a web application.",
+        "tech": [
+          "Terraform",
+          "Ansible",
+          "AWS"
+        ]
+      },
+      {
+        "name": "Kubernetes Cluster Management",
+        "description": "Developed and maintained a Kubernetes cluster to deploy and manage containerized applications, including setting up monitoring, logging, and scaling mechanisms.",
+        "tech": [
+          "Kubernetes",
+          "Docker",
+          "Prometheus",
+          "Grafana"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2022"
+      },
+      {
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "issuer": "The Linux Foundation",
+        "year": "2021"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/aditi-sharma-123456789/"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://aditi-sharma.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. Aditi Sharma, a young woman with dark hair wearing a blue collared shirt, smiling confidently at the camera."
+  }
+}

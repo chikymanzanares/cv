@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "cv_id": "cv_020",
+    "created_at": "2026-02-21T10:26:36.842855+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "en",
+      "seniority": "mid",
+      "persona_type": "self-taught developer",
+      "writing_style": "verbose",
+      "role": "UX Designer",
+      "education_country": "Germany"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "carlota.png"
+  },
+  "data": {
+    "full_name": "Maximilian Müller",
+    "headline": "Passionate UX Designer with a Self-Taught Background",
+    "email": "max.mueller@example.com",
+    "phone": "+49 123 456 7890",
+    "location": "Berlin, Germany",
+    "summary": "As a self-taught UX Designer, I have a unique perspective and a deep passion for creating intuitive and user-centric digital experiences. With a strong background in front-end development, I bring a well-rounded skill set to the table, allowing me to bridge the gap between design and implementation. My attention to detail, problem-solving abilities, and collaborative nature have been instrumental in delivering successful projects for a range of clients. I am constantly seeking new challenges to expand my knowledge and push the boundaries of what's possible in the world of user experience.",
+    "skills": [
+      "User Interface Design",
+      "Interaction Design",
+      "Prototyping",
+      "User Research",
+      "Wireframing",
+      "Front-end Development"
+    ],
+    "languages": [
+      {
+        "name": "German",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Digital Agency",
+        "title": "UX Designer",
+        "start_date": "2019-04-01",
+        "end_date": "2022-06-30",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Collaborated with cross-functional teams to design intuitive and user-friendly interfaces for a variety of web and mobile applications.",
+          "Conducted user research, including interviews, usability testing, and data analysis, to gain insights that informed the design process.",
+          "Created high-fidelity prototypes and interactive mockups to effectively communicate design concepts and gather feedback from stakeholders.",
+          "Participated in agile development sprints, ensuring seamless integration of design solutions with the engineering team."
+        ]
+      },
+      {
+        "company": "Startup Incubator GmbH",
+        "title": "UX Design Consultant",
+        "start_date": "2017-09-01",
+        "end_date": "2019-03-31",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Provided UX design services to early-stage startups, helping them develop user-friendly products and improve their digital experiences.",
+          "Conducted user research, created wireframes, and designed high-fidelity prototypes to validate design concepts with target users.",
+          "Collaborated closely with founders and engineering teams to ensure design solutions were technically feasible and aligned with business objectives.",
+          "Mentored junior designers and shared best practices in user-centered design methodologies."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Applied Sciences Berlin",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "start_year": "2013",
+        "end_year": "2017"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Fitness Tracker App",
+        "description": "Designed and developed a mobile app that helps users track their fitness activities, set goals, and monitor their progress.",
+        "tech": [
+          "Figma",
+          "React Native",
+          "Firebase"
+        ]
+      },
+      {
+        "name": "E-commerce Website Redesign",
+        "description": "Conducted a comprehensive UX audit and redesigned the user interface and information architecture of an existing e-commerce website to improve conversion rates and customer satisfaction.",
+        "tech": [
+          "Sketch",
+          "Invision",
+          "HTML/CSS",
+          "JavaScript"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Usability Analyst",
+        "issuer": "Human Factors International",
+        "year": "2021"
+      },
+      {
+        "name": "Google Analytics Individual Qualification",
+        "issuer": "Google",
+        "year": "2020"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/maximilian-mueller"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.maxmuellerdesign.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. Maximilian Müller, a mid-career UX Designer with a self-taught background, is shown in a well-lit, neutral setting, wearing a collared shirt and looking directly at the camera with a friendly expression."
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "cv_id": "cv_025",
+    "created_at": "2026-02-21T10:27:24.401012+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "de",
+      "seniority": "junior",
+      "persona_type": "self-taught developer",
+      "writing_style": "concise",
+      "role": "Product Manager",
+      "education_country": "UK"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "ben.jpeg"
+  },
+  "data": {
+    "full_name": "Lena Müller",
+    "headline": "Product Manager | Self-Taught Developer",
+    "email": "lena.mueller@example.com",
+    "phone": "+49 123 456 789",
+    "location": "Berlin, Germany",
+    "summary": "Passionate self-taught developer with a keen interest in product management. Experienced in creating and launching successful digital products. Skilled in agile methodologies, user research, and cross-functional collaboration.",
+    "skills": [
+      "Product Management",
+      "Agile Methodologies",
+      "User Research",
+      "Python",
+      "SQL",
+      "Figma"
+    ],
+    "languages": [
+      {
+        "name": "German",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Software Solutions",
+        "title": "Product Manager",
+        "start_date": "2022-06-01",
+        "end_date": "2023-12-31",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Collaborated with cross-functional teams to develop and launch a new SaaS product, resulting in a 25% increase in customer acquisition",
+          "Conducted user research and market analysis to identify pain points and inform product roadmap",
+          "Implemented agile methodologies to streamline product development and delivery"
+        ]
+      },
+      {
+        "company": "Startup Accelerator GmbH",
+        "title": "Product Management Intern",
+        "start_date": "2021-09-01",
+        "end_date": "2022-05-31",
+        "location": "Munich, Germany",
+        "bullets": [
+          "Assisted in the development and launch of a new mobile app, contributing to a 20% increase in user engagement",
+          "Participated in user testing sessions and analyzed feedback to improve the product's user experience",
+          "Supported the team in managing the product backlog and prioritizing feature development"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Cambridge",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "start_year": "2017",
+        "end_year": "2020"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Personal Website",
+        "description": "Designed and developed a personal website using React and Gatsby to showcase my projects and skills.",
+        "tech": [
+          "React",
+          "Gatsby",
+          "CSS"
+        ]
+      },
+      {
+        "name": "Expense Tracker App",
+        "description": "Built a mobile-friendly expense tracking application using React Native and Firebase, allowing users to manage their personal finances.",
+        "tech": [
+          "React Native",
+          "Firebase",
+          "JavaScript"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Product Management Certification",
+        "issuer": "Udemy",
+        "year": "2021"
+      },
+      {
+        "name": "Agile Fundamentals",
+        "issuer": "Scrum.org",
+        "year": "2022"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/lena-mueller"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://lena-mueller.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. The candidate has a friendly, confident expression and is dressed in business casual attire."
+  }
+}

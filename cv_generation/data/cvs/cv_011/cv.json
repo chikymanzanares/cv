@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "cv_id": "cv_011",
+    "created_at": "2026-02-21T10:25:19.809341+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "fr",
+      "seniority": "senior",
+      "persona_type": "career switcher",
+      "writing_style": "verbose",
+      "role": "Backend Engineer",
+      "education_country": "India"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "dan.jpeg"
+  },
+  "data": {
+    "full_name": "Émilie Dubois",
+    "headline": "Expérimenté Ingénieur Backend avec une expérience diversifiée",
+    "email": "emilie.dubois@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "Avec plus de 10 ans d'expérience dans le développement backend, je suis un professionnel polyvalent et passionné. J'ai acquis une expertise approfondie dans la conception et l'implémentation de systèmes backend évolutifs et performants. Mes compétences techniques incluent le développement en Java, l'utilisation de frameworks tels que Spring Boot, la gestion de bases de données, et la mise en place d'architectures microservices. J'ai également une expérience réussie dans la gestion de projets complexes, la résolution de problèmes complexes et la collaboration avec des équipes multidisciplinaires. Je suis constamment à la recherche de nouvelles technologies et de meilleures pratiques pour améliorer mes compétences et contribuer au succès de mon entreprise.",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Microservices",
+      "Database Management",
+      "Agile Methodologies",
+      "Problem-Solving",
+      "Team Collaboration"
+    ],
+    "languages": [
+      {
+        "name": "Français",
+        "level": "Natif"
+      },
+      {
+        "name": "Anglais",
+        "level": "Courant"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Société Générale",
+        "title": "Ingénieur Backend Principal",
+        "start_date": "2018-05-01",
+        "end_date": "2022-12-31",
+        "location": "Paris, France",
+        "bullets": [
+          "Conception et développement de systèmes backend complexes en utilisant Java et Spring Boot",
+          "Mise en place d'architectures microservices évolutives et résilientes",
+          "Gestion de projets backend de bout en bout, de la phase de conception à la mise en production",
+          "Optimisation des performances et de la scalabilité des applications",
+          "Participation active à la formation et au mentorat des équipes junior"
+        ]
+      },
+      {
+        "company": "Airbus",
+        "title": "Ingénieur Backend",
+        "start_date": "2014-09-01",
+        "end_date": "2018-04-30",
+        "location": "Toulouse, France",
+        "bullets": [
+          "Développement d'applications backend critiques pour les systèmes de gestion de la production",
+          "Intégration de solutions backend avec des systèmes legacy et des API tierces",
+          "Participation à la conception et à l'implémentation d'une architecture microservices",
+          "Mise en place de processus d'intégration continue et de déploiement automatisé"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Indian Institute of Technology Madras",
+        "degree": "Maîtrise en Génie Informatique",
+        "field": "Informatique",
+        "start_year": "2009",
+        "end_year": "2011"
+      },
+      {
+        "institution": "Birla Institute of Technology and Science, Pilani",
+        "degree": "Licence en Génie Informatique",
+        "field": "Informatique",
+        "start_year": "2005",
+        "end_year": "2009"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Plateforme de gestion des commandes",
+        "description": "Développement d'une plateforme backend robuste et évolutive pour la gestion des commandes en ligne, en utilisant Java, Spring Boot et une architecture microservices.",
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "Microservices",
+          "Database",
+          "REST API"
+        ]
+      },
+      {
+        "name": "Système de surveillance de la production",
+        "description": "Conception et implémentation d'un système backend pour la surveillance en temps réel de la production industrielle, en intégrant des capteurs IoT et des algorithmes d'analyse de données.",
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "IoT",
+          "Data Analytics",
+          "Messaging"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certification Spring Professional",
+        "issuer": "Pivotal",
+        "year": "2017"
+      },
+      {
+        "name": "Certification AWS Certified Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2020"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/emilie-dubois"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://emilie-dubois.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a woman in her 30s with short brown hair, wearing a blue blazer and a white shirt. She is looking directly at the camera with a confident, friendly expression."
+  }
+}

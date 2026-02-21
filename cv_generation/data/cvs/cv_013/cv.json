@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "cv_id": "cv_013",
+    "created_at": "2026-02-21T10:25:37.932750+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "de",
+      "seniority": "junior",
+      "persona_type": "academic researcher",
+      "writing_style": "formal",
+      "role": "Backend Engineer",
+      "education_country": "Spain"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "mark.jpeg"
+  },
+  "data": {
+    "full_name": "Emilia Fernández",
+    "headline": "Junior Backend Engineer with Academic Research Experience",
+    "email": "emilia.fernandez@example.com",
+    "phone": "+34 123 456 789",
+    "location": "Madrid, Spain",
+    "summary": "Passionate about backend development and eager to apply my academic research skills in a professional setting. Experienced in designing and implementing robust and scalable backend systems. Proficient in a variety of programming languages and frameworks, with a strong focus on code quality and best practices.",
+    "skills": [
+      "Python",
+      "Django",
+      "Flask",
+      "SQL",
+      "Git",
+      "Agile Methodologies",
+      "Data Analysis",
+      "Problem-Solving"
+    ],
+    "languages": [
+      {
+        "name": "Spanish",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "University of Madrid",
+        "title": "Research Assistant",
+        "start_date": "2021-06-01",
+        "end_date": "2022-09-30",
+        "location": "Madrid, Spain",
+        "bullets": [
+          "Conducted literature reviews and data analysis for various research projects in the field of computer science",
+          "Collaborated with interdisciplinary teams to develop and implement innovative solutions",
+          "Presented research findings at academic conferences and workshops"
+        ]
+      },
+      {
+        "company": "Startup Incubator",
+        "title": "Backend Developer Intern",
+        "start_date": "2020-09-01",
+        "end_date": "2021-05-31",
+        "location": "Madrid, Spain",
+        "bullets": [
+          "Developed and maintained backend services for a web-based application using Python and Django",
+          "Participated in agile development practices, including sprint planning, code reviews, and testing",
+          "Gained experience in deploying and scaling backend infrastructure"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Madrid",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "start_year": "2017",
+        "end_year": "2021"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Automated Sentiment Analysis",
+        "description": "Developed a machine learning-based sentiment analysis tool for processing large volumes of text data.",
+        "tech": [
+          "Python",
+          "scikit-learn",
+          "NLTK"
+        ]
+      },
+      {
+        "name": "Distributed File Storage System",
+        "description": "Designed and implemented a distributed file storage system using a peer-to-peer architecture.",
+        "tech": [
+          "Python",
+          "Flask",
+          "Redis",
+          "ZeroMQ"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Python Developer",
+        "issuer": "Python Institute",
+        "year": "2021"
+      },
+      {
+        "name": "Agile Project Management",
+        "issuer": "Scrum Alliance",
+        "year": "2020"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/emilia-fernandez"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/emilia-fernandez"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. The candidate has a warm, friendly expression and is wearing a collared shirt. The background is a simple, neutral color."
+  }
+}

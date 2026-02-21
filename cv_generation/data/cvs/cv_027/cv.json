@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "cv_id": "cv_027",
+    "created_at": "2026-02-21T10:27:39.733679+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "de",
+      "seniority": "senior",
+      "persona_type": "startup engineer",
+      "writing_style": "formal",
+      "role": "Product Manager",
+      "education_country": "UK"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "tommy.jpeg"
+  },
+  "data": {
+    "full_name": "Katharina Weber",
+    "headline": "Senior Product Manager with Startup Experience",
+    "email": "katharina.weber@example.com",
+    "phone": "+49 123 456 7890",
+    "location": "Berlin, Germany",
+    "summary": "Experienced Product Manager with a proven track record of delivering successful products in fast-paced startup environments. Skilled in agile methodologies, user research, and cross-functional collaboration. Passionate about creating innovative solutions that meet customer needs.",
+    "skills": [
+      "Product Management",
+      "Agile Methodologies",
+      "User Research",
+      "Stakeholder Management",
+      "Data Analysis",
+      "Project Management"
+    ],
+    "languages": [
+      {
+        "name": "German",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Startup",
+        "title": "Senior Product Manager",
+        "start_date": "2019-04-01",
+        "end_date": "2023-03-31",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Spearheaded the development and launch of three successful products, driving user growth and revenue by 30% within the first year.",
+          "Collaborated cross-functionally with engineering, design, and marketing teams to define product roadmaps and deliver high-quality solutions.",
+          "Conducted user research, analyzed data, and implemented feature improvements to enhance the user experience.",
+          "Managed the product backlog, prioritized features, and ensured timely delivery of releases."
+        ]
+      },
+      {
+        "company": "Omega Tech",
+        "title": "Product Manager",
+        "start_date": "2016-09-01",
+        "end_date": "2019-03-31",
+        "location": "London, UK",
+        "bullets": [
+          "Spearheaded the development and launch of a new mobile app, leading to a 25% increase in user engagement.",
+          "Collaborated with the engineering team to implement Agile methodologies, improving development efficiency and product quality.",
+          "Conducted user testing and market research to identify customer pain points and inform product roadmap decisions.",
+          "Presented product updates and performance metrics to executive stakeholders, securing additional funding for product initiatives."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Cambridge",
+        "degree": "Master of Science",
+        "field": "Computer Science",
+        "start_year": "2012",
+        "end_year": "2014"
+      },
+      {
+        "institution": "University of Oxford",
+        "degree": "Bachelor of Science",
+        "field": "Mathematics",
+        "start_year": "2008",
+        "end_year": "2012"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Acme Startup Mobile App",
+        "description": "Developed and launched a mobile app for Acme Startup, driving a 25% increase in user engagement.",
+        "tech": [
+          "React Native",
+          "Firebase",
+          "AWS"
+        ]
+      },
+      {
+        "name": "Omega Tech Product Roadmap",
+        "description": "Defined and executed the product roadmap for Omega Tech's flagship software, leading to a 30% increase in revenue.",
+        "tech": [
+          "Agile",
+          "Product Management",
+          "Data Analysis"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Product Manager",
+        "issuer": "Product School",
+        "year": "2018"
+      },
+      {
+        "name": "Agile Certified Practitioner",
+        "issuer": "PMI",
+        "year": "2017"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/katharina-weber"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://katharina-weber.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. The photo should show Katharina Weber, a senior product manager with a friendly and approachable expression. She should be dressed in business casual attire, such as a blouse and blazer, against a plain background."
+  }
+}

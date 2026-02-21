@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "cv_id": "cv_017",
+    "created_at": "2026-02-21T10:26:11.222338+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "de",
+      "seniority": "senior",
+      "persona_type": "corporate enterprise architect",
+      "writing_style": "concise",
+      "role": "UX Designer",
+      "education_country": "India"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "sarah.jpeg"
+  },
+  "data": {
+    "full_name": "Anja Müller",
+    "headline": "Senior UX Designer and Enterprise Architect",
+    "email": "anja.mueller@example.com",
+    "phone": "+49 123 456 7890",
+    "location": "Munich, Germany",
+    "summary": "Seasoned UX Designer and Enterprise Architect with over 15 years of experience in the corporate sector. Adept at bridging the gap between business requirements and technical solutions, delivering intuitive and user-centric digital experiences.",
+    "skills": [
+      "User Experience Design",
+      "Interaction Design",
+      "Wireframing",
+      "Prototyping",
+      "Information Architecture",
+      "Enterprise Architecture",
+      "Project Management"
+    ],
+    "languages": [
+      {
+        "name": "German",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Siemens AG",
+        "title": "Senior UX Designer and Enterprise Architect",
+        "start_date": "2015-01-01",
+        "end_date": "2022-12-31",
+        "location": "Munich, Germany",
+        "bullets": [
+          "Designed and implemented user-centric enterprise software solutions for global manufacturing clients",
+          "Collaborated with cross-functional teams to align business requirements with technical feasibility",
+          "Conducted user research, created wireframes, and developed interactive prototypes to validate design concepts",
+          "Established enterprise-wide design standards and guidelines to ensure consistent user experiences",
+          "Provided architectural guidance and technical leadership for complex IT systems and infrastructure"
+        ]
+      },
+      {
+        "company": "Bosch GmbH",
+        "title": "UX Designer and Enterprise Architect",
+        "start_date": "2010-06-01",
+        "end_date": "2014-12-31",
+        "location": "Stuttgart, Germany",
+        "bullets": [
+          "Designed and developed user interfaces for enterprise resource planning (ERP) systems",
+          "Analyzed business processes and translated them into intuitive digital workflows",
+          "Conducted user testing and iteratively improved design solutions based on feedback",
+          "Participated in the development of enterprise architecture models and roadmaps"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "National Institute of Technology, Rourkela",
+        "degree": "Bachelor of Technology",
+        "field": "Computer Science and Engineering",
+        "start_year": "2005",
+        "end_year": "2009"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Enterprise UX Transformation",
+        "description": "Spearheaded the redesign of the company's enterprise software suite to improve user experience and adoption",
+        "tech": [
+          "User Research",
+          "Interaction Design",
+          "Prototyping"
+        ]
+      },
+      {
+        "name": "Enterprise Architecture Roadmap",
+        "description": "Developed a comprehensive enterprise architecture roadmap to guide the organization's digital transformation",
+        "tech": [
+          "Enterprise Architecture",
+          "Business Process Modeling",
+          "IT Infrastructure Planning"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Enterprise Architect",
+        "issuer": "The Open Group",
+        "year": "2018"
+      },
+      {
+        "name": "Certified User Experience Designer",
+        "issuer": "Nielsen Norman Group",
+        "year": "2016"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/anja-mueller"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.anjamueller.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. Anja Müller, a middle-aged woman with short brown hair, wearing a blue blazer and smiling confidently at the camera."
+  }
+}

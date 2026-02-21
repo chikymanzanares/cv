@@ -1,0 +1,12 @@
+# CV Generation Pipeline
+
+This module contains the offline pipeline used to generate a synthetic dataset of realistic-looking CVs (résumés) in PDF format.
+
+The purpose of this dataset is to support the Retrieval-Augmented Generation (RAG) workflow required by the AI-Powered CV Screener application.
+
+This pipeline is intentionally separated from the runtime backend in order to:
+
+- Keep the production API lightweight and free of unnecessary dependencies
+- Avoid coupling application startup with external LLM or image generation calls
+- Enable reproducible dataset generation for experimentation and evaluation
+- Allow regeneration of PDFs without re-calling the LLM

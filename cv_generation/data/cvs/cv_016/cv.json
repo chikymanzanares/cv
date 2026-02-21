@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "cv_id": "cv_016",
+    "created_at": "2026-02-21T10:26:04.054102+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "es",
+      "seniority": "junior",
+      "persona_type": "academic researcher",
+      "writing_style": "concise",
+      "role": "Product Manager",
+      "education_country": "India"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "peter.jpeg"
+  },
+  "data": {
+    "full_name": "Ananya Sharma",
+    "headline": "Aspiring Product Manager with Academic Research Experience",
+    "email": "ananya.sharma@example.com",
+    "phone": "+91 987-654-3210",
+    "location": "New Delhi, India",
+    "summary": "Passionate academic researcher with a strong background in data analysis and problem-solving. Seeking to transition into a Product Manager role to leverage my analytical skills and drive innovation. Committed to delivering user-centric solutions that create lasting impact.",
+    "skills": [
+      "Product Management",
+      "Data Analysis",
+      "User Research",
+      "Agile Methodologies",
+      "Problem Solving"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "level": "Fluent"
+      },
+      {
+        "name": "Hindi",
+        "level": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "University of Delhi",
+        "title": "Research Assistant",
+        "start_date": "2021-06-01",
+        "end_date": "2023-05-31",
+        "location": "New Delhi, India",
+        "bullets": [
+          "Conducted extensive literature reviews and data analysis to support research projects",
+          "Collaborated with cross-functional teams to design and implement research methodologies",
+          "Presented research findings at academic conferences, contributing to the field's knowledge base"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Indian Institute of Technology, Delhi",
+        "degree": "Master of Science",
+        "field": "Computer Science",
+        "start_year": "2019",
+        "end_year": "2021"
+      },
+      {
+        "institution": "Birla Institute of Technology and Science, Pilani",
+        "degree": "Bachelor of Engineering",
+        "field": "Electronics and Communication",
+        "start_year": "2015",
+        "end_year": "2019"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Predictive Analytics for Customer Churn",
+        "description": "Developed a machine learning model to predict customer churn for a telecommunications company, resulting in a 15% reduction in customer attrition.",
+        "tech": [
+          "Python",
+          "Scikit-learn",
+          "Pandas"
+        ]
+      },
+      {
+        "name": "Automated Recommendation System",
+        "description": "Designed and implemented a content-based recommendation system for an e-commerce platform, improving user engagement and sales.",
+        "tech": [
+          "Java",
+          "Apache Spark",
+          "Neo4j"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Product Manager",
+        "issuer": "Product School",
+        "year": "2022"
+      },
+      {
+        "name": "Advanced Data Analysis",
+        "issuer": "Coursera",
+        "year": "2021"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ananya-sharma"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://ananyasharma.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a young woman with dark hair, wearing a white blouse and a neutral expression, looking directly at the camera."
+  }
+}

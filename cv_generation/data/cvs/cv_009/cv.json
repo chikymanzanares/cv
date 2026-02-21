@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "cv_id": "cv_009",
+    "created_at": "2026-02-21T10:25:05.064186+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "en",
+      "seniority": "junior",
+      "persona_type": "self-taught developer",
+      "writing_style": "formal",
+      "role": "Backend Engineer",
+      "education_country": "India"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "manolo.jpeg"
+  },
+  "data": {
+    "full_name": "Arjun Sharma",
+    "headline": "Aspiring Backend Engineer with a Passion for Problem-Solving",
+    "email": "arjun.sharma@example.com",
+    "phone": "+91 9876543210",
+    "location": "New Delhi, India",
+    "summary": "As a self-taught developer, I have a strong foundation in backend engineering principles and a keen interest in building scalable and efficient applications. With a focus on continuous learning, I'm eager to apply my skills and contribute to innovative projects that make a real impact.",
+    "skills": [
+      "Python",
+      "Django",
+      "SQL",
+      "Git",
+      "Linux",
+      "AWS"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "level": "Fluent"
+      },
+      {
+        "name": "Hindi",
+        "level": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Software Solutions",
+        "title": "Junior Backend Developer",
+        "start_date": "2021-06-01",
+        "end_date": "2023-03-31",
+        "location": "New Delhi, India",
+        "bullets": [
+          "Developed and maintained RESTful APIs using Django and Django REST Framework",
+          "Implemented efficient database models and optimized database queries",
+          "Collaborated with cross-functional teams to understand requirements and deliver solutions",
+          "Participated in code reviews and mentored junior developers"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Delhi Technological University",
+        "degree": "Bachelor of Technology",
+        "field": "Computer Science",
+        "start_year": "2017",
+        "end_year": "2021"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Personal Blog",
+        "description": "Developed a personal blog using Django, SQLite, and Bootstrap. Implemented features like user authentication, CRUD operations, and responsive design.",
+        "tech": [
+          "Django",
+          "SQLite",
+          "Bootstrap"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Developer - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2022"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/arjunsharma"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.arjunsharma.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. Friendly, confident expression. Neutral background."
+  }
+}

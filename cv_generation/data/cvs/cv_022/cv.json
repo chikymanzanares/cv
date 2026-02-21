@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "cv_id": "cv_022",
+    "created_at": "2026-02-21T10:26:55.476572+00:00",
+    "pipeline_version": "1.0.0",
+    "provider": "anthropic",
+    "text_model": "claude-3-haiku-20240307",
+    "image_model": "black-forest-labs/flux.1-schnell",
+    "prompt_version": "cv_json_v1",
+    "profile_config": {
+      "language": "en",
+      "seniority": "mid",
+      "persona_type": "corporate enterprise architect",
+      "writing_style": "formal",
+      "role": "Data Scientist",
+      "education_country": "India"
+    },
+    "photo_source": "local_asset",
+    "photo_asset": "batman.jpeg"
+  },
+  "data": {
+    "full_name": "Aadhya Sharma",
+    "headline": "Experienced Data Scientist with Expertise in Enterprise-Scale Analytics",
+    "email": "aadhya.sharma@example.com",
+    "phone": "+91 9876543210",
+    "location": "Bangalore, India",
+    "summary": "Seasoned Data Scientist with a strong background in developing and deploying large-scale data analytics solutions for enterprise-level organizations. Proficient in leveraging a variety of data engineering and machine learning techniques to derive actionable insights and drive data-driven decision-making. Adept at collaborating cross-functionally with stakeholders to align business objectives with technical capabilities.",
+    "skills": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "TensorFlow",
+      "AWS",
+      "Azure",
+      "Tableau",
+      "Power BI"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "level": "Fluent"
+      },
+      {
+        "name": "Hindi",
+        "level": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Acme Corporation",
+        "title": "Senior Data Scientist",
+        "start_date": "2019-05-01",
+        "end_date": "2023-04-30",
+        "location": "Bangalore, India",
+        "bullets": [
+          "Designed and implemented scalable data pipelines to ingest, process, and analyze large volumes of structured and unstructured data from various sources.",
+          "Developed and deployed predictive models using machine learning techniques to solve complex business problems, including customer churn prediction, demand forecasting, and fraud detection.",
+          "Collaborated with cross-functional teams to translate business requirements into technical solutions, ensuring the alignment of analytics initiatives with organizational goals.",
+          "Mentored and trained junior data scientists, sharing best practices and promoting knowledge-sharing within the team."
+        ]
+      },
+      {
+        "company": "Globex Inc.",
+        "title": "Data Scientist",
+        "start_date": "2016-07-01",
+        "end_date": "2019-04-30",
+        "location": "Mumbai, India",
+        "bullets": [
+          "Designed and implemented data processing workflows to extract, transform, and load data from multiple sources into a centralized data warehouse.",
+          "Developed and deployed machine learning models to automate various business processes, such as customer segmentation, product recommendation, and anomaly detection.",
+          "Collaborated with business stakeholders to understand their data-driven requirements and translate them into actionable analytical solutions.",
+          "Participated in the development of data visualization dashboards to enable data-driven decision-making at the executive level."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Indian Institute of Technology, Bombay",
+        "degree": "Master of Technology",
+        "field": "Computer Science",
+        "start_year": "2013",
+        "end_year": "2015"
+      },
+      {
+        "institution": "Birla Institute of Technology and Science, Pilani",
+        "degree": "Bachelor of Engineering",
+        "field": "Computer Science",
+        "start_year": "2009",
+        "end_year": "2013"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Predictive Maintenance for Industrial Equipment",
+        "description": "Developed a predictive maintenance solution using machine learning techniques to forecast equipment failures and optimize maintenance schedules, resulting in reduced downtime and maintenance costs.",
+        "tech": [
+          "Python",
+          "Scikit-learn",
+          "TensorFlow",
+          "AWS"
+        ]
+      },
+      {
+        "name": "Personalized Product Recommendations",
+        "description": "Designed and implemented a recommendation engine using collaborative filtering and deep learning algorithms to provide personalized product recommendations, leading to increased customer engagement and sales.",
+        "tech": [
+          "Python",
+          "Pandas",
+          "TensorFlow",
+          "Redis"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Data Analytics - Specialty",
+        "issuer": "Amazon Web Services",
+        "year": "2021"
+      },
+      {
+        "name": "Certified Analytics Professional",
+        "issuer": "INFORMS",
+        "year": "2019"
+      }
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/aadhya-sharma"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://www.aadhyasharma.com"
+      }
+    ],
+    "photo_prompt": "Professional LinkedIn-style headshot. Aadhya Sharma, a mid-career data scientist with a formal, corporate demeanor and confident expression."
+  }
+}
