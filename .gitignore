@@ -33,3 +33,6 @@ htmlcov/
 *.db
 *.sqlite
 *.sqlite3
+
+# Project data
+cv_generation/data
