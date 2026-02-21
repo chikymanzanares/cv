@@ -1,138 +1,134 @@
 {
   "meta": {
     "cv_id": "cv_001",
-    "created_at": "2026-02-21T10:23:58.879293+00:00",
+    "created_at": "2026-02-21T10:40:02.579783+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v1",
     "profile_config": {
-      "language": "es",
-      "seniority": "mid",
-      "persona_type": "corporate enterprise architect",
-      "writing_style": "concise",
-      "role": "Data Scientist",
+      "language": "en",
+      "seniority": "senior",
+      "persona_type": "self-taught developer",
+      "writing_style": "verbose",
+      "role": "DevOps Engineer",
       "education_country": "Germany"
     },
     "photo_source": "local_asset",
-    "photo_asset": "carla.jpeg"
+    "photo_asset": "carlota.png"
   },
   "data": {
-    "full_name": "Alejandro Gutierrez",
-    "headline": "Experienced Data Scientist and Enterprise Architect",
-    "email": "alejandro.gutierrez@example.com",
+    "full_name": "Maximilian Schneider",
+    "headline": "Senior DevOps Engineer with a Passion for Automation",
+    "email": "maximilian.schneider@example.com",
     "phone": "+49 123 456 7890",
-    "location": "Berlin, Germany",
-    "summary": "Seasoned data science professional with a strong background in enterprise architecture. Adept at leveraging data-driven insights to drive business strategy and digital transformation. Skilled in leading cross-functional teams and delivering innovative solutions.",
+    "location": "Munich, Germany",
+    "summary": "Experienced DevOps Engineer with a strong background in infrastructure automation, cloud deployment, and continuous integration/continuous delivery (CI/CD) pipelines. Skilled in leveraging tools like Terraform, Ansible, and Docker to streamline development and operations workflows. Passionate about implementing best practices and driving process improvements to enhance efficiency and reliability. Committed to staying up-to-date with the latest industry trends and technologies.",
     "skills": [
-      "Data Analysis",
-      "Machine Learning",
-      "SQL",
-      "Python",
-      "Tableau",
-      "Agile Methodologies",
-      "Project Management"
+      "Terraform",
+      "Ansible",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Azure",
+      "GitLab CI/CD",
+      "Monitoring",
+      "Logging",
+      "Incident Response"
     ],
     "languages": [
       {
         "name": "German",
-        "level": "Fluent"
+        "level": "Native"
       },
       {
         "name": "English",
         "level": "Fluent"
-      },
-      {
-        "name": "Spanish",
-        "level": "Native"
       }
     ],
     "experience": [
       {
-        "company": "Acme Corporation",
-        "title": "Senior Data Scientist",
-        "start_date": "2018-06-01",
-        "end_date": "2022-12-31",
-        "location": "Berlin, Germany",
+        "company": "Black Forest Labs",
+        "title": "Senior DevOps Engineer",
+        "start_date": "2019-06-01",
+        "end_date": "Present",
+        "location": "Munich, Germany",
         "bullets": [
-          "Developed and implemented predictive models to optimize business processes and drive strategic decision-making.",
-          "Collaborated with cross-functional teams to identify and address complex data challenges, resulting in significant operational improvements.",
-          "Designed and deployed data visualization dashboards to enhance data-driven decision-making across the organization."
+          "Designed and implemented infrastructure as code (IaC) solutions using Terraform, managing cloud resources across AWS and Azure",
+          "Automated deployment pipelines with Ansible and GitLab CI/CD, ensuring consistent and reliable application deployments",
+          "Managed Kubernetes clusters, optimizing resource utilization and implementing advanced monitoring and logging solutions",
+          "Collaborated with development teams to improve software delivery processes, reducing deployment time and increasing reliability",
+          "Participated in on-call rotations, troubleshooting and resolving production issues in a timely manner"
         ]
       },
       {
-        "company": "Global Tech Solutions",
-        "title": "Data Scientist and Enterprise Architect",
-        "start_date": "2015-01-01",
-        "end_date": "2018-05-31",
-        "location": "Munich, Germany",
+        "company": "Tannhäuser GmbH",
+        "title": "DevOps Engineer",
+        "start_date": "2016-09-01",
+        "end_date": "2019-05-31",
+        "location": "Nuremberg, Germany",
         "bullets": [
-          "Spearheaded the design and implementation of a comprehensive enterprise data architecture, enabling seamless data integration and analytics.",
-          "Led the development of machine learning models to automate and streamline business processes, resulting in increased efficiency and cost savings.",
-          "Facilitated the adoption of agile methodologies and data-driven decision-making across the organization."
+          "Developed and maintained CI/CD pipelines using Jenkins, automating the build, test, and deployment processes",
+          "Implemented containerization strategies with Docker, streamlining application packaging and deployment",
+          "Collaborated with development teams to improve code quality and promote best practices, such as testing and version control",
+          "Participated in infrastructure planning and optimization, ensuring scalability and high availability",
+          "Provided technical support and training to cross-functional teams, fostering a DevOps culture"
         ]
       }
     ],
     "education": [
       {
         "institution": "Technical University of Munich",
-        "degree": "Master of Science",
-        "field": "Data Science",
-        "start_year": "2013",
-        "end_year": "2015"
-      },
-      {
-        "institution": "University of Heidelberg",
         "degree": "Bachelor of Science",
         "field": "Computer Science",
-        "start_year": "2009",
-        "end_year": "2013"
+        "start_year": "2012",
+        "end_year": "2016"
       }
     ],
     "projects": [
       {
-        "name": "Customer Churn Prediction",
-        "description": "Developed a machine learning model to predict customer churn, enabling the client to implement targeted retention strategies.",
+        "name": "Infrastructure Automation for SaaS Platform",
+        "description": "Designed and implemented a comprehensive infrastructure as code solution using Terraform to manage cloud resources for a SaaS platform, including EC2 instances, databases, and networking components. Integrated the IaC pipeline with GitLab CI/CD to enable automated provisioning and deployment.",
         "tech": [
-          "Python",
-          "Scikit-learn",
-          "Pandas",
-          "Matplotlib"
+          "Terraform",
+          "AWS",
+          "GitLab CI/CD"
         ]
       },
       {
-        "name": "Supply Chain Optimization",
-        "description": "Designed and implemented a data-driven supply chain optimization solution, resulting in a 15% reduction in inventory costs.",
+        "name": "Kubernetes Cluster Management",
+        "description": "Managed and optimized a Kubernetes cluster running on Azure, implementing advanced monitoring and logging solutions to ensure the reliability and performance of containerized applications. Automated the deployment and scaling of the cluster using Ansible and GitLab CI/CD.",
         "tech": [
-          "SQL",
-          "Tableau",
-          "Optimization Algorithms"
+          "Kubernetes",
+          "Ansible",
+          "Azure",
+          "GitLab CI/CD"
         ]
       }
     ],
     "certifications": [
       {
-        "name": "Certified Data Scientist",
-        "issuer": "Udacity",
-        "year": "2017"
-      },
-      {
         "name": "AWS Certified Solutions Architect - Associate",
         "issuer": "Amazon Web Services",
         "year": "2020"
+      },
+      {
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "issuer": "The Linux Foundation",
+        "year": "2021"
       }
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alejandro-gutierrez"
+        "url": "https://www.linkedin.com/in/maximilian-schneider"
       },
       {
         "label": "Portfolio",
-        "url": "https://alejandro-gutierrez.com"
+        "url": "https://example.com/maximilian-schneider"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a middle-aged Hispanic man with short dark hair and a friendly, confident expression."
+    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a middle-aged man with short brown hair, wearing a blue suit and a neutral expression. The background is blurred, focusing the attention on the candidate's face."
   }
 }

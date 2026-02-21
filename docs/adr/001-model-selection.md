@@ -1,77 +1,133 @@
-# Model Selection Rationale
+# Model Selection
 
-This project requires generating structured synthetic CV data in JSON format, as well as realistic candidate profile images to be embedded into PDF resumes for downstream ingestion into a Retrieval-Augmented Generation (RAG) pipeline.
-
-## Task Requirements
-
-The selected models must:
-
-- Follow structured instructions reliably
-- Generate valid JSON outputs
-- Support multilingual content
-- Operate within free-tier constraints
-- Allow local reproducibility by reviewers without billing setup
+This document describes the selected models used for synthetic CV generation within the dataset creation pipeline. The pipeline supports multiple providers configured via environment variables.
 
 ---
 
-## Selected Provider
+## Text Generation Models
 
-The default provider selected for data generation is **Google AI Studio (Gemini)**.
+### Primary (default): Anthropic
 
-Model selection is configurable via environment variables in order to support experimentation and provider fallback without modifying application code.
+The default Large Language Model (LLM) used for generating structured CV content is:
+
+```
+claude-3-haiku-20240307
+```
+
+**Provider:** Anthropic
+
+**Selection rationale:**
+
+* Reliable adherence to structured prompts
+* Consistent generation of valid JSON outputs
+* Instruction-tuned behaviour suitable for document generation
+* Multilingual content generation support
+* Low latency for batch processing
+* Cost-efficiency under constrained usage budgets
+
+Given the requirement to generate 25–30 structured CV profiles for downstream Retrieval-Augmented Generation (RAG) tasks, this model provides an appropriate trade-off between generation quality, speed, and cost.
 
 ---
 
-## Text Generation Model
+### Alternative: Google (AI Studio / Gemini API)
+
 
 ```
 models/gemini-2.0-flash
 ```
 
-### Rationale
+**Provider:** Google (AI Studio / Gemini API)
 
-This model was selected due to:
+**Selection rationale:**
 
-- Reliable adherence to structured prompts
-- Improved JSON output stability compared to open-source alternatives
-- Instruction tuning suitable for synthetic document generation
-- Free-tier availability via Google AI Studio
-- Low latency enabling generation of ~30 CVs in reasonable time
+* Fast and cost-effective model for structured generation
+* Good instruction-following for JSON-like outputs
+* Strong multilingual capability
+* Useful as an alternative provider when configured
 
 ---
 
-## Image Generation Model
+## Image Generation Models
+
+### Primary (optional): OpenRouter
+
+When synthetic headshot generation is enabled (`GENERATE_IMAGES=1`) and the image pipeline uses OpenRouter, the model used is:
+
+```
+black-forest-labs/flux.1-schnell
+```
+
+**Provider:** OpenRouter
+
+**Selection rationale:**
+
+* Availability via OpenRouter API
+* Capability to generate realistic headshot-style imagery
+* Compatibility with batch generation workflows
+* Low-latency inference suitable for dataset creation
+
+The generated images are intended solely for embedding within synthetic CV documents to simulate realistic candidate profile photos.
+
+---
+
+### Alternative: Google (Gemini API)
+
+When image generation is configured to use Google:
 
 ```
 models/gemini-2.5-flash-image
 ```
 
-### Rationale
+**Provider:** Google (Gemini API)
 
-This model enables generation of realistic headshots for synthetic CVs without requiring additional billing setup, allowing the full PDF rendering pipeline to operate using AI-generated visual content.
+**Selection rationale:**
 
----
+* Native Gemini image generation capability
+* Suitable for generating realistic headshot-style imagery
+* Useful as an alternative image provider when configured
 
-## Fallback Provider
-
-In case the default provider is unavailable, the pipeline supports OpenRouter as an alternative LLM backend.
-
-Fallback text model:
-
-```
-mistralai/mistral-small-3.1-24b-instruct:free
-```
-
-Selected for:
-
-- Instruction tuning
-- Adequate parameter size (24B) for structured generation tasks
-- Free-tier availability via OpenRouter
-
-Image generation via OpenRouter may require billing activation and is therefore not enabled by default.
+(Environment variable: `GEMINI_IMAGE_MODEL`.)
 
 ---
 
-## Reproducibility
+## Provider selection mode: `random`
 
-All generation parameters (provider, model name, timestamp, configuration) are embedded in each generated `cv.json` file under the `meta` field to support traceability and reproducibility.
+In addition to choosing a single provider, the pipeline supports:
+
+```
+LLM_PROVIDER=random
+```
+
+This is not a provider in itself: when set, the system selects **at random** one of the available LLM providers (e.g. Anthropic, Google) for each request or batch segment. It is intended for load distribution, cost sampling, or A/B-style comparison across providers without code changes.
+
+---
+
+## Configuration
+
+Model selection is externally configurable through environment variables:
+
+**LLM provider (text):**
+
+```
+LLM_PROVIDER=anthropic   # default: Anthropic Claude
+LLM_PROVIDER=google      # Google Gemini
+LLM_PROVIDER=openrouter  # OpenRouter (text model)
+LLM_PROVIDER=random      # randomly pick one of the configured providers
+```
+
+**Per-provider models:**
+
+```
+# Anthropic (when LLM_PROVIDER=anthropic)
+ANTHROPIC_TEXT_MODEL=claude-3-haiku-20240307
+
+# Google (when LLM_PROVIDER=google or when selected by random)
+GEMINI_TEXT_MODEL=models/gemini-2.0-flash
+GEMINI_IMAGE_MODEL=models/gemini-2.5-flash-image
+
+# OpenRouter (text when LLM_PROVIDER=openrouter; image when using OpenRouter for images)
+OPENROUTER_TEXT_MODEL=...   # e.g. model id from openrouter.ai
+OPENROUTER_IMAGE_MODEL=black-forest-labs/flux.1-schnell
+```
+
+This enables reproducible dataset generation without requiring modification of application code.

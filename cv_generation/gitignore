@@ -1,0 +1,23 @@
+# Environment variables
+.env
+.env.*
+*.env
+*.local
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+.venv.bak/
+venv.bak/

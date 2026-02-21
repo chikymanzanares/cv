@@ -41,6 +41,12 @@ gen-build:
 gen-data:
 	docker compose run --rm -e N_CVS=$(or $(N),30) generator sh -lc "python -m cv_generation.generate_data"
 
+
+# make -C cv_generation gen-data N=2
+gen-data:
+	docker compose run --rm --env N_CVS=$(N) generator \
+	sh -lc "python -m cv_generation.generate_data"
+
 # Convenience: generate just 1
 gen-data-1:
 	docker compose run --rm -e N_CVS=1 generator sh -lc "python -m cv_generation.generate_data"
