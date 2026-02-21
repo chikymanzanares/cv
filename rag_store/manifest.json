@@ -1,9 +1,9 @@
 {
   "fingerprint": "7df5b7e20ba7a9f9808932822e283f813ca8f8f37b9b8aea431ad3962eb68814",
   "pdf_count": 30,
-  "chunk_count": 59,
+  "chunk_count": 169,
   "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
   "dim": 384,
-  "chunk_chars": 1800,
-  "overlap_chars": 250
+  "chunk_chars": 500,
+  "overlap_chars": 50
 }

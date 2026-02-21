@@ -90,6 +90,45 @@ models/gemini-2.5-flash-image
 
 ---
 
+## Embedding Model (RAG pipeline)
+
+### Primary: `paraphrase-multilingual-MiniLM-L12-v2`
+
+Used to vectorize CV text chunks and search queries for the FAISS semantic index.
+
+```
+sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+```
+
+**Provider:** HuggingFace (downloaded once, cached locally in Docker volume `hf_cache`)
+
+**Selection rationale:**
+
+* Fully local — no external API, no cost, no rate limits
+* Multilingual support out of the box (50+ languages), matching the multilingual CV dataset
+* 384-dimensional dense vectors — compact FAISS index, fast search
+* ~471 MB model size, suitable for CPU-only Docker containers
+
+**Runtime config** (`.env`):
+
+```
+EMBEDDING_MODEL=paraphrase-multilingual-MiniLM-L12-v2
+```
+
+**Index artefacts** (`rag_store/manifest.json` records the model used at index time):
+
+```json
+{
+  "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "dim": 384,
+  "chunk_count": 59,
+  "chunk_chars": 1800,
+  "overlap_chars": 250
+}
+```
+
+---
+
 ## Provider selection mode: `random`
 
 In addition to choosing a single provider, the pipeline supports:
