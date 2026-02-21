@@ -1,122 +1,187 @@
 {
   "meta": {
     "cv_id": "cv_026",
-    "created_at": "2026-02-21T13:47:24.252857+00:00",
+    "created_at": "2026-02-21T14:55:14.256812+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "de",
+      "language": "en",
       "seniority": "mid",
-      "persona_type": "corporate enterprise architect",
-      "writing_style": "concise",
-      "role": "DevOps Engineer",
-      "education_country": "UK"
+      "persona_type": "startup engineer",
+      "writing_style": "results-driven",
+      "role": "Backend Engineer",
+      "education_country": "Spain"
     },
     "photo_source": "local_asset",
-    "photo_asset": "gina.jpeg",
+    "photo_asset": "yen.jpeg",
     "generation_config": {
-      "writing_style": "concise",
-      "summary_length": "short",
-      "experience_style": "bullets",
-      "omit_sections": [
-        "languages",
-        "certifications"
-      ],
+      "writing_style": "results-driven",
+      "summary_length": "one_line",
+      "experience_style": "paragraphs",
+      "omit_sections": [],
       "include_interests_section": true,
-      "section_label_preset": null
+      "section_label_preset": null,
+      "page_target": "two_pages",
+      "content_style": "structured"
     }
   },
   "data": {
-    "full_name": "Lukas Müller",
-    "headline": "DevOps Engineer with Expertise in Enterprise Architecture",
-    "email": "lukas.mueller@example.com",
-    "phone": "+49 123 456 789",
-    "location": "Munich, Germany",
-    "summary": "Experienced DevOps Engineer with a strong background in enterprise architecture. Adept at designing and implementing scalable, secure, and efficient infrastructure solutions.",
+    "full_name": "Javier Gutiérrez",
+    "headline": "Experienced Backend Engineer with a Passion for Innovative Startups",
+    "email": "javier.gutierrez@email.com",
+    "phone": "+34 612 345 678",
+    "location": "Barcelona, Spain",
+    "summary": "Seasoned backend engineer with a proven track record of delivering high-impact projects for fast-growing startups. Skilled in designing scalable, reliable, and efficient systems that drive business growth.",
+    "narrative": null,
     "section_labels": {},
     "skills": [
-      "DevOps Automation",
-      "Cloud Infrastructure",
-      "Containerization",
-      "Continuous Integration/Deployment",
-      "Monitoring and Observability",
-      "Enterprise Architecture"
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Agile Methodologies"
+    ],
+    "languages": [
+      {
+        "name": "Spanish",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
     ],
     "experience": [
       {
-        "company": "Acme Corporation",
-        "title": "DevOps Engineer",
-        "start_date": "2019-06-01",
-        "end_date": "2022-12-31",
-        "location": "Munich, Germany",
+        "company": "Fintech Startup",
+        "title": "Backend Lead",
+        "start_date": "2020-04-01",
+        "end_date": "2023-02-28",
+        "location": "Barcelona, Spain",
         "bullets": [
-          "Designed and implemented a scalable, cloud-based infrastructure using AWS, Docker, and Kubernetes",
-          "Automated deployment pipelines for multiple applications, reducing deployment time by 80%",
-          "Implemented monitoring and observability solutions to proactively identify and resolve issues"
-        ]
+          "Designed and implemented a scalable microservices architecture, reducing infrastructure costs by 25% and improving system reliability by 30%.",
+          "Spearheaded the migration to a containerized deployment using Docker and Kubernetes, improving deployment time by 50% and reducing downtime.",
+          "Collaborated with the product team to develop innovative features that increased user engagement by 40% and drove a 25% increase in revenue.",
+          "Mentored and trained a team of 5 junior engineers, helping them develop their skills and contributing to a 20% improvement in team productivity."
+        ],
+        "paragraph": null
       },
       {
-        "company": "Beta Solutions",
-        "title": "Enterprise Architect",
-        "start_date": "2016-09-01",
-        "end_date": "2019-05-31",
-        "location": "London, UK",
+        "company": "Startup Accelerator",
+        "title": "Backend Engineer",
+        "start_date": "2018-06-01",
+        "end_date": "2020-03-31",
+        "location": "Madrid, Spain",
         "bullets": [
-          "Collaborated with cross-functional teams to define and implement enterprise-wide architecture standards",
-          "Designed and documented the organization's technology roadmap, aligning IT initiatives with business goals",
-          "Conducted technology assessments and provided recommendations for modernization and optimization"
-        ]
+          "Developed and maintained backend systems for 10+ startups, contributing to their successful launches and growth.",
+          "Implemented scalable and secure data pipelines, reducing processing time by 40% and improving data reliability.",
+          "Collaborated with cross-functional teams to identify and address technical challenges, leading to a 30% improvement in project delivery timelines.",
+          "Provided technical guidance and mentorship to junior engineers, helping them improve their skills and become more productive."
+        ],
+        "paragraph": null
+      },
+      {
+        "company": "IT Consulting Firm",
+        "title": "Software Engineer",
+        "start_date": "2016-09-01",
+        "end_date": "2018-05-31",
+        "location": "Barcelona, Spain",
+        "bullets": [
+          "Developed and maintained backend systems for clients in various industries, including e-commerce, healthcare, and finance.",
+          "Implemented efficient data processing pipelines, resulting in a 20% reduction in operational costs for clients.",
+          "Collaborated with cross-functional teams to identify and address technical debt, leading to a 15% improvement in system performance.",
+          "Provided technical support and training to client teams, helping them become more self-sufficient and reducing the need for ongoing support."
+        ],
+        "paragraph": null
+      },
+      {
+        "company": "University IT Department",
+        "title": "Junior Backend Developer",
+        "start_date": "2014-09-01",
+        "end_date": "2016-08-31",
+        "location": "Barcelona, Spain",
+        "bullets": [
+          "Developed and maintained backend systems for the university's administrative and student-facing applications.",
+          "Participated in the implementation of a new content management system, resulting in a 25% increase in website traffic and a 20% reduction in content management workload.",
+          "Collaborated with cross-functional teams to identify and address technical issues, leading to a 10% improvement in system uptime.",
+          "Provided technical support and training to university staff, helping them become more self-sufficient and reducing the need for ongoing support."
+        ],
+        "paragraph": null
       }
     ],
     "education": [
       {
-        "institution": "University of Cambridge",
-        "degree": "Master of Engineering",
+        "institution": "Universitat Politècnica de Catalunya",
+        "degree": "Bachelor of Science",
         "field": "Computer Science",
-        "start_year": "2012",
+        "start_year": "2010",
+        "end_year": "2014"
+      },
+      {
+        "institution": "Universitat Autònoma de Barcelona",
+        "degree": "Master of Science",
+        "field": "Software Engineering",
+        "start_year": "2014",
         "end_year": "2016"
       }
     ],
     "projects": [
       {
-        "name": "Cloud Migration Project",
-        "description": "Migrated the company's on-premises infrastructure to a hybrid cloud environment using AWS and Azure.",
+        "name": "Fintech Startup Backend System",
+        "description": "Designed and implemented a scalable and reliable backend system for a fast-growing fintech startup, including features such as secure user authentication, transaction processing, and data analytics.",
         "tech": [
+          "Python",
+          "Django",
+          "PostgreSQL",
           "AWS",
-          "Azure",
-          "Terraform",
-          "Ansible"
+          "Docker",
+          "Kubernetes"
         ]
       },
       {
-        "name": "Microservices Transformation",
-        "description": "Redesigned the company's monolithic application into a scalable, microservices-based architecture.",
+        "name": "University CMS Integration",
+        "description": "Developed and integrated a new content management system for the university's website, improving content management workflows and increasing website traffic by 25%.",
         "tech": [
-          "Docker",
-          "Kubernetes",
-          "RabbitMQ",
-          "Elasticsearch"
+          "Python",
+          "Django",
+          "PostgreSQL",
+          "Nginx",
+          "Git"
         ]
       }
     ],
+    "certifications": [
+      {
+        "name": "AWS Certified Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2021"
+      },
+      {
+        "name": "Certified Scrum Master",
+        "issuer": "Scrum Alliance",
+        "year": "2019"
+      }
+    ],
     "interests": [
-      "Hiking",
-      "Traveling",
-      "Reading Tech Blogs"
+      "Reading",
+      "Cycling",
+      "Traveling"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/lukas-mueller"
+        "url": "https://www.linkedin.com/in/javier-gutierrez"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.example.com/lukas-mueller"
+        "url": "https://www.javiergutierrez.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Smiling, well-groomed, and wearing a suit."
+    "photo_prompt": "Professional LinkedIn-style headshot. Javier Gutiérrez, a mid-career backend engineer with a passion for innovative startups."
   }
 }

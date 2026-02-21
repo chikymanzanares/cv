@@ -1,127 +1,185 @@
 {
   "meta": {
     "cv_id": "cv_019",
-    "created_at": "2026-02-21T13:46:20.454865+00:00",
+    "created_at": "2026-02-21T14:54:10.885161+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "de",
-      "seniority": "senior",
-      "persona_type": "career switcher",
-      "writing_style": "formal",
-      "role": "UX Designer",
-      "education_country": "Germany"
+      "language": "en",
+      "seniority": "mid",
+      "persona_type": "self-taught developer",
+      "writing_style": "detailed",
+      "role": "Data Scientist",
+      "education_country": "Spain"
     },
     "photo_source": "local_asset",
-    "photo_asset": "girl.jpeg",
+    "photo_asset": "pretty.jpeg",
     "generation_config": {
-      "writing_style": "formal",
-      "summary_length": "paragraph",
+      "writing_style": "detailed",
+      "summary_length": "one_line",
       "experience_style": "paragraphs",
-      "omit_sections": [
-        "projects"
-      ],
-      "include_interests_section": true,
+      "omit_sections": [],
+      "include_interests_section": false,
       "section_label_preset": {
-        "summary": "Resumen profesional",
-        "experience": "Experiencia laboral",
-        "education": "Formación",
-        "skills": "Competencias",
-        "languages": "Idiomas",
-        "projects": "Proyectos",
-        "certifications": "Certificaciones",
-        "interests": "Intereses",
-        "profile": "Perfil"
-      }
+        "summary": "Profile",
+        "experience": "Professional Experience",
+        "education": "Education",
+        "skills": "Expertise",
+        "languages": "Languages",
+        "projects": "Selected Projects",
+        "certifications": "Credentials",
+        "interests": "Hobbies",
+        "profile": "Profile"
+      },
+      "page_target": "two_pages",
+      "content_style": "structured"
     }
   },
   "data": {
-    "full_name": "Maximilian Müller",
-    "headline": "Erfahrener UX-Designer mit Fokus auf Benutzerzentrierung",
-    "email": "maximilian.mueller@example.com",
-    "phone": "+49 123 456 7890",
-    "location": "München, Deutschland",
-    "summary": "Ich bin ein erfahrener UX-Designer mit über 10 Jahren Berufserfahrung. Meine Leidenschaft liegt darin, innovative und benutzerfreundliche digitale Produkte zu entwickeln, die das Nutzererlebnis in den Mittelpunkt stellen. Ich verfüge über ein breites Spektrum an Fähigkeiten, darunter Prototyping, Usability-Tests, Interaktionsdesign und visuelle Gestaltung. Ich arbeite eng mit interdisziplinären Teams zusammen, um Projekte erfolgreich umzusetzen und die Bedürfnisse der Nutzer optimal zu erfüllen.",
+    "full_name": "Alejandro Gutiérrez",
+    "headline": "Data Scientist | Self-Taught Developer",
+    "email": "alejandro.gutierrez@example.com",
+    "phone": "+34 612 345 678",
+    "location": "Madrid, Spain",
+    "summary": "Versatile data scientist with a passion for leveraging data-driven insights to drive business impact. Proficient in a range of analytics tools and techniques, with a proven track record of delivering innovative solutions to complex problems.",
+    "narrative": null,
     "section_labels": {
-      "summary": "Resumen profesional",
-      "experience": "Experiencia laboral",
-      "education": "Formación",
-      "skills": "Competencias",
-      "languages": "Idiomas",
-      "interests": "Intereses"
+      "summary": "Profile",
+      "experience": "Professional Experience",
+      "education": "Education",
+      "skills": "Expertise",
+      "languages": "Languages",
+      "projects": "Selected Projects",
+      "certifications": "Credentials",
+      "interests": "Hobbies"
     },
     "skills": [
-      "Interaktionsdesign",
-      "Prototyping",
-      "Usability-Testing",
-      "User Research",
-      "Visual Design",
-      "Wireframing",
-      "Adobe Creative Suite"
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Data Visualization",
+      "Tableau",
+      "Power BI",
+      "Statistical Analysis",
+      "Data Mining"
     ],
     "languages": [
       {
-        "name": "Deutsch",
-        "level": "Muttersprache"
+        "name": "Spanish",
+        "level": "Native"
       },
       {
-        "name": "Englisch",
-        "level": "Fließend"
+        "name": "English",
+        "level": "Fluent"
       }
     ],
     "experience": [
       {
-        "company": "Acme GmbH",
-        "title": "Senior UX-Designer",
-        "start_date": "2018-01-01",
-        "end_date": "2022-12-31",
-        "location": "München, Deutschland",
-        "paragraph": "Als Senior UX-Designer bei Acme GmbH war ich für die Konzeption und Umsetzung benutzerfreundlicher digitaler Lösungen verantwortlich. Ich arbeitete eng mit interdisziplinären Teams zusammen, um die Bedürfnisse der Kunden zu verstehen und innovative Produkte zu entwickeln. Meine Aufgaben umfassten die Durchführung von Nutzerforschung, die Erstellung von Wireframes und Prototypen, das Testen der Usability sowie die Gestaltung der visuellen Oberfläche. Ich konnte maßgeblich dazu beitragen, dass die Produkte von Acme eine hohe Akzeptanz bei den Nutzern fanden."
+        "company": "Acme Data Solutions",
+        "title": "Data Scientist",
+        "start_date": "2020-05-01",
+        "end_date": "2022-08-31",
+        "location": "Madrid, Spain",
+        "bullets": [],
+        "paragraph": "Played a key role in developing and implementing data-driven solutions to address complex business challenges. Leveraged a range of analytical techniques, including machine learning, to uncover valuable insights and drive data-informed decision-making. Collaborated closely with cross-functional teams to translate business requirements into actionable data strategies, resulting in significant improvements in operational efficiency and customer satisfaction."
       },
       {
-        "company": "Omega AG",
-        "title": "UX-Designer",
-        "start_date": "2014-05-01",
-        "end_date": "2017-12-31",
-        "location": "Hamburg, Deutschland",
-        "paragraph": "Bei Omega AG war ich als UX-Designer für die Entwicklung benutzerfreundlicher Webseiten und mobiler Anwendungen verantwortlich. Ich führte Usability-Tests durch, erstellte Wireframes und Prototypen und arbeitete eng mit dem Entwicklungsteam zusammen, um die Umsetzung der Designs sicherzustellen. Darüber hinaus beteiligte ich mich an Marktforschung und der Analyse von Nutzerdaten, um die Produkte kontinuierlich zu verbessern."
+        "company": "Globex Analytics",
+        "title": "Junior Data Analyst",
+        "start_date": "2018-09-01",
+        "end_date": "2020-04-30",
+        "location": "Barcelona, Spain",
+        "bullets": [],
+        "paragraph": "Responsible for collecting, processing, and analyzing data from various sources to support business decision-making. Developed custom dashboards and reports using Tableau and Power BI, enabling stakeholders to access and interpret data more effectively. Contributed to the implementation of data governance frameworks and data quality assurance processes, ensuring the integrity and reliability of the organization's data assets."
+      },
+      {
+        "company": "Startup Incubator",
+        "title": "Data Science Intern",
+        "start_date": "2017-06-01",
+        "end_date": "2018-08-31",
+        "location": "Valencia, Spain",
+        "bullets": [],
+        "paragraph": "Gained hands-on experience in the field of data science by supporting various startup projects. Collaborated with founders and entrepreneurs to identify data-driven solutions to their business challenges, leveraging my skills in data analysis, predictive modeling, and data visualization. Contributed to the development of prototypes and proof-of-concept projects, showcasing the value of data-driven decision-making."
+      },
+      {
+        "company": "Freelance Data Consultant",
+        "title": "Data Consultant",
+        "start_date": "2016-01-01",
+        "end_date": "2017-05-31",
+        "location": "Remote",
+        "bullets": [],
+        "paragraph": "Provided data consulting services to a diverse range of clients, including small businesses and startups. Assisted in the implementation of data management strategies, the development of custom analytics solutions, and the training of client teams on data-driven best practices. Demonstrated the ability to work independently, adapt to varying client needs, and deliver high-quality results within tight deadlines."
       }
     ],
     "education": [
       {
-        "institution": "Technische Universität München",
-        "degree": "Master of Science",
-        "field": "Medieninformatik",
-        "start_year": "2011",
-        "end_year": "2013"
+        "institution": "University of Barcelona",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "start_year": "2013",
+        "end_year": "2017"
       },
       {
-        "institution": "Universität Augsburg",
-        "degree": "Bachelor of Science",
-        "field": "Informatik",
-        "start_year": "2008",
-        "end_year": "2011"
+        "institution": "Udacity",
+        "degree": "Nanodegree",
+        "field": "Data Science",
+        "start_year": "2016",
+        "end_year": "2017"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Predictive Maintenance Model",
+        "description": "Developed a machine learning model to predict equipment failures in a manufacturing plant, resulting in a 20% reduction in unplanned downtime.",
+        "tech": [
+          "Python",
+          "Scikit-learn",
+          "Pandas",
+          "Matplotlib"
+        ]
+      },
+      {
+        "name": "Customer Churn Analysis",
+        "description": "Conducted a comprehensive analysis of customer churn patterns, identifying key drivers and implementing targeted retention strategies that improved customer retention by 15%.",
+        "tech": [
+          "SQL",
+          "Tableau",
+          "Logistic Regression",
+          "Cluster Analysis"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Data Scientist",
+        "issuer": "Udemy",
+        "year": "2018"
+      },
+      {
+        "name": "Tableau Desktop Specialist",
+        "issuer": "Tableau",
+        "year": "2019"
       }
     ],
     "interests": [
-      "Reisen",
-      "Fotografie",
-      "Lesen",
-      "Kochen"
+      "Hiking",
+      "Photography",
+      "Cooking",
+      "Volunteering"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/maximilian-mueller"
+        "url": "https://www.linkedin.com/in/alejandro-gutierrez"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.maximilian-mueller.com"
+        "url": "https://www.alejandrogutierrez.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. The candidate is a middle-aged man with short brown hair and a friendly expression, wearing a collared shirt and suit jacket."
+    "photo_prompt": "Professional LinkedIn-style headshot. Alejandro Gutiérrez, a mid-career data scientist with a self-taught background, looking directly at the camera with a friendly, confident expression."
   }
 }

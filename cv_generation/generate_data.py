@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import random
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -133,6 +134,59 @@ def read_prompt_template(version: str = "v2") -> str:
     if not path.exists():
         raise FileNotFoundError(f"Missing prompt template: {path}")
     return path.read_text(encoding="utf-8")
+
+
+def _sanitize_json_control_chars(raw: str) -> str:
+    """Escape control characters inside JSON string values so json.loads() succeeds."""
+    result = []
+    i = 0
+    in_string = False
+    escape_next = False
+    while i < len(raw):
+        c = raw[i]
+        if escape_next:
+            result.append(c)
+            escape_next = False
+            i += 1
+            continue
+        if c == "\\" and in_string:
+            result.append(c)
+            escape_next = True
+            i += 1
+            continue
+        if c == '"' and not escape_next:
+            in_string = not in_string
+            result.append(c)
+            i += 1
+            continue
+        if in_string and ord(c) < 32:
+            if c == "\n":
+                result.append("\\n")
+            elif c == "\r":
+                result.append("\\r")
+            elif c == "\t":
+                result.append("\\t")
+            else:
+                result.append(" ")
+            i += 1
+            continue
+        result.append(c)
+        i += 1
+    return "".join(result)
+
+
+def _prepare_json_raw(raw: str) -> str:
+    """Strip markdown code fences and fix common LLM JSON mistakes."""
+    raw = raw.strip()
+    # Remove ```json ... ``` or ``` ... ```
+    if raw.startswith("```"):
+        raw = re.sub(r"^```(?:json)?\s*", "", raw)
+        raw = re.sub(r"\s*```\s*$", "", raw)
+        raw = raw.strip()
+    # Fix trailing commas only when comma is immediately followed by ] or } (no space/newline),
+    # so we never touch commas inside string values.
+    raw = re.sub(r",([}\]])", r"\1", raw)
+    return raw
 
 
 def build_structure_instructions(cfg: dict) -> str:
@@ -340,13 +394,18 @@ def main(n: int = 30) -> None:
         cv_dir = out_root / cv_id
         cv_dir.mkdir(parents=True, exist_ok=True)
 
-        raw = generate_text(provider, anthropic, openrouter_text, settings, prompt)
-
-        try:
-            cv_obj = json.loads(raw)
-        except json.JSONDecodeError:
-            (cv_dir / "raw_llm_output.txt").write_text(raw, encoding="utf-8")
-            raise RuntimeError(f"Invalid JSON for {cv_id}")
+        for attempt in range(2):
+            raw = generate_text(provider, anthropic, openrouter_text, settings, prompt)
+            raw = _sanitize_json_control_chars(raw)
+            raw = _prepare_json_raw(raw)
+            try:
+                cv_obj = json.loads(raw)
+                break
+            except json.JSONDecodeError:
+                if attempt == 0:
+                    continue
+                (cv_dir / "raw_llm_output.txt").write_text(raw, encoding="utf-8")
+                raise RuntimeError(f"Invalid JSON for {cv_id} (after retry)")
 
         img_bytes, asset_name = load_random_headshot(headshot_pool)
 

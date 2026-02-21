@@ -1,75 +1,72 @@
 {
   "meta": {
     "cv_id": "cv_013",
-    "created_at": "2026-02-21T14:11:48.996268+00:00",
+    "created_at": "2026-02-21T14:53:10.522342+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "es",
+      "language": "fr",
       "seniority": "mid",
-      "persona_type": "self-taught developer",
+      "persona_type": "academic researcher",
       "writing_style": "punchy",
       "role": "Backend Engineer",
       "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "sarah.jpeg",
+    "photo_asset": "mark.jpeg",
     "generation_config": {
       "writing_style": "punchy",
       "summary_length": "paragraph",
       "experience_style": "bullets",
-      "omit_sections": [],
-      "include_interests_section": true,
+      "omit_sections": [
+        "certifications"
+      ],
+      "include_interests_section": false,
       "section_label_preset": {
-        "summary": "Introduction",
-        "experience": "Employment History",
-        "education": "Academic",
-        "skills": "Skills & Tools",
+        "summary": "Professional Summary",
+        "experience": "Work History",
+        "education": "Education",
+        "skills": "Core Competencies",
         "languages": "Languages",
-        "projects": "Projects",
+        "projects": "Key Projects",
         "certifications": "Certifications",
-        "interests": "Personal Interests",
-        "profile": "Introduction"
+        "interests": "Interests",
+        "profile": "Profile"
       },
       "page_target": "two_pages",
       "content_style": "structured"
     }
   },
   "data": {
-    "full_name": "Alejandro Ramírez",
-    "headline": "Versatile Backend Engineer",
-    "email": "alejandro.ramirez@email.com",
-    "phone": "+34 123 456 789",
-    "location": "Madrid, Spain",
-    "summary": "Driven self-taught developer with a proven track record of delivering robust backend solutions. Adept at leveraging the latest technologies to build scalable, high-performing applications. Passionate about continuous learning and staying ahead of industry trends.",
-    "narrative": null,
+    "full_name": "Sylvie Durand",
+    "headline": "Experienced Backend Engineer with Expertise in Academic Research",
+    "email": "sylvie.durand@email.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "Highly skilled backend engineer with over 8 years of experience in academic research environments. Adept at designing and implementing robust, scalable, and secure backend systems. Passionate about leveraging technology to drive innovation and support cutting-edge research projects. Proven track record of collaborating effectively with cross-functional teams, delivering high-impact solutions, and contributing to the advancement of scientific knowledge.",
     "section_labels": {
-      "summary": "Introduction",
-      "experience": "Employment History",
-      "education": "Academic",
-      "skills": "Skills & Tools",
+      "summary": "Professional Summary",
+      "experience": "Work History",
+      "education": "Education",
+      "skills": "Core Competencies",
       "languages": "Languages",
-      "projects": "Projects",
-      "certifications": "Certifications",
-      "interests": "Personal Interests"
+      "projects": "Key Projects"
     },
     "skills": [
-      "Python",
-      "Django",
-      "FastAPI",
-      "PostgreSQL",
-      "Redis",
-      "Docker",
-      "CI/CD",
-      "Git",
-      "Agile Methodologies"
+      "Backend Development",
+      "Scalable Systems Design",
+      "Data Modeling and Architecture",
+      "API Development",
+      "Agile Methodologies",
+      "Problem-Solving",
+      "Collaboration"
     ],
     "languages": [
       {
-        "name": "Spanish",
+        "name": "French",
         "level": "Native"
       },
       {
@@ -79,107 +76,100 @@
     ],
     "experience": [
       {
-        "company": "Acme Tech Solutions",
+        "company": "University of Paris",
+        "title": "Senior Backend Engineer",
+        "start_date": "2019-06-01",
+        "end_date": "Present",
+        "location": "Paris, France",
+        "bullets": [
+          "Designed and implemented scalable, secure, and high-performing backend systems to support cutting-edge research projects in fields such as computational biology and materials science.",
+          "Collaborated closely with interdisciplinary teams of researchers, data scientists, and project managers to understand requirements and deliver innovative solutions.",
+          "Spearheaded the development of a custom data management platform that streamlined data ingestion, processing, and analysis, resulting in a 30% increase in research productivity.",
+          "Mentored junior engineers and contributed to the continuous improvement of the team's technical practices and codebase."
+        ]
+      },
+      {
+        "company": "National Center for Scientific Research",
         "title": "Backend Engineer",
-        "start_date": "2020-06-01",
-        "end_date": "2022-12-31",
-        "location": "Madrid, Spain",
+        "start_date": "2016-09-01",
+        "end_date": "2019-05-31",
+        "location": "Paris, France",
         "bullets": [
-          "Designed and implemented scalable backend systems using Python, Django, and PostgreSQL",
-          "Developed and optimized API endpoints to ensure high performance and reliability",
-          "Collaborated with cross-functional teams to identify and address technical challenges",
-          "Implemented CI/CD pipelines to automate testing and deployment processes"
-        ],
-        "paragraph": null
+          "Designed and implemented scalable and fault-tolerant backend systems to support large-scale scientific computing and data analysis projects.",
+          "Collaborated with researchers and data scientists to understand their requirements and translate them into robust technical solutions.",
+          "Developed and maintained custom APIs and microservices to facilitate seamless data exchange and integration between different research domains.",
+          "Participated in the implementation of DevOps practices, including automated testing, continuous integration, and deployment, to ensure the reliability and scalability of the systems."
+        ]
       },
       {
-        "company": "Digital Innovations",
-        "title": "Junior Backend Developer",
-        "start_date": "2018-09-01",
-        "end_date": "2020-05-31",
-        "location": "Barcelona, Spain",
+        "company": "University of Cambridge",
+        "title": "Backend Engineering Intern",
+        "start_date": "2015-06-01",
+        "end_date": "2015-08-31",
+        "location": "Cambridge, UK",
         "bullets": [
-          "Contributed to the development of RESTful APIs using Python and FastAPI",
-          "Integrated third-party services and APIs to enhance application functionality",
-          "Participated in code reviews and pair programming sessions to improve code quality",
-          "Assisted in the deployment and maintenance of production applications"
-        ],
-        "paragraph": null
-      },
-      {
-        "company": "Startup Incubator",
-        "title": "Freelance Backend Developer",
-        "start_date": "2016-07-01",
-        "end_date": "2018-08-31",
-        "location": "Remote",
-        "bullets": [
-          "Collaborated with startup founders to design and implement backend solutions",
-          "Leveraged Docker and cloud infrastructure to deploy and scale applications",
-          "Provided technical guidance and mentorship to junior developers",
-          "Participated in hackathons and industry events to stay up-to-date with trends"
-        ],
-        "paragraph": null
+          "Contributed to the development and maintenance of backend systems supporting various research projects in the fields of computational physics and materials science.",
+          "Gained hands-on experience in designing and implementing RESTful APIs, data models, and database schemas to meet the needs of diverse research teams.",
+          "Participated in code reviews, bug fixes, and the implementation of performance optimization strategies to ensure the reliability and efficiency of the systems."
+        ]
       }
     ],
     "education": [
       {
         "institution": "University of Cambridge",
-        "degree": "Bachelor of Science",
+        "degree": "Master of Science (M.Sc.)",
         "field": "Computer Science",
         "start_year": "2013",
-        "end_year": "2017"
+        "end_year": "2015"
+      },
+      {
+        "institution": "University of Paris",
+        "degree": "Bachelor of Science (B.Sc.)",
+        "field": "Computer Science",
+        "start_year": "2009",
+        "end_year": "2013"
       }
     ],
     "projects": [
       {
-        "name": "Chatbot API",
-        "description": "Developed a scalable chatbot API using Python, FastAPI, and Redis. Implemented natural language processing and machine learning models to provide intelligent responses.",
+        "name": "Computational Materials Science Platform",
+        "description": "Designed and implemented a scalable backend system to support a computational materials science research platform, enabling researchers to efficiently model, simulate, and analyze complex material properties.",
         "tech": [
           "Python",
-          "FastAPI",
-          "Redis",
-          "NLP",
-          "ML"
-        ]
-      },
-      {
-        "name": "Inventory Management System",
-        "description": "Designed and built a comprehensive inventory management system using Django, PostgreSQL, and Docker. Integrated with external suppliers and implemented real-time stock updates.",
-        "tech": [
           "Django",
           "PostgreSQL",
-          "Docker",
-          "API Integration"
+          "RabbitMQ",
+          "Kubernetes"
         ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "AWS Certified Developer - Associate",
-        "issuer": "Amazon Web Services",
-        "year": "2021"
       },
       {
-        "name": "Scrum Master Certification",
-        "issuer": "Scrum Alliance",
-        "year": "2019"
+        "name": "Bioinformatics Data Management System",
+        "description": "Developed a custom data management platform to streamline the ingestion, processing, and analysis of large-scale biological datasets, improving the efficiency and productivity of the research team.",
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "Elasticsearch",
+          "Apache Kafka",
+          "Docker"
+        ]
       }
     ],
     "interests": [
-      "Tinkering with Raspberry Pi projects",
-      "Hiking in the mountains",
-      "Reading science fiction novels"
+      "Computational Biology",
+      "Materials Science",
+      "Open-Source Software Development",
+      "Scientific Computing"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alejandro-ramirez"
+        "url": "https://www.linkedin.com/in/sylvie-durand"
       },
       {
         "label": "Portfolio",
-        "url": "https://alejandro-ramirez.com"
+        "url": "https://sylvie-durand.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Smiling, well-dressed, confident."
+    "photo_prompt": "Professional LinkedIn-style headshot. Sylvie Durand, a mid-career backend engineer with expertise in academic research, wearing a smart casual outfit against a plain background."
   }
 }

@@ -1,174 +1,161 @@
 {
   "meta": {
     "cv_id": "cv_012",
-    "created_at": "2026-02-21T14:11:37.086321+00:00",
+    "created_at": "2026-02-21T14:53:01.924401+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "de",
-      "seniority": "senior",
-      "persona_type": "startup engineer",
-      "writing_style": "academic",
-      "role": "Data Scientist",
-      "education_country": "Spain"
+      "language": "en",
+      "seniority": "junior",
+      "persona_type": "self-taught developer",
+      "writing_style": "bullet-heavy",
+      "role": "Backend Engineer",
+      "education_country": "Germany"
     },
     "photo_source": "local_asset",
-    "photo_asset": "wu.jpeg",
+    "photo_asset": "chen.jpeg",
     "generation_config": {
-      "writing_style": "academic",
-      "summary_length": "paragraph",
-      "experience_style": "paragraphs",
-      "omit_sections": [
-        "languages"
-      ],
+      "writing_style": "bullet-heavy",
+      "summary_length": "one_line",
+      "experience_style": "bullets",
+      "omit_sections": [],
       "include_interests_section": true,
-      "section_label_preset": null,
-      "page_target": "long",
+      "section_label_preset": {
+        "summary": "Introduction",
+        "experience": "Employment History",
+        "education": "Academic",
+        "skills": "Skills & Tools",
+        "languages": "Languages",
+        "projects": "Projects",
+        "certifications": "Certifications",
+        "interests": "Personal Interests",
+        "profile": "Introduction"
+      },
+      "page_target": "one_page",
       "content_style": "structured"
     }
   },
   "data": {
-    "full_name": "Alejandro Suárez",
-    "headline": "Senior Data Scientist",
-    "email": "alejandro.suarez@example.com",
-    "phone": "+34 123 456 789",
-    "location": "Madrid, Spain",
-    "summary": "Experienced Data Scientist with a strong background in machine learning and data analysis. Skilled in developing and implementing complex algorithms to extract insights from large datasets. Passionate about leveraging data-driven solutions to drive business impact. Proven track record of successful project delivery and a commitment to continuous learning and innovation.",
+    "full_name": "Jonas Weber",
+    "headline": "Junior Backend Engineer",
+    "email": "jonas.weber@example.com",
+    "phone": "+49 123 456 789",
+    "location": "Berlin, Germany",
+    "summary": "Passionate self-taught developer with a strong background in backend engineering, seeking to apply my skills and contribute to innovative projects.",
+    "narrative": null,
+    "section_labels": {
+      "summary": "Introduction",
+      "experience": "Employment History",
+      "education": "Academic",
+      "skills": "Skills & Tools",
+      "languages": "Languages",
+      "projects": "Projects",
+      "certifications": "Certifications",
+      "interests": "Personal Interests"
+    },
     "skills": [
-      "Machine Learning",
-      "Data Mining",
-      "Statistical Analysis",
       "Python",
+      "Django",
+      "Flask",
       "SQL",
-      "Tableau",
-      "Hadoop"
+      "Git",
+      "Docker",
+      "AWS",
+      "RESTful APIs"
+    ],
+    "languages": [
+      {
+        "name": "German",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
     ],
     "experience": [
       {
-        "company": "Acme Data Solutions",
-        "title": "Senior Data Scientist",
-        "start_date": "2020-01-01",
-        "end_date": "2023-12-31",
-        "location": "Madrid, Spain",
-        "paragraph": "Responsible for leading the data science team in the development and implementation of advanced analytics solutions to support strategic business decisions. Designed and deployed machine learning models to predict customer churn, optimize pricing strategies, and improve supply chain efficiency. Collaborated cross-functionally with business stakeholders to identify and prioritize high-impact use cases. Mentored junior team members and contributed to the continuous improvement of data science practices and methodologies."
+        "company": "Startup X",
+        "title": "Backend Developer",
+        "start_date": "2021-06-01",
+        "end_date": "2022-12-31",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Developed and maintained scalable backend systems using Python and Django",
+          "Implemented RESTful APIs to power the company's web and mobile applications",
+          "Collaborated with cross-functional teams to identify and resolve technical challenges",
+          "Contributed to the deployment and monitoring of applications using Docker and AWS"
+        ],
+        "paragraph": null
       },
       {
-        "company": "Innovate Tech",
-        "title": "Data Scientist",
-        "start_date": "2017-06-01",
-        "end_date": "2019-12-31",
-        "location": "Barcelona, Spain",
-        "paragraph": "Developed and deployed predictive models to optimize marketing campaigns and customer segmentation strategies. Leveraged big data technologies, such as Hadoop and Spark, to process and analyze large datasets. Collaborated with cross-functional teams to identify and address complex business challenges. Contributed to the company's data science knowledge base by conducting research, publishing articles, and presenting at industry conferences."
-      },
-      {
-        "company": "Datavision",
-        "title": "Data Analyst",
-        "start_date": "2014-09-01",
-        "end_date": "2017-05-31",
-        "location": "Valencia, Spain",
-        "paragraph": "Responsible for data extraction, transformation, and analysis to support business decision-making. Developed and maintained reporting dashboards using Tableau to provide real-time insights. Collaborated with business stakeholders to understand their data requirements and translate them into actionable solutions. Contributed to the implementation of data governance frameworks and data quality assurance processes."
-      },
-      {
-        "company": "DataLabs",
-        "title": "Research Assistant",
-        "start_date": "2012-09-01",
-        "end_date": "2014-08-31",
-        "location": "Madrid, Spain",
-        "paragraph": "Assisted in the design and execution of data-driven research projects. Performed statistical analysis and data visualization to support the research team's findings. Contributed to the publication of research papers in peer-reviewed journals. Gained experience in data collection, cleaning, and preprocessing techniques."
-      },
-      {
-        "company": "Datapoint",
-        "title": "Intern Data Analyst",
-        "start_date": "2011-06-01",
-        "end_date": "2012-08-31",
-        "location": "Barcelona, Spain",
-        "paragraph": "Participated in various data analysis projects, gaining hands-on experience in data manipulation, visualization, and reporting. Collaborated with cross-functional teams to identify and address business challenges. Contributed to the development of data-driven solutions and presented findings to stakeholders."
+        "company": "Local IT Consultancy",
+        "title": "Intern",
+        "start_date": "2020-06-01",
+        "end_date": "2020-09-30",
+        "location": "Berlin, Germany",
+        "bullets": [
+          "Assisted senior developers in building and deploying web applications",
+          "Gained experience in agile software development methodologies",
+          "Participated in code reviews and learned best practices for clean, maintainable code"
+        ],
+        "paragraph": null
       }
     ],
     "education": [
       {
-        "institution": "University of Barcelona",
-        "degree": "Master of Science",
-        "field": "Data Science",
-        "start_year": "2010",
-        "end_year": "2012"
-      },
-      {
-        "institution": "University of Valencia",
+        "institution": "University of Berlin",
         "degree": "Bachelor of Science",
-        "field": "Mathematics",
-        "start_year": "2006",
-        "end_year": "2010"
+        "field": "Computer Science",
+        "start_year": "2017",
+        "end_year": "2021"
       }
     ],
     "projects": [
       {
-        "name": "Customer Churn Prediction",
-        "description": "Developed a machine learning model to predict customer churn for a telecommunications company, leading to a 15% reduction in customer attrition.",
+        "name": "Personal Blog",
+        "description": "Developed a personal blog using Django, deployed on AWS Elastic Beanstalk.",
         "tech": [
+          "Django",
           "Python",
-          "Scikit-learn",
-          "Pandas",
-          "Matplotlib"
+          "AWS"
         ]
       },
       {
-        "name": "Predictive Maintenance for Industrial Machinery",
-        "description": "Designed and implemented a predictive maintenance solution using sensor data and machine learning algorithms to optimize equipment uptime and reduce maintenance costs.",
+        "name": "Inventory Management System",
+        "description": "Built a simple inventory management system using Flask and SQLite, as a personal project.",
         "tech": [
+          "Flask",
           "Python",
-          "Tensorflow",
-          "Keras",
-          "Pandas",
-          "Matplotlib"
-        ]
-      },
-      {
-        "name": "Personalized Product Recommendations",
-        "description": "Developed a recommendation engine using collaborative filtering techniques to improve product recommendations and increase customer engagement for an e-commerce platform.",
-        "tech": [
-          "Python",
-          "Pandas",
-          "Scikit-learn",
-          "Flask"
+          "SQLite"
         ]
       }
     ],
     "certifications": [
       {
-        "name": "Certified Data Scientist",
-        "issuer": "Udacity",
-        "year": "2018"
-      },
-      {
-        "name": "Certified Machine Learning Engineer",
-        "issuer": "Coursera",
-        "year": "2020"
-      },
-      {
-        "name": "Certified Hadoop Developer",
-        "issuer": "Cloudera",
-        "year": "2017"
+        "name": "AWS Certified Developer - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2022"
       }
     ],
     "interests": [
       "Reading",
       "Hiking",
-      "Traveling"
+      "Cooking"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alejandro-suarez"
+        "url": "https://www.linkedin.com/in/jonas-weber"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.example.com/alejandro-suarez"
+        "url": "https://www.example.com/jonas-weber"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Alejandro Suárez, a senior data scientist, appears in a formal suit with a neutral expression, looking directly at the camera."
+    "photo_prompt": "Professional LinkedIn-style headshot. Smiling, well-lit, neutral background."
   }
 }

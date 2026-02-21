@@ -1,28 +1,28 @@
 {
   "meta": {
     "cv_id": "cv_005",
-    "created_at": "2026-02-21T14:10:30.222410+00:00",
+    "created_at": "2026-02-21T14:51:27.295283+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "es",
-      "seniority": "junior",
-      "persona_type": "startup engineer",
-      "writing_style": "concise",
-      "role": "Backend Engineer",
+      "language": "fr",
+      "seniority": "mid",
+      "persona_type": "self-taught developer",
+      "writing_style": "narrative",
+      "role": "Data Scientist",
       "education_country": "Germany"
     },
     "photo_source": "local_asset",
-    "photo_asset": "tinary.jpeg",
+    "photo_asset": "sony.jpeg",
     "generation_config": {
-      "writing_style": "concise",
-      "summary_length": "paragraph",
-      "experience_style": "bullets",
+      "writing_style": "narrative",
+      "summary_length": "one_line",
+      "experience_style": "paragraphs",
       "omit_sections": [
-        "education"
+        "projects"
       ],
       "include_interests_section": false,
       "section_label_preset": {
@@ -41,33 +41,37 @@
     }
   },
   "data": {
-    "full_name": "Alejandro García",
-    "headline": "Backend Engineer",
-    "email": "alejandro.garcia@example.com",
-    "phone": "+49 123 456 7890",
-    "location": "Berlin, Germany",
-    "summary": "Passionate backend engineer with a strong foundation in software development. Adept at designing and implementing scalable, high-performance systems. Eager to contribute to innovative startup projects.",
-    "narrative": null,
+    "full_name": "Émilie Durand",
+    "headline": "Data Scientist | Self-Taught Developer",
+    "email": "emilie.durand@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "Passionate data scientist with a diverse background in self-taught programming and a keen interest in applying data-driven insights to solve complex problems.",
+    "narrative": "Émilie Durand's journey as a data scientist began with a strong fascination for technology and a desire to tackle real-world challenges. After completing her education in Germany, she embarked on a self-taught path, diving deep into programming and data analysis. Her natural curiosity and problem-solving skills have allowed her to thrive in various data-centric roles, where she has consistently delivered impactful solutions. Émilie's ability to extract meaningful insights from complex datasets, combined with her effective communication and collaboration skills, have made her a valued asset in her field.",
     "section_labels": {
       "summary": "Introduction",
       "experience": "Employment History",
+      "education": "Academic",
       "skills": "Skills & Tools",
       "languages": "Languages",
       "projects": "Projects",
       "certifications": "Certifications",
-      "interests": "Personal Interests"
+      "interests": "Personal Interests",
+      "profile": "Introduction"
     },
     "skills": [
       "Python",
-      "Django",
-      "PostgreSQL",
-      "Docker",
-      "Kubernetes",
-      "AWS"
+      "SQL",
+      "Machine Learning",
+      "Data Visualization",
+      "Tableau",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn"
     ],
     "languages": [
       {
-        "name": "Spanish",
+        "name": "French",
         "level": "Native"
       },
       {
@@ -76,72 +80,71 @@
       },
       {
         "name": "German",
-        "level": "Intermediate"
+        "level": "Conversational"
       }
     ],
     "experience": [
       {
-        "company": "Startup X",
-        "title": "Backend Engineer",
-        "start_date": "2022-06-01",
-        "end_date": "2023-12-31",
-        "location": "Berlin, Germany",
-        "bullets": [
-          "Designed and implemented scalable microservices architecture using Django and PostgreSQL",
-          "Automated infrastructure using Docker and Kubernetes, improving deployment efficiency",
-          "Collaborated with cross-functional teams to deliver high-quality features on time"
-        ],
-        "paragraph": null
+        "company": "Acme Data Solutions",
+        "title": "Data Scientist",
+        "start_date": "2021-06-01",
+        "end_date": "2023-03-31",
+        "location": "Paris, France",
+        "paragraph": "As a data scientist at Acme Data Solutions, Émilie played a pivotal role in developing predictive models and data-driven strategies for the company's diverse client base. She leveraged her expertise in machine learning and data visualization to uncover valuable insights, driving informed decision-making and delivering measurable business impact. Émilie's ability to collaborate cross-functionally and effectively communicate complex technical concepts to stakeholders was instrumental in the success of her projects."
       },
       {
-        "company": "Acme Inc.",
-        "title": "Junior Backend Developer",
-        "start_date": "2021-03-01",
-        "end_date": "2022-05-31",
+        "company": "Startup Innovations",
+        "title": "Data Analyst",
+        "start_date": "2019-09-01",
+        "end_date": "2021-05-31",
+        "location": "Berlin, Germany",
+        "paragraph": "During her time at Startup Innovations, Émilie honed her data analysis skills, working closely with the product and marketing teams to derive actionable insights from various data sources. She developed custom dashboards and reports, enabling the company to make data-driven decisions that led to improved customer engagement and increased revenue. Émilie's ability to identify trends and patterns within complex datasets was instrumental in driving the company's growth."
+      },
+      {
+        "company": "Data Solutions GmbH",
+        "title": "Junior Data Analyst",
+        "start_date": "2017-07-01",
+        "end_date": "2019-08-31",
         "location": "Munich, Germany",
-        "bullets": [
-          "Developed and maintained RESTful APIs using Django and Django REST Framework",
-          "Implemented database migrations and optimized database queries for improved performance",
-          "Participated in code reviews and pair programming to enhance code quality"
-        ],
-        "paragraph": null
+        "paragraph": "As a junior data analyst at Data Solutions GmbH, Émilie gained valuable experience in data extraction, cleaning, and analysis. She collaborated with cross-functional teams to develop and implement data-driven strategies, contributing to the company's overall success. Émilie's strong attention to detail and problem-solving skills allowed her to tackle complex data-related challenges, laying the foundation for her future growth as a data professional."
       }
     ],
-    "education": [],
-    "projects": [
+    "education": [
       {
-        "name": "Personal Blog",
-        "description": "Developed a personal blog using Django and PostgreSQL, with features like user authentication, CRUD operations, and responsive design.",
-        "tech": [
-          "Django",
-          "PostgreSQL",
-          "HTML/CSS",
-          "JavaScript"
-        ]
+        "institution": "Technical University of Munich",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "start_year": "2013",
+        "end_year": "2017"
       }
     ],
     "certifications": [
       {
-        "name": "AWS Certified Developer - Associate",
-        "issuer": "Amazon Web Services",
+        "name": "Certified Data Scientist",
+        "issuer": "DataCamp",
         "year": "2022"
+      },
+      {
+        "name": "Advanced SQL Certification",
+        "issuer": "Udacity",
+        "year": "2021"
       }
     ],
     "interests": [
-      "Hiking",
-      "Traveling",
-      "Cooking"
+      "Hiking and outdoor adventures",
+      "Cooking and experimenting with new recipes",
+      "Attending data science and technology conferences"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alejandro-garcia"
+        "url": "https://www.linkedin.com/in/emilie-durand"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.example.com/alejandro-garcia"
+        "url": "https://emilie-durand.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Alejandro is a young, clean-cut man with dark hair and a friendly smile, dressed in a collared shirt against a plain background."
+    "photo_prompt": "Professional LinkedIn-style headshot. Émilie Durand, a mid-career data scientist with a self-taught background, looking confident and approachable in a well-lit, high-quality portrait."
   }
 }

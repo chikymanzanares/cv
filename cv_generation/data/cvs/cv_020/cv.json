@@ -1,156 +1,152 @@
 {
   "meta": {
     "cv_id": "cv_020",
-    "created_at": "2026-02-21T13:46:30.772239+00:00",
+    "created_at": "2026-02-21T14:54:23.734271+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "es",
-      "seniority": "junior",
-      "persona_type": "career switcher",
-      "writing_style": "narrative",
-      "role": "UX Designer",
+      "language": "de",
+      "seniority": "senior",
+      "persona_type": "academic researcher",
+      "writing_style": "verbose",
+      "role": "Product Manager",
       "education_country": "Germany"
     },
     "photo_source": "local_asset",
-    "photo_asset": "tinary.jpeg",
+    "photo_asset": "jim.jpeg",
     "generation_config": {
-      "writing_style": "narrative",
+      "writing_style": "verbose",
       "summary_length": "short",
       "experience_style": "bullets",
-      "omit_sections": [],
-      "include_interests_section": true,
+      "omit_sections": [
+        "projects"
+      ],
+      "include_interests_section": false,
       "section_label_preset": {
-        "summary": "Profil",
-        "experience": "Berufserfahrung",
-        "education": "Ausbildung",
-        "skills": "Kompetenzen",
-        "languages": "Sprachen",
-        "projects": "Projekte",
-        "certifications": "Zertifizierungen",
-        "interests": "Interessen",
+        "summary": "Profil professionnel",
+        "experience": "Expérience",
+        "education": "Formation",
+        "skills": "Compétences",
+        "languages": "Langues",
+        "projects": "Projets",
+        "certifications": "Certifications",
+        "interests": "Centres d'intérêt",
         "profile": "Profil"
-      }
+      },
+      "page_target": "one_page",
+      "content_style": "structured"
     }
   },
   "data": {
-    "full_name": "Sofía Martínez",
-    "headline": "Diseñadora de UX Creativa y Apasionada",
-    "email": "sofia.martinez@email.com",
-    "phone": "+49 123 456 789",
-    "location": "Berlín, Alemania",
-    "summary": "Después de varios años trabajando en el sector de ventas al por menor, he decidido dar un giro a mi carrera y perseguir mi pasión por el diseño de experiencias de usuario. Ahora, con una sólida formación en UX y un enfoque creativo, estoy emocionada por aplicar mis habilidades en un entorno dinámico y en constante evolución.",
+    "full_name": "Dr. Katharina Müller",
+    "headline": "Senior Product Manager and Academic Researcher",
+    "email": "katharina.mueller@example.com",
+    "phone": "+49 123 456 7890",
+    "location": "Berlin, Germany",
+    "summary": "Experienced product manager with a strong academic background in computer science. Skilled in leading cross-functional teams, driving innovation, and delivering successful products. Passionate about bridging the gap between research and practical applications.",
+    "narrative": null,
     "section_labels": {
-      "summary": "Profil",
-      "experience": "Berufserfahrung",
-      "education": "Ausbildung",
-      "skills": "Kompetenzen",
-      "languages": "Sprachen",
-      "projects": "Projekte",
-      "certifications": "Zertifizierungen",
-      "interests": "Interessen"
+      "summary": "Profil professionnel",
+      "experience": "Expérience",
+      "education": "Formation",
+      "skills": "Compétences",
+      "languages": "Langues",
+      "certifications": "Certifications",
+      "interests": "Centres d'intérêt"
     },
     "skills": [
-      "Wireframing y prototipado",
-      "Investigación de usuarios",
-      "Diseño de interfaces",
-      "Pensamiento de diseño",
-      "Herramientas de diseño (Figma, Adobe XD)"
+      "Product Management",
+      "Agile Methodologies",
+      "User Research",
+      "Data Analysis",
+      "Project Management",
+      "Technical Expertise"
     ],
     "languages": [
       {
-        "name": "Español",
-        "level": "Nativo"
+        "name": "Allemand",
+        "level": "Langue maternelle"
       },
       {
-        "name": "Inglés",
-        "level": "Avanzado"
-      },
-      {
-        "name": "Alemán",
-        "level": "Intermedio"
+        "name": "Anglais",
+        "level": "Courant"
       }
     ],
     "experience": [
       {
-        "company": "Tiendas Unidas",
-        "title": "Gerente de Ventas",
-        "start_date": "2018-04-01",
-        "end_date": "2021-09-30",
-        "location": "Madrid, España",
+        "company": "Startup Alpha GmbH",
+        "title": "Senior Product Manager",
+        "start_date": "2019-09-01",
+        "end_date": "2022-12-31",
+        "location": "Berlin, Germany",
         "bullets": [
-          "Lideré un equipo de 10 vendedores, logrando superar los objetivos de ventas anuales en un 15%.",
-          "Implementé un nuevo sistema de seguimiento de inventario, lo que redujo los errores de pedido en un 20%."
+          "Led the development and launch of a successful AI-powered productivity app, resulting in a 25% increase in user engagement and a 20% growth in revenue.",
+          "Collaborated closely with cross-functional teams, including engineering, design, and marketing, to define product strategy, roadmap, and feature prioritization.",
+          "Conducted user research, analyzed data, and used insights to drive product improvements and new feature development."
         ],
         "paragraph": null
       },
       {
-        "company": "Estudio de Diseño Kreativ",
-        "title": "Pasante de Diseño de UX",
-        "start_date": "2022-03-01",
-        "end_date": "2022-08-31",
-        "location": "Berlín, Alemania",
+        "company": "Research Institute for Intelligent Systems",
+        "title": "Research Scientist",
+        "start_date": "2015-01-01",
+        "end_date": "2019-08-31",
+        "location": "Heidelberg, Germany",
         "bullets": [
-          "Participé en el proceso de investigación de usuarios y creación de wireframes para una aplicación de fitness.",
-          "Colaboré con el equipo de desarrollo para asegurar una implementación exitosa de los diseños.",
-          "Realicé pruebas de usabilidad y recogí retroalimentación de los usuarios para iterar y mejorar los diseños."
+          "Conducted cutting-edge research in the field of machine learning, with a focus on natural language processing and computer vision.",
+          "Published several peer-reviewed articles in prestigious academic journals and presented at international conferences.",
+          "Collaborated with industry partners to transfer research findings into practical applications."
         ],
         "paragraph": null
       }
     ],
     "education": [
       {
-        "institution": "Universidad Técnica de Berlín",
-        "degree": "Maestría en Diseño de Interacción",
-        "field": "Diseño de Experiencia de Usuario",
-        "start_year": "2021",
-        "end_year": "2023"
+        "institution": "Technical University of Munich",
+        "degree": "Doctor of Philosophy (Ph.D.)",
+        "field": "Computer Science",
+        "start_year": "2010",
+        "end_year": "2015"
       },
       {
-        "institution": "Universidad Complutense de Madrid",
-        "degree": "Licenciatura en Administración de Empresas",
-        "field": "Negocios y Comercio",
-        "start_year": "2014",
-        "end_year": "2018"
-      }
-    ],
-    "projects": [
-      {
-        "name": "Rediseño de la aplicación de fitness Healthy Habits",
-        "description": "Participé en el rediseño de la interfaz de usuario y la experiencia de la aplicación de fitness Healthy Habits. Realicé investigación de usuarios, creé wireframes y prototipos, y colaboré con el equipo de desarrollo para asegurar una implementación exitosa.",
-        "tech": [
-          "Figma",
-          "Adobe XD",
-          "Investigación de usuarios",
-          "Diseño de interacción"
-        ]
+        "institution": "Technical University of Munich",
+        "degree": "Master of Science (M.Sc.)",
+        "field": "Computer Science",
+        "start_year": "2007",
+        "end_year": "2010"
       }
     ],
     "certifications": [
       {
-        "name": "Certificación en Diseño de Experiencia de Usuario",
-        "issuer": "Interaction Design Foundation",
-        "year": "2022"
+        "name": "Certified Scrum Product Owner",
+        "issuer": "Scrum Alliance",
+        "year": "2018"
+      },
+      {
+        "name": "Professional in User Experience (UX)",
+        "issuer": "International UX Association",
+        "year": "2020"
       }
     ],
     "interests": [
-      "Lectura de novelas gráficas y cómics",
-      "Fotografía callejera",
-      "Exploración de nuevos restaurantes y cocinas del mundo"
+      "Hiking and Outdoor Activities",
+      "Cooking and Trying New Cuisines",
+      "Reading Academic Literature",
+      "Volunteering for Local Tech Meetups"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/sofia-martinez"
+        "url": "https://www.linkedin.com/in/katharina-mueller"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.sofiacreativa.com"
+        "url": "https://www.example.com/katharina-mueller"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Sofía Martínez, a young, friendly-looking woman with dark hair and a warm smile, wearing a simple blouse against a neutral background."
+    "photo_prompt": "Professional LinkedIn-style headshot. Smiling, well-lit, and focused on the camera. Katharina Müller, a senior product manager and academic researcher."
   }
 }

@@ -1,119 +1,42 @@
 {
   "meta": {
     "cv_id": "cv_022",
-    "created_at": "2026-02-21T13:46:50.493965+00:00",
+    "created_at": "2026-02-21T14:54:42.088317+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "es",
+      "language": "fr",
       "seniority": "junior",
-      "persona_type": "academic researcher",
-      "writing_style": "formal",
+      "persona_type": "startup engineer",
+      "writing_style": "results-driven",
       "role": "UX Designer",
-      "education_country": "Spain"
+      "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "carla.jpeg",
+    "photo_asset": "tommy.jpeg",
     "generation_config": {
-      "writing_style": "formal",
-      "summary_length": "paragraph",
-      "experience_style": "paragraphs",
+      "writing_style": "results-driven",
+      "summary_length": "one_line",
+      "experience_style": "bullets",
       "omit_sections": [
-        "certifications",
-        "projects",
-        "languages"
+        "languages",
+        "certifications"
       ],
       "include_interests_section": true,
-      "section_label_preset": {
-        "summary": "Resumen profesional",
-        "experience": "Experiencia laboral",
-        "education": "Formación",
-        "skills": "Competencias",
-        "languages": "Idiomas",
-        "projects": "Proyectos",
-        "certifications": "Certificaciones",
-        "interests": "Intereses",
-        "profile": "Perfil"
-      }
+      "section_label_preset": null,
+      "page_target": "long",
+      "content_style": "narrative"
     }
   },
   "data": {
-    "full_name": "Alejandro García Martínez",
-    "headline": "Diseñador UX junior con experiencia en investigación académica",
-    "email": "alejandro.garcia@example.com",
-    "phone": "+34 123 456 789",
-    "location": "Madrid, España",
-    "summary": "Diseñador UX junior con sólida formación académica en investigación y experiencia en proyectos de diseño de interfaces de usuario. Apasionado por comprender las necesidades de los usuarios y crear soluciones intuitivas y efectivas. Habilidades en investigación, prototipado y pruebas de usabilidad. Busco oportunidades para aplicar mis conocimientos y desarrollar mi carrera en el campo del diseño de experiencia de usuario.",
-    "section_labels": {
-      "summary": "Resumen profesional",
-      "experience": "Experiencia laboral",
-      "education": "Formación",
-      "skills": "Competencias",
-      "languages": "Idiomas",
-      "interests": "Intereses"
-    },
-    "skills": [
-      "Diseño de interfaces de usuario",
-      "Investigación de usuarios",
-      "Prototipado y pruebas de usabilidad",
-      "Herramientas de diseño (Figma, Adobe XD, Sketch)",
-      "Metodologías ágiles"
-    ],
-    "languages": [
-      {
-        "name": "Español",
-        "level": "Nativo"
-      },
-      {
-        "name": "Inglés",
-        "level": "Avanzado"
-      }
-    ],
-    "experience": [
-      {
-        "company": "Universidad Complutense de Madrid",
-        "title": "Asistente de investigación",
-        "start_date": "2020-09-01",
-        "end_date": "2022-06-30",
-        "location": "Madrid, España",
-        "paragraph": "Participé en varios proyectos de investigación en el campo de la interacción humano-computadora. Realicé estudios de campo, entrevistas con usuarios, análisis de datos y elaboración de informes. Colaboré en el diseño y evaluación de prototipos de aplicaciones web y móviles. Adquirí habilidades valiosas en investigación, diseño centrado en el usuario y pruebas de usabilidad."
-      },
-      {
-        "company": "Agencia de Diseño Creativo",
-        "title": "Diseñador UX junior",
-        "start_date": "2022-07-01",
-        "end_date": "2023-06-30",
-        "location": "Madrid, España",
-        "paragraph": "Trabajé en el equipo de diseño de experiencia de usuario de una agencia creativa. Participé en el proceso de diseño desde la investigación inicial hasta el prototipado y las pruebas de usabilidad. Colaboré con diseñadores, desarrolladores y gerentes de producto para crear soluciones digitales intuitivas y centradas en el usuario. Adquirí experiencia en el uso de herramientas de diseño, metodologías ágiles y trabajo en equipo."
-      }
-    ],
-    "education": [
-      {
-        "institution": "Universidad Autónoma de Madrid",
-        "degree": "Grado en Diseño Digital",
-        "field": "Diseño de Interacción",
-        "start_year": "2016",
-        "end_year": "2020"
-      }
-    ],
-    "interests": [
-      "Lectura de libros sobre diseño y tecnología",
-      "Seguimiento de tendencias en experiencia de usuario",
-      "Participación en eventos y meetups del sector"
-    ],
-    "links": [
-      {
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alejandro-garcia-martinez"
-      },
-      {
-        "label": "Portfolio",
-        "url": "https://www.behance.net/alejandrogmartinez"
-      }
-    ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Alejandro García Martínez, a young man with dark hair and glasses, looking directly at the camera with a neutral expression."
+    "full_name": "Isabelle Mercier",
+    "headline": "Passionate UX Designer with a Proven Track Record of Delivering Impactful Solutions",
+    "email": "isabelle.mercier@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "narrative": "As a driven and creative UX Designer, I have honed my skills within the dynamic startup ecosystem, delivering innovative solutions that have consistently driven measurable improvements. With a keen eye for user-centric design and a passion for solving complex challenges, I have collaborated closely with cross-functional teams to transform ideas into tangible results. In my previous role at a leading SaaS startup, I spearheaded the redesign of the company's flagship product, resulting in a 25% increase in user engagement and a 15% reduction in customer churn. I am adept at leveraging data-driven insights to inform design decisions, and I thrive on the challenge of creating intuitive and visually appealing interfaces that delight users. Alongside my design expertise, I possess a strong background in front-end development, allowing me to seamlessly bridge the gap between design and implementation. I am excited to continue my growth journey and contribute my skills to a forward-thinking organization that values creativity, collaboration, and a relentless pursuit of excellence."
   }
 }

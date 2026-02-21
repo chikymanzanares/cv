@@ -1,37 +1,39 @@
 {
   "meta": {
     "cv_id": "cv_011",
-    "created_at": "2026-02-21T14:11:25.167388+00:00",
+    "created_at": "2026-02-21T14:52:52.101187+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "en",
-      "seniority": "junior",
+      "language": "fr",
+      "seniority": "mid",
       "persona_type": "academic researcher",
-      "writing_style": "academic",
+      "writing_style": "action-oriented",
       "role": "UX Designer",
-      "education_country": "Spain"
+      "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "brandow.jpeg",
+    "photo_asset": "dan.jpeg",
     "generation_config": {
-      "writing_style": "academic",
-      "summary_length": "paragraph",
+      "writing_style": "action-oriented",
+      "summary_length": "one_line",
       "experience_style": "bullets",
-      "omit_sections": [],
+      "omit_sections": [
+        "projects"
+      ],
       "include_interests_section": false,
       "section_label_preset": {
-        "summary": "Profile",
-        "experience": "Professional Experience",
+        "summary": "Professional Summary",
+        "experience": "Work History",
         "education": "Education",
-        "skills": "Expertise",
+        "skills": "Core Competencies",
         "languages": "Languages",
-        "projects": "Selected Projects",
-        "certifications": "Credentials",
-        "interests": "Hobbies",
+        "projects": "Key Projects",
+        "certifications": "Certifications",
+        "interests": "Interests",
         "profile": "Profile"
       },
       "page_target": "long",
@@ -39,36 +41,34 @@
     }
   },
   "data": {
-    "full_name": "Alejandra Martínez",
-    "headline": "Junior UX Designer and Academic Researcher",
-    "email": "alejandra.martinez@example.com",
-    "phone": "+34 612 345 678",
-    "location": "Barcelona, Spain",
-    "summary": "Passionate and detail-oriented UX Designer with a strong academic background in human-computer interaction and user research. Experienced in conducting user studies, designing intuitive interfaces, and collaborating with cross-functional teams to deliver innovative digital solutions. Committed to staying up-to-date with the latest trends and best practices in the field of UX design.",
+    "full_name": "Emilie Dubois",
+    "headline": "Experienced UX Designer and Researcher",
+    "email": "emilie.dubois@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "Passionate UX designer with 8+ years of experience creating user-centric digital solutions for academic and research-driven organizations.",
     "narrative": null,
     "section_labels": {
-      "summary": "Profile",
-      "experience": "Professional Experience",
+      "summary": "Professional Summary",
+      "experience": "Work History",
       "education": "Education",
-      "skills": "Expertise",
+      "skills": "Core Competencies",
       "languages": "Languages",
-      "projects": "Selected Projects",
-      "certifications": "Credentials",
-      "interests": "Hobbies"
+      "certifications": "Certifications",
+      "interests": "Interests"
     },
     "skills": [
       "User Research",
       "Interaction Design",
       "Prototyping",
       "Information Architecture",
+      "Design Thinking",
       "Usability Testing",
-      "Adobe Creative Suite",
-      "Figma",
-      "HTML/CSS"
+      "Agile Methodologies"
     ],
     "languages": [
       {
-        "name": "Spanish",
+        "name": "French",
         "level": "Native"
       },
       {
@@ -78,110 +78,90 @@
     ],
     "experience": [
       {
-        "company": "Acme Design Studio",
-        "title": "UX Designer Intern",
-        "start_date": "2021-06-01",
-        "end_date": "2021-08-31",
-        "location": "Barcelona, Spain",
+        "company": "University of Paris",
+        "title": "Senior UX Designer",
+        "start_date": "2019-09-01",
+        "end_date": "Present",
+        "location": "Paris, France",
         "bullets": [
-          "Conducted user research and interviews to gather insights into user needs and pain points",
-          "Collaborated with the design team to create low-fidelity wireframes and high-fidelity prototypes",
-          "Performed usability testing and analyzed feedback to iteratively improve the design",
-          "Presented design concepts and recommendations to stakeholders"
+          "Led the redesign of the university's online learning platform, improving user engagement and satisfaction by 30%",
+          "Conducted extensive user research, including interviews, surveys, and usability testing, to inform the design process",
+          "Collaborated with cross-functional teams to translate user insights into intuitive and accessible digital experiences",
+          "Mentored junior designers and provided training on best practices in UX design"
         ],
         "paragraph": null
       },
       {
-        "company": "University of Barcelona",
-        "title": "Research Assistant",
-        "start_date": "2020-09-01",
-        "end_date": "2021-06-01",
-        "location": "Barcelona, Spain",
+        "company": "Research Institute for Social Sciences",
+        "title": "UX Designer",
+        "start_date": "2016-06-01",
+        "end_date": "2019-08-31",
+        "location": "Paris, France",
         "bullets": [
-          "Assisted in the design and execution of user studies focused on improving the user experience of educational technology",
-          "Collaborated with professors and researchers to analyze data and generate insights",
-          "Contributed to the preparation of research papers and presentations"
+          "Designed and implemented the user interface for a new data visualization tool, resulting in a 25% increase in user adoption",
+          "Facilitated workshops with researchers to understand their needs and pain points, and translated these insights into design solutions",
+          "Collaborated with developers to ensure seamless integration of UX design into the technical implementation"
         ],
         "paragraph": null
       },
       {
-        "company": "Catalonia Tech",
+        "company": "National Center for Scientific Research",
         "title": "UX Design Intern",
-        "start_date": "2019-07-01",
-        "end_date": "2019-09-30",
-        "location": "Barcelona, Spain",
+        "start_date": "2015-06-01",
+        "end_date": "2016-05-31",
+        "location": "Paris, France",
         "bullets": [
-          "Participated in the design and development of a mobile application for a local startup",
-          "Conducted user interviews and usability testing to identify areas for improvement",
-          "Created wireframes, mockups, and interactive prototypes using Figma"
+          "Conducted user research and usability testing to identify areas for improvement in the organization's web-based applications",
+          "Designed and prototyped new interface concepts, incorporating feedback from end-users",
+          "Participated in cross-functional team meetings to align on project goals and timelines"
         ],
         "paragraph": null
       }
     ],
     "education": [
       {
-        "institution": "University of Barcelona",
-        "degree": "Bachelor of Science",
-        "field": "Human-Computer Interaction",
-        "start_year": "2017",
-        "end_year": "2021"
-      },
-      {
-        "institution": "Universitat Politècnica de Catalunya",
+        "institution": "University of Cambridge",
         "degree": "Master of Science",
-        "field": "User Experience Design",
-        "start_year": "2021",
-        "end_year": "2023"
-      }
-    ],
-    "projects": [
-      {
-        "name": "Accessibility Research Project",
-        "description": "Conducted a study on the accessibility challenges faced by individuals with visual impairments when using mobile applications. Developed design guidelines and prototypes to improve the user experience.",
-        "tech": [
-          "User Research",
-          "Accessibility",
-          "Prototyping"
-        ]
+        "field": "Human-Computer Interaction",
+        "start_year": "2013",
+        "end_year": "2014"
       },
       {
-        "name": "Sustainable UX Design",
-        "description": "Explored the integration of sustainable design principles into the UX design process. Designed a mobile app that encourages environmentally-friendly behaviors.",
-        "tech": [
-          "Sustainable Design",
-          "Mobile Design",
-          "User Research"
-        ]
+        "institution": "Université Paris-Sorbonne",
+        "degree": "Bachelor of Arts",
+        "field": "Digital Design",
+        "start_year": "2010",
+        "end_year": "2013"
       }
     ],
+    "projects": [],
     "certifications": [
       {
-        "name": "Certified User Experience Designer",
-        "issuer": "Interaction Design Foundation",
-        "year": "2022"
+        "name": "Certified Usability Analyst",
+        "issuer": "Human Factors International",
+        "year": "2018"
       },
       {
-        "name": "Usability Testing Certification",
-        "issuer": "Nielsen Norman Group",
-        "year": "2021"
+        "name": "Design Thinking Certification",
+        "issuer": "IDEO U",
+        "year": "2017"
       }
     ],
     "interests": [
-      "User Experience Design",
-      "Human-Computer Interaction",
-      "Sustainable Design",
-      "Accessibility"
+      "Exploring emerging technologies in user experience design",
+      "Volunteering for non-profit organizations focused on digital accessibility",
+      "Attending design conferences and workshops to stay up-to-date on industry trends"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alejandra-martinez"
+        "url": "https://www.linkedin.com/in/emilie-dubois"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.alejandramartinez.com"
+        "url": "https://www.emiliedubois.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Alejandra Martínez, a young woman with long, dark hair, wearing a blue blouse and smiling at the camera."
+    "photo_prompt": "Professional LinkedIn-style headshot. Emilie Dubois, an experienced UX designer with a warm, friendly expression, wearing a smart casual outfit against a plain background."
   }
 }
