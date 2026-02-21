@@ -109,8 +109,9 @@ def main() -> None:
         tpl_name = _pick_template(cv_obj, templates)
         tpl = jenv.get_template(tpl_name)
 
-        # Build a file:// URI for the local image so WeasyPrint can load it
-        photo_uri = photo.resolve().as_uri() if photo.exists() else None
+        # Use relative path so the written HTML works when opened in browser (same dir as photo).
+        # WeasyPrint will resolve it via base_url set to cv_dir below.
+        photo_uri = "photo.png" if photo.exists() else None
 
         # Render HTML
         html = tpl.render(
@@ -120,10 +121,13 @@ def main() -> None:
         )
 
         if settings.write_html:
-            html_path.write_text(html, encoding="utf-8")
+            # Inject CSS so the HTML looks like the PDF when opened in a browser (e.g. photo size)
+            css_inline = settings.css_file.read_text(encoding="utf-8")
+            html_with_css = html.replace("</head>", f"<style>\n{css_inline}\n</style>\n</head>")
+            html_path.write_text(html_with_css, encoding="utf-8")
 
-        # Write PDF (base_url is key for relative assets)
-        HTML(string=html, base_url=str(settings.static_dir.resolve())).write_pdf(
+        # Write PDF: base_url = cv_dir so relative "photo.png" resolves; CSS is passed via stylesheets
+        HTML(string=html, base_url=str(cv_dir.resolve())).write_pdf(
             str(pdf_path),
             stylesheets=[css],
         )

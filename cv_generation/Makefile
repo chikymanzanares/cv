@@ -51,8 +51,9 @@ gen-data:
 gen-data-1:
 	docker compose run --rm -e N_CVS=1 generator sh -lc "python -m cv_generation.generate_data"
 
+# Regenerate all PDFs (and HTML). Use: FORCE_PDF=1 make -C cv_generation gen-pdf
 gen-pdf:
-	docker compose run --rm generator sh -lc "python -m cv_generation.render_pdfs"
+	docker compose run --rm -e FORCE_PDF=$${FORCE_PDF:-0} generator sh -lc "python -m cv_generation.render_pdfs"
 
 gen-all: gen-data gen-pdf
 
