@@ -5,19 +5,19 @@ import json
 import os
 import pickle
 import re
-from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 
 import fitz  # PyMuPDF
 import faiss
-import httpx
 import numpy as np
 from rank_bm25 import BM25Okapi
+from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 
 
 WORD_RE = re.compile(r"[A-Za-zÀ-ÿ0-9_+#.-]+")
+DEFAULT_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 
 
 def tokenize(text: str) -> List[str]:
@@ -34,9 +34,7 @@ def extract_text_from_pdf(pdf_path: Path) -> str:
 
 
 def chunk_text(text: str, chunk_chars: int = 1800, overlap_chars: int = 250) -> List[str]:
-    """
-    Simple chunker by characters (robust + no tokenizer dependency).
-    """
+    """Simple chunker by characters (robust + no tokenizer dependency)."""
     if not text:
         return []
     chunks = []
@@ -53,41 +51,7 @@ def chunk_text(text: str, chunk_chars: int = 1800, overlap_chars: int = 250) -> 
     return chunks
 
 
-@dataclass
-class EmbeddingsClient:
-    base_url: str
-    api_key: str
-    model: str
-    timeout_s: float = 60.0
-
-    def embed_texts(self, texts: List[str]) -> np.ndarray:
-        """
-        OpenAI-compatible embeddings endpoint:
-        POST {base_url}/embeddings
-        { "model": "...", "input": [ ... ] }
-        """
-        url = self.base_url.rstrip("/") + "/embeddings"
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-        }
-        payload = {"model": self.model, "input": texts}
-
-        with httpx.Client(timeout=self.timeout_s) as client:
-            r = client.post(url, headers=headers, json=payload)
-            r.raise_for_status()
-            data = r.json()
-
-        # OpenAI-style: data["data"] = [{ "embedding": [...], "index": 0 }, ...]
-        embs = [item["embedding"] for item in data["data"]]
-        arr = np.array(embs, dtype="float32")
-        return arr
-
-
 def file_fingerprint(paths: List[Path]) -> str:
-    """
-    Fingerprint based on file paths + mtimes + sizes, to detect changes.
-    """
     h = hashlib.sha256()
     for p in sorted(paths):
         st = p.stat()
@@ -114,18 +78,14 @@ def main():
     pdf_dir = Path(args.pdf_dir)
     out_dir = Path(args.out_dir)
 
-    base_url = os.getenv("EMBEDDINGS_BASE_URL", "").strip()
-    api_key = os.getenv("EMBEDDINGS_API_KEY", "").strip()
-    model = os.getenv("EMBEDDINGS_MODEL", "").strip()
-
-    if not base_url or not api_key or not model:
-        raise SystemExit(
-            "Missing EMBEDDINGS_* env vars. Set EMBEDDINGS_BASE_URL, EMBEDDINGS_API_KEY, EMBEDDINGS_MODEL in .env"
-        )
+    model_name = os.getenv("EMBEDDING_MODEL", DEFAULT_MODEL)
 
     ensure_out_dir(out_dir)
 
-    pdf_paths = sorted(pdf_dir.glob("*.pdf"))
+    # CVs live in subdirs: cv_generation/data/cvs/cv_001/cv.pdf, cv_002/cv.pdf, ...
+    pdf_paths = sorted(pdf_dir.glob("*/cv.pdf"))
+    if not pdf_paths:
+        pdf_paths = sorted(pdf_dir.glob("*.pdf"))
     if not pdf_paths:
         raise SystemExit(f"No PDFs found in {pdf_dir.resolve()}")
 
@@ -140,14 +100,13 @@ def main():
 
     print(f"Found {len(pdf_paths)} PDFs. Extracting text + chunking...")
 
-    # Build chunks + metadata
     records: List[Dict[str, Any]] = []
     all_texts: List[str] = []
     all_tokens: List[List[str]] = []
 
     chunk_id = 0
     for pdf_path in tqdm(pdf_paths, desc="PDFs"):
-        cv_id = pdf_path.stem  # filename without .pdf
+        cv_id = pdf_path.parent.name if pdf_path.parent != pdf_dir else pdf_path.stem
         text = extract_text_from_pdf(pdf_path)
         chunks = chunk_text(text, chunk_chars=args.chunk_chars, overlap_chars=args.overlap_chars)
 
@@ -169,30 +128,28 @@ def main():
 
     print(f"Total chunks: {len(records)}")
 
-    # Build BM25
+    # BM25
     print("Building BM25 index...")
     bm25 = BM25Okapi(all_tokens)
 
-    # Build FAISS
-    print("Embedding chunks + building FAISS index...")
-    emb_client = EmbeddingsClient(base_url=base_url, api_key=api_key, model=model)
+    # FAISS with local SentenceTransformer (no API needed)
+    print(f"Loading embedding model: {model_name} ...")
+    embedder = SentenceTransformer(model_name)
 
-    # Embed in batches
+    print("Embedding chunks + building FAISS index...")
     vectors: List[np.ndarray] = []
     for i in tqdm(range(0, len(all_texts), args.batch_size), desc="Embedding"):
         batch = all_texts[i : i + args.batch_size]
-        vec = emb_client.embed_texts(batch)  # (B, D)
-        vectors.append(vec)
+        vec = embedder.encode(batch, show_progress_bar=False, convert_to_numpy=True)
+        vectors.append(vec.astype("float32"))
 
     X = np.vstack(vectors).astype("float32")
-    # Normalize for cosine similarity using Inner Product
     faiss.normalize_L2(X)
 
     dim = X.shape[1]
     index = faiss.IndexFlatIP(dim)
     index.add(X)
 
-    # Persist to disk
     faiss_path = out_dir / "faiss.index"
     chunks_path = out_dir / "chunks.jsonl"
     bm25_path = out_dir / "bm25.pkl"
@@ -207,27 +164,19 @@ def main():
 
     print(f"Saving BM25 object: {bm25_path}")
     with bm25_path.open("wb") as f:
-        pickle.dump(
-            {
-                "bm25": bm25,
-                "chunk_count": len(records),
-            },
-            f,
-        )
+        pickle.dump({"bm25": bm25, "chunk_count": len(records)}, f)
 
     manifest = {
         "fingerprint": current_fp,
         "pdf_count": len(pdf_paths),
         "chunk_count": len(records),
-        "embedding_model": model,
-        "embedding_base_url": base_url,
+        "embedding_model": model_name,
         "dim": int(dim),
         "chunk_chars": args.chunk_chars,
         "overlap_chars": args.overlap_chars,
     }
     manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     print(f"Saved manifest: {manifest_path}")
-
     print("✅ Done.")
 
 

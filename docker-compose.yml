@@ -80,6 +80,35 @@ services:
     command: ["sh", "-lc", "python -m cv_generation.generate_data --n 30"]
     restart: "no"
 
+  rag_index:
+    build:
+      context: .
+      target: rag
+    image: cv/chatbot-rag:local
+    env_file:
+      - .env
+    volumes:
+      - ./:/cv
+      - hf_cache:/root/.cache/huggingface
+    working_dir: /cv
+    command: ["sh", "-lc", "python -m rag/build_index.py --pdf_dir data/cvs --out_dir rag_store"]
+    restart: "no"
+  
+  rag_search:
+    build:
+      context: .
+      target: rag
+    image: cv/chatbot-rag:local
+    env_file:
+      - .env
+    volumes:
+      - ./:/cv
+      - hf_cache:/root/.cache/huggingface
+    working_dir: /cv
+    command: ["sh", "-lc", "python -m rag_cli.search --index_dir rag_store --query 'Who has Python experience?'"]
+    restart: "no"
+
 volumes:
   postgres_data:
   front_node_modules:
+  hf_cache:

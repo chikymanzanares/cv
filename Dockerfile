@@ -49,3 +49,12 @@ RUN pip install --no-cache-dir -r requirements-generation.txt
 
 # We mount the repo as volume, so no COPY here.
 WORKDIR /cv
+
+
+# NEW: rag stage (offline indexing + CLI search)
+FROM base AS rag
+
+COPY requirements-rag.txt .
+RUN pip install --no-cache-dir -r requirements-rag.txt
+
+WORKDIR /cv
