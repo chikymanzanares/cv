@@ -1,0 +1,99 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<div class="page modern">
+  <header class="header">
+    <div class="title">
+      <h1>{{ cv.full_name }}</h1>
+      <p class="headline">{{ cv.headline }}</p>
+      <p class="contact">
+        {{ cv.email }} · {{ cv.phone }} · {{ cv.location }}
+      </p>
+      {% if cv.links %}
+      <p class="links">
+        {% for l in cv.links %}
+          <span>{{ l.label }}: {{ l.url }}</span>{% if not loop.last %} · {% endif %}
+        {% endfor %}
+      </p>
+      {% endif %}
+    </div>
+
+    {% if photo_uri %}
+    <div class="photo">
+      <img src="{{ photo_uri }}" alt="photo" />
+    </div>
+    {% endif %}
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p>{{ cv.summary }}</p>
+  </section>
+
+  <section class="two-col">
+    <div>
+      <h2>Skills</h2>
+      <ul class="chips">
+        {% for s in cv.skills or [] %}
+          <li>{{ s }}</li>
+        {% endfor %}
+      </ul>
+
+      <h2>Languages</h2>
+      <ul>
+        {% for lang in cv.languages or [] %}
+          <li>{{ lang.name }} — {{ lang.level }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div>
+      <h2>Education</h2>
+      {% for e in cv.education or [] %}
+        <div class="item">
+          <div class="item-title">{{ e.degree }} · {{ e.field }}</div>
+          <div class="item-sub">{{ e.institution }} ({{ e.start_year }}–{{ e.end_year }})</div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    {% for ex in cv.experience or [] %}
+      <div class="item">
+        <div class="item-title">{{ ex.title }} — {{ ex.company }}</div>
+        <div class="item-sub">{{ ex.location }} · {{ ex.start_date }} → {{ ex.end_date }}</div>
+        <ul>
+          {% for b in ex.bullets or [] %}
+            <li>{{ b }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </section>
+
+  {% if cv.projects %}
+  <section>
+    <h2>Projects</h2>
+    {% for p in cv.projects %}
+      <div class="item">
+        <div class="item-title">{{ p.name }}</div>
+        <div class="item-sub">{{ (p.tech or []) | join(", ") }}</div>
+        <p>{{ p.description }}</p>
+      </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if cv.certifications %}
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      {% for c in cv.certifications %}
+        <li>{{ c.name }} — {{ c.issuer }} ({{ c.year }})</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

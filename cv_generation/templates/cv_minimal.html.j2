@@ -1,0 +1,45 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<div class="page minimal">
+  <div class="top">
+    <div>
+      <h1>{{ cv.full_name }}</h1>
+      <div class="muted">{{ cv.headline }}</div>
+      <div class="muted">{{ cv.location }}</div>
+      <div class="muted">{{ cv.email }} · {{ cv.phone }}</div>
+    </div>
+    {% if photo_uri %}
+      <img class="photo-small" src="{{ photo_uri }}" alt="photo" />
+    {% endif %}
+  </div>
+
+  <div class="block">
+    <h2>Summary</h2>
+    <p>{{ cv.summary }}</p>
+  </div>
+
+  <div class="block">
+    <h2>Experience</h2>
+    {% for ex in cv.experience or [] %}
+      <div class="item">
+        <div><strong>{{ ex.title }}</strong> — {{ ex.company }}</div>
+        <div class="muted">{{ ex.start_date }} → {{ ex.end_date }} · {{ ex.location }}</div>
+        <ul>
+          {% for b in ex.bullets or [] %}
+            <li>{{ b }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="block">
+    <h2>Skills</h2>
+    <ul class="chips">
+      {% for s in cv.skills or [] %}
+        <li>{{ s }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

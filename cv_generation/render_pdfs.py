@@ -1,0 +1,138 @@
+from __future__ import annotations
+
+import json
+import os
+import random
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+from weasyprint import HTML, CSS
+
+
+@dataclass(frozen=True)
+class RenderSettings:
+    input_dir: Path
+    output_dir: Path
+    templates_dir: Path
+    static_dir: Path
+    css_file: Path
+    seed: int | None
+    write_html: bool
+    force: bool
+
+
+def _env(templates_dir: Path) -> Environment:
+    return Environment(
+        loader=FileSystemLoader(str(templates_dir)),
+        autoescape=select_autoescape(["html", "xml"]),
+    )
+
+
+def _load_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _list_cv_dirs(input_dir: Path) -> list[Path]:
+    return sorted([p for p in input_dir.glob("cv_*") if p.is_dir()])
+
+
+def _pick_template(cv_obj: dict[str, Any], templates: list[str]) -> str:
+    """
+    Pick template per CV to increase PDF diversity.
+    Deterministic if seed is set (handled by random.seed()).
+    """
+    # Optional: you can bias templates based on language/seniority etc.
+    return random.choice(templates)
+
+
+def _safe_filename(s: str) -> str:
+    return "".join(ch for ch in s if ch.isalnum() or ch in ("-", "_")).strip() or "cv"
+
+
+def main() -> None:
+    settings = RenderSettings(
+        input_dir=Path(os.getenv("GENERATION_OUTPUT_DIR", "cv_generation/data/cvs")),
+        output_dir=Path(os.getenv("GENERATION_OUTPUT_DIR", "cv_generation/data/cvs")),
+        templates_dir=Path(os.getenv("CV_TEMPLATES_DIR", "cv_generation/templates")),
+        static_dir=Path(os.getenv("CV_STATIC_DIR", "cv_generation/static")),
+        css_file=Path(os.getenv("CV_CSS_FILE", "cv_generation/static/cv.css")),
+        seed=int(os.getenv("PDF_SEED")) if os.getenv("PDF_SEED") else None,
+        write_html=os.getenv("WRITE_HTML", "1") == "1",
+        force=os.getenv("FORCE_PDF", "0") == "1",
+    )
+
+    if settings.seed is not None:
+        random.seed(settings.seed)
+
+    if not settings.templates_dir.exists():
+        raise FileNotFoundError(f"Missing templates dir: {settings.templates_dir}")
+    if not settings.css_file.exists():
+        raise FileNotFoundError(f"Missing CSS file: {settings.css_file}")
+
+    templates = [
+        "cv_modern.html.j2",
+        "cv_classic.html.j2",
+        "cv_minimal.html.j2",
+    ]
+
+    jenv = _env(settings.templates_dir)
+    css = CSS(filename=str(settings.css_file))
+
+    cv_dirs = _list_cv_dirs(settings.input_dir)
+    if not cv_dirs:
+        raise RuntimeError(f"No CV folders found in {settings.input_dir} (expected cv_001/ etc.)")
+
+    ok = 0
+    for cv_dir in cv_dirs:
+        cv_json = cv_dir / "cv.json"
+        photo = cv_dir / "photo.png"  # we always write photo.png in your pipeline
+        if not cv_json.exists():
+            print(f"[SKIP] Missing cv.json in {cv_dir}")
+            continue
+        if not photo.exists():
+            print(f"[WARN] Missing photo.png in {cv_dir} (will render without photo)")
+
+        cv_obj = _load_json(cv_json)
+        meta = cv_obj.get("meta", {})
+        data = cv_obj.get("data", {})
+
+        # Output names
+        pdf_path = cv_dir / "cv.pdf"
+        html_path = cv_dir / "cv.html"
+
+        if pdf_path.exists() and not settings.force:
+            print(f"[SKIP] Exists {pdf_path} (set FORCE_PDF=1 to overwrite)")
+            continue
+
+        tpl_name = _pick_template(cv_obj, templates)
+        tpl = jenv.get_template(tpl_name)
+
+        # Build a file:// URI for the local image so WeasyPrint can load it
+        photo_uri = photo.resolve().as_uri() if photo.exists() else None
+
+        # Render HTML
+        html = tpl.render(
+            meta=meta,
+            cv=data,
+            photo_uri=photo_uri,
+        )
+
+        if settings.write_html:
+            html_path.write_text(html, encoding="utf-8")
+
+        # Write PDF (base_url is key for relative assets)
+        HTML(string=html, base_url=str(settings.static_dir.resolve())).write_pdf(
+            str(pdf_path),
+            stylesheets=[css],
+        )
+
+        ok += 1
+        print(f"[OK] Rendered {cv_dir.name} -> {pdf_path.name} (template={tpl_name})")
+
+    print(f"\n🎉 Done. PDFs rendered: {ok}/{len(cv_dirs)}")
+
+
+if __name__ == "__main__":
+    main()

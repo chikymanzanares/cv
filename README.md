@@ -50,13 +50,48 @@ Clients can reconnect using `Last-Event-ID` to resume the stream.
 
 ---
 
+## Configuration
+
+1. **Copy the environment template** and create your local `.env`:
+
+   ```
+   cp .env_ex .env
+   ```
+
+2. **Set your API keys** in `.env` according to the LLM provider you use:
+
+   - **Anthropic:** set `LLM_PROVIDER=anthropic` and add your key:
+     ```
+     ANTHROPIC_API_KEY=your-key-here
+     ```
+   - **Google (Gemini):** set `LLM_PROVIDER` to the value used for Gemini and add:
+     ```
+     GEMINI_API_KEY=your-google-api-key-here
+     ```
+
+Without a valid `.env` and the corresponding API key, the project will not work.
+
+---
+
 ## Start the project
 
-Run everything (API + Postgres + migrations):
+1. **Generate CV data** (required before first run):
 
-```
-make up
-```
+   ```
+   make -C cv_generation gen-data
+   ```
+
+2. **Generate PDFs** from the CV data:
+
+   ```
+   make -C cv_generation gen-pdf
+   ```
+
+3. **Run everything** (API + Postgres + migrations):
+
+   ```
+   make up
+   ```
 
 This will:
 - Build the API image

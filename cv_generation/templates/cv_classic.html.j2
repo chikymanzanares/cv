@@ -1,0 +1,55 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<div class="page classic">
+  <div class="row">
+    {% if photo_uri %}
+    <div class="photo-left">
+      <img src="{{ photo_uri }}" alt="photo" />
+    </div>
+    {% endif %}
+    <div class="main">
+      <h1>{{ cv.full_name }}</h1>
+      <p class="headline">{{ cv.headline }}</p>
+      <p class="contact">{{ cv.email }} · {{ cv.phone }} · {{ cv.location }}</p>
+    </div>
+  </div>
+
+  <hr/>
+
+  <h2>Profile</h2>
+  <p>{{ cv.summary }}</p>
+
+  <h2>Experience</h2>
+  {% for ex in cv.experience or [] %}
+    <div class="item">
+      <div class="item-title">{{ ex.company }} — {{ ex.title }}</div>
+      <div class="item-sub">{{ ex.location }} · {{ ex.start_date }} → {{ ex.end_date }}</div>
+      <ul>
+        {% for b in ex.bullets or [] %}
+          <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+
+  <h2>Education</h2>
+  {% for e in cv.education or [] %}
+    <div class="item">
+      <div class="item-title">{{ e.institution }}</div>
+      <div class="item-sub">{{ e.degree }} · {{ e.field }} ({{ e.start_year }}–{{ e.end_year }})</div>
+    </div>
+  {% endfor %}
+
+  <h2>Skills</h2>
+  <p>{{ (cv.skills or []) | join(" · ") }}</p>
+
+  {% if cv.languages %}
+  <h2>Languages</h2>
+  <p>
+    {% for lang in cv.languages %}
+      {{ lang.name }} ({{ lang.level }}){% if not loop.last %}, {% endif %}
+    {% endfor %}
+  </p>
+  {% endif %}
+</div>
+{% endblock %}
