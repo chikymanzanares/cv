@@ -7,7 +7,7 @@ endif
 
 .PHONY: up down rebuild build logs restart ps clean fresh \
 	alembic-init migrate upgrade downgrade current history bump \
-	dbshell dbtables
+	dbshell dbtables tests-unit
 
 # =========================
 # DOCKER
@@ -108,3 +108,21 @@ dbshell:
 # List all tables
 dbtables:
 	docker compose exec postgres psql -U $(POSTGRES_USER) -d $(POSTGRES_DB) -c "\dt"
+
+
+# =========================
+# TESTS
+# =========================
+
+# Build a dev image that includes requirements-dev.txt (pytest)
+test-build:
+	docker build --target development -t cv/chatbot-api:dev .
+
+# Unit tests (no DB)
+test-unit: test-build
+	docker run --rm \
+		-e PYTHONPATH=/cv \
+		-v $(PWD):/cv \
+		-w /cv \
+		cv/chatbot-api:dev \
+		pytest -q test/unit

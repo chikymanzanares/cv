@@ -32,7 +32,7 @@ services:
   api:
     build:
       context: .
-      target: production
+      target: development
     image: cv/chatbot-api:local
     ports:
       - "8000:8000"

@@ -55,6 +55,13 @@ class FakeRunExecutor(RunExecutor):
 
             self.run_repo.set_status(run_id=run_id, status=RunStatus.done)
 
+            # Persist the "done" signal as an event too (so SSE replay matches DB)
+            self.event_repo.append(
+                run_id=run_id,
+                type=RunEventType.state,
+                data={"status": "done"},
+            )
+
         except Exception as e:
             try:
                 self.event_repo.append(
