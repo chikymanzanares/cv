@@ -83,35 +83,50 @@ Without a valid `.env` and the corresponding API key, the project will not work.
 
 ## Start the project
 
-1. **Generate CV data and PDFs** (required before first run). One command does both:
+### First time (or after regenerating CVs)
 
-   ```
-   make -C cv_generation gen-all
-   ```
+**Step 1 — Generate CVs + PDFs + RAG index** in one command:
 
-   Or step by step: `make -C cv_generation gen-data` then `make -C cv_generation gen-pdf`.
+```bash
+make dataset
+```
 
-2. **Build the RAG index** (required before starting the API). This extracts text from the PDFs and builds the FAISS + BM25 search indices:
+This runs sequentially:
+- `gen-all` → generates 30 fake CV JSON files and renders them to PDF
+- `rag-rebuild` → extracts text from the PDFs and builds the FAISS + BM25 search indices
 
-   ```
-   make -f rag/Makefile build
-   make -f rag/Makefile index
-   ```
+The first run downloads the embedding model ([intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small), ~117 MB, cached after that).
 
-   The first time it downloads the embedding model ([intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small), ~117 MB, cached locally after that).
-   The index is saved to `rag_store/` and reused on every subsequent start.
+> **Important:** every time you regenerate the CVs (`make gen-all` or `make dataset`), you must rebuild the RAG index — otherwise the API will answer from stale data. `make dataset` always does both in the correct order.
 
-3. **Run everything** (API + Postgres + migrations):
+**Step 2 — Start the API, frontend and database:**
 
-   ```
-   make up
-   ```
+```bash
+make up
+```
 
-This will:
-- Build the API image
-- Start Postgres
-- Run Alembic migrations
-- Start FastAPI on http://localhost:8000
+This builds images, starts Postgres, runs Alembic migrations, starts FastAPI on http://localhost:8000 and the frontend on http://localhost:5173.
+
+---
+
+### Subsequent starts (no CV changes)
+
+```bash
+make up
+```
+
+The RAG index in `rag_store/` is already built and persisted on disk. The API loads it into memory at startup automatically.
+
+---
+
+### Regenerating the dataset later
+
+```bash
+make dataset
+docker compose restart api
+```
+
+`make dataset` rebuilds CVs and the index. The API restart forces it to load the new index from disk (the running instance keeps the old one in memory until restarted).
 
 ---
 

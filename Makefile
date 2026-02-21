@@ -8,7 +8,8 @@ endif
 .PHONY: up down rebuild build logs restart ps clean fresh \
 	alembic-init migrate upgrade downgrade current history bump \
 	dbshell dbtables tests-unit \
-	front front-logs front-shell
+	front front-logs front-shell \
+	gen-data gen-pdf-force gen-all rag-index rag-rebuild dataset
 
 # =========================
 # API
@@ -123,6 +124,39 @@ dbshell:
 # List all tables
 dbtables:
 	docker compose exec postgres psql -U $(POSTGRES_USER) -d $(POSTGRES_DB) -c "\dt"
+
+
+# =========================
+# CV DATASET + RAG PIPELINE
+# =========================
+
+# Generate JSON data for all CVs
+gen-data:
+	make -C cv_generation gen-data
+
+# Generate PDFs (force overwrite existing)
+gen-pdf-force:
+	make -C cv_generation gen-pdf-force
+
+# Generate JSON + PDFs
+gen-all:
+	make -C cv_generation gen-all
+
+# Build FAISS + BM25 indices (incremental)
+rag-index:
+	docker compose run --rm rag_index \
+	sh -lc "python -m rag.rag_cli.build_index --pdf_dir cv_generation/data/cvs --out_dir rag_store"
+
+# Force full reindex (use after regenerating CVs)
+rag-rebuild:
+	docker compose run --rm rag_index \
+	sh -lc "python -m rag.rag_cli.build_index --pdf_dir cv_generation/data/cvs --out_dir rag_store --force"
+
+# Full dataset pipeline: generate CVs + PDFs + RAG index.
+# Run once after cloning, and every time you regenerate the dataset.
+# After this completes, restart the API so it picks up the new index:
+#   make dataset && docker compose restart api
+dataset: gen-all rag-rebuild
 
 
 # =========================
