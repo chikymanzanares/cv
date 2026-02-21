@@ -5,12 +5,19 @@ from app.application.chat.run_executor import RunExecutor
 from app.domain.chat.entities import RunEventType, RunStatus
 from app.domain.chat.repositories.run_repository import RunRepository
 from app.domain.chat.repositories.run_event_repository import RunEventRepository
+from app.domain.chat.repositories.thread_repository import ThreadRepository
 
 
 class FakeRunExecutor(RunExecutor):
-    def __init__(self, run_repo: RunRepository, event_repo: RunEventRepository):
+    def __init__(
+        self,
+        run_repo: RunRepository,
+        event_repo: RunEventRepository,
+        thread_repo: ThreadRepository,
+    ):
         self.run_repo = run_repo
         self.event_repo = event_repo
+        self.thread_repo = thread_repo
 
     def start(self, *, thread_id: uuid.UUID, run_id: uuid.UUID) -> None:
         try:
@@ -52,6 +59,8 @@ class FakeRunExecutor(RunExecutor):
                 type=RunEventType.final,
                 data={"text": text},
             )
+
+            self.thread_repo.add_assistant_message(thread_id=thread_id, content=text)
 
             self.run_repo.set_status(run_id=run_id, status=RunStatus.done)
 

@@ -12,7 +12,7 @@ from app.application.chat.get_run import GetRunUseCase
 from app.application.chat.cancel_run import CancelRunUseCase
 
 
-router = APIRouter(prefix="/api", tags=["runs"])
+router = APIRouter(tags=["runs"])
 
 
 def get_db():

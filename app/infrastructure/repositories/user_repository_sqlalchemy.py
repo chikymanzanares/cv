@@ -23,16 +23,16 @@ class SqlAlchemyUserRepository(UserRepository):
         self.db.add(u)
         try:
             self.db.commit()
-        except IntegrityError as e:
+        except IntegrityError:
             self.db.rollback()
+            # Fallback if another request created the user between our check and insert
             existing = self.get_user_by_name(name=name)
             if existing:
                 raise UserAlreadyExistsError(
                     message=f"User with name '{name}' already exists",
                     user_id=existing.id,
                     name=existing.name,
-                ) from e
+                )
             raise
-
         self.db.refresh(u)
         return DomainUser(id=u.id, name=u.name)

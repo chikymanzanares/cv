@@ -13,7 +13,7 @@ from app.application.chat.get_thread import GetThreadUseCase
 from app.application.chat.post_message_create_run import PostMessageCreateRunUseCase
 from app.application.chat.fake_run_executor import FakeRunExecutor
 
-router = APIRouter(prefix="/api", tags=["threads"])
+router = APIRouter(tags=["threads"])
 
 
 def get_db():
@@ -86,7 +86,8 @@ def post_message_create_run(
         try:
             bg_run_repo = SqlAlchemyRunRepository(bg_db)
             bg_event_repo = SqlAlchemyRunEventRepository(bg_db)
-            executor = FakeRunExecutor(bg_run_repo, bg_event_repo)
+            bg_thread_repo = SqlAlchemyThreadRepository(bg_db)
+            executor = FakeRunExecutor(bg_run_repo, bg_event_repo, bg_thread_repo)
             executor.start(thread_id=thread_id, run_id=run_id)
         finally:
             bg_db.close()

@@ -9,7 +9,7 @@ from app.application.chat.create_user import CreateUserUseCase
 from app.application.errors import UserAlreadyExistsError
 
 
-router = APIRouter(prefix="/api", tags=["users"])
+router = APIRouter(tags=["users"])
 
 
 def get_db():
