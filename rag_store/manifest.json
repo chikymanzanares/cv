@@ -1,9 +1,0 @@
-{
-  "fingerprint": "b7a0dc5ddfe2a4745b295626aa3193d166331cdfc87e18bc0a5e9513bc7c1ce6",
-  "pdf_count": 30,
-  "chunk_count": 162,
-  "embedding_model": "intfloat/multilingual-e5-small",
-  "dim": 384,
-  "chunk_chars": 500,
-  "overlap_chars": 50
-}
