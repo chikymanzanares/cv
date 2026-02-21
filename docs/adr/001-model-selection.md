@@ -92,38 +92,42 @@ models/gemini-2.5-flash-image
 
 ## Embedding Model (RAG pipeline)
 
-### Primary: `paraphrase-multilingual-MiniLM-L12-v2`
+### Primary: `intfloat/multilingual-e5-small`
 
 Used to vectorize CV text chunks and search queries for the FAISS semantic index.
 
+**Model:** [intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small) (Hugging Face)
+
 ```
-sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+intfloat/multilingual-e5-small
 ```
 
 **Provider:** HuggingFace (downloaded once, cached locally in Docker volume `hf_cache`)
 
 **Selection rationale:**
 
+* Trained for **retrieval** (query → passage), not paraphrase similarity — suitable for RAG and CV search
 * Fully local — no external API, no cost, no rate limits
-* Multilingual support out of the box (50+ languages), matching the multilingual CV dataset
-* 384-dimensional dense vectors — compact FAISS index, fast search
-* ~471 MB model size, suitable for CPU-only Docker containers
+* Multilingual support (100 languages from xlm-roberta), matching the multilingual CV dataset
+* 384-dimensional dense vectors, max sequence length 512 tokens
+* ~117 MB model size, suitable for CPU-only Docker containers
+* Inputs use `query: ` and `passage: ` prefixes as per model card; the pipeline applies these automatically
 
 **Runtime config** (`.env`):
 
 ```
-EMBEDDING_MODEL=paraphrase-multilingual-MiniLM-L12-v2
+EMBEDDING_MODEL=intfloat/multilingual-e5-small
 ```
 
 **Index artefacts** (`rag_store/manifest.json` records the model used at index time):
 
 ```json
 {
-  "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "embedding_model": "intfloat/multilingual-e5-small",
   "dim": 384,
-  "chunk_count": 59,
-  "chunk_chars": 1800,
-  "overlap_chars": 250
+  "chunk_count": 169,
+  "chunk_chars": 500,
+  "overlap_chars": 50
 }
 ```
 

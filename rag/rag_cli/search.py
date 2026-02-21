@@ -10,7 +10,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 
-DEFAULT_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
+DEFAULT_MODEL = "intfloat/multilingual-e5-small"
 
 
 def load_chunks(chunks_path: Path):
@@ -78,7 +78,7 @@ def main():
     st_model = SentenceTransformer(model_name)
 
     qvec = st_model.encode(
-        [args.query],
+        [f"query: {args.query}"],
         convert_to_numpy=True,
         normalize_embeddings=True,
     ).astype("float32")

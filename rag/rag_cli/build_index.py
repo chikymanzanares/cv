@@ -17,7 +17,7 @@ from tqdm import tqdm
 
 
 WORD_RE = re.compile(r"[A-Za-zÀ-ÿ0-9_+#.-]+")
-DEFAULT_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
+DEFAULT_MODEL = "intfloat/multilingual-e5-small"
 
 
 def tokenize(text: str) -> List[str]:
@@ -140,7 +140,8 @@ def main():
     vectors: List[np.ndarray] = []
     for i in tqdm(range(0, len(all_texts), args.batch_size), desc="Embedding"):
         batch = all_texts[i : i + args.batch_size]
-        vec = embedder.encode(batch, show_progress_bar=False, convert_to_numpy=True)
+        passages = [f"passage: {t}" for t in batch]
+        vec = embedder.encode(passages, show_progress_bar=False, convert_to_numpy=True)
         vectors.append(vec.astype("float32"))
 
     X = np.vstack(vectors).astype("float32")

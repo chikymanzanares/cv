@@ -90,7 +90,7 @@ Without a valid `.env` and the corresponding API key, the project will not work.
    make -f rag/Makefile index
    ```
 
-   The first time it downloads the embedding model (~471 MB, cached locally after that).
+   The first time it downloads the embedding model ([intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small), ~117 MB, cached locally after that).
    The index is saved to `rag_store/` and reused on every subsequent start.
 
 3. **Run everything** (API + Postgres + migrations):

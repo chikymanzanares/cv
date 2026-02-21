@@ -72,9 +72,10 @@ chunk_chars   = 500  (default, configurable via --chunk_chars)
 overlap_chars = 50   (default, configurable via --overlap_chars)
 ```
 
-The defaults are aligned with the model's hard limit of **128 tokens**
-(~500–600 characters for multilingual text). This ensures every chunk is
-fully represented in its FAISS vector — nothing is silently truncated.
+The defaults keep each chunk well within the token limit of the embedding model
+[`intfloat/multilingual-e5-small`](https://huggingface.co/intfloat/multilingual-e5-small) (**512 tokens** max).
+At ~5.5 chars/token for multilingual text, 500 chars ≈ 90 tokens, so every chunk is fully
+represented in its FAISS vector with no truncation.
 
 Example — a 2300-character CV produces ~5 chunks:
 
@@ -103,10 +104,13 @@ rag_store/bm25.pkl
 Chunks are embedded in batches using a local **SentenceTransformer** model:
 
 ```
-paraphrase-multilingual-MiniLM-L12-v2
+intfloat/multilingual-e5-small
 ```
 
-- Downloaded from HuggingFace on first run (~471 MB)
+Model card: [Hugging Face — intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small).
+Inputs must be prefixed with `query: ` (for the search query) or `passage: ` (for document chunks); the pipeline applies these automatically.
+
+- Downloaded from HuggingFace on first run (~117 MB)
 - Cached in Docker volume `hf_cache` — subsequent runs load from disk
 - Produces 384-dimensional float32 vectors
 - Vectors are L2-normalized → inner product equals cosine similarity
@@ -133,11 +137,11 @@ A `manifest.json` is written after every successful index build:
 {
   "fingerprint": "7df5b7e...",
   "pdf_count": 30,
-  "chunk_count": 59,
-  "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "chunk_count": 169,
+  "embedding_model": "intfloat/multilingual-e5-small",
   "dim": 384,
-  "chunk_chars": 1800,
-  "overlap_chars": 250
+  "chunk_chars": 500,
+  "overlap_chars": 50
 }
 ```
 
@@ -218,8 +222,10 @@ Query: "Jenkins"  |  mode=hybrid  |  topk=5
 The embedding model is read from the environment:
 
 ```
-EMBEDDING_MODEL=paraphrase-multilingual-MiniLM-L12-v2  # default
+EMBEDDING_MODEL=intfloat/multilingual-e5-small  # default
 ```
+
+See [Hugging Face — intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small).
 
 ---
 
