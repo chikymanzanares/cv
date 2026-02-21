@@ -104,6 +104,11 @@ def main() -> None:
         "cv_modern.html.j2",
         "cv_classic.html.j2",
         "cv_minimal.html.j2",
+        "cv_sidebar.html.j2",
+        "cv_compact.html.j2",
+        "cv_accent.html.j2",
+        "cv_warm.html.j2",
+        "cv_green.html.j2",
     ]
 
     jenv = _env(settings.templates_dir)
@@ -135,18 +140,29 @@ def main() -> None:
             print(f"[SKIP] Exists {pdf_path} (set FORCE_PDF=1 to overwrite)")
             continue
 
-        tpl_name = _pick_template(cv_obj, templates)
+        available_templates = list(templates)
+        if data.get("narrative"):
+            available_templates.append("cv_narrative.html.j2")
+        tpl_name = _pick_template(cv_obj, available_templates)
         tpl = jenv.get_template(tpl_name)
 
         # Use relative path so the written HTML works when opened in browser (same dir as photo).
         # WeasyPrint will resolve it via base_url set to cv_dir below.
         photo_uri = "photo.png" if photo.exists() else None
 
+        # Optional theme for cv_modern (so it sometimes has color; other templates have fixed theme)
+        theme = (
+            random.choice(["", "theme-accent", "theme-warm", "theme-green"])
+            if tpl_name == "cv_modern.html.j2"
+            else ""
+        )
+
         # Render HTML
         html = tpl.render(
             meta=meta,
             cv=data,
             photo_uri=photo_uri,
+            theme=theme,
         )
 
         if settings.write_html:

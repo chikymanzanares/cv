@@ -69,6 +69,13 @@ EXPERIENCE_STYLES = ["bullets", "paragraphs"]
 # Optional extra section (hobbies/interests) with variable name
 INCLUDE_INTERESTS_SECTION_WEIGHT = 0.4  # 40% of CVs get this section
 
+# Target length: one_page (compact), two_pages, long (2–3 pages)
+PAGE_TARGET_WEIGHTS = [0.45, 0.35, 0.20]  # one_page, two_pages, long
+PAGE_TARGETS = ["one_page", "two_pages", "long"]
+
+# Content format: structured (sections/bullets) vs narrative (all in one prose block)
+CONTENT_STYLE_WEIGHT_NARRATIVE = 0.15  # 15% of CVs: everything in one/few paragraphs
+
 # Short guidance per writing style so the LLM varies tone and structure
 WRITING_STYLE_GUIDANCE = {
     "formal": "Use formal language, complete sentences, avoid slang.",
@@ -132,6 +139,13 @@ def build_structure_instructions(cfg: dict) -> str:
     """Build variability instructions for the LLM from profile config."""
     parts = []
 
+    content_style = cfg.get("content_style", "structured")
+    if content_style == "narrative":
+        parts.append(
+            "This CV must be written as continuous prose, 'a lo bestia'. Put the ENTIRE CV body in data.narrative: one or several long paragraphs covering summary, experience, education, skills, everything. No bullets, no section headings in the body—just flowing text. Leave experience, education, skills, summary as empty [] or omit; the only body content is the string data.narrative. Include dates and role names inside the prose."
+        )
+        return " ".join(parts)
+
     omit = cfg.get("omit_sections", [])
     if omit:
         parts.append(
@@ -169,6 +183,19 @@ def build_structure_instructions(cfg: dict) -> str:
         parts.append(
             "Include an optional section for hobbies/personal interests. Choose a title (e.g. Hobbies, Interests, Personal, Outside Work, Leisure, Personal Interests) and put it in section_labels.interests. Put the content in data.interests as an array of 2–5 short items (e.g. ['Reading', 'Cycling']) or as one short paragraph string."
         )
+
+    page_target = cfg.get("page_target", "one_page")
+    if page_target == "two_pages":
+        parts.append(
+            "This CV should fill about 2 pages. Include 4–5 experience entries, a full-paragraph summary (4–6 sentences), 4–5 bullets per role (or substantial paragraphs), 2+ education entries if relevant, and 1–2 projects. More content than a one-pager."
+        )
+    elif page_target == "long":
+        parts.append(
+            "This CV should be 2–3 pages long. Include 5–7 experience entries, a detailed summary (2 short paragraphs or 6–8 sentences), 5–6 bullets per role (or long narrative paragraphs), multiple education entries, 2–3 projects, certifications. Dense, comprehensive content."
+        )
+    else:
+        parts.append("Keep this CV to about one page: 2–3 experience entries, concise summary, 2–4 bullets per role.")
+
     return " ".join(parts)
 
 
@@ -183,6 +210,9 @@ def sample_profile_config() -> dict:
     use_alternative = random.random() < USE_ALTERNATIVE_SECTION_LABELS_WEIGHT
     section_label_preset = random.choice(SECTION_LABEL_PRESETS) if use_alternative else None
 
+    page_target = random.choices(PAGE_TARGETS, weights=PAGE_TARGET_WEIGHTS, k=1)[0]
+    content_style = "narrative" if random.random() < CONTENT_STYLE_WEIGHT_NARRATIVE else "structured"
+
     return {
         "language": random.choice(LANGUAGES),
         "seniority": random.choice(SENIORITY_LEVELS),
@@ -195,6 +225,8 @@ def sample_profile_config() -> dict:
         "section_label_preset": section_label_preset,
         "experience_style": random.choice(EXPERIENCE_STYLES),
         "include_interests_section": random.random() < INCLUDE_INTERESTS_SECTION_WEIGHT,
+        "page_target": page_target,
+        "content_style": content_style,
     }
 
 
@@ -329,6 +361,8 @@ def main(n: int = 30) -> None:
             "omit_sections": cfg["omit_sections"],
             "include_interests_section": cfg["include_interests_section"],
             "section_label_preset": cfg.get("section_label_preset"),
+            "page_target": cfg["page_target"],
+            "content_style": cfg["content_style"],
         }
 
         (cv_dir / "cv.json").write_text(

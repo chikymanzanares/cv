@@ -1,0 +1,93 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<div class="page compact-layout">
+  <header class="header">
+    <div class="title">
+      <h1>{{ cv.full_name }}</h1>
+      <p class="headline">{{ cv.headline }}</p>
+      <p class="contact">{{ cv.email }} · {{ cv.phone }} · {{ cv.location }}</p>
+    </div>
+    {% if photo_uri %}
+    <div class="photo photo-tr">
+      <img src="{{ photo_uri }}" alt="photo" />
+    </div>
+    {% endif %}
+  </header>
+  <div class="body-cols">
+    <div class="col">
+      <section class="section">
+        <h2>{{ section_title(cv, 'summary') }}</h2>
+        <p>{{ cv.summary }}</p>
+      </section>
+      <section class="section">
+        <h2>{{ section_title(cv, 'experience') }}</h2>
+        {% for ex in cv.experience or [] %}
+          <div class="item">
+            <div class="item-title">{{ ex.title }} — {{ ex.company }}</div>
+            <div class="item-sub">{{ ex.start_date }} → {{ ex.end_date }}</div>
+            {% if ex.paragraph %}
+            <p>{{ ex.paragraph }}</p>
+            {% else %}
+            <ul>
+              {% for b in ex.bullets or [] %}<li>{{ b }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </section>
+    </div>
+    <div class="col">
+      <section class="section">
+        <h2>{{ section_title(cv, 'education') }}</h2>
+        {% for e in cv.education or [] %}
+          <div class="item">
+            <div class="item-title">{{ e.institution }}</div>
+            <div class="item-sub">{{ e.degree }} ({{ e.start_year }}–{{ e.end_year }})</div>
+          </div>
+        {% endfor %}
+      </section>
+      <section class="section">
+        <h2>{{ section_title(cv, 'skills') }}</h2>
+        {% if cv.skills is string %}
+        <p>{{ cv.skills }}</p>
+        {% else %}
+        <ul class="chips">
+          {% for s in cv.skills or [] %}<li>{{ s }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </section>
+      {% if cv.languages %}
+      <section class="section">
+        <h2>{{ section_title(cv, 'languages') }}</h2>
+        <p>
+          {% for lang in cv.languages %}
+            {{ lang.name }} ({{ lang.level }}){% if not loop.last %}; {% endif %}
+          {% endfor %}
+        </p>
+      </section>
+      {% endif %}
+      {% if cv.projects %}
+      <section class="section">
+        <h2>{{ section_title(cv, 'projects') }}</h2>
+        {% for p in cv.projects %}
+          <div class="item">
+            <div class="item-title">{{ p.name }}</div>
+            <p>{{ p.description }}</p>
+          </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+      {% if cv.interests %}
+      <section class="section">
+        <h2>{{ section_title(cv, 'interests') }}</h2>
+        {% if cv.interests is string %}
+        <p>{{ cv.interests }}</p>
+        {% else %}
+        <p>{{ cv.interests | join(" · ") }}</p>
+        {% endif %}
+      </section>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

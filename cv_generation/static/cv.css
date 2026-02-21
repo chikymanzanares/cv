@@ -1,5 +1,13 @@
 @page { size: A4; margin: 18mm; }
 
+:root {
+  --accent-blue: #1e40af;
+  --accent-warm: #b45309;
+  --accent-green: #166534;
+  --sidebar-bg: #f0f4f8;
+  --header-bg: #1e3a5f;
+}
+
 body { font-family: Arial, sans-serif; font-size: 11pt; }
 h1 { margin: 0 0 4px 0; font-size: 22pt; }
 h2 { margin: 14px 0 6px 0; font-size: 13pt; }
@@ -10,6 +18,8 @@ p { margin: 0 0 8px 0; line-height: 1.35; }
 
 .header { display: flex; gap: 16px; align-items: flex-start; }
 .photo img { width: 110px; height: 110px; object-fit: cover; border-radius: 10px; }
+.header.photo-left .photo { order: -1; }
+.header.photo-right .photo { order: 1; }
 
 .two-col { display: flex; gap: 18px; }
 .two-col > div { flex: 1; }
@@ -27,3 +37,42 @@ p { margin: 0 0 8px 0; line-height: 1.35; }
 .minimal .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
 .minimal .photo-small { width: 70px; height: 70px; border-radius: 10px; object-fit: cover; }
 .block { margin-top: 12px; }
+
+/* ---- Theme: accent blue (colored header strip) ---- */
+.theme-accent .header { background: var(--header-bg); color: #fff; padding: 12px 14px; margin: 0 -2px 14px -2px; border-radius: 6px; }
+.theme-accent .header .muted, .theme-accent .header .headline, .theme-accent .header .contact { color: #e2e8f0; }
+.theme-accent h2 { border-left: 4px solid var(--accent-blue); padding-left: 10px; }
+
+/* ---- Theme: warm (amber accent) ---- */
+.theme-warm h2 { color: var(--accent-warm); border-bottom: 2px solid var(--accent-warm); padding-bottom: 4px; }
+.theme-warm .chips li { border-color: var(--accent-warm); color: var(--accent-warm); }
+
+/* ---- Theme: green (muted accent) ---- */
+.theme-green h2 { color: var(--accent-green); }
+.theme-green .item-title { color: var(--accent-green); }
+
+/* ---- Layout: sidebar (left column = photo + skills + languages) ---- */
+.sidebar-layout { display: flex; gap: 0; }
+.sidebar-layout .sidebar { width: 32%; min-width: 90px; background: var(--sidebar-bg); padding: 14px; border-radius: 8px; margin-right: 18px; }
+.sidebar-layout .sidebar .photo-wrap { text-align: center; margin-bottom: 14px; }
+.sidebar-layout .sidebar .photo-wrap img { width: 100%; max-width: 140px; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 10px; }
+.sidebar-layout .main-content { flex: 1; }
+.sidebar-layout .sidebar h2 { font-size: 11pt; margin: 10px 0 4px 0; }
+.sidebar-layout .sidebar h2:first-of-type { margin-top: 0; }
+
+/* ---- Layout: compact (two columns for body, photo top-left or top-right) ---- */
+.compact-layout { }
+.compact-layout .header { margin-bottom: 10px; }
+.compact-layout .body-cols { display: flex; gap: 20px; margin-top: 10px; }
+.compact-layout .body-cols .col { flex: 1; }
+.compact-layout .photo-tl img,
+.compact-layout .photo-tr img { width: 85px; height: 85px; object-fit: cover; border-radius: 8px; }
+.compact-layout .photo-tr { order: 2; }
+.compact-layout .section { margin-bottom: 12px; }
+.compact-layout .section h2 { font-size: 12pt; margin: 8px 0 4px 0; }
+
+/* ---- Narrative / prose: one block of text ---- */
+.narrative-block { margin-top: 14px; }
+.narrative-block .narrative { font-size: 11pt; line-height: 1.5; text-align: justify; }
+.narrative-block .narrative p { margin-bottom: 12px; }
+.narrative-block .narrative p:last-child { margin-bottom: 0; }

@@ -1,164 +1,156 @@
 {
   "meta": {
     "cv_id": "cv_002",
-    "created_at": "2026-02-21T13:43:45.707476+00:00",
+    "created_at": "2026-02-21T14:10:03.393735+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "de",
-      "seniority": "senior",
-      "persona_type": "startup engineer",
-      "writing_style": "punchy",
-      "role": "Product Manager",
-      "education_country": "Germany"
+      "language": "fr",
+      "seniority": "junior",
+      "persona_type": "career switcher",
+      "writing_style": "creative",
+      "role": "DevOps Engineer",
+      "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "ben.jpeg",
+    "photo_asset": "dan.jpeg",
     "generation_config": {
-      "writing_style": "punchy",
-      "summary_length": "short",
+      "writing_style": "creative",
+      "summary_length": "paragraph",
       "experience_style": "bullets",
       "omit_sections": [],
-      "include_interests_section": false,
+      "include_interests_section": true,
       "section_label_preset": {
-        "summary": "Profil professionnel",
-        "experience": "Expérience",
-        "education": "Formation",
-        "skills": "Compétences",
-        "languages": "Langues",
-        "projects": "Projets",
+        "summary": "Introduction",
+        "experience": "Employment History",
+        "education": "Academic",
+        "skills": "Skills & Tools",
+        "languages": "Languages",
+        "projects": "Projects",
         "certifications": "Certifications",
-        "interests": "Centres d'intérêt",
-        "profile": "Profil"
-      }
+        "interests": "Personal Interests",
+        "profile": "Introduction"
+      },
+      "page_target": "one_page",
+      "content_style": "structured"
     }
   },
   "data": {
-    "full_name": "Lukas Bauer",
-    "headline": "Erfahrener Produkt-Manager für Start-ups",
-    "email": "lukas.bauer@example.com",
-    "phone": "+49 123 456 7890",
-    "location": "Berlin, Deutschland",
-    "summary": "Erfahrener Produkt-Manager mit Erfolgsbilanz bei der Entwicklung und Einführung innovativer digitaler Produkte. Spezialisiert auf Lean-Methoden und agiles Projektmanagement.",
+    "full_name": "Sylvie Dupont",
+    "headline": "Passionate DevOps Engineer Seeking to Revolutionize Cloud Deployments",
+    "email": "sylvie.dupont@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "As a driven and adaptable DevOps Engineer, I bring a unique blend of technical expertise and creative problem-solving skills to the table. With a background in software development, I have a deep understanding of the challenges faced by engineering teams and a keen eye for optimizing workflows and infrastructure. I am passionate about leveraging the latest cloud technologies to streamline deployment processes and enhance collaboration within high-performing organizations. My adaptability and eagerness to learn make me an invaluable asset in fast-paced, dynamic environments.",
+    "narrative": null,
     "section_labels": {
-      "summary": "Profil professionnel",
-      "experience": "Expérience",
-      "education": "Formation",
-      "skills": "Compétences",
-      "languages": "Langues",
-      "projects": "Projets",
+      "summary": "Introduction",
+      "experience": "Employment History",
+      "education": "Academic",
+      "skills": "Skills & Tools",
+      "languages": "Languages",
+      "projects": "Projects",
       "certifications": "Certifications",
-      "interests": "Centres d'intérêt"
+      "interests": "Personal Interests"
     },
     "skills": [
-      "Produkt-Management",
-      "Agiles Projektmanagement",
-      "Lean-Methoden",
-      "Produktanalyse",
-      "User Experience Design"
+      "Cloud Infrastructure",
+      "Automation and Scripting",
+      "Containerization (Docker, Kubernetes)",
+      "Continuous Integration/Continuous Deployment (CI/CD)",
+      "Monitoring and Observability",
+      "DevOps Tooling (Ansible, Terraform, Jenkins)"
     ],
     "languages": [
       {
-        "name": "Deutsch",
-        "level": "Muttersprache"
+        "name": "French",
+        "level": "Native"
       },
       {
-        "name": "Englisch",
-        "level": "Fließend"
+        "name": "English",
+        "level": "Fluent"
       }
     ],
     "experience": [
       {
-        "company": "Acme Start-up GmbH",
-        "title": "Produkt-Manager",
-        "start_date": "2019-06-01",
-        "end_date": "2022-09-30",
-        "location": "Berlin, Deutschland",
+        "company": "Acme Cloud Solutions",
+        "title": "DevOps Engineer",
+        "start_date": "2021-06-01",
+        "end_date": "2023-03-31",
+        "location": "Paris, France",
         "bullets": [
-          "Entwickelte und implementierte eine Produktstrategie, die den Umsatz um 35% steigerte",
-          "Leitete das agile Produktentwicklungsteam und optimierte den Entwicklungsprozess",
-          "Analysierte Kundenfeedback und -daten, um Produktverbesserungen umzusetzen"
-        ]
+          "Designed and implemented robust CI/CD pipelines, reducing deployment time by 40% and improving overall system reliability.",
+          "Spearheaded the migration of on-premises infrastructure to a cloud-native architecture, leveraging the latest containerization and orchestration technologies.",
+          "Collaborated closely with cross-functional teams to identify and address bottlenecks, optimizing workflows and enhancing overall team productivity."
+        ],
+        "paragraph": null
       },
       {
-        "company": "Digitale Innovationen AG",
-        "title": "Produkt-Manager (Praktikum)",
-        "start_date": "2018-03-01",
-        "end_date": "2019-05-31",
-        "location": "München, Deutschland",
+        "company": "Techno Innovations",
+        "title": "Software Developer",
+        "start_date": "2019-09-01",
+        "end_date": "2021-05-31",
+        "location": "Paris, France",
         "bullets": [
-          "Unterstützte bei der Konzeption und Entwicklung neuer digitaler Produkte",
-          "Führte Marktanalysen und Wettbewerbsbeobachtungen durch",
-          "Erstellte Produktspezifikationen und User Stories"
-        ]
+          "Developed and maintained mission-critical applications, contributing to the successful delivery of multiple projects.",
+          "Participated in Agile development processes, including daily standups, sprint planning, and retrospectives."
+        ],
+        "paragraph": null
       }
     ],
     "education": [
       {
-        "institution": "Technische Universität München",
-        "degree": "Master of Science",
-        "field": "Wirtschaftsinformatik",
-        "start_year": "2016",
-        "end_year": "2018"
-      },
-      {
-        "institution": "Universität Mannheim",
+        "institution": "University of London",
         "degree": "Bachelor of Science",
-        "field": "Betriebswirtschaftslehre",
-        "start_year": "2013",
-        "end_year": "2016"
+        "field": "Computer Science",
+        "start_year": "2015",
+        "end_year": "2018"
       }
     ],
     "projects": [
       {
-        "name": "Produktlaunch Acme App",
-        "description": "Entwicklung und Einführung einer neuen mobilen Anwendung für Kleinunternehmen",
+        "name": "Cloud-Native Application Deployment",
+        "description": "Designed and implemented a fully automated CI/CD pipeline for deploying a microservices-based application to a Kubernetes cluster, leveraging tools like Helm, Istio, and Prometheus.",
         "tech": [
-          "Produkt-Management",
-          "Agiles Projektmanagement",
-          "User Experience Design"
-        ]
-      },
-      {
-        "name": "Produktoptimierung Digitale Innovationen",
-        "description": "Analyse und Verbesserung eines bestehenden Produktportfolios",
-        "tech": [
-          "Marktanalyse",
-          "Produktanalyse",
-          "Lean-Methoden"
+          "Kubernetes",
+          "Helm",
+          "Istio",
+          "Prometheus",
+          "Ansible",
+          "Terraform"
         ]
       }
     ],
     "certifications": [
       {
-        "name": "Product Management Professional",
-        "issuer": "Produktmanagement-Institut",
-        "year": "2020"
+        "name": "AWS Certified Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "year": "2022"
       },
       {
-        "name": "Agile Scrum Master",
-        "issuer": "Scrum Alliance",
-        "year": "2019"
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "issuer": "Cloud Native Computing Foundation",
+        "year": "2021"
       }
     ],
     "interests": [
-      "Startup-Ökosystem",
-      "Produktinnovation",
-      "Digitale Transformation"
+      "Exploring emerging cloud technologies",
+      "Cycling and outdoor adventures",
+      "Tinkering with home automation projects"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/lukas-bauer"
+        "url": "https://www.linkedin.com/in/sylvie-dupont"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.example.com/lukas-bauer"
+        "url": "https://sylviedupont.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Confident, smiling portrait of Lukas Bauer in a business casual outfit against a neutral background."
+    "photo_prompt": "Professional LinkedIn-style headshot. Sylvie Dupont, a young woman with shoulder-length dark hair, smiling confidently at the camera against a plain background."
   }
 }

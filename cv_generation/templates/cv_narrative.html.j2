@@ -1,0 +1,36 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<div class="page narrative-page">
+  <header class="header">
+    <div class="title">
+      <h1>{{ cv.full_name }}</h1>
+      <p class="headline">{{ cv.headline }}</p>
+      <p class="contact">{{ cv.email }} · {{ cv.phone }} · {{ cv.location }}</p>
+      {% if cv.links %}
+      <p class="links">
+        {% for l in cv.links %}
+          <span>{{ l.label }}: {{ l.url }}</span>{% if not loop.last %} · {% endif %}
+        {% endfor %}
+      </p>
+      {% endif %}
+    </div>
+    {% if photo_uri %}
+    <div class="photo">
+      <img src="{{ photo_uri }}" alt="photo" />
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="narrative-block">
+    {% if cv.narrative %}
+    <div class="narrative">
+      {% for para in cv.narrative.split('\n\n') %}
+      <p>{{ para }}</p>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="narrative">{{ cv.summary or "" }}</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

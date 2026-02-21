@@ -44,6 +44,7 @@ Return JSON with this shape:
     "phone": "...",
     "location": "...",
     "summary": "...",
+    "narrative": null,
     "section_labels": {{}},
     "skills": ["...", "..."],
     "languages": [{{"name":"...", "level":"..."}}],
@@ -77,6 +78,7 @@ Return JSON with this shape:
 
 - section_labels: optional object with keys summary, experience, education, skills, languages (and projects, certifications, interests if used). Use custom titles only if requested; otherwise omit or empty.
 - interests: optional. If requested, array of 2–5 items or one string. Section title in section_labels.interests (e.g. Hobbies, Interests, Personal, Outside Work, Leisure). Omit if not requested.
+- narrative: when instructed to output prose style, put the entire CV body here as one or more paragraphs (everything in flowing text). Leave other section arrays empty. Omit when not prose style.
 - experience[].paragraph: use when experience is narrative style (one paragraph per role); then leave bullets empty. Otherwise use bullets and omit paragraph.
 - Omit or use empty arrays [] for any section you were told not to include.
 

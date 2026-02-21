@@ -1,6 +1,6 @@
 {% extends "base.html.j2" %}
 {% block content %}
-<div class="page modern {{ theme }}">
+<div class="page modern theme-accent">
   <header class="header">
     <div class="title">
       <h1>{{ cv.full_name }}</h1>
@@ -16,7 +16,6 @@
       </p>
       {% endif %}
     </div>
-
     {% if photo_uri %}
     <div class="photo">
       <img src="{{ photo_uri }}" alt="photo" />
@@ -36,12 +35,9 @@
       <p>{{ cv.skills }}</p>
       {% else %}
       <ul class="chips">
-        {% for s in cv.skills or [] %}
-          <li>{{ s }}</li>
-        {% endfor %}
+        {% for s in cv.skills or [] %}<li>{{ s }}</li>{% endfor %}
       </ul>
       {% endif %}
-
       <h2>{{ section_title(cv, 'languages') }}</h2>
       <ul>
         {% for lang in cv.languages or [] %}
@@ -49,7 +45,6 @@
         {% endfor %}
       </ul>
     </div>
-
     <div>
       <h2>{{ section_title(cv, 'education') }}</h2>
       {% for e in cv.education or [] %}
@@ -71,9 +66,7 @@
         <p>{{ ex.paragraph }}</p>
         {% else %}
         <ul>
-          {% for b in ex.bullets or [] %}
-            <li>{{ b }}</li>
-          {% endfor %}
+          {% for b in ex.bullets or [] %}<li>{{ b }}</li>{% endfor %}
         </ul>
         {% endif %}
       </div>
@@ -111,9 +104,7 @@
     <p>{{ cv.interests }}</p>
     {% else %}
     <ul class="chips">
-      {% for i in cv.interests %}
-        <li>{{ i }}</li>
-      {% endfor %}
+      {% for i in cv.interests %}<li>{{ i }}</li>{% endfor %}
     </ul>
     {% endif %}
   </section>

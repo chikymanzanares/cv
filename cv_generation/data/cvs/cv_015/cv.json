@@ -1,164 +1,51 @@
 {
   "meta": {
     "cv_id": "cv_015",
-    "created_at": "2026-02-21T13:45:41.542246+00:00",
+    "created_at": "2026-02-21T14:12:12.641026+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "de",
-      "seniority": "senior",
-      "persona_type": "startup engineer",
-      "writing_style": "creative",
-      "role": "Product Manager",
-      "education_country": "Germany"
+      "language": "es",
+      "seniority": "mid",
+      "persona_type": "career switcher",
+      "writing_style": "punchy",
+      "role": "DevOps Engineer",
+      "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "steve.jpeg",
+    "photo_asset": "girl.jpeg",
     "generation_config": {
-      "writing_style": "creative",
-      "summary_length": "one_line",
-      "experience_style": "bullets",
-      "omit_sections": [],
+      "writing_style": "punchy",
+      "summary_length": "short",
+      "experience_style": "paragraphs",
+      "omit_sections": [
+        "certifications"
+      ],
       "include_interests_section": true,
       "section_label_preset": {
-        "summary": "Professional Summary",
-        "experience": "Work History",
-        "education": "Education",
-        "skills": "Core Competencies",
-        "languages": "Languages",
-        "projects": "Key Projects",
-        "certifications": "Certifications",
-        "interests": "Interests",
-        "profile": "Profile"
-      }
+        "summary": "Profil",
+        "experience": "Berufserfahrung",
+        "education": "Ausbildung",
+        "skills": "Kompetenzen",
+        "languages": "Sprachen",
+        "projects": "Projekte",
+        "certifications": "Zertifizierungen",
+        "interests": "Interessen",
+        "profile": "Profil"
+      },
+      "page_target": "two_pages",
+      "content_style": "narrative"
     }
   },
   "data": {
-    "full_name": "Maximilian Schneider",
-    "headline": "Innovative Product Manager with a Passion for Startup Success",
-    "email": "m.schneider@email.com",
-    "phone": "+49 123 456 7890",
-    "location": "Berlin, Germany",
-    "summary": "Seasoned product manager with a proven track record of driving innovation and growth for dynamic startups. Adept at bridging the gap between technology and user needs, delivering impactful solutions that delight customers.",
-    "section_labels": {
-      "summary": "Professional Summary",
-      "experience": "Work History",
-      "education": "Education",
-      "skills": "Core Competencies",
-      "languages": "Languages",
-      "projects": "Key Projects",
-      "certifications": "Certifications",
-      "interests": "Interests"
-    },
-    "skills": [
-      "Product Strategy and Roadmapping",
-      "Agile Methodologies",
-      "User Research and Analytics",
-      "Cross-Functional Collaboration",
-      "Product Launches and Scaling"
-    ],
-    "languages": [
-      {
-        "name": "German",
-        "level": "Native"
-      },
-      {
-        "name": "English",
-        "level": "Fluent"
-      }
-    ],
-    "experience": [
-      {
-        "company": "Zeta Innovations",
-        "title": "Product Manager",
-        "start_date": "2019-04-01",
-        "end_date": "2022-09-30",
-        "location": "Berlin, Germany",
-        "bullets": [
-          "Spearheaded the development and launch of a groundbreaking AI-powered productivity platform, resulting in a 25% increase in user engagement.",
-          "Collaborated cross-functionally to identify and prioritize new feature requests, driving continuous product improvements and a 35% boost in customer satisfaction.",
-          "Conducted in-depth user research and analysis to uncover emerging market trends, informing the product roadmap and positioning the company as an industry leader."
-        ]
-      },
-      {
-        "company": "Neuron Technologies",
-        "title": "Product Manager",
-        "start_date": "2016-07-01",
-        "end_date": "2019-03-31",
-        "location": "Munich, Germany",
-        "bullets": [
-          "Played a pivotal role in the successful launch of a cloud-based data analytics solution, leading to a 40% increase in revenue within the first year.",
-          "Facilitated agile development processes, ensuring seamless coordination between engineering, design, and marketing teams.",
-          "Spearheaded the implementation of user-centric design principles, resulting in a 20% improvement in customer retention."
-        ]
-      }
-    ],
-    "education": [
-      {
-        "institution": "Technical University of Munich",
-        "degree": "Master of Science",
-        "field": "Computer Science",
-        "start_year": "2013",
-        "end_year": "2015"
-      },
-      {
-        "institution": "University of Bonn",
-        "degree": "Bachelor of Science",
-        "field": "Computer Science",
-        "start_year": "2010",
-        "end_year": "2013"
-      }
-    ],
-    "projects": [
-      {
-        "name": "Startup Accelerator Program",
-        "description": "Participated in a highly competitive startup accelerator program, working closely with mentors to refine the product vision and go-to-market strategy.",
-        "tech": [
-          "Product Management",
-          "Entrepreneurship",
-          "Lean Startup"
-        ]
-      },
-      {
-        "name": "Hackathon Challenge",
-        "description": "Collaborated with a cross-functional team to develop a novel solution for a complex business problem, winning the grand prize at a prestigious hackathon event.",
-        "tech": [
-          "Rapid Prototyping",
-          "Design Thinking",
-          "Teamwork"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "Certified Scrum Product Owner",
-        "issuer": "Scrum Alliance",
-        "year": "2018"
-      },
-      {
-        "name": "Professional in Product Management",
-        "issuer": "Product School",
-        "year": "2017"
-      }
-    ],
-    "interests": [
-      "Exploring emerging technologies",
-      "Mentoring aspiring entrepreneurs",
-      "Hiking in the German countryside"
-    ],
-    "links": [
-      {
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/maximilian-schneider"
-      },
-      {
-        "label": "Portfolio",
-        "url": "https://www.maximilian-schneider.com"
-      }
-    ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Smiling, confident expression, business attire."
+    "full_name": "Martín Fernández",
+    "headline": "DevOps Engineer | Career Switcher",
+    "email": "martin.fernandez@email.com",
+    "phone": "+34 123 456 789",
+    "location": "Madrid, Spain",
+    "narrative": "Experienced IT professional with a diverse background, now transitioning into the thrilling world of DevOps. Honed problem-solving skills and a keen eye for process optimization. Adept at bridging the gap between development and operations, driving seamless collaboration and automation. Skilled in cloud infrastructure, containerization, and CI/CD pipelines. Passionate about leveraging the latest technologies to streamline workflows and deliver exceptional results. Ready to make an impact as a DevOps Engineer and drive continuous improvement within a dynamic organization."
   }
 }
