@@ -1,6 +1,7 @@
 # rag/retrieval.py — Shared retrieval logic for CLI and API.
 # Used by rag.rag_cli.search and (later) FastAPI endpoints.
 import json
+import logging
 import os
 import pickle
 import re
@@ -11,6 +12,7 @@ import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
+logger = logging.getLogger(__name__)
 
 DEFAULT_EMBEDDING_MODEL = "intfloat/multilingual-e5-small"
 BM25_WORD_RE = re.compile(r"[A-Za-zÀ-ÿ0-9_+#.-]+")
@@ -130,8 +132,14 @@ def run_search_with_model(
     chunks = index_data["chunks"]
     bm25_obj = index_data["bm25"]
 
+    faiss_query_str = f"query: {query}"
+    bm25_tokens = BM25_WORD_RE.findall(query.lower())
+    logger.info("[RAG] query=%r", query)
+    logger.info("[RAG] FAISS input=%r", faiss_query_str)
+    logger.info("[RAG] BM25 tokens=%s", bm25_tokens)
+
     qvec = model.encode(
-        [f"query: {query}"],
+        [faiss_query_str],
         convert_to_numpy=True,
         normalize_embeddings=True,
     ).astype("float32")
@@ -143,12 +151,22 @@ def run_search_with_model(
 
     if mode in ("faiss", "hybrid", "reranked"):
         faiss_results = search_faiss(faiss_index, chunks, qvec, candidate_k)
+        logger.info("[RAG] FAISS results (top %d):", len(faiss_results))
+        for r in faiss_results[:topk]:
+            logger.info("  [%.4f] %s chunk=%d | %s", r["score"], r["cv_id"], r["chunk_index"], r["text"][:80].replace("\n", " "))
+
     if mode in ("bm25", "hybrid", "reranked"):
         bm25_results = search_bm25(bm25_obj, chunks, query, candidate_k)
+        logger.info("[RAG] BM25 results (top %d):", len(bm25_results))
+        for r in bm25_results[:topk]:
+            logger.info("  [%.4f] %s chunk=%d | %s", r["score"], r["cv_id"], r["chunk_index"], r["text"][:80].replace("\n", " "))
 
     if mode in ("hybrid", "reranked") and faiss_results is not None and bm25_results is not None:
         rrf_merged = rerank_rrf(faiss_results, bm25_results, k=rrf_k)
         main_results = [doc for _, doc in rrf_merged[:topk]]
+        logger.info("[RAG] Reranked (RRF, k=%d):", rrf_k)
+        for i, (score, r) in enumerate(rrf_merged[:topk], 1):
+            logger.info("  #%d [%.5f] %s chunk=%d | %s", i, score, r["cv_id"], r["chunk_index"], r["text"][:80].replace("\n", " "))
     elif mode == "faiss" and faiss_results is not None:
         main_results = faiss_results[:topk]
     elif mode == "bm25" and bm25_results is not None:

@@ -118,6 +118,27 @@ Inputs must be prefixed with `query: ` (for the search query) or `passage: ` (fo
 - Vectors are L2-normalized → inner product equals cosine similarity
 - Stored as `IndexFlatIP` (exact search, no approximation)
 
+#### Why the search is multilingual
+
+This model was trained on text in **100+ languages simultaneously** (based on xlm-roberta).
+As a result, phrases with the same meaning generate vectors that are close in the embedding
+space regardless of language:
+
+```
+"integración continua"       (ES) → vector [0.23, -0.41, ...]
+"continuous integration"     (EN) → vector [0.24, -0.40, ...]  ← very close
+"kontinuierliche Integration" (DE) → vector [0.22, -0.39, ...]
+```
+
+This means a query written in Spanish will retrieve relevant CV chunks written in English,
+French, or German — and vice versa — with no extra configuration.
+
+BM25 complements this: technical terms like `CI/CD`, `Docker`, or `Jenkins` appear verbatim
+across CVs in any language, so keyword search also works cross-lingually for domain vocabulary.
+
+> See [docs/adr/001-model-selection.md](../docs/adr/001-model-selection.md) for the full rationale
+> behind choosing this embedding model over other alternatives.
+
 ```
 rag_store/faiss.index    ← binary matrix  (N chunks × 384 dims)
 rag_store/chunks.jsonl   ← one JSON line per chunk (text + metadata)

@@ -122,8 +122,12 @@ class RagRunExecutor(RunExecutor):
             system = _build_system(chunks)
             messages = _build_llm_messages(recent_history, current_query)
 
+            logger.info("[run:%s] LLM context (%d chunks → %d sources):", run_id, len(chunks), len(sources))
+            for chunk in chunks:
+                logger.info("  [%s chunk=%d] %s", chunk["cv_id"], chunk["chunk_index"], chunk["text"][:100].replace("\n", " "))
+
             # --- 4. Stream LLM response ---
-            logger.info("[run:%s] LLM streaming start", run_id)
+            logger.info("[run:%s] LLM streaming start | history=%d msgs", run_id, len(recent_history))
             full_text = ""
             token_count = 0
             for token in self.llm_service.stream(system=system, messages=messages):

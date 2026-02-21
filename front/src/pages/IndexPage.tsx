@@ -37,12 +37,12 @@ export default function IndexPage() {
 
   const start = async () => {
     if (!name.trim()) {
-      setStatus("Escribe un nombre primero.");
+      setStatus("Please enter a name first.");
       return;
     }
 
     setBusy(true);
-    setStatus("Creando usuario...");
+    setStatus("Creating user...");
     try {
       let userId: number;
       let userName: string;
@@ -59,13 +59,13 @@ export default function IndexPage() {
         if (existing) {
           userId = existing.user_id;
           userName = existing.name || name.trim();
-          setStatus("Usuario ya existente. Creando thread...");
+          setStatus("Existing user found. Creating thread...");
         } else {
           throw e;
         }
       }
 
-      setStatus("Creando thread...");
+      setStatus("Creating thread...");
       const threadRes = await createThread(userId);
       saveSession({
         userId: String(userId),
@@ -73,11 +73,11 @@ export default function IndexPage() {
         threadId: threadRes.thread_id,
       });
 
-      setStatus("✅ Listo. Entrando al chat...");
+      setStatus("✅ Done. Entering chat...");
       navigate("/chat");
     } catch (e) {
       console.error(e);
-      setStatus("❌ Error creando usuario/thread. Mira la consola (F12).");
+      setStatus("❌ Error creating user/thread. Check the console (F12).");
     } finally {
       setBusy(false);
     }
@@ -94,11 +94,11 @@ export default function IndexPage() {
         <Input
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Nombre de usuario"
+          placeholder="Username"
           className="flex-1"
         />
         <Button onClick={start} disabled={busy}>
-          {busy ? "..." : "Empezar"}
+          {busy ? "..." : "Start"}
         </Button>
       </div>
 
