@@ -83,7 +83,17 @@ Without a valid `.env` and the corresponding API key, the project will not work.
 
    Or step by step: `make -C cv_generation gen-data` then `make -C cv_generation gen-pdf`.
 
-2. **Run everything** (API + Postgres + migrations):
+2. **Build the RAG index** (required before starting the API). This extracts text from the PDFs and builds the FAISS + BM25 search indices:
+
+   ```
+   make -f rag/Makefile build
+   make -f rag/Makefile index
+   ```
+
+   The first time it downloads the embedding model (~471 MB, cached locally after that).
+   The index is saved to `rag_store/` and reused on every subsequent start.
+
+3. **Run everything** (API + Postgres + migrations):
 
    ```
    make up
