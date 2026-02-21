@@ -84,8 +84,8 @@ export default function ChatPage() {
         onToken: (chunk) => {
           setMessages((prev) => appendAssistant(prev, assistantId, chunk));
         },
-        onFinal: (fullText) => {
-          setMessages((prev) => finalizeAssistant(prev, assistantId, fullText));
+        onFinal: (fullText, sources) => {
+          setMessages((prev) => finalizeAssistant(prev, assistantId, fullText, sources));
         },
         onDone: () => {
           setIsSending(false);

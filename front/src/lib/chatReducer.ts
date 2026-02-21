@@ -38,10 +38,11 @@ export function appendAssistant(
 export function finalizeAssistant(
   state: ChatMessage[],
   assistantId: string,
-  fullText: string
+  fullText: string,
+  sources?: string[]
 ): ChatMessage[] {
   return state.map((m) =>
-    m.id === assistantId ? { ...m, content: fullText } : m
+    m.id === assistantId ? { ...m, content: fullText, sources } : m
   );
 }
 

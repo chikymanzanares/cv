@@ -62,4 +62,5 @@ export interface ChatMessage {
   id: string;
   role: ChatRole;
   content: string;
+  sources?: string[];
 }

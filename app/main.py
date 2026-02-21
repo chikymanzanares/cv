@@ -6,6 +6,7 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
 logging.basicConfig(
     level=logging.INFO,
@@ -71,6 +72,10 @@ app = FastAPI(lifespan=lifespan)
 app.include_router(threads_router, prefix="/api")
 app.include_router(runs_router, prefix="/api")
 app.include_router(users_router, prefix="/api")
+
+# Serve generated CV files (HTML + PDF) so the frontend can link to them.
+# Accessible at /cvs/{cv_id}/cv.pdf and /cvs/{cv_id}/cv.html
+app.mount("/cvs", StaticFiles(directory="cv_generation/data/cvs"), name="cvs")
 
 
 @app.get("/api/health")

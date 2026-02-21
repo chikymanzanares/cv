@@ -3,7 +3,7 @@ import { streamSSE } from "../lib/sse";
 
 export interface UseRunStreamCallbacks {
   onToken?: (text: string) => void;
-  onFinal?: (text: string) => void;
+  onFinal?: (text: string, sources: string[]) => void;
   onDone?: () => void;
   onToolEvent?: (evt: { tool?: string; input?: unknown; output?: unknown }) => void;
 }
@@ -38,7 +38,10 @@ export function useRunStream() {
             callbacks.onToken?.(text);
           } else if (evt.event === "final") {
             const text = (payload?.text as string) ?? "";
-            callbacks.onFinal?.(text);
+            const sources = Array.isArray(payload?.sources)
+              ? (payload.sources as string[])
+              : [];
+            callbacks.onFinal?.(text, sources);
           } else if (evt.event === "done") {
             callbacks.onDone?.();
           } else if (evt.event === "tool_start" || evt.event === "tool_end") {
