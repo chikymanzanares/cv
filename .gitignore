@@ -34,6 +34,6 @@ htmlcov/
 *.sqlite
 *.sqlite3
 
-# Project data
-cv_generation/data
-/cv_generation/data/cvs
+# Project data (generated CVs, PDFs, etc.)
+cv_generation/data/
+cv_generation/data/cvs/
