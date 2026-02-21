@@ -1,7 +1,7 @@
 {
   "meta": {
     "cv_id": "cv_015",
-    "created_at": "2026-02-21T14:53:33.780314+00:00",
+    "created_at": "2026-02-21T18:51:52.715815+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
@@ -9,141 +9,41 @@
     "prompt_version": "cv_json_v2",
     "profile_config": {
       "language": "es",
-      "seniority": "mid",
-      "persona_type": "self-taught developer",
-      "writing_style": "results-driven",
-      "role": "Data Scientist",
-      "education_country": "UK"
+      "seniority": "junior",
+      "persona_type": "academic researcher",
+      "writing_style": "minimal",
+      "role": "Product Manager",
+      "education_country": "India"
     },
     "photo_source": "local_asset",
-    "photo_asset": "ginger.jpeg",
+    "photo_asset": "claudia.jpeg",
     "generation_config": {
-      "writing_style": "results-driven",
+      "writing_style": "minimal",
       "summary_length": "one_line",
       "experience_style": "bullets",
       "omit_sections": [],
       "include_interests_section": false,
       "section_label_preset": {
-        "summary": "Summary",
-        "experience": "Experience",
-        "education": "Education",
-        "skills": "Skills",
-        "languages": "Languages",
-        "projects": "Projects",
+        "summary": "Executive Summary",
+        "experience": "Career History",
+        "education": "Qualifications",
+        "skills": "Technical Skills",
+        "languages": "Language Skills",
+        "projects": "Notable Projects",
         "certifications": "Certifications",
-        "interests": "Interests",
-        "profile": "Profile"
+        "interests": "Outside Work",
+        "profile": "Executive Summary"
       },
       "page_target": "one_page",
-      "content_style": "structured"
+      "content_style": "narrative"
     }
   },
   "data": {
-    "full_name": "Alejandro Martínez",
-    "headline": "Passionate Data Scientist with Proven Results",
-    "email": "alejandro.martinez@example.com",
-    "phone": "+34 123 456 789",
-    "location": "Barcelona, Spain",
-    "summary": "Experienced data scientist with a track record of delivering impactful data-driven solutions that drive business growth.",
-    "narrative": null,
-    "section_labels": {
-      "summary": "Summary",
-      "experience": "Experience",
-      "education": "Education",
-      "skills": "Skills",
-      "languages": "Languages",
-      "projects": "Projects",
-      "certifications": "Certifications",
-      "interests": "Interests"
-    },
-    "skills": [
-      "Python",
-      "SQL",
-      "Machine Learning",
-      "Data Visualization",
-      "Tableau",
-      "Microsoft Power BI"
-    ],
-    "languages": [
-      {
-        "name": "Spanish",
-        "level": "Native"
-      },
-      {
-        "name": "English",
-        "level": "Fluent"
-      }
-    ],
-    "experience": [
-      {
-        "company": "Acme Analytics",
-        "title": "Data Scientist",
-        "start_date": "2020-06-01",
-        "end_date": "2022-12-31",
-        "location": "Barcelona, Spain",
-        "bullets": [
-          "Developed predictive models that increased customer retention by 12% and reduced churn by 8%.",
-          "Automated data pipelines that reduced reporting time by 50% and improved data accuracy.",
-          "Implemented a data visualization dashboard that enhanced data-driven decision making and increased sales by 15%."
-        ],
-        "paragraph": null
-      },
-      {
-        "company": "XYZ Consulting",
-        "title": "Data Analyst",
-        "start_date": "2018-09-01",
-        "end_date": "2020-05-31",
-        "location": "London, UK",
-        "bullets": [
-          "Analyzed complex datasets to uncover valuable insights that led to a 20% increase in operational efficiency.",
-          "Designed and implemented a data warehouse that improved data accessibility and enabled self-service reporting."
-        ],
-        "paragraph": null
-      }
-    ],
-    "education": [
-      {
-        "institution": "University of Cambridge",
-        "degree": "Master of Science",
-        "field": "Data Science",
-        "start_year": "2016",
-        "end_year": "2017"
-      }
-    ],
-    "projects": [
-      {
-        "name": "Predictive Maintenance Model",
-        "description": "Developed a machine learning model to predict equipment failures and optimize maintenance schedules, resulting in a 25% reduction in maintenance costs.",
-        "tech": [
-          "Python",
-          "Scikit-learn",
-          "Pandas",
-          "Matplotlib"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "Certified Data Scientist",
-        "issuer": "IBM",
-        "year": "2019"
-      }
-    ],
-    "interests": [
-      "Hiking",
-      "Photography",
-      "Cooking"
-    ],
-    "links": [
-      {
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alejandro-martinez"
-      },
-      {
-        "label": "Portfolio",
-        "url": "https://www.example.com/alejandro-martinez"
-      }
-    ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Smiling, well-lit, focused on the face."
+    "full_name": "Ananya Sharma",
+    "headline": "Junior Product Manager",
+    "email": "ananya.sharma@example.com",
+    "phone": "+91 9876543210",
+    "location": "New Delhi, India",
+    "narrative": "Ananya Sharma, a recent graduate from the prestigious Indian Institute of Technology, Delhi, has embarked on her journey as a Junior Product Manager. With a strong academic background in Computer Science and a keen interest in innovation, she is eager to apply her analytical skills and problem-solving abilities to drive product success. During her time at IIT, Ananya was actively involved in various research projects, honing her ability to identify user needs and develop effective solutions. She is now excited to leverage her technical expertise and passion for product development to contribute to the growth of a dynamic organization."
   }
 }

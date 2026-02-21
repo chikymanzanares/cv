@@ -11,8 +11,8 @@ ENV PYTHONPATH=/cv
 
 FROM base AS production
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt requirements-rag.txt .
+RUN pip install --no-cache-dir -r requirements.txt -r requirements-rag.txt
 
 COPY app ./app
 
@@ -51,10 +51,10 @@ RUN pip install --no-cache-dir -r requirements-generation.txt
 WORKDIR /cv
 
 
-# NEW: rag stage (offline indexing + CLI search)
+# RAG: search deps shared with production; index deps only for this stage.
 FROM base AS rag
 
-COPY requirements-rag.txt .
-RUN pip install --no-cache-dir -r requirements-rag.txt
+COPY requirements-rag.txt requirements-rag-index.txt .
+RUN pip install --no-cache-dir -r requirements-rag.txt -r requirements-rag-index.txt
 
 WORKDIR /cv

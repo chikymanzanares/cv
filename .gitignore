@@ -36,3 +36,4 @@ htmlcov/
 
 # Project data
 cv_generation/data
+/cv_generation/data/cvs

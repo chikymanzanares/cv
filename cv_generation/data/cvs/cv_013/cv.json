@@ -1,175 +1,52 @@
 {
   "meta": {
     "cv_id": "cv_013",
-    "created_at": "2026-02-21T14:53:10.522342+00:00",
+    "created_at": "2026-02-21T18:51:39.987536+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "fr",
-      "seniority": "mid",
-      "persona_type": "academic researcher",
-      "writing_style": "punchy",
-      "role": "Backend Engineer",
-      "education_country": "UK"
+      "language": "de",
+      "seniority": "senior",
+      "persona_type": "career switcher",
+      "writing_style": "results-driven",
+      "role": "Product Manager",
+      "education_country": "Germany"
     },
     "photo_source": "local_asset",
-    "photo_asset": "mark.jpeg",
+    "photo_asset": "charles.jpeg",
     "generation_config": {
-      "writing_style": "punchy",
-      "summary_length": "paragraph",
-      "experience_style": "bullets",
+      "writing_style": "results-driven",
+      "summary_length": "short",
+      "experience_style": "paragraphs",
       "omit_sections": [
-        "certifications"
+        "education",
+        "projects"
       ],
       "include_interests_section": false,
       "section_label_preset": {
-        "summary": "Professional Summary",
-        "experience": "Work History",
-        "education": "Education",
-        "skills": "Core Competencies",
+        "summary": "About Me",
+        "experience": "Employment",
+        "education": "Academic Background",
+        "skills": "Skills",
         "languages": "Languages",
-        "projects": "Key Projects",
-        "certifications": "Certifications",
-        "interests": "Interests",
-        "profile": "Profile"
+        "projects": "Projects",
+        "certifications": "Licenses & Certifications",
+        "interests": "Personal",
+        "profile": "About Me"
       },
       "page_target": "two_pages",
-      "content_style": "structured"
+      "content_style": "narrative"
     }
   },
   "data": {
-    "full_name": "Sylvie Durand",
-    "headline": "Experienced Backend Engineer with Expertise in Academic Research",
-    "email": "sylvie.durand@email.com",
-    "phone": "+33 6 12 34 56 78",
-    "location": "Paris, France",
-    "summary": "Highly skilled backend engineer with over 8 years of experience in academic research environments. Adept at designing and implementing robust, scalable, and secure backend systems. Passionate about leveraging technology to drive innovation and support cutting-edge research projects. Proven track record of collaborating effectively with cross-functional teams, delivering high-impact solutions, and contributing to the advancement of scientific knowledge.",
-    "section_labels": {
-      "summary": "Professional Summary",
-      "experience": "Work History",
-      "education": "Education",
-      "skills": "Core Competencies",
-      "languages": "Languages",
-      "projects": "Key Projects"
-    },
-    "skills": [
-      "Backend Development",
-      "Scalable Systems Design",
-      "Data Modeling and Architecture",
-      "API Development",
-      "Agile Methodologies",
-      "Problem-Solving",
-      "Collaboration"
-    ],
-    "languages": [
-      {
-        "name": "French",
-        "level": "Native"
-      },
-      {
-        "name": "English",
-        "level": "Fluent"
-      }
-    ],
-    "experience": [
-      {
-        "company": "University of Paris",
-        "title": "Senior Backend Engineer",
-        "start_date": "2019-06-01",
-        "end_date": "Present",
-        "location": "Paris, France",
-        "bullets": [
-          "Designed and implemented scalable, secure, and high-performing backend systems to support cutting-edge research projects in fields such as computational biology and materials science.",
-          "Collaborated closely with interdisciplinary teams of researchers, data scientists, and project managers to understand requirements and deliver innovative solutions.",
-          "Spearheaded the development of a custom data management platform that streamlined data ingestion, processing, and analysis, resulting in a 30% increase in research productivity.",
-          "Mentored junior engineers and contributed to the continuous improvement of the team's technical practices and codebase."
-        ]
-      },
-      {
-        "company": "National Center for Scientific Research",
-        "title": "Backend Engineer",
-        "start_date": "2016-09-01",
-        "end_date": "2019-05-31",
-        "location": "Paris, France",
-        "bullets": [
-          "Designed and implemented scalable and fault-tolerant backend systems to support large-scale scientific computing and data analysis projects.",
-          "Collaborated with researchers and data scientists to understand their requirements and translate them into robust technical solutions.",
-          "Developed and maintained custom APIs and microservices to facilitate seamless data exchange and integration between different research domains.",
-          "Participated in the implementation of DevOps practices, including automated testing, continuous integration, and deployment, to ensure the reliability and scalability of the systems."
-        ]
-      },
-      {
-        "company": "University of Cambridge",
-        "title": "Backend Engineering Intern",
-        "start_date": "2015-06-01",
-        "end_date": "2015-08-31",
-        "location": "Cambridge, UK",
-        "bullets": [
-          "Contributed to the development and maintenance of backend systems supporting various research projects in the fields of computational physics and materials science.",
-          "Gained hands-on experience in designing and implementing RESTful APIs, data models, and database schemas to meet the needs of diverse research teams.",
-          "Participated in code reviews, bug fixes, and the implementation of performance optimization strategies to ensure the reliability and efficiency of the systems."
-        ]
-      }
-    ],
-    "education": [
-      {
-        "institution": "University of Cambridge",
-        "degree": "Master of Science (M.Sc.)",
-        "field": "Computer Science",
-        "start_year": "2013",
-        "end_year": "2015"
-      },
-      {
-        "institution": "University of Paris",
-        "degree": "Bachelor of Science (B.Sc.)",
-        "field": "Computer Science",
-        "start_year": "2009",
-        "end_year": "2013"
-      }
-    ],
-    "projects": [
-      {
-        "name": "Computational Materials Science Platform",
-        "description": "Designed and implemented a scalable backend system to support a computational materials science research platform, enabling researchers to efficiently model, simulate, and analyze complex material properties.",
-        "tech": [
-          "Python",
-          "Django",
-          "PostgreSQL",
-          "RabbitMQ",
-          "Kubernetes"
-        ]
-      },
-      {
-        "name": "Bioinformatics Data Management System",
-        "description": "Developed a custom data management platform to streamline the ingestion, processing, and analysis of large-scale biological datasets, improving the efficiency and productivity of the research team.",
-        "tech": [
-          "Java",
-          "Spring Boot",
-          "Elasticsearch",
-          "Apache Kafka",
-          "Docker"
-        ]
-      }
-    ],
-    "interests": [
-      "Computational Biology",
-      "Materials Science",
-      "Open-Source Software Development",
-      "Scientific Computing"
-    ],
-    "links": [
-      {
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/sylvie-durand"
-      },
-      {
-        "label": "Portfolio",
-        "url": "https://sylvie-durand.com"
-      }
-    ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Sylvie Durand, a mid-career backend engineer with expertise in academic research, wearing a smart casual outfit against a plain background."
+    "full_name": "Lukas Müller",
+    "headline": "Senior Product Manager",
+    "email": "lukas.mueller@example.com",
+    "phone": "+49 123 456 7890",
+    "location": "Munich, Germany",
+    "narrative": "With over 10 years of diverse experience in the technology industry, I have transitioned from an engineering background to become a results-driven Senior Product Manager. My journey began as a Software Engineer, where I honed my technical skills and developed a deep understanding of product development processes. Recognizing my passion for bridging the gap between technology and business, I pursued a career shift into product management. At my previous role at Acme Corp, I led the development of a cutting-edge e-commerce platform, driving a 25% increase in online sales within the first year. I successfully managed cross-functional teams, collaborated closely with stakeholders, and implemented data-driven decision-making to deliver impactful products. With a strong analytical mindset and a keen eye for user experience, I have consistently delivered innovative solutions that have positively impacted the bottom line. Currently, I am seeking a new challenge as a Senior Product Manager where I can leverage my technical expertise, strategic thinking, and customer-centric approach to drive the success of a dynamic organization."
   }
 }

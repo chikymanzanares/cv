@@ -1,174 +1,197 @@
 {
   "meta": {
     "cv_id": "cv_009",
-    "created_at": "2026-02-21T14:52:09.760973+00:00",
+    "created_at": "2026-02-21T18:50:41.227042+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "es",
+      "language": "de",
       "seniority": "junior",
-      "persona_type": "academic researcher",
-      "writing_style": "concise",
-      "role": "UX Designer",
-      "education_country": "Spain"
+      "persona_type": "career switcher",
+      "writing_style": "creative",
+      "role": "Data Scientist",
+      "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "rock.jpeg",
+    "photo_asset": "yen.jpeg",
     "generation_config": {
-      "writing_style": "concise",
-      "summary_length": "paragraph",
-      "experience_style": "paragraphs",
+      "writing_style": "creative",
+      "summary_length": "one_line",
+      "experience_style": "bullets",
       "omit_sections": [],
       "include_interests_section": false,
-      "section_label_preset": null,
+      "section_label_preset": {
+        "summary": "Profil",
+        "experience": "Berufserfahrung",
+        "education": "Ausbildung",
+        "skills": "Kompetenzen",
+        "languages": "Sprachen",
+        "projects": "Projekte",
+        "certifications": "Zertifizierungen",
+        "interests": "Interessen",
+        "profile": "Profil"
+      },
       "page_target": "two_pages",
       "content_style": "structured"
     }
   },
   "data": {
-    "full_name": "Sofía Ramírez",
-    "headline": "UX Designer",
-    "email": "sofia.ramirez@example.com",
-    "phone": "+34 123 456 789",
-    "location": "Barcelona, Spain",
-    "summary": "Passionate UX Designer with a strong background in academic research. Skilled in user-centered design, usability testing, and data analysis. Committed to creating intuitive and accessible digital experiences.",
+    "full_name": "Lena Müller",
+    "headline": "Aufstrebende Data Scientist auf der Suche nach neuen Herausforderungen",
+    "email": "lena.mueller@example.com",
+    "phone": "+49 123 456 7890",
+    "location": "Berlin, Deutschland",
+    "summary": "Kreative und lösungsorientierte Data Scientist mit Erfahrung in der Analyse komplexer Datensätze und der Entwicklung innovativer Modelle. Bereit, mein Wissen und meine Fähigkeiten in einem dynamischen Umfeld einzubringen.",
     "narrative": null,
-    "section_labels": {},
+    "section_labels": {
+      "summary": "Profil",
+      "experience": "Berufserfahrung",
+      "education": "Ausbildung",
+      "skills": "Kompetenzen",
+      "languages": "Sprachen",
+      "projects": "Projekte",
+      "certifications": "Zertifizierungen",
+      "interests": "Interessen"
+    },
     "skills": [
-      "User Research",
-      "Wireframing",
-      "Prototyping",
-      "Usability Testing",
-      "Data Analysis"
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Data Visualization",
+      "Statistik"
     ],
     "languages": [
       {
-        "name": "Spanish",
-        "level": "Native"
+        "name": "Deutsch",
+        "level": "Muttersprache"
       },
       {
-        "name": "English",
-        "level": "Fluent"
+        "name": "Englisch",
+        "level": "Fließend"
       }
     ],
     "experience": [
       {
-        "company": "Acme Design Agency",
-        "title": "UX Designer",
-        "start_date": "2021-06-01",
+        "company": "Acme Analytics GmbH",
+        "title": "Data Analyst",
+        "start_date": "2020-06-01",
         "end_date": "2022-12-31",
-        "location": "Barcelona, Spain",
+        "location": "Berlin, Deutschland",
         "bullets": [
-          "Conducted user research, including interviews, surveys, and usability testing, to identify user needs and pain points.",
-          "Designed wireframes, prototypes, and high-fidelity mockups to visualize and iterate on user flows and interface designs.",
-          "Collaborated with cross-functional teams, including developers and product managers, to ensure the implementation of user-centric solutions.",
-          "Presented research findings and design proposals to stakeholders, gaining buy-in and support for project initiatives."
+          "Entwickelte und implementierte Datenanalyseprozesse, die die Entscheidungsfindung im Unternehmen verbesserten",
+          "Führte Predictive Analytics-Projekte durch, um Trends und Muster in Kundendaten zu identifizieren",
+          "Erstellte interaktive Dashboards und Visualisierungen, um komplexe Daten für Führungskräfte verständlich darzustellen"
         ],
         "paragraph": null
       },
       {
-        "company": "University of Barcelona",
-        "title": "Research Assistant",
+        "company": "Startup Innovations GmbH",
+        "title": "Data Science Praktikant",
         "start_date": "2019-09-01",
-        "end_date": "2021-05-31",
-        "location": "Barcelona, Spain",
+        "end_date": "2020-02-29",
+        "location": "Berlin, Deutschland",
         "bullets": [
-          "Assisted professors in conducting literature reviews, data collection, and analysis for various research projects.",
-          "Contributed to the preparation of research papers and presentations, ensuring accurate and well-structured content.",
-          "Collaborated with interdisciplinary teams to identify and address research gaps, fostering innovative approaches.",
-          "Developed strong analytical and critical thinking skills through the research process."
+          "Unterstützte das Data Science-Team bei der Entwicklung von Algorithmen zur Kundenanalyse",
+          "Führte A/B-Tests durch, um die Wirksamkeit von Marketingkampagnen zu messen",
+          "Erstellte Prototypen für maschinelle Lernmodelle zur Vorhersage von Kundenbindung"
         ],
         "paragraph": null
       },
       {
-        "company": "Startup Incubator",
-        "title": "UX Design Intern",
-        "start_date": "2018-06-01",
-        "end_date": "2018-08-31",
-        "location": "Barcelona, Spain",
+        "company": "Retail Trends GmbH",
+        "title": "Vertriebsmitarbeiter",
+        "start_date": "2017-08-01",
+        "end_date": "2019-05-31",
+        "location": "Hamburg, Deutschland",
         "bullets": [
-          "Participated in user research activities, including interviews and usability testing, to understand the needs of startup founders.",
-          "Designed low-fidelity wireframes and interactive prototypes to explore and validate design concepts.",
-          "Collaborated with the product and engineering teams to ensure the implementation of user-friendly features.",
-          "Gained hands-on experience in the full UX design process, from research to implementation."
+          "Analysierte Verkaufsdaten, um Verkaufstrends und Kundenpräferenzen zu erkennen",
+          "Entwickelte Verkaufsstrategien, um den Umsatz in meinem Verkaufsgebiet zu steigern",
+          "Gewann neue Kunden durch gezielte Akquisitionsmaßnahmen"
         ],
         "paragraph": null
       },
       {
-        "company": "University of Barcelona",
-        "title": "Research Assistant (Internship)",
-        "start_date": "2017-06-01",
-        "end_date": "2017-08-31",
-        "location": "Barcelona, Spain",
+        "company": "Hochschule Berlin",
+        "title": "Studentische Hilfskraft",
+        "start_date": "2016-04-01",
+        "end_date": "2017-07-31",
+        "location": "Berlin, Deutschland",
         "bullets": [
-          "Assisted professors in conducting literature reviews and data analysis for various research projects.",
-          "Contributed to the preparation of research presentations and publications.",
-          "Developed strong research and analytical skills through hands-on experience."
+          "Unterstützte Professoren bei der Durchführung von Forschungsprojekten",
+          "Analysierte Daten und erstellte Berichte für Konferenzpräsentationen",
+          "Organisierte Veranstaltungen und Workshops für Studenten"
         ],
         "paragraph": null
       }
     ],
     "education": [
       {
-        "institution": "University of Barcelona",
+        "institution": "Universität London",
         "degree": "Master of Science",
-        "field": "Human-Computer Interaction",
-        "start_year": "2019",
-        "end_year": "2021"
+        "field": "Data Science",
+        "start_year": "2018",
+        "end_year": "2020"
       },
       {
-        "institution": "University of Barcelona",
+        "institution": "Universität Cambridge",
         "degree": "Bachelor of Science",
-        "field": "Psychology",
-        "start_year": "2015",
-        "end_year": "2019"
+        "field": "Informatik",
+        "start_year": "2014",
+        "end_year": "2017"
       }
     ],
     "projects": [
       {
-        "name": "Accessibility Project",
-        "description": "Designed and tested a mobile app for visually impaired users, ensuring a high level of accessibility and usability.",
+        "name": "Predictive Maintenance Modell",
+        "description": "Entwickelte ein maschinelles Lernmodell zur Vorhersage von Ausfällen in einer Produktionsanlage, um Wartungskosten zu senken.",
         "tech": [
-          "User Research",
-          "Prototyping",
-          "Usability Testing"
+          "Python",
+          "Scikit-learn",
+          "Pandas",
+          "Matplotlib"
         ]
       },
       {
-        "name": "UX Redesign",
-        "description": "Conducted a comprehensive UX audit and redesign for a local e-commerce website, improving the user experience and increasing conversion rates.",
+        "name": "Kundenanalyse-Dashboard",
+        "description": "Erstellte ein interaktives Dashboard zur Visualisierung von Kundendaten, um Einblicke in Kaufverhalten und Kundensegmente zu gewinnen.",
         "tech": [
-          "User Research",
-          "Wireframing",
-          "Visual Design"
+          "Python",
+          "Tableau",
+          "SQL"
         ]
       }
     ],
     "certifications": [
       {
-        "name": "Certified Usability Analyst",
-        "issuer": "Human Factors International",
+        "name": "Data Science Spezialist",
+        "issuer": "Udemy",
         "year": "2021"
+      },
+      {
+        "name": "Python Programmierung",
+        "issuer": "Coursera",
+        "year": "2019"
       }
     ],
     "interests": [
-      "Exploring new design trends and technologies",
-      "Volunteering for accessibility-focused initiatives",
-      "Participating in design-related hackathons and meetups"
+      "Reisen",
+      "Lesen",
+      "Fotografie",
+      "Kochen"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/sofia-ramirez"
+        "url": "https://www.linkedin.com/in/lenamueller"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.sofiaramirez.com"
+        "url": "https://lenamueller.de"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Sofía is a young woman with dark hair, wearing a neutral-colored blouse and looking directly at the camera with a friendly expression."
+    "photo_prompt": "Professional LinkedIn-style headshot. Confident, friendly expression. Neutral background."
   }
 }

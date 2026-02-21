@@ -189,6 +189,44 @@ def _prepare_json_raw(raw: str) -> str:
     return raw
 
 
+def _close_truncated_json(raw: str) -> str:
+    """If JSON was cut off mid-string or with unclosed brackets, close it so loads() can succeed."""
+    in_string = False
+    escape = False
+    depth_curly = 0
+    depth_square = 0
+    i = 0
+    while i < len(raw):
+        c = raw[i]
+        if escape:
+            escape = False
+            i += 1
+            continue
+        if c == "\\" and in_string:
+            escape = True
+            i += 1
+            continue
+        if c == '"':
+            in_string = not in_string
+            i += 1
+            continue
+        if not in_string:
+            if c == "{":
+                depth_curly += 1
+            elif c == "}":
+                depth_curly -= 1
+            elif c == "[":
+                depth_square += 1
+            elif c == "]":
+                depth_square -= 1
+        i += 1
+    out = raw
+    if in_string:
+        out += '"'
+    out += "]" * max(0, depth_square) + "}" * max(0, depth_curly)
+    return out
+
+
 def build_structure_instructions(cfg: dict) -> str:
     """Build variability instructions for the LLM from profile config."""
     parts = []
@@ -401,7 +439,14 @@ def main(n: int = 30) -> None:
             try:
                 cv_obj = json.loads(raw)
                 break
-            except json.JSONDecodeError:
+            except json.JSONDecodeError as e:
+                if "Unterminated string" in str(e) or "Expecting" in str(e):
+                    raw = _close_truncated_json(raw)
+                    try:
+                        cv_obj = json.loads(raw)
+                        break
+                    except json.JSONDecodeError:
+                        pass
                 if attempt == 0:
                     continue
                 (cv_dir / "raw_llm_output.txt").write_text(raw, encoding="utf-8")

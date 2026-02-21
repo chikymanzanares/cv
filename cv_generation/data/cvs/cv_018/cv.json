@@ -1,180 +1,178 @@
 {
   "meta": {
     "cv_id": "cv_018",
-    "created_at": "2026-02-21T14:53:59.545971+00:00",
+    "created_at": "2026-02-21T18:52:12.308473+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "de",
+      "language": "fr",
       "seniority": "mid",
-      "persona_type": "academic researcher",
-      "writing_style": "storytelling",
+      "persona_type": "self-taught developer",
+      "writing_style": "business-casual",
       "role": "Backend Engineer",
-      "education_country": "India"
+      "education_country": "UK"
     },
     "photo_source": "local_asset",
-    "photo_asset": "claudia.jpeg",
+    "photo_asset": "esteban.jpeg",
     "generation_config": {
-      "writing_style": "storytelling",
-      "summary_length": "short",
-      "experience_style": "bullets",
-      "omit_sections": [
-        "languages",
-        "education"
-      ],
+      "writing_style": "business-casual",
+      "summary_length": "paragraph",
+      "experience_style": "paragraphs",
+      "omit_sections": [],
       "include_interests_section": false,
       "section_label_preset": {
-        "summary": "Introduction",
-        "experience": "Employment History",
-        "education": "Academic",
-        "skills": "Skills & Tools",
-        "languages": "Languages",
-        "projects": "Projects",
+        "summary": "Executive Summary",
+        "experience": "Career History",
+        "education": "Qualifications",
+        "skills": "Technical Skills",
+        "languages": "Language Skills",
+        "projects": "Notable Projects",
         "certifications": "Certifications",
-        "interests": "Personal Interests",
-        "profile": "Introduction"
+        "interests": "Outside Work",
+        "profile": "Executive Summary"
       },
       "page_target": "two_pages",
       "content_style": "structured"
     }
   },
   "data": {
-    "full_name": "Aadhya Sharma",
-    "headline": "Experienced Backend Engineer with a Passion for Research",
-    "email": "aadhya.sharma@example.com",
-    "phone": "+49 123 456 7890",
-    "location": "Berlin, Germany",
-    "summary": "As an accomplished Backend Engineer with a strong academic background, I have honed my skills in designing and developing robust, scalable, and efficient software systems. My journey has been marked by a deep fascination with problem-solving, a commitment to continuous learning, and a desire to push the boundaries of what's possible in the tech industry.",
+    "full_name": "Olivier Mercier",
+    "headline": "Experienced Backend Engineer",
+    "email": "olivier.mercier@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "A self-taught backend engineer with over 7 years of experience in developing robust and scalable web applications. Proficient in various programming languages and frameworks, I have a strong track record of delivering high-quality software solutions that meet business requirements. I am passionate about staying up-to-date with the latest industry trends and technologies, and I enjoy collaborating with cross-functional teams to create innovative products. My problem-solving skills, attention to detail, and commitment to continuous learning make me a valuable asset to any organization.",
     "narrative": null,
     "section_labels": {
-      "summary": "Introduction",
-      "experience": "Employment History",
-      "education": "Academic",
-      "skills": "Skills & Tools",
-      "projects": "Projects",
+      "summary": "Executive Summary",
+      "experience": "Career History",
+      "education": "Qualifications",
+      "skills": "Technical Skills",
+      "languages": "Language Skills",
+      "projects": "Notable Projects",
       "certifications": "Certifications",
-      "interests": "Personal Interests"
+      "interests": "Outside Work"
     },
     "skills": [
       "Python",
       "Django",
+      "Flask",
+      "SQL",
       "PostgreSQL",
-      "Redis",
+      "MongoDB",
+      "Git",
       "Docker",
-      "Kubernetes",
       "AWS",
       "Agile Methodologies"
     ],
-    "languages": [],
-    "experience": [
+    "languages": [
       {
-        "company": "Acme Tech Solutions",
-        "title": "Senior Backend Engineer",
-        "start_date": "2020-06-01",
-        "end_date": "2023-04-30",
-        "location": "Berlin, Germany",
-        "bullets": [
-          "Designed and implemented a scalable and fault-tolerant microservices architecture using Django, PostgreSQL, and Redis.",
-          "Spearheaded the migration of the company's legacy monolithic application to a modern, cloud-native infrastructure on AWS, reducing deployment time by 50%.",
-          "Mentored junior engineers, fostering a culture of knowledge sharing and continuous improvement.",
-          "Collaborated closely with cross-functional teams to ensure seamless integration and delivery of complex features."
-        ],
-        "paragraph": null
+        "name": "French",
+        "level": "Native"
       },
       {
-        "company": "Quantum Innovations",
-        "title": "Backend Engineer",
-        "start_date": "2017-09-01",
-        "end_date": "2020-05-31",
-        "location": "Bangalore, India",
-        "bullets": [
-          "Developed and maintained high-performance APIs for a cutting-edge quantum computing platform, ensuring reliable data processing and secure communication.",
-          "Participated in research and development initiatives, exploring novel algorithms and techniques to enhance the platform's capabilities.",
-          "Collaborated with a cross-functional team of scientists, engineers, and researchers to deliver innovative solutions to complex problems.",
-          "Contributed to the company's open-source projects, sharing knowledge and fostering a collaborative community."
-        ],
-        "paragraph": null
-      },
-      {
-        "company": "Technovate Labs",
-        "title": "Junior Backend Developer",
-        "start_date": "2015-07-01",
-        "end_date": "2017-08-31",
-        "location": "Pune, India",
-        "bullets": [
-          "Developed and maintained RESTful APIs using Django and PostgreSQL for a range of client projects.",
-          "Participated in agile development processes, including sprint planning, code reviews, and continuous integration.",
-          "Gained experience in deploying and managing applications in cloud environments, such as AWS and DigitalOcean."
-        ],
-        "paragraph": null
-      },
-      {
-        "company": "Startup Incubator",
-        "title": "Backend Intern",
-        "start_date": "2014-05-01",
-        "end_date": "2015-06-30",
-        "location": "Bangalore, India",
-        "bullets": [
-          "Contributed to the development of a cloud-based platform for startups, gaining hands-on experience in building and deploying scalable web applications.",
-          "Collaborated with a team of engineers and entrepreneurs to explore innovative solutions to real-world problems."
-        ],
-        "paragraph": null
+        "name": "English",
+        "level": "Fluent"
       }
     ],
-    "education": [],
+    "experience": [
+      {
+        "company": "Acme Software Solutions",
+        "title": "Senior Backend Engineer",
+        "start_date": "2019-06-01",
+        "end_date": "Present",
+        "location": "Paris, France",
+        "bullets": [],
+        "paragraph": "As a Senior Backend Engineer at Acme Software Solutions, I have been responsible for designing and implementing scalable and reliable backend systems for a variety of web applications. I have played a key role in the development of a popular e-commerce platform, where I have optimized database queries, implemented caching mechanisms, and integrated third-party payment gateways. Additionally, I have contributed to the development of a real-time analytics platform, leveraging technologies such as Redis, Elasticsearch, and Apache Kafka to process and analyze large volumes of data. Throughout my tenure, I have mentored junior developers, participated in code reviews, and collaborated with cross-functional teams to ensure the successful delivery of projects."
+      },
+      {
+        "company": "Startup Innovators",
+        "title": "Backend Developer",
+        "start_date": "2016-09-01",
+        "end_date": "2019-05-31",
+        "location": "London, UK",
+        "bullets": [],
+        "paragraph": "At Startup Innovators, I was part of a dynamic team responsible for building and maintaining a suite of web applications for various clients. I played a key role in the development of a real-time event management platform, where I designed and implemented a scalable and fault-tolerant backend architecture using microservices and containerization. I also contributed to the development of a data analytics platform, integrating various data sources and building custom data pipelines to generate insightful reports. Throughout my time at Startup Innovators, I honed my skills in agile development methodologies, continuous integration, and deployment best practices."
+      },
+      {
+        "company": "Tech Ventures",
+        "title": "Junior Backend Developer",
+        "start_date": "2014-07-01",
+        "end_date": "2016-08-31",
+        "location": "London, UK",
+        "bullets": [],
+        "paragraph": "As a Junior Backend Developer at Tech Ventures, I was responsible for building and maintaining web applications using Python and Django. I contributed to the development of a content management system, where I implemented custom APIs, integrated with third-party services, and optimized database queries. I also worked on a project management tool, where I implemented user authentication, role-based access control, and real-time collaboration features. During this time, I gained valuable experience in software development best practices, such as unit testing, code documentation, and version control."
+      },
+      {
+        "company": "Tech Innovators",
+        "title": "Freelance Backend Developer",
+        "start_date": "2013-01-01",
+        "end_date": "2014-06-30",
+        "location": "London, UK",
+        "bullets": [],
+        "paragraph": "As a Freelance Backend Developer, I worked on a variety of projects for clients in the technology and e-commerce sectors. I designed and implemented custom APIs, integrated third-party services, and optimized database performance for web applications. I also contributed to the development of a mobile application, where I implemented push notifications, in-app purchases, and user analytics. Throughout this period, I honed my skills in rapid prototyping, agile development, and client communication, which have been invaluable in my career."
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of London",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "start_year": "2010",
+        "end_year": "2013"
+      }
+    ],
     "projects": [
       {
-        "name": "Quantum Optimization Algorithm",
-        "description": "Developed a novel quantum optimization algorithm for solving complex scheduling problems, demonstrating significant performance improvements over classical approaches.",
+        "name": "Personal Blog",
+        "description": "Developed a personal blog using Django, PostgreSQL, and Nginx. Implemented features such as user authentication, content management, and social media integration.",
         "tech": [
-          "Python",
-          "Quantum Computing",
-          "Optimization Algorithms"
+          "Django",
+          "PostgreSQL",
+          "Nginx"
         ]
       },
       {
-        "name": "Distributed Logging System",
-        "description": "Designed and implemented a scalable, fault-tolerant distributed logging system using Redis, Elasticsearch, and Kibana, enabling real-time monitoring and analysis of application logs.",
+        "name": "Cryptocurrency Trading Bot",
+        "description": "Built a trading bot using Python and the Binance API to automate cryptocurrency trading strategies. Implemented real-time market data analysis, order execution, and portfolio management.",
         "tech": [
           "Python",
-          "Redis",
-          "Elasticsearch",
-          "Kibana",
-          "Distributed Systems"
+          "Binance API",
+          "Market Data Analysis"
         ]
       }
     ],
     "certifications": [
       {
-        "name": "AWS Certified Solutions Architect - Associate",
+        "name": "AWS Certified Developer - Associate",
         "issuer": "Amazon Web Services",
-        "year": "2021"
+        "year": "2020"
       },
       {
-        "name": "Professional Scrum Master I",
-        "issuer": "Scrum.org",
-        "year": "2019"
+        "name": "Certified ScrumMaster",
+        "issuer": "Scrum Alliance",
+        "year": "2018"
       }
     ],
     "interests": [
-      "Quantum Computing",
-      "Distributed Systems",
       "Hiking",
-      "Astronomy"
+      "Cooking",
+      "Traveling",
+      "Reading"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/aadhya-sharma"
+        "url": "https://www.linkedin.com/in/olivier-mercier"
       },
       {
         "label": "Portfolio",
-        "url": "https://aadhya-sharma.com"
+        "url": "https://www.oliviermercier.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. A friendly, confident-looking individual with a warm smile, dressed in business casual attire."
+    "photo_prompt": "Professional LinkedIn-style headshot. Olivier Mercier, a middle-aged man with short dark hair and a friendly, confident expression, wearing a collared shirt and jacket."
   }
 }

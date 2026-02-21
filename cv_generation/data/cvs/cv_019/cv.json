@@ -1,28 +1,28 @@
 {
   "meta": {
     "cv_id": "cv_019",
-    "created_at": "2026-02-21T14:54:10.885161+00:00",
+    "created_at": "2026-02-21T18:52:26.116980+00:00",
     "pipeline_version": "1.0.0",
     "provider": "anthropic",
     "text_model": "claude-3-haiku-20240307",
     "image_model": "black-forest-labs/flux.1-schnell",
     "prompt_version": "cv_json_v2",
     "profile_config": {
-      "language": "en",
-      "seniority": "mid",
-      "persona_type": "self-taught developer",
-      "writing_style": "detailed",
-      "role": "Data Scientist",
+      "language": "fr",
+      "seniority": "senior",
+      "persona_type": "corporate enterprise architect",
+      "writing_style": "creative",
+      "role": "Product Manager",
       "education_country": "Spain"
     },
     "photo_source": "local_asset",
-    "photo_asset": "pretty.jpeg",
+    "photo_asset": "wu.jpeg",
     "generation_config": {
-      "writing_style": "detailed",
+      "writing_style": "creative",
       "summary_length": "one_line",
-      "experience_style": "paragraphs",
+      "experience_style": "bullets",
       "omit_sections": [],
-      "include_interests_section": false,
+      "include_interests_section": true,
       "section_label_preset": {
         "summary": "Profile",
         "experience": "Professional Experience",
@@ -39,12 +39,12 @@
     }
   },
   "data": {
-    "full_name": "Alejandro Gutiérrez",
-    "headline": "Data Scientist | Self-Taught Developer",
-    "email": "alejandro.gutierrez@example.com",
-    "phone": "+34 612 345 678",
-    "location": "Madrid, Spain",
-    "summary": "Versatile data scientist with a passion for leveraging data-driven insights to drive business impact. Proficient in a range of analytics tools and techniques, with a proven track record of delivering innovative solutions to complex problems.",
+    "full_name": "Sylvie Mercier",
+    "headline": "Visionary Product Manager | Corporate Enterprise Architect",
+    "email": "sylvie.mercier@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "summary": "Seasoned product leader with a proven track record of transforming complex business challenges into innovative solutions that drive growth and customer delight.",
     "narrative": null,
     "section_labels": {
       "summary": "Profile",
@@ -57,129 +57,146 @@
       "interests": "Hobbies"
     },
     "skills": [
-      "Python",
-      "SQL",
-      "Machine Learning",
-      "Data Visualization",
-      "Tableau",
-      "Power BI",
-      "Statistical Analysis",
-      "Data Mining"
+      "Product Strategy",
+      "Agile Methodologies",
+      "Enterprise Architecture",
+      "Business Analysis",
+      "Cross-Functional Collaboration",
+      "Digital Transformation"
     ],
     "languages": [
       {
-        "name": "Spanish",
+        "name": "French",
         "level": "Native"
       },
       {
         "name": "English",
         "level": "Fluent"
+      },
+      {
+        "name": "Spanish",
+        "level": "Intermediate"
       }
     ],
     "experience": [
       {
-        "company": "Acme Data Solutions",
-        "title": "Data Scientist",
-        "start_date": "2020-05-01",
-        "end_date": "2022-08-31",
-        "location": "Madrid, Spain",
-        "bullets": [],
-        "paragraph": "Played a key role in developing and implementing data-driven solutions to address complex business challenges. Leveraged a range of analytical techniques, including machine learning, to uncover valuable insights and drive data-informed decision-making. Collaborated closely with cross-functional teams to translate business requirements into actionable data strategies, resulting in significant improvements in operational efficiency and customer satisfaction."
+        "company": "Acme Corporation",
+        "title": "Head of Product Management",
+        "start_date": "2018-05-01",
+        "end_date": "2022-12-31",
+        "location": "Paris, France",
+        "bullets": [
+          "Spearheaded the development and launch of a groundbreaking enterprise software platform, resulting in a 25% increase in annual revenue",
+          "Collaborated cross-functionally to define and execute a strategic product roadmap, aligning with the company's long-term vision",
+          "Leveraged data-driven insights to optimize the user experience, leading to a 30% improvement in customer satisfaction scores",
+          "Mentored and empowered a high-performing product team, fostering a culture of innovation and continuous improvement"
+        ],
+        "paragraph": null
       },
       {
-        "company": "Globex Analytics",
-        "title": "Junior Data Analyst",
-        "start_date": "2018-09-01",
-        "end_date": "2020-04-30",
+        "company": "Globex Industries",
+        "title": "Senior Product Manager",
+        "start_date": "2015-01-01",
+        "end_date": "2018-04-30",
         "location": "Barcelona, Spain",
-        "bullets": [],
-        "paragraph": "Responsible for collecting, processing, and analyzing data from various sources to support business decision-making. Developed custom dashboards and reports using Tableau and Power BI, enabling stakeholders to access and interpret data more effectively. Contributed to the implementation of data governance frameworks and data quality assurance processes, ensuring the integrity and reliability of the organization's data assets."
+        "bullets": [
+          "Drove the successful implementation of a complex enterprise resource planning (ERP) system, delivering a 20% increase in operational efficiency",
+          "Facilitated cross-departmental collaboration to identify and address customer pain points, resulting in a 15% increase in customer retention",
+          "Spearheaded the development and launch of a mobile application, expanding the company's digital footprint and driving a 12% increase in user engagement"
+        ],
+        "paragraph": null
       },
       {
-        "company": "Startup Incubator",
-        "title": "Data Science Intern",
-        "start_date": "2017-06-01",
-        "end_date": "2018-08-31",
-        "location": "Valencia, Spain",
-        "bullets": [],
-        "paragraph": "Gained hands-on experience in the field of data science by supporting various startup projects. Collaborated with founders and entrepreneurs to identify data-driven solutions to their business challenges, leveraging my skills in data analysis, predictive modeling, and data visualization. Contributed to the development of prototypes and proof-of-concept projects, showcasing the value of data-driven decision-making."
+        "company": "Technovate Solutions",
+        "title": "Product Manager",
+        "start_date": "2012-06-01",
+        "end_date": "2014-12-31",
+        "location": "Madrid, Spain",
+        "bullets": [
+          "Played a key role in the successful rollout of a cloud-based software platform, resulting in a 30% increase in customer acquisition",
+          "Leveraged user feedback to continuously refine and enhance the product, leading to a 25% improvement in customer satisfaction"
+        ],
+        "paragraph": null
       },
       {
-        "company": "Freelance Data Consultant",
-        "title": "Data Consultant",
-        "start_date": "2016-01-01",
-        "end_date": "2017-05-31",
-        "location": "Remote",
-        "bullets": [],
-        "paragraph": "Provided data consulting services to a diverse range of clients, including small businesses and startups. Assisted in the implementation of data management strategies, the development of custom analytics solutions, and the training of client teams on data-driven best practices. Demonstrated the ability to work independently, adapt to varying client needs, and deliver high-quality results within tight deadlines."
+        "company": "Innovatech",
+        "title": "Product Specialist",
+        "start_date": "2010-09-01",
+        "end_date": "2012-05-31",
+        "location": "Barcelona, Spain",
+        "bullets": [
+          "Collaborated with cross-functional teams to identify and prioritize product enhancements, driving a 20% increase in user adoption",
+          "Provided technical support and training to customers, ensuring seamless product implementation and user onboarding"
+        ],
+        "paragraph": null
       }
     ],
     "education": [
       {
         "institution": "University of Barcelona",
-        "degree": "Bachelor of Science",
-        "field": "Computer Science",
-        "start_year": "2013",
-        "end_year": "2017"
+        "degree": "Master of Business Administration",
+        "field": "Business Administration",
+        "start_year": "2008",
+        "end_year": "2010"
       },
       {
-        "institution": "Udacity",
-        "degree": "Nanodegree",
-        "field": "Data Science",
-        "start_year": "2016",
-        "end_year": "2017"
+        "institution": "Universitat Politècnica de Catalunya",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "start_year": "2004",
+        "end_year": "2008"
       }
     ],
     "projects": [
       {
-        "name": "Predictive Maintenance Model",
-        "description": "Developed a machine learning model to predict equipment failures in a manufacturing plant, resulting in a 20% reduction in unplanned downtime.",
+        "name": "Enterprise Software Platform",
+        "description": "Designed and delivered a comprehensive enterprise software platform to streamline business operations and drive digital transformation.",
         "tech": [
-          "Python",
-          "Scikit-learn",
-          "Pandas",
-          "Matplotlib"
+          "Product Management",
+          "Agile Methodologies",
+          "Enterprise Architecture",
+          "Cloud Computing"
         ]
       },
       {
-        "name": "Customer Churn Analysis",
-        "description": "Conducted a comprehensive analysis of customer churn patterns, identifying key drivers and implementing targeted retention strategies that improved customer retention by 15%.",
+        "name": "Mobile Application Development",
+        "description": "Spearheaded the development and launch of a mobile application to enhance customer engagement and expand the company's digital footprint.",
         "tech": [
-          "SQL",
-          "Tableau",
-          "Logistic Regression",
-          "Cluster Analysis"
+          "Product Management",
+          "User Experience Design",
+          "Mobile Development",
+          "Continuous Integration"
         ]
       }
     ],
     "certifications": [
       {
-        "name": "Certified Data Scientist",
-        "issuer": "Udemy",
-        "year": "2018"
+        "name": "Certified Product Manager",
+        "issuer": "Product Management Institute",
+        "year": "2015"
       },
       {
-        "name": "Tableau Desktop Specialist",
-        "issuer": "Tableau",
-        "year": "2019"
+        "name": "Certified Enterprise Architect",
+        "issuer": "The Open Group",
+        "year": "2018"
       }
     ],
     "interests": [
-      "Hiking",
-      "Photography",
-      "Cooking",
-      "Volunteering"
+      "Exploring emerging technologies",
+      "Mentoring aspiring product managers",
+      "Traveling to new destinations",
+      "Practicing mindfulness and meditation"
     ],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/alejandro-gutierrez"
+        "url": "https://www.linkedin.com/in/sylvie-mercier"
       },
       {
         "label": "Portfolio",
-        "url": "https://www.alejandrogutierrez.com"
+        "url": "https://sylviemercier.com"
       }
     ],
-    "photo_prompt": "Professional LinkedIn-style headshot. Alejandro Gutiérrez, a mid-career data scientist with a self-taught background, looking directly at the camera with a friendly, confident expression."
+    "photo_prompt": "Professional LinkedIn-style headshot. Sylvie Mercier, a senior product manager and corporate enterprise architect, is shown in a well-lit, high-quality portrait with a neutral, confident expression."
   }
 }

@@ -1,8 +1,7 @@
-PyMuPDF>=1.24.0
+# RAG search only (API + rag service when running search).
+# Used by rag.retrieval: FAISS, BM25, SentenceTransformer.
 faiss-cpu>=1.8.0
 rank-bm25>=0.2.2
 numpy>=1.26,<2.0
-tqdm>=4.66
-python-dotenv==1.0.1
 sentence-transformers==2.7.0
 torch==2.2.2

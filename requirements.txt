@@ -3,4 +3,3 @@ psycopg[binary]>=3.1
 fastapi
 uvicorn[standard]
 alembic>=1.13
-

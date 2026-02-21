@@ -8,6 +8,8 @@ Uses a **hybrid retrieval** strategy combining:
 
 Both indices are built from the same text chunks extracted from the CV PDFs.
 
+**Shared module:** `rag/retrieval.py` holds the search logic (load index, FAISS, BM25, RRF). It is used by the CLI (`rag.rag_cli.search`) and by the API (FastAPI) so a single change applies to both.
+
 ---
 
 ## Architecture

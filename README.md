@@ -42,6 +42,14 @@ Clients can reconnect using `Last-Event-ID` to resume the stream.
 
 ---
 
+## Key directories
+
+- **`cv_generation/`** — Offline pipeline to generate synthetic CVs (JSON + HTML + PDF) using an LLM and WeasyPrint. Produces the dataset under `cv_generation/data/cvs/`. See [cv_generation/README.md](cv_generation/README.md) for folder structure and commands.
+
+- **`rag/`** — RAG pipeline: index CV PDFs (FAISS + BM25) and run semantic + keyword search. Shared logic lives in `rag/retrieval.py` (used by CLI and API). See [rag/README.md](rag/README.md) for indexing, retrieval, and reranking details.
+
+---
+
 ## Requirements
 
 - Docker
@@ -64,7 +72,7 @@ Clients can reconnect using `Last-Event-ID` to resume the stream.
      ```
      ANTHROPIC_API_KEY=your-key-here
      ```
-   - **Google (Gemini):** set `LLM_PROVIDER` to the value used for Gemini and add:
+   - **Google (Gemini):** set `LLM_PROVIDER=google` and add:
      ```
      GEMINI_API_KEY=your-google-api-key-here
      ```

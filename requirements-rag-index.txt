@@ -1,0 +1,4 @@
+# RAG indexing only (build_index: extract PDF text, progress bars).
+# Not needed for production API.
+PyMuPDF>=1.24.0
+tqdm>=4.66
