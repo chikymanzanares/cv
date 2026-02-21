@@ -7,10 +7,11 @@ endif
 
 .PHONY: up down rebuild build logs restart ps clean fresh \
 	alembic-init migrate upgrade downgrade current history bump \
-	dbshell dbtables tests-unit
+	dbshell dbtables tests-unit \
+	front front-logs front-shell
 
 # =========================
-# DOCKER
+# API
 # =========================
 
 # Start all services (API + Postgres) and build if needed
@@ -51,6 +52,20 @@ ps:
 clean:
 	docker compose down -v --remove-orphans
 	docker system prune -f
+
+
+# =========================
+# FRONTEND
+# =========================
+
+front:
+	docker compose up --build --force-recreate front
+
+front-logs:
+	docker compose logs -f front
+
+front-shell:
+	docker compose exec front sh
 
 
 # =========================

@@ -46,6 +46,26 @@ services:
     depends_on:
       - postgres
     command: ["sh", "-lc", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} --reload"]
+    
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/openapi.json"]
+      interval: 5s
+      timeout: 2s
+      retries: 10
+
+
+  front:
+    build:
+      context: ./front
+    image: cv/chatbot-front:local
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./front:/front
+      - /front/node_modules
+    depends_on:
+      api:
+        condition: service_healthy
 
 volumes:
   postgres_data:
