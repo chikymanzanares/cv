@@ -106,32 +106,31 @@ def rerank_rrf(
     return [(rrf_scores[key], by_key[key]) for key in sorted_keys]
 
 
-def run_search(
-    index_dir: Path,
+def run_search_with_model(
+    index_data: Dict[str, Any],
+    model: Any,
     query: str,
     topk: int = 5,
     mode: str = "hybrid",
     rrf_k: int = 60,
-    embedding_model: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
-    Run search over the RAG index. Single entry point for both CLI and API.
+    Run search using pre-loaded index data and embedding model.
+
+    Use this in API/long-lived processes to avoid reloading the model on every request.
+    index_data must come from load_index(). model must be a SentenceTransformer instance.
 
     Returns a dict with:
-      - "results": main result list (reranked if mode in hybrid/reranked, else faiss or bm25)
-      - "faiss_results": list or None (set when mode in hybrid/reranked)
-      - "bm25_results": list or None (set when mode in hybrid/reranked)
-      - "reranked": list of (score, doc) or None (set when mode in hybrid/reranked)
+      - "results": main result list (reranked if mode hybrid/reranked, else faiss or bm25)
+      - "faiss_results": list or None
+      - "bm25_results": list or None
+      - "reranked": list of (score, doc) or None
     """
-    index_dir = Path(index_dir)
-    data = load_index(index_dir)
-    faiss_index = data["faiss_index"]
-    chunks = data["chunks"]
-    bm25_obj = data["bm25"]
+    faiss_index = index_data["faiss_index"]
+    chunks = index_data["chunks"]
+    bm25_obj = index_data["bm25"]
 
-    model_name = embedding_model or os.getenv("EMBEDDING_MODEL", DEFAULT_EMBEDDING_MODEL)
-    st_model = SentenceTransformer(model_name)
-    qvec = st_model.encode(
+    qvec = model.encode(
         [f"query: {query}"],
         convert_to_numpy=True,
         normalize_embeddings=True,
@@ -166,3 +165,22 @@ def run_search(
         "bm25_results": bm25_results,
         "reranked": rrf_merged,
     }
+
+
+def run_search(
+    index_dir: Path,
+    query: str,
+    topk: int = 5,
+    mode: str = "hybrid",
+    rrf_k: int = 60,
+    embedding_model: Optional[str] = None,
+) -> Dict[str, Any]:
+    """
+    Run search over the RAG index. Loads index and model from disk on every call.
+    Use run_search_with_model for long-lived processes (API) to avoid model reload overhead.
+    """
+    index_dir = Path(index_dir)
+    index_data = load_index(index_dir)
+    model_name = embedding_model or os.getenv("EMBEDDING_MODEL")
+    model = SentenceTransformer(model_name)
+    return run_search_with_model(index_data, model, query, topk, mode, rrf_k)

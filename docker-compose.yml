@@ -49,6 +49,7 @@ services:
       PORT: ${PORT:-8000}
     volumes:
       - ./:/cv
+      - hf_cache:/root/.cache/huggingface
     working_dir: /cv
     depends_on:
       migrate:
@@ -99,7 +100,7 @@ services:
       - ./:/cv
       - hf_cache:/root/.cache/huggingface
     working_dir: /cv
-    command: ["sh", "-lc", "python -m rag/build_index.py --pdf_dir data/cvs --out_dir rag_store"]
+    command: ["sh", "-lc", "python -m rag.rag_cli.build_index --pdf_dir cv_generation/data/cvs --out_dir rag_store"]
     restart: "no"
   
   rag_search:
