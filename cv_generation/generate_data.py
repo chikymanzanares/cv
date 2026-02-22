@@ -226,6 +226,14 @@ def _close_truncated_json(raw: str) -> str:
     return out
 
 
+def _strip_incomplete_trailing_key(raw: str) -> str:
+    """Remove the last key that has no value (truncated key after _close_truncated_json).
+    E.g. ..., \"photo_\" ] } -> ..., ] } so the previous key is the last in the object/array.
+    """
+    # Match: comma, optional space, quoted string (key), optional space, quote we added, then only ] } and space to end
+    return re.sub(r',\s*"(?:[^"\\]|\\.)*"\s*"(\s*[\]}\s]*)$', r"\1", raw)
+
+
 def build_structure_instructions(cfg: dict) -> str:
     """Build variability instructions for the LLM from profile config."""
     parts = []
@@ -454,6 +462,14 @@ def main(n: int = 30) -> None:
                         break
                     except json.JSONDecodeError as e2:
                         print(f"[{cv_id}] Repair failed: {e2.msg} at line {e2.lineno} col {e2.colno}", flush=True)
+                        if "Expecting ':' delimiter" in str(e2):
+                            raw = _strip_incomplete_trailing_key(raw)
+                            raw = re.sub(r",\s*([}\]])", r"\1", raw)
+                            try:
+                                cv_obj = json.loads(raw)
+                                break
+                            except json.JSONDecodeError:
+                                pass
                 if attempt == 0:
                     continue
                 out_path = cv_dir / "raw_llm_output.txt"
