@@ -7,6 +7,12 @@ The system is organized using **Domain / Application / Infrastructure** layers a
 
 ---
 
+## Video demonstration
+
+[**Watch the demo on YouTube**](https://www.youtube.com/watch?v=kGEehxnktFo) — walkthrough of the CV generation pipeline, RAG workflow, and the chat interface.
+
+---
+
 ## Architecture
 
 ```
