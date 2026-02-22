@@ -60,3 +60,5 @@ FORCE_PDF=1 make -C cv_generation gen-pdf   # Overwrite existing PDFs
 ```
 
 Model selection and variability (writing styles, section labels, page length, etc.) are documented in [docs/adr/001-model-selection.md](../docs/adr/001-model-selection.md).
+
+If the LLM response is cut off mid-JSON (e.g. "Unterminated string" or "Expecting ':' delimiter"), the model hit its **output token limit**. Increase `CV_GEN_MAX_TOKENS` in `.env` (default 4096; try 8192 for long CVs). The pipeline also tries to repair truncated JSON when possible.

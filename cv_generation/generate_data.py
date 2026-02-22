@@ -136,6 +136,13 @@ def read_prompt_template(version: str = "v2") -> str:
     return path.read_text(encoding="utf-8")
 
 
+def sanitize(text: str) -> str:
+    """Replace newlines with literal \\n and tabs with space."""
+    text = text.replace("\n", "\\n")
+    text = text.replace("\t", " ")
+    return text
+
+
 def _sanitize_json_control_chars(raw: str) -> str:
     """Escape control characters inside JSON string values so json.loads() succeeds."""
     result = []
@@ -222,7 +229,8 @@ def _close_truncated_json(raw: str) -> str:
     out = raw
     if in_string:
         out += '"'
-    out += "]" * max(0, depth_square) + "}" * max(0, depth_curly)
+    # Close objects first, then arrays (e.g. { "url": "https://truncated" } ] not ] })
+    out += "}" * max(0, depth_curly) + "]" * max(0, depth_square)
     return out
 
 
@@ -369,6 +377,7 @@ def generate_text(provider, anthropic, openrouter_text, settings, prompt) -> str
             model=settings.anthropic_text_model,
             prompt=prompt,
             temperature=0.7,
+            max_tokens=settings.max_tokens,
         )
 
     elif provider == "openrouter":
@@ -377,6 +386,7 @@ def generate_text(provider, anthropic, openrouter_text, settings, prompt) -> str
             model=settings.openrouter_text_model,
             prompt=prompt,
             temperature=0.7,
+            max_tokens=settings.max_tokens,
         )
 
     else:
