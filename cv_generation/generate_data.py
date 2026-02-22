@@ -183,9 +183,8 @@ def _prepare_json_raw(raw: str) -> str:
         raw = re.sub(r"^```(?:json)?\s*", "", raw)
         raw = re.sub(r"\s*```\s*$", "", raw)
         raw = raw.strip()
-    # Fix trailing commas only when comma is immediately followed by ] or } (no space/newline),
-    # so we never touch commas inside string values.
-    raw = re.sub(r",([}\]])", r"\1", raw)
+    # Fix trailing commas before ] or } (with or without whitespace/newline).
+    raw = re.sub(r",\s*([}\]])", r"\1", raw)
     return raw
 
 
@@ -440,17 +439,29 @@ def main(n: int = 30) -> None:
                 cv_obj = json.loads(raw)
                 break
             except json.JSONDecodeError as e:
+                err_msg = f"[{cv_id}] JSON error (attempt {attempt + 1}/2): {e.msg} at line {e.lineno} col {e.colno}"
+                if getattr(e, "pos", None) is not None:
+                    pos = e.pos
+                    snippet_start = max(0, pos - 80)
+                    snippet_end = min(len(raw), pos + 80)
+                    snippet = raw[snippet_start:snippet_end]
+                    err_msg += f" (char {pos}). Snippet: ...{snippet!r}..."
+                print(err_msg, flush=True)
                 if "Unterminated string" in str(e) or "Expecting" in str(e):
                     raw = _close_truncated_json(raw)
                     try:
                         cv_obj = json.loads(raw)
                         break
-                    except json.JSONDecodeError:
-                        pass
+                    except json.JSONDecodeError as e2:
+                        print(f"[{cv_id}] Repair failed: {e2.msg} at line {e2.lineno} col {e2.colno}", flush=True)
                 if attempt == 0:
                     continue
-                (cv_dir / "raw_llm_output.txt").write_text(raw, encoding="utf-8")
-                raise RuntimeError(f"Invalid JSON for {cv_id} (after retry)")
+                out_path = cv_dir / "raw_llm_output.txt"
+                out_path.write_text(raw, encoding="utf-8")
+                raise RuntimeError(
+                    f"Invalid JSON for {cv_id} (after retry): {e.msg} at line {e.lineno} col {e.colno}. "
+                    f"Full LLM output saved to {out_path}"
+                )
 
         img_bytes, asset_name = load_random_headshot(headshot_pool)
 

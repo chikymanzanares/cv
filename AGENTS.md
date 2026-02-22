@@ -115,6 +115,23 @@ Agents MUST ensure:
 -   All execution steps are persisted via RunEvents
 -   Execution can be resumed from any seq
 
+### SSE event payloads
+
+Each SSE message has an `event` type and a JSON `data` payload. The stream sends `id: <seq>` so clients can use the `Last-Event-ID` header for resume.
+
+| event | data shape |
+|-------|------------|
+| token | `{ "text": "..." }` — incremental assistant text |
+| tool_start | `{ "tool": "...", "input": { ... } }` |
+| tool_end | `{ "tool": "...", "output": { ... } }` |
+| final | `{ "text": "...", "sources": ["cv_001", ...] }` — full response and CV IDs used |
+| state | `{ "status": "done" \| "error" \| "canceled" }` |
+| error | `{ "error": "..." }` |
+| canceled | `{ "reason": "..." }` |
+| heartbeat | sent as a comment line (e.g. `: ping`); no data payload |
+
+Source of truth: [app/infrastructure/web/routers/runs.py](app/infrastructure/web/routers/runs.py), [app/domain/chat/entities.py](app/domain/chat/entities.py) (RunEventType).
+
 ------------------------------------------------------------------------
 
 ## Cancellation Contract
